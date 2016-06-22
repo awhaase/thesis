@@ -1,0 +1,76 @@
+\documentclass[a4paper,twoside,11pt,
+                %draft,%
+              ]{scrbook} 
+\usepackage[top=2.5cm,bottom=3.0cm,inner=3.0cm,outer=3.0cm]{geometry}
+
+\usepackage{ifdraft}
+\usepackage{ifthen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\includeonly{abstract,tub-eidesstattliche}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{header}
+
+\begin{document}
+    \selectlanguage{UKenglish}%
+    \input{gloss-entries}
+
+\frontmatter
+
+    \pagestyle{thesisINTRO}
+    \input{tub-titlepage}
+    \input{abstract}
+
+
+    \selectlanguage{UKenglish}%
+    \tableofcontents
+    \listoffigures
+    \listoftables
+
+    %\ifdraft{%
+        %\input{titlepage}
+        %\newpage
+        %\thispagestyle{empty}
+        %\mbox{}
+
+        %\tableofcontents
+        %\addtocontents{toc}{\protect\thispagestyle{fancy}}
+    %}{%
+        %\pagestyle{thesisINTRO}
+        %\tableofcontents
+    %}
+
+    \printglossary[type=\acronymtype,title=Abbreviations,style=list]
+    \printglossary[type=symbols,title=Symbols,style=long,nonumberlist=true]
+
+\mainmatter
+    \ifdraft{}{\pagestyle{thesisINTRO}}
+    %\include{pIntro}
+    \ifdraft{}{\pagestyle{thesis}}
+    \include{ch05_cr_sc_multilayer}
+    %\include{pFundamentals}
+    %\include{pExperimental}
+    %\include{pNanometro}
+    %\include{pPolymer}
+    %\include{pXrr}
+    \ifdraft{}{\pagestyle{thesisINTRO}}
+    %\include{pSummary}
+
+    %\ifdraft{}{\pagestyle{thesisINTRO}}
+    \printbibliography[heading=bibintoc,title={References}]
+
+
+\backmatter
+    \pagestyle{thesisINTRO}
+    \include{danksagung}
+    \include{tub-eidesstattliche}
+    \include{tub-publist}
+
+    %\ifdraft{}{%
+        %\printglossary[title=Glossary]
+        %\printglossary[type=\acronymtype,title=Abbreviations,style=list]
+        %\printglossary[type=symbols,title=Symbols,style=long,nonumberlist=true]
+    %}
+
+\end{document}

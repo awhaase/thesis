@@ -1,0 +1,262 @@
+%%%% common header file for final and draft mode
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+\usepackage[ngerman,UKenglish]{babel}
+\usepackage{microtype}
+\usepackage{textcomp}
+\usepackage{xspace}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{floatrow}
+\DeclareColorBox{imgbg}{\fcolorbox{white}{white}}
+
+\ifdraft{%
+    \input{draft-header}
+}{%
+    \input{final-head-start}
+}
+
+%%%%% Bibliografie
+\usepackage[autostyle,english=british,autopunct]{csquotes}
+\usepackage[backend=biber,sorting=nyt,
+            %style=authoryear-comp,autocite=footnote,
+            style=numeric-comp,autocite=superscript,
+            firstinits=true,uniquename=init,backref=false,
+            maxbibnames=25,minbibnames=10,maxcitenames=2,
+            url=false,doi=true,isbn=false,eprint=true,
+            ]{biblatex}
+\addbibresource{zotero-full.bib}
+%%% fine-tuning of the appearance
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryBibitem{\clearfield{day}}
+\renewcommand{\labelnamepunct}{\addcolon\addspace}
+\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
+\DeclareCiteCommand{\citepatent}
+    [\mkbibfootnote]
+    {\usebibmacro{prenote}}
+    {patent \printtext[bibhyperref]{\thefield{number}}}
+    {\multicitedelim}
+    {\usebibmacro{postnote}}
+\DeclareCiteCommand{\supercite}
+    [\mkbibsuperscript]
+    {%
+        \usebibmacro{cite:init}%
+        \let\multicitedelim=\supercitedelim
+        \iffieldundef{prenote}
+        {}
+        {\BibliographyWarning{Ignoring prenote argument}}%
+        \iffieldundef{postnote}
+        {}
+        {\BibliographyWarning{Ignoring postnote argument}}%
+        \bibopenbracket
+    }%
+    {\usebibmacro{citeindex}%
+    \usebibmacro{cite:comp}}
+    {}
+    {\usebibmacro{cite:dump}\bibclosebracket}
+
+\DeclareCiteCommand{\mycite}
+    []
+    {\usebibmacro{prenote}}
+    {%
+        \printnames[][-\value{listtotal}]{author}: %
+        \printfield{title}, %
+        \iffieldundef{booktitle}
+            {\printfield{journaltitle} }
+            {\printfield{booktitle} }
+        \printfield{volume}.\printfield{number} (\printfield{year}), %
+        \printfield{pages}%
+    }
+    {\multicitedelim}
+    {\usebibmacro{postnote}}
+
+%\DeclareCiteCommand{\publistcite}
+    %[]
+    %{\usebibmacro{prenote}}
+    %{%
+        %\printnames[][-\value{listtotal}]{author}: %
+        %\printfield{title}, %
+        %\printfield{journaltitle} \printfield{volume}.\printfield{number} (\printfield{year}), %
+        %\printfield{pages}%
+        %\printfield{doi}%
+    %}
+    %{\multicitedelim}
+    %{\usebibmacro{postnote}}
+
+\makeatletter
+%%%% use maxbibnames instead of maxcitenames in fullcite:
+\DeclareCiteCommand{\fullcite}
+  {\defcounter{maxnames}{\blx@maxbibnames}%
+    \usebibmacro{prenote}}
+  {\usedriver
+     {\DeclareNameAlias{sortname}{default}}
+     {\thefield{entrytype}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+\makeatother
+
+\let\cite=\autocite  %% supercite als Standard
+
+
+%%% nachfolgend Umdefinitionen von Unicode-Zeichen, die
+%%% in manchen Zotero-BibLaTeX-Einträgen sind:
+\DeclareUnicodeCharacter{00A0}{~}  % non-breaking space
+\DeclareUnicodeCharacter{202F}{\,} % narrow non-breaking space
+\DeclareUnicodeCharacter{2060}{}   % zero-width space
+\DeclareUnicodeCharacter{2002}{\:} % en space
+\DeclareUnicodeCharacter{2003}{\;} % em space
+\DeclareUnicodeCharacter{2007}{ }  % figure space
+\DeclareUnicodeCharacter{2009}{\,} % thin space
+\DeclareUnicodeCharacter{2010}{-}  % hyphen
+\DeclareUnicodeCharacter{2012}{-}  % figure dash
+\DeclareUnicodeCharacter{2013}{--} % en dash
+\DeclareUnicodeCharacter{2014}{---}% em dash
+\DeclareUnicodeCharacter{2015}{-}  % horizontal bar
+\DeclareUnicodeCharacter{2212}{-}  % minus
+
+%%%%% Grafiken, Abbildungen
+\usepackage[final]{graphicx} % option final to show images also in draft mode
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{import}
+\usepackage{pgf,tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{patterns}
+\usetikzlibrary{intersections}
+\usetikzlibrary{shadows}
+\usetikzlibrary{spy}
+\usetikzlibrary{shapes.symbols, shapes.misc, shapes.geometric, shapes.arrows}
+\usetikzlibrary{decorations.markings}
+\usepgflibrary{decorations.shapes}
+\usetikzlibrary{calc}
+\tikzset{>=stealth}
+
+
+%%%% Tabellen,Listen
+\usepackage{tabularx,booktabs,multirow}
+\usepackage[inline]{enumitem}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+%%%% Mathe, Zahlen, chem. Formeln
+\usepackage{amsmath,amssymb}
+\usepackage{eurosym}
+\usepackage{dsfont}
+\usepackage[abbreviations=true,
+            detect-all,
+            product-units = brackets,
+            list-units=repeat,
+            range-units=repeat,
+            multi-part-units=brackets,
+            per-mode=reciprocal,
+            separate-uncertainty =true,
+            range-phrase = \text{ to },
+            list-final-separator = \text{ and },
+           ]{siunitx}
+\DeclareSIUnit{\px}{px}
+\DeclareSIUnit[number-unit-product = {\thinspace}]{\inch}{inches}
+\DeclareSIUnit{\EUR}{\text{\euro}}
+
+\usepackage[version=3]{mhchem}
+\usepackage{xfrac}
+
+%%%% Verschiedenes
+\usepackage[para,multiple,stable,perpage,symbol*]{footmisc}
+%%% footnote without marker
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+%%%% Comment-Sections
+\usepackage{comment} %% drinnen lassen fuer Lang-Abstract
+
+%%%% Testen (am Ende entfernen)
+%\usepackage{showkeys}
+%\renewcommand*{\showkeyslabelformat}[1]{%
+%\fbox{\normalfont\tiny\ttfamily#1}}
+\usepackage[textsize=scriptsize,bordercolor=none,backgroundcolor=YellowGreen,linecolor=YellowGreen]{todonotes}
+%\renewcommand{\todo}[1]{\todo{\sffamily #1}}
+\newcommand{\dofig}[1]{\todo[backgroundcolor=DarkSeaGreen,linecolor=none]{\sffamily\textbf{DoFigure:}~#1}\xspace}
+\newcommand{\dotxt}[1]{\todo[backgroundcolor=Coral,linecolor=none]{\sffamily\textbf{DoText:}~#1}\xspace}
+\newcommand{\doref}[1]{\todo[backgroundcolor=Gold,linecolor=Gold]{\sffamily\textbf{DoRef:}~#1}\xspace}
+\newcommand{\doalt}[1]{\textcolor{SkyBlue}{#1}\todo[backgroundcolor=SkyBlue,linecolor=SkyBlue]{\sffamily\textbf{Altrn:}~#1}\xspace}
+
+%%%% Hier kommt's auf die Reihenfolge an
+\usepackage{varioref}
+\usepackage[pdfpagelabels]{hyperref}
+%\usepackage{breakurl} % damit URLs korrekt umgebrochen werden
+\usepackage[capitalise]{cleveref}
+
+\ifdraft{%
+    \hypersetup{%
+            pdftitle={},    
+            pdfauthor={Jan Wernecke},
+            pdfcreator={pdfLaTeX},
+            pdfborder=0 0 0,
+            breaklinks=true,
+            bookmarksopen=true,
+            bookmarksnumbered=true,
+            linkcolor=black,
+            urlcolor=SeaGreen,
+            citecolor=SteelBlue,
+            colorlinks=true}
+}{%
+    \input{final-head-end}
+}
+
+%%% glossaries for Abbreviations, Glossary
+\usepackage[nonumberlist]{glossaries}
+\usepackage{acronym}
+\newglossary[alg]{acronym}{acr}{acn}{\acronymname}
+\newglossary[slg]{symbols}{sls}{slo}{\glssymbolsgroupname}
+\makeglossaries
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%%%% eigene Kommandos
+\usepackage{overpic} %for draft text overlays
+\usepackage{rotating}
+\newcommand{\draftImage}[2]{%
+    \begin{overpic}[#1]{#2}
+        \put(0,0){\includegraphics[#1]{#2}}
+        \put(2,2){\LARGE\color{CornflowerBlue}{\ttfamily\begin{rotate}{45}[Draft]\end{rotate}}}
+    \end{overpic}
+}
+\newcommand{\CD}{\ensuremath{C\mskip-3mu D}\xspace}
+\renewcommand{\phi}{\ensuremath{\varphi}\xspace}
+\newcommand{\vidx}[2]{\ensuremath{#1_\text{#2}}\xspace}
+\newcommand{\eph}{\vidx{E}{ph}}
+\newcommand{\ethr}{\vidx{E}{thresh}}
+\newcommand{\ali}{\vidx{\alpha}{i}}
+\newcommand{\alc}{\vidx{\alpha}{c}}
+\newcommand{\alf}{\vidx{\alpha}{f}}
+\newcommand{\thf}{\vidx{\theta}{f}}
+\newcommand{\dens}{\ensuremath{\varrho}\xspace}
+\newcommand{\edens}{\ensuremath{\vidx{\varrho}{e}}\xspace}
+\newcommand{\pdepth}{\ensuremath{\Lambda}\xspace}
+\newcommand{\ls}{\vidx{L}{s}}
+\newcommand{\lpx}{\vidx{L}{px}}
+\newcommand{\q}[1]{\vidx{q}{#1}}
+\newcommand{\qval}[1]{\ensuremath{\SI[per-mode=reciprocal]{#1}{\per\nm}}\xspace}
+\newcommand{\ev}[1]{\ensuremath{\SI{#1}{\eV}}\xspace}
+\newcommand{\kev}[1]{\ensuremath{\SI{#1}{\keV}}\xspace}
+\newcommand{\qe}{\ensuremath{\mathit{QE}}\xspace}
+\newcommand{\nm}[1]{\ensuremath{\SI{#1}{\nm}}\xspace}
+
+\newcommand{\pvp}{PS-\textit{b}-P2VP\xspace}
+\newcommand{\pil}{PILATUS~1M\xspace}
+\newcommand{\vpil}{in-vacuum \pil}
+
+\newcommand{\ivec}[2]{\ensuremath{\vidx{\vec{#1}}{#2}}\xspace}
+\newcommand{\ivecabs}[2]{\ensuremath{|\ivec{#1}{#2}|}\xspace}
+\newcommand{\n}{\ensuremath{\hat{n}}\xspace}
+\newcommand{\ft}[1]{\ensuremath{\mathcal{F}(#1)}\xspace}
+\newcommand{\dft}[1]{\ensuremath{\mathcal{F}_{\text{DFT}}(#1)}\xspace}
+%\newcommand{\psd}[1]{\ensuremath{\mathcal{PSD}(#1)}\xspace}
+\newcommand{\psd}[1]{\ensuremath{\mathrm{PSD}(#1)}\xspace}
+\newcommand{\hkl}[1]{\ensuremath{\left(#1\right)}\xspace}
+\newcommand{\imagu}{\ensuremath{i}\xspace}
+\renewcommand{\Re}{\operatorname{\mathfrak{R}}}
+\renewcommand{\Im}{\operatorname{\mathfrak{I}}}
+\newcommand{\rarr}{\ensuremath{\curvearrowright}\xspace}
