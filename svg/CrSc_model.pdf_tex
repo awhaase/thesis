@@ -1,0 +1,78 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'CrSc_model.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{651.15984421bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.90458987)%
+    \put(0,0){\includegraphics[width=\unitlength]{CrSc_model.pdf}}%
+    \put(0.8457239,0.40507937){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{dCr}}}%
+    \put(0.84791418,0.56051974){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{dSc}}}%
+    \put(0.57288845,0.502488){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{sSc}}}%
+    \put(0.57359049,0.34014029){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{sCr}}}%
+    \put(0.9164508,0.48037361){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{D}}}%
+    \put(0.52194175,0.70669669){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{z}}}%
+    \put(0.52166438,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{nSc}}}%
+    \put(0.9061278,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{nCr}}}%
+    \put(0.80535637,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ñCr}}}%
+    \put(0.62142084,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ñSc}}}%
+    \put(0.98609452,0.18247455){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n}}}%
+    \put(0.42800773,0.40507937){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{dCr}}}%
+    \put(0.43019801,0.56051974){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{dSc}}}%
+    \put(0.48644886,0.48037361){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{D}}}%
+    \put(0.00593942,0.70669669){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{z}}}%
+    \put(0.00566204,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{nSc}}}%
+    \put(0.39012547,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{nCr}}}%
+    \put(0.4700922,0.18247455){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n}}}%
+    \put(0.81873462,0.54970042){\color[rgb]{1,0,0}\makebox(0,0)[rb]{\smash{gradual interface
+profile}}}%
+    \put(0.78324198,0.46598166){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{ideal interface
+profile}}}%
+    \put(0.0327529,0.69252304){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a)}}}%
+    \put(0.54875525,0.69252304){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b)}}}%
+  \end{picture}%
+\endgroup%
