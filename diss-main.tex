@@ -3,11 +3,10 @@
               ]{scrbook} 
 \usepackage[top=2.5cm,bottom=3.0cm,inner=3.0cm,outer=3.0cm]{geometry}
 
+\usepackage{ifdraft}
+\usepackage{ifthen}
 \usepackage{amsmath}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\includeonly{abstract,tub-eidesstattliche}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{header}
 
@@ -27,18 +26,6 @@
     \listoffigures
     \listoftables
 
-    %\ifdraft{%
-        %\input{titlepage}
-        %\newpage
-        %\thispagestyle{empty}
-        %\mbox{}
-
-        %\tableofcontents
-        %\addtocontents{toc}{\protect\thispagestyle{fancy}}
-    %}{%
-        %\pagestyle{thesisINTRO}
-        %\tableofcontents
-    %}
 
     \printglossary[type=\acronymtype,title=Abbreviations,style=list]
     \printglossary[type=symbols,title=Symbols,style=long,nonumberlist=true]
@@ -59,5 +46,6 @@
     \include{danksagung}
     \include{tub-eidesstattliche}
     \include{tub-publist}
+
 
 \end{document}
