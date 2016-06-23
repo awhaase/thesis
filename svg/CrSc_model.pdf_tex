@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{651.15984421bp}%
+    \setlength{\unitlength}{434.76276294bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,31 +48,31 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.90458987)%
+  \begin{picture}(1,0.8710157)%
     \put(0,0){\includegraphics[width=\unitlength]{CrSc_model.pdf}}%
-    \put(0.8457239,0.40507937){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{dCr}}}%
-    \put(0.84791418,0.56051974){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{dSc}}}%
-    \put(0.57288845,0.502488){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{sSc}}}%
-    \put(0.57359049,0.34014029){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{sCr}}}%
-    \put(0.9164508,0.48037361){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{D}}}%
-    \put(0.52194175,0.70669669){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{z}}}%
-    \put(0.52166438,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{nSc}}}%
-    \put(0.9061278,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{nCr}}}%
-    \put(0.80535637,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ñCr}}}%
-    \put(0.62142084,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ñSc}}}%
-    \put(0.98609452,0.18247455){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n}}}%
-    \put(0.42800773,0.40507937){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{dCr}}}%
-    \put(0.43019801,0.56051974){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{dSc}}}%
-    \put(0.48644886,0.48037361){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{D}}}%
-    \put(0.00593942,0.70669669){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{z}}}%
-    \put(0.00566204,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{nSc}}}%
-    \put(0.39012547,0.15884476){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{nCr}}}%
-    \put(0.4700922,0.18247455){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n}}}%
-    \put(0.81873462,0.54970042){\color[rgb]{1,0,0}\makebox(0,0)[rb]{\smash{gradual interface
+    \put(0.81434015,0.39004739){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_{Cr}$}}}%
+    \put(0.81644914,0.53971954){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_{Sc}$}}}%
+    \put(0.55162928,0.4838413){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s_{Sc}$}}}%
+    \put(0.55230527,0.32751812){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$s_{Cr}$}}}%
+    \put(0.88244246,0.46254753){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$D$}}}%
+    \put(0.50257314,0.68047203){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
+    \put(0.50230607,0.15295023){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_{Sc}$}}}%
+    \put(0.87250253,0.15295023){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_{Cr}$}}}%
+    \put(0.7754706,0.15295023){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\tilde{n}_{Cr}$}}}%
+    \put(0.59836069,0.15295023){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\tilde{n}_{Sc}$}}}%
+    \put(0.94950179,0.17570316){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{n}}}%
+    \put(0.41212491,0.39004739){\makebox(0,0)[lb]{\smash{$d_{Cr}$}}}%
+    \put(0.41423389,0.53971954){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$d_{Sc}$}}}%
+    \put(0.46839735,0.46254753){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$D$}}}%
+    \put(0.00571902,0.68047203){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$z$}}}%
+    \put(0.00545194,0.15295023){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_{Sc}$}}}%
+    \put(0.3756484,0.15295023){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n_{Cr}$}}}%
+    \put(0.45264767,0.17570316){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$n$}}}%
+    \put(0.62115124,0.55698402){\color[rgb]{1,0,0}\makebox(0,0)[lb]{\smash{gradual interface
 profile}}}%
-    \put(0.78324198,0.46598166){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{ideal interface
+    \put(0.62905282,0.39664694){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ideal interface
 profile}}}%
-    \put(0.0327529,0.69252304){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a)}}}%
-    \put(0.54875525,0.69252304){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b)}}}%
+    \put(0.03153747,0.66682437){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{a)}}}%
+    \put(0.52839164,0.66682437){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{b)}}}%
   \end{picture}%
 \endgroup%

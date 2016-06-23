@@ -4,38 +4,28 @@ MAIN = diss-main
 
 ### Variables for dependencies
 OBJECTS = Makefile
-TEXDIR = tex
+#TEXDIR = tex
 SVGDIR = svg
 IMGDIR = img
-PYTDIR = python
-TEXFILES = $(shell find . -name '*.tex')
-IMGFILES = $(shell find ../$(IMGDIR)/ -name '*.*')
 
 # commands
 LATEX = pdflatex --interaction=nonstopmode
 
 .PHONY: svg python $(MAIN).pdf
 
-all: $(MAIN).pdf
+all: svg tex
 
-# CUSTOM BUILD RULES
-show: $(MAIN).pdf
-	xdg-open $<
+svg:
+	@echo '----------------------------------------'
+	@echo '| Generiere Bilder svg >> pdf          |'
+	@echo '----------------------------------------'
+	$(MAKE) -C $(SVGDIR)
 
-# MAIN LATEXMK RULE
-# -pdf tells latexmk to generate PDF directly (instead of DVI).
-# -pdflatex="" tells latexmk to call a specific backend with specific options.
-# -use-make tells latexmk to call make for generating missing files.
-# -interactive=nonstopmode keeps the pdflatex backend from stopping at a
-# missing file reference and interactively asking you for an alternative.
-
-$(MAIN).pdf: $(TEXFILES) $(IMGFILES) $(OBJECTS)
+tex:	
 	@echo '----------------------------------------'
 	@echo '| Generiere pdf mit latexmk            |'
 	@echo '----------------------------------------'
 	latexmk -pdf -pdflatex=$(LATEX) $(MAIN).tex
-
-
 
 clean:
 	@echo '----------------------------------------'
