@@ -1,16 +1,192 @@
 \chapter{Fundamentals}
+This chapter covers the theoretical fundamentals of the interactions of x-rays with matter.
+\section{EUV and X-ray Radiation}
+\Gls{euv} and x-ray radiation is electromagnetic radiation, which only differs by its spectral range. The different names for these parts of the electromagnetic spectrum are mostly of historic origin. However, differences in energy and, thus, reflectance, tranmission and absorption properties in matter still justify this differentiation today from a technical perspective. For the sake of consistency within this thesis and the lack of a unique definition of the terms used in literature, we shall define \gls{euv} radiation as electromagnetic radiation within the spectral range from vacuum wavelength of \nm{2} to \nm{50} (corresponding to photon energies of approximately \ev{6200} to \ev{25}). Consequently, the radiation with the vacuum wavelength from \nm{0.01} to \nm{1.9} (photon energies from around \kev{124} to \kev{0.62}) shall be called x-rays. In both cases the theoretical description is identical and is thus presented here independent of this naming convention.
 
-\section{Interactions of X-rays with Matter}
+The entirety of electrostatic fields and electromagnetic radiation is described by Maxwell's equations. In vacuum and without any electric charges present, they are defined as
+\begin{align*}
+\nabla \cdotp \vec{E} &=0 \text{,} & \nabla \cdotp \vec{B} &=0 \text{,}\\
+\nabla \times \vec{E} & = -\frac{\partial \vec{B}}{\partial t}\text{,} & \nabla \times \vec{B} &= \mu_0 \epsilon_0 \frac{\partial E}{\partial t} \text{,}
+\end{align*}
+with the electric constant \gls{epsilon_0} and the magnetic constant \gls{mu_0} and the electric field $\vec{E}$ and the magnetic field $\vec{B}$. By taking the curl of these equations we obtain the wave equations for both fields as
+\begin{align}
+\Delta \vec{E} - \frac{1}{c^2} \frac{\partial^2 \vec{E}}{\partial t^2} &= 0\text{,}& \Delta \vec{B} - \frac{1}{c^2} \frac{\partial^2 \vec{B}}{\partial t^2} &= 0\text{,} \label{ch_theo:eqn_wave_equation_vacuum}
+\end{align}
+where the speed of light in vacuum is defined as $\gls{c} = \sfrac{1}{\sqrt{\gls{mu_0}\gls{epsilon_0}}}$.
+
+All scattering processes and charge densities in this thesis are considered to be time-independent. The wave equations Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum} can thus be further simplified by separating the explicit time dependence of the fields as
+\begin{align}
+\vec{E}(\vec{r},t) &= \vec{E}(\vec{r}) e^{i \gls{omega} t}\text{,} & \vec{B}(\vec{r},t) &= \vec{B}(\vec{r}) e^{i \gls{omega} t}\text{,}
+\end{align}
+where $\vec{r}$ is a vector to a point in space. The time-independent wave equations then read
+\begin{align}
+(\Delta  + \gls{k_0}^2 ) \vec{E} &= 0\text{,}& (\Delta  + \gls{k_0}^2 ) \vec{B} &= 0\text{,} \label{ch_theo:eqn_wave_equation_vacuum_time_indepenend}
+\end{align}
+where $\gls{k_0}= \sfrac{\gls{omega}}{\gls{c}}$, i.e.~the modulus of the vacuum wave vector. A very important solution to this wave equation is the monochromatic plain wave, which is usually presumed to be impinging on scattering problems such as those discussed in this thesis. Hence, for Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} we obtain
+\begin{align}
+E(\vec{r},t) &= E_0 \, e^{i \gls{omega} t - i \vec{k} \cdot \vec{r}}\text{,} & B(\vec{r},t) &= B_0 \, e^{i \gls{omega} t - i \vec{k} \cdot \vec{r}}\text{,} \label{ch_theo:eqn_plain_wave}
+\end{align}
+where $E_0$ and $B_0$ are the initial electric and magnetic field amplitudes, respectively, and $|\gls{k}| = \gls{k_0}$ \cite{born_principles_1965}.
+
+The radiation propagating as a plane wave has a wavelength of $\gls{lambda}$, where each photon carries an energy of
+\begin{align}
+E_\text{ph} = \frac{h c}{\lambda} = \hbar \gls{omega}\text{,}
+\end{align}
+where $\gls{h}$ is the Planck's constant and $\hbar = \sfrac{h}{2 \pi}$. The photon energy is typically expressed in units of the electron charge, which defines the unit \emph{\gls{eV}} used for expressions in this thesis.
+
+This description of the propagation of electromagnetic radiation in vacuum can be extended to the propagation inside a homogeneous medium. This will be discussed in the following section on the interaction of \gls{euv} and x-ray radiation with matter.
+
+\section{Interaction of EUV and X-ray Radiation With Matter}
+As noted above, the wave equation Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} still holds for the propagation of radiation inside a homogeneous medium in slightly modified form. The speed of light \gls{c}, while being a constant in vacuum with respect to the energy, becomes energy dependent once the wave enters the medium \cite{bergevin_interaction_2009}. This \emph{dispersion} has an impact on the wave number. In addition, in general the radiation will be partially absorbed while propagating through matter. To account for this change of the wave number with respect to the vacuum propagation we introduce a complex, energy dependent \emph{index of refraction},
+\begin{align}
+\gls{n} = 1 - \delta - i \beta \text{,} \label{ch_theo:eqn_n}
+\end{align}
+where its real part $\delta$ accounts for the deviation from the vacuum index of refraction. The dispersion is a result of the interaction of the electromagnetic radiation with the electrons in the medium, which is dependend on the wavelength as well as the \emph{\gls{el_dens}}. The factor $\delta$ is therefore proportional to these two quantities $\delta \propto \lambda^2 \gls{el_dens}$ \cite{als-nielsen_x-rays_2011, mikulik_x-ray_1997}. The absorption is accounted for by $\beta$, defined through the linear attenuation coefficient $\mu$,
+\begin{align}
+\beta = \frac{\gls{lambda} \mu}{4 \pi} \text{.}
+\end{align}
+By replacing the vacuum wave number $\gls{k_0}$ with $k = n \gls{k_0}$ in the wave equation Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} and the plain wave solutions in Eq.~\eqref{ch_theo:eqn_plain_wave}, we obtain the wave equation for the propagation of x-rays and EUV radiation inside a medium and its solutions.
+
+\paragraph{Interaction of a Photon With Atoms and its Electrons}
+The continuum description above gives a consistent description of the reflection, refraction and absorption of x-rays and EUV radiation at the interfaces of vacuum and matter in a macroscopic picture. The treatment is analogous to reflection and refraction in classical optics and serves well to describe these processes in case of specular reflectance from homogeneous materials as we shall see later in this chapter. However, it is necessary to also give a more general description on the interaction of a photon with the atoms, and more importantly the electrons, of a medium to describe the origin of the diffuse scattering and fluorescence processes, which are not covered by the continuum description above.
+
+When a photon hits an atom with its electrons three very important process can occur, that need to be distinguished.
+\begin{description}
+       \item[Elastic Scattering]
+          {The photon interacts with the matter in an energy conserving way. It may be scattered out of its original direction by interaction with single free electrons, also known as \emph{Thomson scattering}. In general however, it might encounter ensembles of electrons, i.e.~an electron density such as the bound electrons of an atom. This generalization of the scattering by an electron density is called \emph{Rayleigh scattering}.}
+       \item[Inelastic Scattering]
+          {In this case the photon exchanges a portion of its energy with the system it interacts with resulting in a loss of energy and, thus, increased wavelength for the scattered photon. This is the results of the particle-wave-duality of electromagnetic radiation. In this scattering process the total momentum of the incoming photon is conserved by scattering with an electron and transfering a portion of its momentum. This process is known as \emph{Compton scattering}. In this picture the electron is treated as a free electron which ends up with an increased momentum. There is, however, the possibility that the photon excites a bound electron into an excited state thereby transferring its energy. This process is not covered by the Compton scattering process and is known as \emph{Raman scattering}.}
+       \item[Absorption]
+          {The third possibility is that the photon is absorbed entirely by ejecting a bound core shell electron from the atom leaving a vacancy. This is known as \emph{photoelectric effect}. It requires a photon energy exceeding the binding energy of the electron for allowing it to be ejected from the atom. The vacancy on the inner shells is filled by relaxation of electrons from energetically higher core shell states leading to the emission of radiation of lower energy than the initial photon energy. This is called \emph{fluorescence}, where the emitted photons energy is specific for the element of the atom due to the specific binding energies in the core shell for each element. Another possibility in competing with the emission of fluorescence radiation is the \emph{Auger effect}. Here, instead of emitting the energy of the core shell relaxation as fluorescence radiation, it is transmitted to second electron of the same atom, which is in turn ejected with reduced energy compared to the photoelectron of the primary process.}
+\end{description}
+
+
+\subsection{Elastic Scattering}
+Scattering of an incoming plane wave is described by the quantity of the \emph{differential scattering cross section}, defined as
+\begin{align}
+\Big(\frac{d \sigma}{d \Omega}\Big) &= \frac{I_\text{scattered}}{\Phi_0 \Delta \Omega}\text{,}
+\end{align}
+where $I_\text{scattered}$ is the scattered intensity into the solid angle $\Delta \Omega$ and $\Phi_0$ is the total flux of incoming photons of the primary wave per unit area.
+
 \paragraph{Momentum Transfer and Reciprocal Space}
+Assuming a scattering process from a single surface in reflection geometry as depicted in Fig.~\ref{fig:scattering_process} the incoming beam irradiating the sample under the angle of incidence \gls{alpha_i} is described by the wave vector $\gls{k}_i$. The direction of this vector is the propagation direction of the incident radiation, where its absolute value is the wavenumber $k = |\gls{k}_i| = \frac{2 \pi}{\gls{lambda}}$. A detector positioned at a different angle, typically called scattering angle \gls{alpha_f}, detects the scattered radiation. The outgoing or scattered beam is described by the wavevector $\gls{k}_f$ with direction towards the detector, again in accordance with the propagation direction of the radiation. In case of an elastic, i.e.~energy conserving, scattering process its absolute value is the wavenumber of the incoming beam $|\gls{k}_f| = |\gls{k}_i| = \gls{k_0}$. This general scattering process is characterized by its momentum transfer vector 
+\begin{align}
+\gls{q} = \gls{k}_f - \gls{k}_i\text{,} \label{ch:theo_eqn:q}
+\end{align}
+also known as scattering vector. From this definition the components of this three dimensional vector can be expressed by the involved angles and wavelengths as
+\begin{align}\begin{split}
+q_x &= k \big( \cos \gls{theta_f} \sin \gls{alpha_f} - \sin \gls{alpha_i}\big)\text{,}\\
+q_y &= k \big( \sin \gls{theta_f} \sin \gls{alpha_f}\big)\text{,}\\
+q_z &= k \big( \cos \gls{alpha_f} + \cos \gls{alpha_i}\big)\text{.}
+\end{split} \label{ch_theo:eqn_q_components}
+\end{align}
+The momentum transfer vector is a characteristic quantity for scattering processes. Its three components in Eq.~\eqref{ch_theo:eqn_q_components} span the so called reciprocal space.
 
-\section{X-ray Reflection from Layered Systems}
-\subsection{Wave Equation}
-\subsection{Matrix Algorithm}
-\subsection{Specular Reflectance}
-\subsection{Field Calculation}
+\subsection{Absorption and Fluorescence Radiation}
+
+\section{Specular Reflectance from Surfaces and Interfaces in Multilayer Systems}
+
+\paragraph{Matrix Algorithm}
+
+\paragraph{Field Calculation}
+
+
+
 
 \section{Diffuse Near-normal Incidence Scattering}
+Our theoretical description of the diffuse EUV scattering from multilayers is based on the distorted-wave Born approximation (DWBA)~\cite{PhysRevB.49.10668,PhysRevB.47.15896}, widely used in the analysis of hard X-ray scattering. The DWBA is a perturbation theory in which the interfacial roughness is considered to be a small deviation from the ideal multilayer. This corresponds to a potential in the wave equation 
+\begin{equation}
+        (\Delta + K^2) |E(\mathbf{r})\rangle = V(\mathbf{r}) |E(\mathbf{r})\rangle\text{,} \label{eqn:wave_equation} 
+\end{equation}
+of $V(\mathbf{r}) = V_\text{id}(\mathbf{r}) + V_\text{r}(\mathbf{r})$ that can be separated into a strong part $V_\text{id}(\mathbf{r})$ for which an analytical solution exists and a small perturbation $V_\text{r}(\mathbf{r})$ describing the interfacial roughness. In case of a multilayer, we start from the dynamic calculation of the electric fields of a perfectly flat multilayer. The wave equation Eq.~\eqref{eqn:wave_equation} is solved by calculating the field amplitudes using a matrix formalism \cite{PrinciplesOfOptics}.
 
-\subsection{Planar Rough Surface}
+For the calculation of the specular reflectivity curve it is necessary to correct the field calculation for the interfacial roughness and diffusion. Modified Fresnel coefficients according to N\'evot/Croece \cite{nevot_croece} assuming a Gaussian interface profile are used, 
+\begin{align}
+        r^{(j)} &= r_{id}^{(j)} \exp(-2 k_z^{(j)} k_z^{(j+1)} \sigma_j^2)\text{,} \label{eqn:fresnel_r}\\
+        t^{(j)} &= t_{id}^{(j)} \exp((k_z^{(j)} - k_z^{(j+1)})^2 \sigma_j^2/2) \text{,} \label{eqn:fresnel_t}
+\end{align}
+where $r_{id}^{(j)}$ and $t_{id}^{(j)}$ are the Fresnel reflection and transmission coefficients, respectively, for the ideal  $j^\text{th}$ interface, $\sigma_j$ is the root mean square roughness (rms) and $k_z^{(j)}$ is the $z$-component of the incidence wave vector at the $j^\text{th}$ interface.
+
+The diffuse scattering cross section is given by the covariance of the matrix element of the perturbation potential on the basis of the wave functions from the analytic solution for a given incidence and exit angle \cite{PhysRevB.38.2297,PhysRevB.49.10668} 
+\begin{equation}
+        \underset{\text{diffuse}}{\Big(\frac{d \sigma}{d \Omega}\Big)}= \text{Cov}(\langle E_{\text{id},1}| V_r|E_{\text{id},2}\rangle)\text{,} \label{eqn:incoherent_cross_section} 
+\end{equation}
+where $|E_{\text{id},i}\rangle\text{, }i =1,2$ are the solutions of the wave equation Eq.~\eqref{eqn:wave_equation} for the ideal multilayer and the given incidence and exit angles, respectively, calculated using the unmodified Fresnel coefficients $r_{id}^{(j)}$ and $t_{id}^{(j)}$ representing the perfectly flat multilayer. Since the roughness potential is non-zero only at the individual interfaces, Eq.~\eqref{eqn:incoherent_cross_section} can be decomposed into a sum over the matrix elements at each interface $j$. In the following, we use the small roughness $q_{z,j} \sigma_j \ll 1$ approximation which is valid for any high-quality multilayer mirror (cf. \cite{PhysRevB.53.6048} for the more general expression).
+
+In the case of small reflectivity amplitudes, dynamic multiple reflections are often neglected and the dominant term in the decomposition is diffuse scattering of the transmitted fields at the roughness of each interface. The so-called semi-kinematic approximation \cite{PhysRevB.38.2297} yields an explicit expression for Eq.~\eqref{eqn:incoherent_cross_section} with
+\begin{align}
+                \overset{\text{semi-kinematic}}{\underset{\text{diffuse}}{\Big(\frac{d \sigma}{d \Omega}\Big)}} = &\frac{A \pi^2}{\lambda^4}\sum \limits_{j=1}^{N}\sum \limits_{i=1}^{N} \Big((n_j^2 - n_{j+1}^2)^* (n_i^2 - n_{i+1}^2) \nonumber \\ &\qquad\times T^{(1)*}_j T^{(2)*}_j T^{(1)}_i T^{(2)}_i S_{i j}(q_x)\Big)\text{,} \label{eqn:semi_kinematic_theory} 
+\end{align}
+where $A$ is the illuminated sample area, $\lambda$ the wavelength of the incident light and $n_j$ is the complex index of refraction of material $j$. The $T^{(1,2)}_j$ are defined as the amplitude of the transmitted field at the interface $j$ for the given exit angle (2) (represented as a time-inverted beam originating at the detector) and incidence angle (1). The total field at the $j$th interface is expressed in terms of the reflected field $E_r^{(j)}(z)$ propagating towards the vacuum and the transmitted field $E_t^{(j)}(z)$ propagating towards the substrate
+\begin{align}
+        E_t^{(j)}(z) &= T_{j} e^{i k_z^{(j)} z} \text{,} \\
+        E_r^{(j)}(z) &= R_{j} e^{-i k_z^{(j)} z} \text{,} 
+\end{align}
+with $E_{id}^{(j)}(\mathbf{r}) = e^{i \mathbf{k_\parallel r_\parallel}} (E_t^{(j)}(z) + E_r^{(j)}(z))$ being the full solution of the wave equation Eq.~\eqref{eqn:wave_equation} for the ideal multilayer at the $j^\text{th}$ interface. $S_{ij}(q_x)$ is the structure factor describing the influence of the interfacial roughness on the diffuse scattering intensity defined through
+\begin{align}
+S_{ij}(\vec{q}_\parallel; q_z^{(j)}, q_z^{(i)}) = &\frac{\exp \Big[-((q_z^{(j)*})^{2} \sigma_j^2 + (q_z^{(i)})^{2} \sigma_i^2)/2\Big]}{q_z^{(j)*} q_z^{(i)}} \int d^2 \vec{X} \Big(\exp [q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})]-1\Big) \exp(i \vec{q}_\parallel \cdot \vec{X}) \text{,} \label{eqn:full_structure_factor}
+\end{align}
+where $q_z^{(i)}$ is the $z$-component of the scattering vector $\vec{q}$ at the $i$th interface, $\vec{X} = \vec{x} - \vec{x}'$ is the lateral distance vector and $C_{ij}(\vec{x}-\vec{x}') = \langle h_i(\vec{x}) h_j(\vec{x}') \rangle$ is the correlation function of the interface profiles $h(\vec{x})$ of the interfaces $i$ and $j$ \cite{PhysRevB.51.5297,PhysRevB.53.6048}. In case of the small roughness approximation, \begin{align}
+\frac{\exp \Big[-((q_z^{(j)*})^2 \sigma_j^2 + (q_z^{(i)})^{2} \sigma_i^2)/2\Big]}{q_z^{(j)*} q_z^{(i)}} \approx \frac{1}{q_z^{(j)*} q_z^{(i)}}
+\end{align}
+and $\exp [q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})]-1 \approx q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})$ apply and Eq.~\eqref{eqn:full_structure_factor} reduces to
+\begin{align}
+S_{ij}(\vec{q}_\parallel) \approx \int d^2 \vec{X} C_{ij}(\vec{X}) \exp(i \vec{q}_\parallel \cdot \vec{X}) \text{.} \label{eqn:reduced_structure_factor}
+\end{align}
+$S_{ij}(\vec{q}_\parallel)$ is, thus, the Fourier transform of the correlation function $C_{ij}(\vec{X})$. In case of co-planar scattering furthermore $\vec{q}_\parallel \equiv \vec{q}_x$.
+Assuming identical growth for the individual layers, i.e.~a material independent propagation of roughness along the $z$-direction, $S_{ij}(q_x)$ can be expressed in terms of the lateral power spectral density (PSD) $C_{i}(q_x)$ and a vertical replication factor $c_{ij}^{\perp}(q_x)$ \cite{spiller1993multilayer},
+\begin{equation}
+        S_{ij}(q_x) = c_{ij}^{\perp}(q_x) C_{\text{max}(i,j)}(q_x)\text{.} \label{eqn:factorized_structure_factor}
+\end{equation}
+
+Other PSD functions based on different models of lateral interface roughness correlation have been proposed, e.g.~by Sinha et al.~\cite{PhysRevB.38.2297}. We follow the approach by de Boehr et al.~\cite{deBoerLateralCorrelation,PhysRevB.51.5297} for fractal interface roughness, where the lateral correlation function of the $i$th interface is given by
+\begin{align}
+\tilde{C}_i(\vec{X}) = P_i \xi_\parallel^{H_i} |\vec{X}|^{H_i} K_{H_i}\Big(|\vec{X}|/\xi_\parallel\Big) \text{.} \label{eqn:lateral_correlation_function}
+\end{align}
+$H_i$ is the Hurst factor providing a measure for the jaggedness of the interface \cite{PhysRevB.38.2297}, $K_{H_i}$ are the modified Bessel functions of the order $H_i$, $\xi_\parallel$ is a lateral correlation length and
+\begin{align}
+P_i = \frac{\sigma_i^2}{\xi_\parallel^{H_i-1} 2^{H_i-1} \Gamma(1+H_i)/H_i}\text{.}
+\end{align}
+
+Our goal is to determine a single average power spectral density. We thus do not distinguish between individual interfaces in the model and assume an identical roughness properties for all interfaces. Hence $\sigma_j = \sigma$, $H_j = H$ and $C_{\text{max}(i,j)}(q_x) = C(q_x)$. The PSD is given by the Fourier transform of Eq.~\eqref{eqn:lateral_correlation_function} with respect to $q_x$, which yields the closed analytic form
+\begin{equation}
+        C(q_x) = \frac{4 \pi H \sigma^2 \xi_\parallel^2}{(1+|q_x|^2\xi_\parallel^2)^{1+H}} \text{.} \label{eqn:psd} 
+\end{equation}
+
+
+The high degree of thickness stability for well-defined multilayers as is necessary for high-performance mirrors implies a high degree of vertical correlation of individual interfaces roughness throughout the stack. In order to derive the replication factor in Eq.~\eqref{eqn:factorized_structure_factor}, we follow Stearns et al.~\cite{stearns:4286}. In this model, the evolution of the surface roughness $w(x,y)$ during the growth of a single layer is described by the Langevin equation. In its Fourier transformed form, 
+\begin{align}
+\frac{\partial w(f)}{\partial t} = - 4 \pi^2 v f^2 w(f) + \frac{\partial \eta(f)}{\partial t} \text{,} \label{eqn:langevin}
+\end{align}
+where $v$ is a diffusion-like parameter, $\eta(f)$ is random noise normalized to the layer thickness and $w(f)$ describes the roughness evolution in dependence of the spacial frequency $f$. The roughness evolution during the growth of a single layer of a specific material can then be evaluated by discritizing Eq.~\eqref{eqn:langevin} for the successive deposition of material of thickness $\delta d$
+\begin{align}
+w_i(f) = c_\perp(f;\delta d) w_{i-1}(f) + \eta(f) \text{,}
+\end{align}
+where $c_\perp(f;\delta d)$ is the replication factor of roughness for a single deposition. In the limit of repeated infinitesimal depositions until the full $n$th layer of thickness $d_n$ is grown, $c_\perp(f,d_n)$ can be evaluated to be \cite{spiller1993multilayer}
+\begin{align}
+    c_\perp(f,d_n) &= \exp(-4\pi^2 f^2 v \,d_n) \nonumber \\
+                   &= \exp(-q_x^2 v \,d_n)\text{,}
+\end{align}
+with $q_x^2 = 4 \pi^2 f^2$. Assuming identical diffusionlike behavior $v$ for all materials of a multilayer and defining $\xi_\perp(q_x) = 1/(v q_x^2)$, the replication factor in Eq.~\eqref{eqn:factorized_structure_factor} is given by
+\begin{align}
+c_{ij}^\perp(q_x) =  \exp\Bigg(-\sum \limits_{n = \text{min}(i,j)}^{\text{max}(i,j)-1}d_n/\xi_\perp(q_x) \Bigg)\text{.}
+\end{align}
+Here, $\xi_\perp(q_x)$ can be interpreted as a frequency dependent vertical correlation length, describing the distance perpendicular to the stack until the replication factor decreased to $1/e$.
+
+Gullikson et al.~\cite{PhysRevB.59.13273} observed that the direction of the vertical replication of roughness can be tilted with respect to the surface normal. This leads to tilted Bragg planes requiring a coordinate transformation in reciprocal space to account for the tilt angle $\beta$ according to
+\begin{align}
+\overline{q}_z = q_z - q_x \tan \beta\text{.}
+\end{align}
+Since the vertical scattering vector components enter the calculations through the Fresnel coefficients $r_{id}^{(j)}$ and $t_{id}^{(j)}$, an additional factor enters the calculation of Eq.~\eqref{eqn:factorized_structure_factor} through substitution by
+\begin{align}
+\overline{S_{ij}}(q_x) = \exp\Big(-i q_x \tan \beta (z_i-z_j)\Big)  S_{ij}(q_x) \text{,} \label{eqn:tilt_correction}
+\end{align}
+where $z_i$ is the $z$-position of the $i$th interface.
+
+So far, multiple reflections at the interfaces have been ignored (semi-kinematic approximation). However, in the case of high-reflectance multilayer mirrors, this might not be valid. In order to include first order multiple reflections, i.e.~single reflection and transmission processes before and after the diffuse scattering event, in the theoretical treatment, the reflected fields need to be included in Eq.~\eqref{eqn:incoherent_cross_section}. The explicit expression considering dynamic multiple reflections within the layer is given by
+    \begin{align}
+        \overset{\text{dynamic}}{\underset{\text{diffuse}}{\Big(\frac{d \sigma}{d \Omega}\Big)}} = &\Bigg[\frac{A \pi^2}{\lambda^4}\sum \limits_{j=1}^{N}\sum \limits_{i=1}^{N} (n_j^2 - n_{j+1}^2)^* (n_i^2 - n_{i+1}^2)\Big( (T^{(1)}_j + R^{(1)}_j)^* (T^{(2)}_j + R^{(2)}_j)^* \nonumber \\ &\qquad\times(T^{(1)}_i + R^{(1)}_i) (T^{(2)}_i + R^{(2)}_i) \Big) \exp\Big(-i q_x \tan \beta (z_i-z_j)\Big) c_\perp^{i j}\Bigg]\,\, C(q_x) \text{,} \label{eqn:multilayer_enhancement_factor}
+    \end{align}
+where $R^{(1,2)}_j$ are the reflected field amplitude at interface $j$ for the given incidence angle (1) and exit angle (2), the latter again in a time-inverted representation of a beam originating at the detector.
 
 \section{Grazing-incidence X-ray Fluourescence}

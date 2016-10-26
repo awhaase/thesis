@@ -20,14 +20,14 @@
 \usepackage[autostyle,english=british,autopunct]{csquotes}
 \usepackage[backend=biber,sorting=nyt,
             %style=authoryear-comp,autocite=footnote,
-            style=numeric-comp,autocite=superscript,
+            style=numeric-comp,autocite=plain,
             firstinits=true,uniquename=init,backref=false,
             maxbibnames=25,minbibnames=10,maxcitenames=2,
             url=false,doi=true,isbn=false,eprint=true,
             ]{biblatex}
 
 \addbibresource{zotero-full.bib}
-%\addbibresource{references.bib}
+
 %%% fine-tuning of the appearance
 \AtEveryBibitem{\clearfield{month}}
 \AtEveryBibitem{\clearfield{day}}
@@ -209,7 +209,7 @@
 }
 
 %%% glossaries for Abbreviations, Glossary
-\usepackage[nonumberlist]{glossaries}
+\usepackage[nonumberlist, nomain]{glossaries}
 \usepackage{acronym}
 \newglossary[alg]{acronym}{acr}{acn}{\acronymname}
 \newglossary[slg]{symbols}{sls}{slo}{\glssymbolsgroupname}
