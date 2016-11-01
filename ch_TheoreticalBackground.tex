@@ -32,11 +32,11 @@ The radiation propagating as a plane wave has a wavelength of $\gls{lambda}$, wh
 \begin{align}
 E_\text{ph} = \frac{h c}{\lambda} = \hbar \gls{omega}\text{,}
 \end{align}
-where $\gls{h}$ is the Planck's constant and $\hbar = \sfrac{h}{2 \pi}$. The photon energy is typically expressed in units of the electron charge, which defines the unit \emph{\gls{eV}} used for expressions in this thesis.
+where $\gls{h}$ is the Planck's constant and $\hbar = \sfrac{h}{2 \pi}$. From this follows that the modulus of the vacuum wave vector, also called the \emph{wave number}, $\gls{k_0} = \sfrac{2 \pi}{\lambda}$. The photon energy is typically expressed in units of the electron charge, which defines the unit \emph{\gls{eV}} used for expressions in this thesis.
 
 This description of the propagation of electromagnetic radiation in vacuum can be extended to the propagation inside a homogeneous medium. This will be discussed in the following section on the interaction of \gls{euv} and x-ray radiation with matter.
 
-\section{Interaction of EUV and X-ray Radiation With Matter}
+\section{Interaction of EUV and X-ray Radiation With Matter} \label{ch_theo:sec_interaction}
 As noted above, the wave equation Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} still holds for the propagation of radiation inside a homogeneous medium in slightly modified form. The speed of light \gls{c}, while being a constant in vacuum with respect to the energy, becomes energy dependent once the wave enters the medium \cite{bergevin_interaction_2009}. This \emph{dispersion} has an impact on the wave number. In addition, in general the radiation will be partially absorbed while propagating through matter. To account for this change of the wave number with respect to the vacuum propagation we introduce a complex, energy dependent \emph{index of refraction},
 \begin{align}
 \gls{n} = 1 - \delta - i \beta \text{,} \label{ch_theo:eqn_n}
@@ -53,7 +53,7 @@ The continuum description above gives a consistent description of the reflection
 When a photon hits an atom with its electrons three very important process can occur, that need to be distinguished.
 \begin{description}
        \item[Elastic Scattering]
-          {The photon interacts with the matter in an energy conserving way. It may be scattered out of its original direction by interaction with single free electrons, also known as \emph{Thomson scattering}. In general however, it might encounter ensembles of electrons, i.e.~an electron density such as the bound electrons of an atom. This generalization of the scattering by an electron density is called \emph{Rayleigh scattering}.}
+          {The photon interacts with the matter in an energy conserving way. It may be scattered out of its original direction by interaction with single free electrons, also known as \emph{Thomson scattering}. In general however, it might encounter ensembles of electrons, i.e.~an electron density such as the bound electrons of an atom. This generalization of the scattering by an electron density is called \emph{Rayleigh scattering}, which is highly photon energy dependend.}
        \item[Inelastic Scattering]
           {In this case the photon exchanges a portion of its energy with the system it interacts with resulting in a loss of energy and, thus, increased wavelength for the scattered photon. This is the results of the particle-wave-duality of electromagnetic radiation. In this scattering process the total momentum of the incoming photon is conserved by scattering with an electron and transfering a portion of its momentum. This process is known as \emph{Compton scattering}. In this picture the electron is treated as a free electron which ends up with an increased momentum. There is, however, the possibility that the photon excites a bound electron into an excited state thereby transferring its energy. This process is not covered by the Compton scattering process and is known as \emph{Raman scattering}.}
        \item[Absorption]
@@ -66,10 +66,28 @@ Scattering of an incoming plane wave is described by the quantity of the \emph{d
 \begin{align}
 \Big(\gls{dcs}\Big) &= \frac{I_\text{scattered}}{\Phi_0 \Delta \Omega}\text{,}
 \end{align}
-where $I_\text{scattered}$ is the scattered intensity into the solid angle $\Delta \Omega$ and $\Phi_0$ is the total flux of incoming photons of the primary wave per unit area. Due to this proportionality, the goal of calculating the scattering intensity is achieved by determining the differential cross section for the scattering problem at hand. As an example we shall demonstrate the differential cross section at hand of scattering from a single free electron and extend that description to scattering from an arbitrary electron density \gls{el_dens}.
+where $I_\text{scattered}$ is the scattered intensity into the solid angle $\Delta \Omega$ and $\Phi_0$ is the total flux of incoming photons of the primary wave per unit area. Due to this proportionality, the goal of calculating the scattering intensity is achieved by determining the differential cross section for the scattering problem at hand. As an example we shall briefly demonstrate the differential cross section at hand of scattering from a single free electron and extend that description to scattering from an arbitrary electron density \gls{el_dens}.
 
-\paragraph{From Thomson scattering to Rayleigh scattering}
+\paragraph{Rayleigh scattering from atoms}
+The scattering cross section in case of a single free electron is given by
+\begin{align}
+ \Big(\gls{dcs}\Big) &= \Big(\frac{e^2}{4 \pi \epsilon_0 m c^2}\Big)^2 |\vec{e_i} \cdot \vec{e_s}|^2 = \gls{r_e}^2 |\vec{e_i} \cdot \vec{e_s}|^2 \text{,}
+\end{align}
+where $e$ is the electron charge and the unit vectors $\vec{e_i}$ and $\vec{e_s}$ describe the direction of the electric field vector before and after the scattering process, respectively. The differential cross section in the case of \emph{Thomson scattering} is proportional to the square of the classical electron radius $\gls{r_e}$. Depending on the polarization properties of the impinging radiation, the scalar product of the two unit vectors yields
+\begin{align}
+|\vec{e_i} \cdot \vec{e_s}|^2 &= \begin{cases}
+    1 & \text{electric field perpendicular to scattering plane} \\
+    \cos^2(\Delta \Psi) & \text{electric field parallel to scattering plane} \\
+    \frac{1}{2}\big(1+\cos^2(\Delta \Psi)\big) & \text{unpolarized radiation}
+\end{cases} \text{,}
+\end{align}
+where $\Delta \Psi$ is the angle between the incoming beam and the scatter direction (cf.~Fig.~\ref{ch_theo:fig_scattering_process} below) \cite{als-nielsen_x-rays_2011}.
 
+In general, the scattering from a single free electron will not be an accurate description for most scattering problems of radiation on matter. Instead electrons are bound in an atom and the radiation is scattered by the electron density at a certain position $\vec{r}$ associated with the distribution of electrons in a certain atom. The result is a differential cross section considering the scattering from a volume element $d\vec{r}$ by the electron density \gls{el_dens},
+\begin{align}
+\Big(\gls{dcs}\Big) &= \gls{r_e}^2 |f^0(\vec{q})|^2 |\vec{e_i} \cdot \vec{e_s}|^2 = \gls{r_e}^2 \Big|\int \gls{el_dens} e^{- i \vec{q} \cdot \vec{r}} \, d\vec{r}\Big|^2 \, |\vec{e_i} \cdot \vec{e_s}|^2 \text{,} \label{ch_theo:eqn_atomic_form_factor}
+\end{align}
+where $f^0(\vec{q})$ is called the \emph{atomic form factor} and $\gls{q} = \vec{k}_f - \vec{k}_{i}$ the \emph{wavevector transfer} or \emph{scattering vector} \cite{daillant_x-ray_2009}. The latter in Eq.~\eqref{ch_theo:eqn_atomic_form_factor} accounts for the phase difference between different scattering centers in the spacial electron distribution and is an important characteristic of any scattering process. Since the scattering processes described in this thesis are considered in reflection geometry only, we shall define it in terms of the corresponding incidence and exit angles below.
 
 \paragraph{Momentum Transfer and Reciprocal Space}
 Assuming a scattering process from a single surface in reflection geometry as depicted in Fig.~\ref{ch_theo:fig_scattering_process} the incoming beam irradiating the sample under the angle of incidence \gls{alpha_i} is described by the wave vector $\gls{k}_i$.
@@ -92,11 +110,80 @@ q_z &= k \big( \cos \gls{alpha_f} + \cos \gls{alpha_i}\big)\text{.}
 \end{align}
 The momentum transfer vector is a characteristic quantity for scattering processes. Its three components in Eq.~\eqref{ch_theo:eqn_q_components} span the so called reciprocal space.
 
+\paragraph{Anomalous scattering and Born approximation}
+The differential cross section found in Eq.~\eqref{ch_theo:eqn_atomic_form_factor} with the atomic form factor $f^{0}(\vec{q})$ follows from a quantum mechanical perturbation calculation and is strictly speaking only valid far away from any electronic resonance. That, however, might not be the case, especially for \gls{euv} and x-ray radiation scattered on light elements. Here, especially the core shell energy levels are close to the energy of the impinging radiation. In that case the electron response will no longer be that of a free or quasi free electron but influenced due to the fact that it is tightly bound. This effect is called \emph{dispersion} and results in two wavelength dependent dispersion correction factors in the atomic form factor \cite{als-nielsen_x-rays_2011, daillant_x-ray_2009}, which is described as
+\begin{align}
+ f(\vec{q}, \lambda) &= f^0(\vec{q}) + f'(\lambda) + i f''(\lambda) \text{.} \label{ch_theo:eqn_dispersion_correction}
+\end{align}
+The \emph{atomic scattering factors} $f'(\lambda)$ and $f''(\lambda)$ are strongly dependent on the element of the atoms involved in the scattering process. The first factor $f'(\lambda)$ accounts for the modified response of an electron close to an electronic resonance, often described in analogy to a driven harmonic oscillator close to its eigenfrequency. The second factor $f''(\lambda)$ describes dissipative processes into the atomic system. It is associated with the absorption of radiation in matter. In fact, both factors, while being related through the so called \emph{Kramers-Kronig relation}, define the complex index of refraction (expressed here for a single element) of the continuum theory introduced above at the beginning of Sec.~\ref{ch_theo:sec_interaction} through
+\begin{align}
+n &= 1 - \delta - i \beta = 1 - \frac{\gls{r_e}}{2 \pi} \lambda^2 n_a f(0, \lambda) \text{,}
+\end{align}
+where $n_a$ is the number of atoms per unit volume \cite{thompson_x-ray_2001}.
+
+Finally, we should note that the atomic form factor including its dispersion correction terms in Eq.~\eqref{ch_theo:eqn_dispersion_correction} and consequently the differential scattering cross section from Eq.~\eqref{ch_theo:eqn_atomic_form_factor} is obtained following a perturbation theory approach. In the quantum mechanical description the field driving the scattering process is considered to be the incident wave field (e.g.~a plane wave) instead of the exact total field including the scattered field component. This is an approximation, called the \emph{Born approximation}, only valid if the scattered field is small compared to the incident field. This implicitly corresponds to considering only one single scattering event per incident photon. Multiple scattering processes are not included in this description (kinematic scattering). Later, we will generalize this approximation to more complex, exactly solvable scattering problems instead of considering only the kinematic processes.
+% \begin{description}
+%     \item[Thomson scattering]{Free electron, no resonances, wavelength independend}
+%     \item[Rayleigh scattering]{Bound electron with resonances, in limiting case Thomson (very high energy), at low energy (low frequency) strongly dependent on the frequency}
+%     \item[Anomalous scattering]{X-rays close to resonances, especially of inner shells. Dispersion correction with $f'$ adn $i f''$ needed. This is Thomson scattering plus correction. The so called atomic scattering factors are dependent on the element and enter the calculation of the complex index of refraction.}
+% \end{description}
+
+
+
+
 \subsection{Absorption and Fluorescence Radiation}
 
 \section{Specular Reflectance from Surfaces and Interfaces in Multilayer Systems}
 
 \paragraph{Matrix Algorithm}
+The EUV and X-ray reflectivities were calculated based on the well-established matrix algorithm \cite{born_principles_1965,mikulik_x-ray_1997}. The roughness and interdiffusion are taken into account by using modified Fresnel coefficients including a N\'{e}vot-Croce factor using $\sigma$ to describe the disturbances at the interfaces \cite{croce_p._etude_1976}. We assume the interdiffusion and roughness profile to be of error-function like shape, which leads to the modified Fresnel coefficients
+\begin{align}
+        r^{(j)} &= r_{id}^{(j)} \exp(-2 k_z^{(j)} k_z^{(j+1)} 
+\sigma^2)\text{,} \nonumber \\
+        t^{(j)} &= t_{id}^{(j)} \exp((k_z^{(j)} - k_z^{(j+1)})^2 \sigma^2/2) 
+\text{,} \label{eqn:mod_fresnel}
+\end{align}
+where $r_{id}^{(j)}$ and $t_{id}^{(j)}$ are the unmodified Fresnel coefficients for an ideal multilayer system at each interface $j$, defined as
+\begin{align}
+        r_{id}^{(j)} &= \frac{k_z^{(j)} - k_z^{(j+1)}}{k_z^{(j)} + 
+k_z^{(j+1)}}\text{,} \nonumber \\
+        t_{id}^{(j)} &= \frac{2 k_z^{(j)}}{k_z^{(j)} + k_z^{(j+1)}}\text{.} \label{eqn:id_fresnel}
+\end{align}
+The $z$-component of the complex wave vector in each layer $j$ is denoted with $k_z^{(j)}$. It is calculated according to the incoming wave vector in vacuum $k^\text{vac} = 2\pi/\lambda$ with Snell's law
+\begin{align}
+k_z^{(j)} &= \sqrt{\Big(n^{(j)} k^{\text{vac}}\Big)^2 - k_x^{\text{vac}}}
+\end{align}
+where $k^\text{vac}_x = \cos(\alpha_i) k^\text{vac}$ with the angle of incidence $\alpha_i$ defined from the surface normal (cf.~Fig.~\ref{fig:geometry}) and $n$ is the complex index of refraction of layer $j$. The transmitted and reflected fields can then be calculated based on the following matrix equation with the boundary conditions of a known incoming electric field $E_0$ and the vanishing reflected field inside the infinite substrate
+\begin{align}
+\begin{pmatrix}
+E_0 \\
+E_R
+\end{pmatrix} &=
+\prod\limits_{j} M_j
+\begin{pmatrix}
+E_T \\
+0
+\end{pmatrix} \text{.} \label{eqn:field_propagation_equation}
+\end{align} 
+The propagation matrix is defined as \cite{mikulik_x-ray_1997}
+\begin{align}
+M_j = \frac{1}{t^{(j)}}
+\begin{pmatrix}
+1 & r^{(j)} \\
+r^{(j)} & 1
+\end{pmatrix}
+\begin{pmatrix}
+e^{-i k_z^{(j+1)} d_j} & 1 \\
+1 & e^{i k_z^{(j+1)} d_j}
+\end{pmatrix}
+\text{,} \label{eqn:field_propagation_matrix}
+\end{align}
+including the modified Fresnel coefficients $r^{(j)}$ and $t^{(j)}$ defined in Eq.~\eqref{eqn:mod_fresnel} and the thickness $d_j$ of layer $j$. The total reflectance $R$ and transmittance $T$ can then be calculated as the quotient of the (known) incoming field $E_0$ with the reflected $E_R$ and transmitted field $E_T$, respectively, as
+\begin{align}
+R &= |E_R/E_0|^2\text{,} \nonumber\\
+T &= |E_T/E_0|^2 \text{.} \label{eqn:refl_trans}
+\end{align}
+
 \begin{figure}[htb]
     %\def\svgwidth{0.5\textwidth}
     \import{svg/}{multilayer_sheme.pdf_tex}
