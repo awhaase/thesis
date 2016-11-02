@@ -454,7 +454,7 @@
          sodipodi:role="line"
          id="tspan4064"
          x="310.09454"
-         y="429.46738">$\vec{k}^{(1)}$</tspan></text>
+         y="429.46738">$\vec{k}_t^{(1)}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4070"
@@ -476,7 +476,7 @@
          sodipodi:role="line"
          id="tspan4076"
          x="314.09454"
-         y="367.69318">$\vec{k}_f^{(0)}$</tspan></text>
+         y="367.69318">$\vec{k}_r^{(0)}$</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)"
        d="m 214.66401,456.06486 0,-120.1049"

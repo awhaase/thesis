@@ -45,7 +45,11 @@ where its real part $\delta$ accounts for the deviation from the vacuum index of
 \begin{align}
 \beta = \frac{\gls{lambda} \mu}{4 \pi} \text{.}
 \end{align}
-By replacing the vacuum wave number $\gls{k_0}$ with $k = n \gls{k_0}$ in the wave equation Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} and the plain wave solutions in Eq.~\eqref{ch_theo:eqn_plain_wave}, we obtain the wave equation for the propagation of x-rays and EUV radiation inside a medium and its solutions.
+By replacing the vacuum wave number $\gls{k_0}$ with 
+\begin{align}
+k = n \gls{k_0} \label{ch_theo:eqn_k_inside_medium}
+\end{align}
+in the wave equation Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} and the plain wave solutions in Eq.~\eqref{ch_theo:eqn_plain_wave}, we obtain the wave equation for the propagation of x-rays and EUV radiation inside a medium and its solutions.
 
 \paragraph{Interaction of a Photon With Atoms and its Electrons}
 The continuum description above gives a consistent description of the reflection, refraction and absorption of x-rays and EUV radiation at the interfaces of vacuum and matter in a macroscopic picture. The treatment is analogous to reflection and refraction in classical optics and serves well to describe these processes in case of specular reflectance from homogeneous materials as we shall see later in this chapter. However, it is necessary to also give a more general description on the interaction of a photon with the atoms, and more importantly the electrons, of a medium to describe the origin of the diffuse scattering and fluorescence processes, which are not covered by the continuum description above.
@@ -134,32 +138,79 @@ Finally, we should note that the atomic form factor including its dispersion cor
 \subsection{Absorption and Fluorescence Radiation}
 
 \section{Specular Reflectance from Surfaces and Interfaces in Multilayer Systems}
-
+As mentioned above in the beginning of Sec.~\ref{ch_theo:sec_interaction} the reflection and transmission of EUV and x-ray radiation will be treated here with a continuum approach based on the index of refraction. Before we treat specular reflectance and transmittance in multilayer systems, lets recapitulate reflection and transmission through a single surface. Fig.~\ref{ch_theo:fig_singlelayer_scheme} gives the necessary definitions for radiation passing through an abrupt interface. The coordinate system was chosen such that the surface is perpendicular to the $z$-direction and $z=0$ is at the surface.
 \begin{figure}[htb]
     \def\svgwidth{0.57\textwidth}
     \import{svg/}{singlelayer_sheme.pdf_tex}
     \caption{Illustration of \emph{Snell's law}. The parallel component of the wave vector $k_x^{(0)} = k_x^{(1)} = k_x$ remains unchanged when the radiation enters the medium. The perpendicular component changes according to the index of refraction (see main text).}
     \label{ch_theo:fig_singlelayer_scheme}
 \end{figure}
-\paragraph{Matrix Algorithm}
-The EUV and X-ray reflectivities were calculated based on the well-established matrix algorithm \cite{born_principles_1965,mikulik_x-ray_1997}. The roughness and interdiffusion are taken into account by using modified Fresnel coefficients including a N\'{e}vot-Croce factor using $\sigma$ to describe the disturbances at the interfaces \cite{croce_p._etude_1976}. We assume the interdiffusion and roughness profile to be of error-function like shape, which leads to the modified Fresnel coefficients
+The refraction process in that case is entirely governed by \emph{Snell's law} known from classical optics \cite{born_principles_1965}. With the solutions of the wave equation for propagation in homogeneous media in the beginning of Sec.~\ref{ch_theo:sec_interaction}, Snell's law can be expressed in terms of the wave vector by
 \begin{align}
-        r^{(j)} &= r_{id}^{(j)} \exp(-2 k_z^{(j)} k_z^{(j+1)} 
-\sigma^2)\text{,} \nonumber \\
-        t^{(j)} &= t_{id}^{(j)} \exp((k_z^{(j)} - k_z^{(j+1)})^2 \sigma^2/2) 
-\text{,} \label{eqn:mod_fresnel}
+k_z^{(j)} &= \sqrt{\Big(n^{(j)} \gls{k_0}\Big)^2 - k_x^2} \text{,} \label{ch_theo:eqn_snells_law}
 \end{align}
-where $r_{id}^{(j)}$ and $t_{id}^{(j)}$ are the unmodified Fresnel coefficients for an ideal multilayer system at each interface $j$, defined as
+where $k_x = \cos(\alpha_i) \gls{k_0}$ with the angle of incidence $\alpha_i$ defined from the surface normal (cf.~Fig.~\ref{ch_theo:fig_scattering_process}) and $n^{(j)}$ is the complex index of refraction of layer $j$.
+
+Another well known requirement at the interface is the continuity of both the electric field amplitude and its derivative \cite{born_principles_1965, gibaud_specular_2009}. From that follows that the parallel component of the wave vector $k_x^{(j)} \equiv k_x \forall j$ does not change at the interface. Together with the relation in Eq.~\ref{ch_theo:eqn_k_inside_medium} this yields a relation of the electric field amplitudes in vacuum (layer $j=0$) and the medium (layer $j=1$) through the \emph{Fresnel coefficients} of reflection $r^{(0)}$ and transmission $t^{(0)}$ via
 \begin{align}
-        r_{id}^{(j)} &= \frac{k_z^{(j)} - k_z^{(j+1)}}{k_z^{(j)} + 
-k_z^{(j+1)}}\text{,} \nonumber \\
-        t_{id}^{(j)} &= \frac{2 k_z^{(j)}}{k_z^{(j)} + k_z^{(j+1)}}\text{.} \label{eqn:id_fresnel}
+\begin{pmatrix}
+E_t  \\ 
+E_r 
+\end{pmatrix} &=
+\begin{pmatrix}
+t^{(0)} E_0 \\
+r^{(0)} E_0
+\end{pmatrix} \text{,} \label{ch_theo:eqn_fresnel_reflection}
 \end{align}
-The $z$-component of the complex wave vector in each layer $j$ is denoted with $k_z^{(j)}$. It is calculated according to the incoming wave vector in vacuum $\gls{k_0} = 2\pi/\lambda$ with Snell's law
+where $E_0$ is the field amplitude of the incident field with wave vector $\vec{k}_i^{(0)}$, $E_t^{(1)}$ is the transmitted field amplitude in layer $j=1$ with wave vector $\vec{k}^{(1)}$ and $E_r^{(0)}$ is the reflected field amplitude with wave vector $\vec{k}_r^{(0)}$. For the transmission and reflection at any two interfaces $j$ and $j+1$ the Fresnel coefficients read
 \begin{align}
-k_z^{(j)} &= \sqrt{\Big(n^{(j)} \gls{k_0}\Big)^2 - k_x^2}
+        r^{(j)} &= \frac{k_z^{(j)} - k_z^{(j+1)}}{k_z^{(j)} + 
+k_z^{(j+1)}}\text{,}  \label{ch_theo:eqn_fresnel_reflection_coefficient}\\
+        t^{(j)} &= \frac{2 k_z^{(j)}}{k_z^{(j)} + k_z^{(j+1)}}\text{.}  \label{ch_theo:eqn_fresnel_transmission_coefficient}
 \end{align}
-where $k_x = \cos(\alpha_i) \gls{k_0}$ with the angle of incidence $\alpha_i$ defined from the surface normal (cf.~Fig.~\ref{ch_theo:fig_scattering_process}) and $n^{(j)}$ is the complex index of refraction of layer $j$. The transmitted and reflected fields can then be calculated based on the following matrix equation with the boundary conditions of a known incoming electric field $E_0$ and the vanishing reflected field inside the infinite substrate
+\paragraph{Matrix Algorithm for Multilayer Systems}
+In this part we extend the calculation above to a system of multiple layers on top of a substrate which is assumed to be infinite. This provides the exact fully dynamic solution of the wave equation for an ideal multilayer system with abrupt interfaces. Thus, all reflections and transmissions at all interfaces are considered, including multiple events. The EUV and X-ray fields were calculated based on the well-established matrix algorithm which is an extension of the above Fresnel coefficient method \cite{born_principles_1965,mikulik_x-ray_1997}. The field inside each layer $j$ is described similarly to Eq.~\eqref{ch_theo:eqn_fresnel_reflection} by their reflected and transmitted field components as
+\begin{align}
+E^{(j)}(\vec{r}) = e^{i \vec{k}_\parallel \cdot \vec{r}_\parallel} (E_t^{(j)}(z) + E_r^{(j)}(z)) \text{,}
+\end{align}
+where $\vec{k}_\parallel$ is the wave vector component parallel to the interfaces (in the two-dimensional geometry of Fig.~\ref{ch_theo:fig_singlelayer_scheme} above was $\vec{k}_\parallel = \vec{k}_x$) and $\vec{r}_\parallel$ is the position perpendicular to the $z$-direction. The two field components are further described by the transmitted and reflected field amplitudes $T_j$ and $R_j$ as
+\begin{align}
+E_t^{(j)}(z) &= T_{j} e^{i k_z^{(j)} z} \text{,} \\
+E_r^{(j)}(z) &= R_{j} e^{-i k_z^{(j)} z} \text{,} 
+\end{align}
+where $E_t^{(j)}(z)$ describes the field component propagating towards the substrate and $E_r^{(j)}(z)$ is the reflected field component in each layer propagating towards the vacuum. The field amplitudes and layer thicknesses are illustrated in Fig.~\ref{ch_theo:fig_multilayer_scheme}.
+\begin{figure}[htb]
+    %\def\svgwidth{0.5\textwidth}
+    \import{svg/}{multilayer_sheme.pdf_tex}
+    \caption{Illustration of the field amplitudes in the exact analytical solution of field propagation through a multilayer stack. The vertical coordiante $z$ is defined to be zero at the substrate interface.}
+    \label{ch_theo:fig_multilayer_scheme}
+\end{figure}
+The components of two adjacent layers are connected by the propagation matrix $M_j$
+\begin{align}
+M_j = \frac{1}{t^{(j)}}
+\begin{pmatrix}
+1 & r^{(j)} \\
+r^{(j)} & 1
+\end{pmatrix}
+\begin{pmatrix}
+e^{-i k_z^{(j+1)} d_{j+1}} & 1 \\
+1 & e^{i k_z^{(j+1)} d_{j+1}}
+\end{pmatrix}
+\text{,} \label{ch_theo:eqn_field_propagation_matrix}
+\end{align}
+through the relation
+\begin{align}
+\begin{pmatrix}
+E^{(j)}_t \\
+E^{(j)}_r
+\end{pmatrix} &=
+M_j
+\begin{pmatrix}
+E^{(j+1)}_t \\
+E^{(j+1)}_r
+\end{pmatrix} \text{.} \label{ch_theo:eqn_field_propagation_equation}
+\end{align}
+The field propagation matrix in Eq.~\eqref{ch_theo:eqn_field_propagation_matrix} includes the Fresnel coefficients from Eq.~\eqref{ch_theo:eqn_fresnel_reflection_coefficient} and Eq.~\eqref{ch_theo:eqn_fresnel_transmission_coefficient} accounting for the reflection and transmission process at the interface. In between two interfaces a homogeneous layer was assumed so that the field is only propagated by the phase factor $e^{\pm i k_z^{(j)} d_{j}}$ along the $z$-direction and the layer thickness $d_j$. The system of equations in Eq.~\eqref{ch_theo:eqn_field_propagation_equation} becomes solvable by replicated application of the field propagation matrix to relate the \emph{known} incident field amplitude $E_0$, the total reflected field amplitude in the vacuum $E_R$ and the transmitted field in the substrate $E_T$. Since there can not be a reflected field inside the substrate the system of equations Eq.~\eqref{ch_theo:eqn_field_propagation_equation} reads
 \begin{align}
 \begin{pmatrix}
 E_0 \\
@@ -169,36 +220,25 @@ E_R
 \begin{pmatrix}
 E_T \\
 0
-\end{pmatrix} \text{.} \label{eqn:field_propagation_equation}
-\end{align} 
-The propagation matrix is defined as \cite{mikulik_x-ray_1997}
-\begin{align}
-M_j = \frac{1}{t^{(j)}}
-\begin{pmatrix}
-1 & r^{(j)} \\
-r^{(j)} & 1
-\end{pmatrix}
-\begin{pmatrix}
-e^{-i k_z^{(j+1)} d_j} & 1 \\
-1 & e^{i k_z^{(j+1)} d_j}
-\end{pmatrix}
-\text{,} \label{eqn:field_propagation_matrix}
+\end{pmatrix} \text{,} \label{eqn:field_propagation_equation}
 \end{align}
-including the modified Fresnel coefficients $r^{(j)}$ and $t^{(j)}$ defined in Eq.~\eqref{eqn:mod_fresnel} and the thickness $d_j$ of layer $j$. The total reflectance $R$ and transmittance $T$ can then be calculated as the quotient of the (known) incoming field $E_0$ with the reflected $E_R$ and transmitted field $E_T$, respectively, as
+with two unknowns $E_R$ and $E_T$ which can be calculated based on this relation. Thereby all field amplitudes at each interface can be obtained. The total reflectance $R$ and transmittance $T$ can then be calculated as the quotient of the (known) incoming field $E_0$ with the reflected $E_R$ and transmitted field $E_T$, respectively, as
 \begin{align}
 R &= |E_R/E_0|^2\text{,} \nonumber\\
 T &= |E_T/E_0|^2 \text{.} \label{eqn:refl_trans}
 \end{align}
 
-\begin{figure}[htb]
-    %\def\svgwidth{0.5\textwidth}
-    \import{svg/}{multilayer_sheme.pdf_tex}
-    \caption{Illustration of the field amplitudes in the exact analytical solution of field propagation through a multilayer stack. The vertical coordiante $z$ is defined to be zero at the substrate interface.}
-    \label{ch_theo:fig_multilayer_scheme}
-\end{figure}
+\paragraph{Accounting for Roughness and Interdiffusion}
+The calculation above yields an exact and fully dynamic solution of the problem of reflecting and transmitting EUV or x-ray radiation from and through a generic multilayer. However, in a realistic sample the interfaces will not be perfectly flat and abrupt. Instead the two materials could mix or the interfaces could be rough. Both effects lead to a diminished reflectance of each interface and thus reduces the reflected field amplitudes which changes their interference behavior. These two processes of roughness and interdiffusion can be treated within the framework of the matrix algorithm presented above by using modified Fresnel coefficients A detailed calculation for arbitrary roughness interface profiles along the $z$-direction can be found in \cite{vidal_metallic_1984}, for example.
 
-\paragraph{Field Calculation}
-
+For our calculations we assume a Gaussian distribution function of the roughness and interdiffusion. The general expression found in \cite{vidal_metallic_1984} for the modified Fresnel coefficients then yields the result of N\'{e}vot and Croce \cite{croce_p._etude_1976}. The Gaussian distribution function corresponds to the assumption of the interdiffusion and roughness profile to be of error-function like shape, which leads to the modified Fresnel coefficients
+\begin{align}
+       \tilde{r}^{(j)} &= r^{(j)} \exp(-2 k_z^{(j)} k_z^{(j+1)} 
+\sigma_j^2)\text{,} \nonumber \\
+       \tilde{t}^{(j)} &= t^{(j)} \exp((k_z^{(j)} - k_z^{(j+1)})^2 \sigma_j^2/2) 
+\text{,} \label{eqn:mod_fresnel}
+\end{align}
+where $r^{(j)}$ and $t^{(j)}$ are the unmodified Fresnel coefficients for an ideal multilayer system at each interface $j$ from Eq.~\eqref{ch_theo:eqn_fresnel_reflection_coefficient} and Eq.~\eqref{ch_theo:eqn_fresnel_transmission_coefficient}. The parameter $\sigma_j$ is the \emph{mean square roughness} or \emph{interdiffusion}, respectively at the $j$th interface. For any calculation within the framework of this thesis, those modified Fresnel coefficients were used in Eq.~\eqref{ch_theo:eqn_field_propagation_matrix} instead of the ideal coefficients.
 
 
 
