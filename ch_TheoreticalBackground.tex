@@ -134,7 +134,12 @@ Finally, we should note that the atomic form factor including its dispersion cor
 \subsection{Absorption and Fluorescence Radiation}
 
 \section{Specular Reflectance from Surfaces and Interfaces in Multilayer Systems}
-
+\begin{figure}[htb]
+    \def\svgwidth{0.57\textwidth}
+    \import{svg/}{singlelayer_sheme.pdf_tex}
+    \caption{Illustration of \emph{Snell's law}. The parallel component of the wave vector $k_x^{(0)} = k_x^{(1)} = k_x$ remains unchanged when the radiation enters the medium. The perpendicular component changes according to the index of refraction (see main text).}
+    \label{ch_theo:fig_singlelayer_scheme}
+\end{figure}
 \paragraph{Matrix Algorithm}
 The EUV and X-ray reflectivities were calculated based on the well-established matrix algorithm \cite{born_principles_1965,mikulik_x-ray_1997}. The roughness and interdiffusion are taken into account by using modified Fresnel coefficients including a N\'{e}vot-Croce factor using $\sigma$ to describe the disturbances at the interfaces \cite{croce_p._etude_1976}. We assume the interdiffusion and roughness profile to be of error-function like shape, which leads to the modified Fresnel coefficients
 \begin{align}
@@ -149,11 +154,11 @@ where $r_{id}^{(j)}$ and $t_{id}^{(j)}$ are the unmodified Fresnel coefficients 
 k_z^{(j+1)}}\text{,} \nonumber \\
         t_{id}^{(j)} &= \frac{2 k_z^{(j)}}{k_z^{(j)} + k_z^{(j+1)}}\text{.} \label{eqn:id_fresnel}
 \end{align}
-The $z$-component of the complex wave vector in each layer $j$ is denoted with $k_z^{(j)}$. It is calculated according to the incoming wave vector in vacuum $k^\text{vac} = 2\pi/\lambda$ with Snell's law
+The $z$-component of the complex wave vector in each layer $j$ is denoted with $k_z^{(j)}$. It is calculated according to the incoming wave vector in vacuum $\gls{k_0} = 2\pi/\lambda$ with Snell's law
 \begin{align}
-k_z^{(j)} &= \sqrt{\Big(n^{(j)} k^{\text{vac}}\Big)^2 - k_x^{\text{vac}}}
+k_z^{(j)} &= \sqrt{\Big(n^{(j)} \gls{k_0}\Big)^2 - k_x^2}
 \end{align}
-where $k^\text{vac}_x = \cos(\alpha_i) k^\text{vac}$ with the angle of incidence $\alpha_i$ defined from the surface normal (cf.~Fig.~\ref{fig:geometry}) and $n$ is the complex index of refraction of layer $j$. The transmitted and reflected fields can then be calculated based on the following matrix equation with the boundary conditions of a known incoming electric field $E_0$ and the vanishing reflected field inside the infinite substrate
+where $k_x = \cos(\alpha_i) \gls{k_0}$ with the angle of incidence $\alpha_i$ defined from the surface normal (cf.~Fig.~\ref{ch_theo:fig_scattering_process}) and $n^{(j)}$ is the complex index of refraction of layer $j$. The transmitted and reflected fields can then be calculated based on the following matrix equation with the boundary conditions of a known incoming electric field $E_0$ and the vanishing reflected field inside the infinite substrate
 \begin{align}
 \begin{pmatrix}
 E_0 \\
@@ -197,7 +202,7 @@ T &= |E_T/E_0|^2 \text{.} \label{eqn:refl_trans}
 
 
 \section{Diffuse Near-normal Incidence Scattering}
-Our theoretical description of the diffuse EUV scattering from multilayers is based on the distorted-wave Born approximation (DWBA)~\cite{holy_nonspecular_1994,holy_x-ray_199}, widely used in the analysis of hard X-ray scattering. The DWBA is a perturbation theory in which the interfacial roughness is considered to be a small deviation from the ideal multilayer. This corresponds to a potential in the wave equation 
+Our theoretical description of the diffuse EUV scattering from multilayers is based on the distorted-wave Born approximation (DWBA)~\cite{holy_nonspecular_1994,holy_x-ray_1993}, widely used in the analysis of hard X-ray scattering. The DWBA is a perturbation theory in which the interfacial roughness is considered to be a small deviation from the ideal multilayer. This corresponds to a potential in the wave equation 
 \begin{equation}
         (\Delta + K^2) |E(\mathbf{r})\rangle = V(\mathbf{r}) |E(\mathbf{r})\rangle\text{,} \label{eqn:wave_equation} 
 \end{equation}
@@ -242,11 +247,11 @@ Assuming identical growth for the individual layers, i.e.~a material independent
         S_{ij}(q_x) = c_{ij}^{\perp}(q_x) C_{\text{max}(i,j)}(q_x)\text{.} \label{eqn:factorized_structure_factor}
 \end{equation}
 
-Other PSD functions based on different models of lateral interface roughness correlation have been proposed, e.g.~by Sinha et al.~\cite{PhysRevB.38.2297}. We follow the approach by de Boehr et al.~\cite{deBoerLateralCorrelation,PhysRevB.51.5297} for fractal interface roughness, where the lateral correlation function of the $i$th interface is given by
+Other PSD functions based on different models of lateral interface roughness correlation have been proposed, e.g.~by Sinha et al.~\cite{sinha_x-ray_1988}. We follow the approach by de Boehr et al.~\cite{boer_influence_1994,de_boer_x-ray_1995} for fractal interface roughness, where the lateral correlation function of the $i$th interface is given by
 \begin{align}
 \tilde{C}_i(\vec{X}) = P_i \xi_\parallel^{H_i} |\vec{X}|^{H_i} K_{H_i}\Big(|\vec{X}|/\xi_\parallel\Big) \text{.} \label{eqn:lateral_correlation_function}
 \end{align}
-$H_i$ is the Hurst factor providing a measure for the jaggedness of the interface \cite{PhysRevB.38.2297}, $K_{H_i}$ are the modified Bessel functions of the order $H_i$, $\xi_\parallel$ is a lateral correlation length and
+$H_i$ is the Hurst factor providing a measure for the jaggedness of the interface \cite{sinha_x-ray_1988}, $K_{H_i}$ are the modified Bessel functions of the order $H_i$, $\xi_\parallel$ is a lateral correlation length and
 \begin{align}
 P_i = \frac{\sigma_i^2}{\xi_\parallel^{H_i-1} 2^{H_i-1} \Gamma(1+H_i)/H_i}\text{.}
 \end{align}
@@ -256,8 +261,8 @@ Our goal is to determine a single average power spectral density. We thus do not
         C(q_x) = \frac{4 \pi H \sigma^2 \xi_\parallel^2}{(1+|q_x|^2\xi_\parallel^2)^{1+H}} \text{.} \label{eqn:psd} 
 \end{equation}
 
-
-The high degree of thickness stability for well-defined multilayers as is necessary for high-performance mirrors implies a high degree of vertical correlation of individual interfaces roughness throughout the stack. In order to derive the replication factor in Eq.~\eqref{eqn:factorized_structure_factor}, we follow Stearns et al.~\cite{stearns:4286}. In this model, the evolution of the surface roughness $w(x,y)$ during the growth of a single layer is described by the Langevin equation. In its Fourier transformed form, 
+\paragraph{Vertical correlation of roughness}
+The high degree of thickness stability for well-defined multilayers as is necessary for high-performance mirrors implies a high degree of vertical correlation of individual interfaces roughness throughout the stack. In order to derive the replication factor in Eq.~\eqref{eqn:factorized_structure_factor}, we follow Stearns et al.~\cite{stearns_x-ray_1992}. In this model, the evolution of the surface roughness $w(x,y)$ during the growth of a single layer is described by the Langevin equation. In its Fourier transformed form, 
 \begin{align}
 \frac{\partial w(f)}{\partial t} = - 4 \pi^2 v f^2 w(f) + \frac{\partial \eta(f)}{\partial t} \text{,} \label{eqn:langevin}
 \end{align}
