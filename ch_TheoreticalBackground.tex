@@ -260,6 +260,13 @@ Our theoretical description of the diffuse EUV scattering from multilayers is ba
 \end{equation}
 of $V(\mathbf{r}) = V_\text{id}(\mathbf{r}) + V_\text{r}(\mathbf{r})$ that can be separated into a strong part $V_\text{id}(\mathbf{r})$ for which an analytical solution exists and a small perturbation $V_\text{r}(\mathbf{r})$ describing the interfacial roughness. In case of a multilayer, we start from the dynamic calculation of the electric fields of a perfectly flat multilayer. The wave equation Eq.~\eqref{eqn:wave_equation} is solved by calculating the field amplitudes using a matrix formalism \cite{born_principles_1965}.
 
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{DWBA_sheme.pdf_tex}
+    \caption{Illustration of \gls{dwba}.}
+    \label{ch_theo:fig_dwba_scheme}
+\end{figure*}
+
 For the calculation of the specular reflectivity curve it is necessary to correct the field calculation for the interfacial roughness and diffusion. Modified Fresnel coefficients according to N\'evot/Croece \cite{nevot_l._caracterisation_1980} assuming a Gaussian interface profile are used, 
 \begin{align}
         r^{(j)} &= r_{id}^{(j)} \exp(-2 k_z^{(j)} k_z^{(j+1)} \sigma_j^2)\text{,} \label{eqn:fresnel_r}\\
@@ -350,4 +357,4 @@ So far, multiple reflections at the interfaces have been ignored (semi-kinematic
 where $R^{(1,2)}_j$ are the reflected field amplitude at interface $j$ for the given incidence angle (1) and exit angle (2), the latter again in a time-inverted representation of a beam originating at the detector.
 
 \section{Grazing-incidence X-ray Fluourescence}
-\cite{sherman_theoretical_1955, de_boer_glancing-incidence_1991}
+\cite{sherman_theoretical_1955, shiraiwa_theoretical_1966, de_boer_glancing-incidence_1991}
