@@ -24,7 +24,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
      inkscape:cx="323.79688"
-     inkscape:cy="584.21379"
+     inkscape:cy="584.56735"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -999,55 +999,55 @@
        sodipodi:linespacing="125%"
        id="text10092"
        y="535.78784"
-       x="459.67691"
+       x="451.67691"
        style="font-size:8.89851379px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          y="535.78784"
-         x="459.67691"
+         x="451.67691"
          id="tspan10094"
          sodipodi:role="line">$T_{j}^{(1)}$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.89851379px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="345.10645"
+       x="331.10645"
        y="535.78784"
        id="text11464"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan11466"
-         x="345.10645"
+         x="331.10645"
          y="535.78784">$R_{j+1}^{(1)}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text10117"
        y="535.78784"
-       x="516.93341"
+       x="510.93341"
        style="font-size:8.89851379px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          y="535.78784"
-         x="516.93341"
+         x="510.93341"
          id="tspan10119"
          sodipodi:role="line">$R_{j+1}^{*(2)}$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.89851379px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="639.61646"
+       x="629.61646"
        y="535.78784"
        id="text10121"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan10123"
-         x="639.61646"
+         x="629.61646"
          y="535.78784">$R_{j+1}^{*(2)}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text10125"
        y="535.78784"
-       x="586.93695"
+       x="576.93695"
        style="font-size:8.89851379px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          y="535.78784"
-         x="586.93695"
+         x="576.93695"
          id="tspan10127"
          sodipodi:role="line">$R_{j+1}^{(1)}$</tspan></text>
   </g>
