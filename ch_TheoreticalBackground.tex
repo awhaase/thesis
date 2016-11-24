@@ -158,9 +158,9 @@ As mentioned above in the beginning of Sec.~\ref{ch_theo:sec_interaction} the re
 \end{figure}
 The refraction process in that case is entirely governed by \emph{Snell's law} known from classical optics \cite{born_principles_1965}. With the solutions of the wave equation for propagation in homogeneous media in the beginning of Sec.~\ref{ch_theo:sec_interaction}, Snell's law can be expressed in terms of the wave vector by
 \begin{align}
-k_z^{(j)} &= \sqrt{\Big(n^{(j)} \gls{k_0}\Big)^2 - k_x^2} \text{,} \label{ch_theo:eqn_snells_law}
+k_z^{(j)} &= \sqrt{\Big(n^{(j)} \gls{k_0}\Big)^2 - k_x^2} \quad \text{, with } k_x = \cos(\alpha_i) \gls{k_0} \text{,} \label{ch_theo:eqn_snells_law}
 \end{align}
-where $k_x = \cos(\alpha_i) \gls{k_0}$ with the angle of incidence $\alpha_i$ defined from the surface normal (cf.~Fig.~\ref{ch_theo:fig_scattering_process}) and $n^{(j)}$ is the complex index of refraction of layer $j$.
+and the angle of incidence $\alpha_i$ defined from the surface normal (cf.~Fig.~\ref{ch_theo:fig_scattering_process}) and $n^{(j)}$ is the complex index of refraction of layer $j$.
 
 Another well known requirement at the interface is the continuity of both the electric field amplitude and its derivative \cite{born_principles_1965, gibaud_specular_2009}. From that follows that the parallel component of the wave vector $k_x^{(j)} \equiv k_x \forall j$ does not change at the interface. Together with the relation in Eq.~\ref{ch_theo:eqn_k_inside_medium} this yields a relation of the electric field amplitudes in vacuum (layer $j=0$) and the medium (layer $j=1$) through the \emph{Fresnel coefficients} of reflection $r^{(0)}$ and transmission $t^{(0)}$ via
 \begin{align}
@@ -182,12 +182,12 @@ k_z^{(j+1)}}\text{,}  \label{ch_theo:eqn_fresnel_reflection_coefficient}\\
 \paragraph{Matrix Algorithm for Multilayer Systems} \label{ch_theo:sec_matrix_algorithm}
 In this part we extend the calculation above to a system of multiple layers on top of a substrate which is assumed to be infinite. This provides the exact fully dynamic solution of the wave equation for an ideal multilayer system with abrupt interfaces. Thus, all reflections and transmissions at all interfaces are considered, including multiple events. The EUV and X-ray fields were calculated based on the well-established matrix algorithm which is an extension of the above Fresnel coefficient method \cite{born_principles_1965,mikulik_x-ray_1997}. The field inside each layer $j$ is described similarly to Eq.~\eqref{ch_theo:eqn_fresnel_reflection} by their reflected and transmitted field components as
 \begin{align}
-E^{(j)}(\vec{r}) = e^{i \vec{k}_\parallel \cdot \vec{r}_\parallel} (E_t^{(j)}(z) + E_r^{(j)}(z)) \text{,}
+E^{(j)}(\vec{r}) = e^{i \vec{k}_\parallel \cdot \vec{r}_\parallel} (E_t^{(j)}(z) + E_r^{(j)}(z)) \text{,} \label{ch_theo:eqn_multilayer_solution_transmitted_and_reflected}
 \end{align}
 where $\vec{k}_\parallel$ is the wave vector component parallel to the interfaces (in the two-dimensional geometry of Fig.~\ref{ch_theo:fig_singlelayer_scheme} above was $\vec{k}_\parallel = \vec{k}_x$) and $\vec{r}_\parallel$ is the position perpendicular to the $z$-direction. The two field components are further described by the transmitted and reflected field amplitudes $T_j$ and $R_j$ as
 \begin{align}
-E_t^{(j)}(z) &= T_{j} e^{i k_z^{(j)} z} \text{,} \\
-E_r^{(j)}(z) &= R_{j} e^{-i k_z^{(j)} z} \text{,} 
+E_t^{(j)}(z) &= T_{j} e^{i k_z^{(j)} z} \text{,} \label{ch_theo:eqn_multilayer_amplitude_transmitted} \\
+E_r^{(j)}(z) &= R_{j} e^{-i k_z^{(j)} z} \text{,} \label{ch_theo:eqn_multilayer_amplitude_reflected}
 \end{align}
 where $E_t^{(j)}(z)$ describes the field component propagating towards the substrate and $E_r^{(j)}(z)$ is the reflected field component in each layer propagating towards the vacuum. The field amplitudes and layer thicknesses are illustrated in Fig.~\ref{ch_theo:fig_multilayer_scheme}.
 \begin{figure}[htb]
@@ -259,10 +259,10 @@ Diffuse scattering in the special case of layered systems is the result of imper
 In this case, in terms of the conventional Born approximation that corresponds to treating the existence of and potential disturbances within a multilayer system as perturbation. The approximation would then consider the scattered radiation to be weak with respect to the impinging plane wave. The latter is then simply the exact solution to the vacuum wave equation Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend}. This approximation, however, is most certainly not valid in case of the presence of a multilayer system which significantly alters the incoming plane wave in the reflection and transmission process.
 
 Instead, theoretical description of the diffuse EUV scattering from multilayers is based on the \gls{dwba}~\cite{holy_nonspecular_1994,holy_x-ray_1993}, widely used in the analysis of hard X-ray scattering. The \gls{dwba} is an extension of the above mentioned Born approximation in which the interfacial roughness is considered to be a small deviation from the ideal multilayer system. In general, the wave equation for a multilayer system is
-\begin{equation}
-        (\Delta + \gls{k_0}^2) E(\mathbf{r}) = V(\vec{r}) E(\vec{r})\text{,} \label{ch_theo:eqn_multilayer_wave_equation} 
-\end{equation}
-with the potential $V(\vec{r}) = \gls{k_0}\big(1-\gls{n}^2(\vec{r})\big)$ \cite{pietsch_high-resolution_2004} describing the different materials inside the layer system through their index of refraction \gls{n}. The \gls{dwba} is based on the principle that part of this potential leads to a wave equation which can be solved analytically, while a small disturbance to that potential remains to be treated as perturbation. In case of a multilayer the exact solution of a system with ideal interfaces can indeed be found and is given in Sec.~\ref{ch_theo:sec_matrix_algorithm}. The potential can be separated into a strong part $V_\text{id}(\vec{r})$ for which an analytical solution exists and a small perturbation $V_\text{r}(\vec{r})$ describing the interfacial roughness as deviation from the ideal layer system. In analogy to the Born approximation, the scattering process is then evaluated considering the wave fields obtained from the solution with the ideal potential $V_\text{id}(\vec{r})$ only instead of the full wave field including all previous scattering events. Thus, the analytic solution of the multilayer wave equation (``distorted wave'') in the \gls{dwba} takes the place of the plane wave in the Born approximation. In that way, the scattering from the perturbations are still considered kinematically (single scattering approximation), however, the incoming distorted waves are fully dynamic solutions of the transmittance and reflectance at all layers of the multilayer system.
+\begin{align}
+        (\Delta + \gls{k_0}^2) E(\vec{r}) &= V(\vec{r}) E(\vec{r})\text{,} \label{ch_theo:eqn_multilayer_wave_equation} 
+\end{align}
+with the potential $V(\vec{r}) = \gls{k_0}\big(1-\gls{n}^2(\vec{r})\big)$ \cite{pietsch_high-resolution_2004} describing the different materials inside the layer system through their index of refraction \gls{n}. The \gls{dwba} is based on the principle that part of this potential leads to a wave equation which can be solved analytically, while a small disturbance to that potential remains to be treated as perturbation. In case of a multilayer the exact solution of a system with ideal interfaces can indeed be found and is given in Sec.~\ref{ch_theo:sec_matrix_algorithm}. The potential can be separated into a strong part $V_\text{id}(\vec{r})$ for which an analytical solution exists and a small perturbation $V_\text{r}(\vec{r})$ describing the interfacial roughness as deviation from the ideal layer system, i.e.~  $V(\vec{r}) = V_\text{id}(\vec{r}) + V_\text{r}(\vec{r})$. In analogy to the Born approximation, the scattering process is then evaluated considering the wave fields obtained from the solution with the ideal potential $V_\text{id}(\vec{r})$ only instead of the full wave field including all previous scattering events. Thus, the analytic solution of the multilayer wave equation (``distorted wave'') in the \gls{dwba} takes the place of the plane wave in the Born approximation. In that way, the scattering from the perturbations are still considered kinematically (single scattering approximation), however, the incoming distorted waves are fully dynamic solutions of the transmittance and reflectance at all layers of the multilayer system.
 
 
 %In case of a multilayer, we start from the dynamic calculation of the electric fields of a perfectly flat multilayer. The wave equation Eq.~\eqref{ch_theo:eqn_multilayer_wave_equation} is solved by calculating the field amplitudes using a matrix formalism \cite{born_principles_1965}.
@@ -275,40 +275,62 @@ with the potential $V(\vec{r}) = \gls{k_0}\big(1-\gls{n}^2(\vec{r})\big)$ \cite{
 %        t^{(j)} &= t_{id}^{(j)} \exp((k_z^{(j)} - k_z^{(j+1)})^2 \sigma_j^2/2) \text{,} \label{eqn:fresnel_t}
 %\end{align}
 %where $r_{id}^{(j)}$ and $t_{id}^{(j)}$ are the Fresnel reflection and transmission coefficients, respectively, for the ideal  $j^\text{th}$ interface, $\sigma_j$ is the root mean square roughness (rms) and $k_z^{(j)}$ is the $z$-component of the incidence wave vector at the $j^\text{th}$ interface.
-\subsection{The \gls{dwba} Near-normal Incidence Scattering Cross Section}
-The detailed derivation of the diffuse (incoherent) differential scattering cross section for rough multilayer systems can be found in Pietsch, Hol\'{y} and Baumbach \cite{pietsch_high-resolution_2004} and the corresponding publications \cite{sinha_x-ray_1988,holy_nonspecular_1994}, as well as in de Boer \cite{de_boer_x-ray_1996}. Here, we give a summarized version illustrating the application to near-normal incidence scattering and the corresponding approximations leading to the determination of a roughness \gls{psd} for the interfaces in a multilayer system. The diffuse scattering cross section is given by the covariance of the matrix element of the perturbation potential on the basis of the wave functions from the analytic solution for a given incidence and exit angle  written in Dirac notation \cite{dirac_new_1939}
+\subsection{The \gls{dwba} Scattering Cross Section}
+The detailed derivation of the diffuse (incoherent) differential scattering cross section for rough multilayer systems can be found in Pietsch, Hol\'{y} and Baumbach \cite{pietsch_high-resolution_2004} and the corresponding publications \cite{sinha_x-ray_1988,holy_nonspecular_1994}, as well as in de Boer \cite{de_boer_x-ray_1996} and Mikul\'{i}k \cite{mikulik_x-ray_1997}. Here, we give a summarized version illustrating the application to near-normal incidence scattering and the corresponding approximations leading to the determination of a roughness \gls{psd} for the interfaces in a multilayer system.
+
+The derivation of the diffuse scattering cross section is based on the quantum mechanical formalism for perturbation theory. There, the transition probability from one state into another is described as the expectance value of the transition matrix. In case of the scattering problem at a multilayer this translates to considering the incoming wave field, given by the exact solution of the wave equation for a multilayer system and calculating the expectance value for scattering into a scattered state arriving at the detector. The latter is generally unknown. However, the reciprocity theorem \cite{lorentz_theorem_1896, l._d._landau_electrodynamics_1960} of classical electrodynamics states that an unknown field at an detector generated by a known dipole source, i.e.~the incident field induced dipole at a perturbation of an interface causing the emission of scattered radiation, can be replaced by the time-inverted known field caused by a single dipole source at the detector position (``detector beam'') \cite{sinha_x-ray_1988, holy_nonspecular_1994, daillant_diffuse_2009}. The latter is just the time-inverted solution of the same wave equation of the ideal multilayer as for the regular solution. We thus consider two independent solutions of the wave equation \eqref{ch_theo:eqn_multilayer_wave_equation} with $V(\vec{r}) = V_\text{id}(\vec{r})$ and express them in Dirac notation \cite{dirac_new_1939} as $|E_{\text{id}}^{(1)}\rangle$ and $|E_{\text{id}}^{(2)}\rangle$, where the superscript $(1)$ denotes the regular solution obtained via the matrix algorithm in Sec.~\ref{ch_theo:sec_matrix_algorithm} and the index $(2)$ indicates the time-inverted solution for the scattering angle $\alpha_f$ of the detector position with respect to the surface.\footnote{In regard to the matrix algorithm in Sec.~\ref{ch_theo:sec_matrix_algorithm} the solution for the time-inverted ``detector beam'' is obtained by replacing the vacuum wave vector component $k_x$ in Eq.~\eqref{ch_theo:eqn_snells_law} with the corresponding component for the scattering angle $\alpha_f$ instead of the angle of incidence $\alpha_i$.} According to Eq.~\eqref{ch_theo:eqn_multilayer_solution_transmitted_and_reflected}, Eq.~\eqref{ch_theo:eqn_multilayer_amplitude_transmitted} and Eq.~\eqref{ch_theo:eqn_multilayer_amplitude_reflected} the two solutions can be expressed in terms of the reflected and transmitted field amplitudes as
+\begin{align}
+|E_{\text{id}}^{(1)}\rangle &= e^{i \vec{k}_{\parallel,(1)} \cdot \vec{r}_\parallel} \big(T_{j}^{(1)} e^{i k_z^{(j)} z} + R_{j}^{(1)} e^{-i k_z^{(j)} z}\big) \text{,} \label{ch_theo:eqn_regular_solution_ket}\\
+|E_{\text{id}}^{(2)}\rangle &= \big(\langle E_{\text{id}}^{(2)}|\big)^* = e^{-i \vec{k}_{\parallel,(2)} \cdot \vec{r}_\parallel} \big(T_{j}^{(2)*} e^{-i k_z^{(j)} z} + R_{j}^{(2)*} e^{i k_z^{(j)} z}\big) \label{ch_theo:eqn_time_inverted_solution_ket} \text{.} 
+\end{align}
+These solutions are the basis for the calculation of the differential scattering cross section, which is given by the covariance of the matrix element of the perturbation potential \cite{pietsch_high-resolution_2004} as
 \begin{equation}
-        \underset{\text{diffuse}}{\Big(\frac{d \sigma}{d \Omega}\Big)}= \text{Cov}(\langle E_{\text{id},1}| V_r|E_{\text{id},2}\rangle)\text{,} \label{eqn:incoherent_cross_section} 
+        \underset{\text{DWBA}}{\Big(\frac{d \sigma}{d \Omega}\Big)}= \text{Cov}(\langle E_{\text{id}}^{(2)}| V_r|E_{\text{id}}^{(1)}\rangle)\text{.} \label{eqn:incoherent_cross_section} 
 \end{equation}
-where $|E_{\text{id},i}\rangle\text{, }i =1,2$ are the solutions of the wave equation Eq.~\eqref{eqn:wave_equation} for the ideal multilayer and the given incidence and exit angles, respectively, calculated using the unmodified Fresnel coefficients $r_{id}^{(j)}$ and $t_{id}^{(j)}$ representing the perfectly flat multilayer. Since the roughness potential is non-zero only at the individual interfaces, Eq.~\eqref{eqn:incoherent_cross_section} can be decomposed into a sum over the matrix elements at each interface $j$. In the following, we use the small roughness $q_{z,j} \sigma_j \ll 1$ approximation which is valid for any high-quality multilayer mirror (cf. \cite{de_boer_x-ray_1996} for the more general expression).
+The explicit expression for the covariance can be calculated based on Eq.~\eqref{ch_theo:eqn_regular_solution_ket} and Eq.~\eqref{ch_theo:eqn_time_inverted_solution_ket} and yields the full \gls{dwba} differential scattering cross section for the diffuse (incoherent) scattering considering all transmitted and reflected fields, i.e.~all first order dynamic effects, as
+\begin{align}
+        {\underset{\text{DWBA}}{\Big(\frac{d \sigma}{d \Omega}\Big)}} = &\Bigg[\frac{A \pi^2}{\lambda^4}\sum \limits_{j=1}^{N}\sum \limits_{i=1}^{N} (n_j^2 - n_{j+1}^2)^* (n_i^2 - n_{i+1}^2)\Big( (T^{(1)}_j + R^{(1)}_j)^* (T^{(2)}_j + R^{(2)}_j)^* \nonumber \\ &\qquad\times(T^{(1)}_i + R^{(1)}_i) (T^{(2)}_i + R^{(2)}_i) \Big) S_{ij}(\vec{q}_\parallel; q_z^{(j)}, q_z^{(i)}) \text{,} \label{ch_theo:eqn_full_dwba_expression}
+\end{align}
+where $A$ is the illuminated sample area and $S_{ij}(\vec{q}_\parallel; q_z^{(j)}, q_z^{(i)})$ includes the effect of the perturbation potential $V_r(\vec{r})$. For the multilayer system this perturbation is roughness at the interfaces, which can be correlated vertically throughout the stack, as well as in-plane of a single interface. A detailed derivation of the explicit form of that form factor is given in the following paragraph.
 
 In the case of small reflectivity amplitudes, dynamic multiple reflections are often neglected and the dominant term in the decomposition is diffuse scattering of the transmitted fields at the roughness of each interface. The so-called semi-kinematic approximation \cite{sinha_x-ray_1988} yields an explicit expression for Eq.~\eqref{eqn:incoherent_cross_section} with
 \begin{align}
-                \overset{\text{semi-kinematic}}{\underset{\text{diffuse}}{\Big(\frac{d \sigma}{d \Omega}\Big)}} = &\frac{A \pi^2}{\lambda^4}\sum \limits_{j=1}^{N}\sum \limits_{i=1}^{N} \Big((n_j^2 - n_{j+1}^2)^* (n_i^2 - n_{i+1}^2) \nonumber \\ &\qquad\times T^{(1)*}_j T^{(2)*}_j T^{(1)}_i T^{(2)}_i S_{i j}(q_x)\Big)\text{,} \label{eqn:semi_kinematic_theory} 
+                \overset{\text{semi-kinematic}}{\underset{\text{DWBA}}{\Big(\frac{d \sigma}{d \Omega}\Big)}} = &\frac{A \pi^2}{\lambda^4}\sum \limits_{j=1}^{N}\sum \limits_{i=1}^{N} \Big((n_j^2 - n_{j+1}^2)^* (n_i^2 - n_{i+1}^2) \nonumber \\ &\qquad\times T^{(1)*}_j T^{(2)*}_j T^{(1)}_i T^{(2)}_i S_{ij}(\vec{q}_\parallel; q_z^{(j)}, q_z^{(i)})\Big)\text{.} \label{ch_theo:eqn_semi_kinematic_dwba_expression} 
 \end{align}
-where $A$ is the illuminated sample area, $\lambda$ the wavelength of the incident light and $n_j$ is the complex index of refraction of material $j$. The $T^{(1,2)}_j$ are defined as the amplitude of the transmitted field at the interface $j$ for the given exit angle (2) (represented as a time-inverted beam originating at the detector) and incidence angle (1). The total field at the $j$th interface is expressed in terms of the reflected field $E_r^{(j)}(z)$ propagating towards the vacuum and the transmitted field $E_t^{(j)}(z)$ propagating towards the substrate
+The semi-kinematic approximation is similar to the conventional Born approximation, except that it considers the exact transmitted field amplitudes at a certain interface instead of a plane wave. The comparison of this expression with the full first-order \gls{dwba} term in Eq.~\eqref{ch_theo:eqn_full_dwba_expression} is useful to evaluate the contribution of dynamic effects to the scattering cross section and consequently the measured diffuse scattering distribution.
+
+An illustration of the four scattering processes included in the full first-order \gls{dwba} is shown in Fig.~\ref{ch_theo:fig_dwba_scheme} at the example of the interface of layer $j$ and $j+1$ in the multilayer system.
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{DWBA_sheme.pdf_tex}
+    \caption{Illustration of the four scattering processes of the \gls{dwba}\footnote{Figure similar to Pietsch, Hol\'{y} and Baumbach \cite{pietsch_high-resolution_2004}.}. The $T T^*$ process on the left is purely kinematic in nature and equivalent to the Born approximation. The three other processes $RT^*$, $TR^*$ and $RR^*$ are purely dynamic and not described by kinematic theory.}
+    \label{ch_theo:fig_dwba_scheme}
+\end{figure*}
+
+
+\paragraph{Calculation of the Roughness Power Spectral Density}
+The effect of the perturbation potential is contained within the factor $S_{ij}(\vec{q}_\parallel; q_z^{(j)}, q_z^{(i)})$ in Eq.~\eqref{ch_theo:eqn_full_dwba_expression} and Eq.~\eqref{ch_theo:eqn_semi_kinematic_dwba_expression}. For a multilayer system this perturbation is interfacial roughness as a deviation from the ideal multilayer with sharp and perfectly flat interfaces. The influence of the interfacial roughness on the diffuse scattering intensity described by the explicit form \cite{de_boer_x-ray_1995,de_boer_x-ray_1996}
 \begin{align}
-        E_t^{(j)}(z) &= T_{j} e^{i k_z^{(j)} z} \text{,} \\
-        E_r^{(j)}(z) &= R_{j} e^{-i k_z^{(j)} z} \text{,} 
+S_{ij}(\vec{q}_\parallel; q_z^{(j)}, q_z^{(i)}) = &\frac{\exp \Big[-((q_z^{(j)*})^{2} \sigma_j^2 + (q_z^{(i)})^{2} \sigma_i^2)/2\Big]}{q_z^{(j)*} q_z^{(i)}}  \nonumber \\
+&\qquad \times \int d^2 \vec{X} \Big(\exp [q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})]-1\Big) \exp(i \vec{q}_\parallel \cdot \vec{X}) \text{,} \label{ch_theo:eqn_full_dwba_roughness_factor}
 \end{align}
-with $E_{id}^{(j)}(\mathbf{r}) = e^{i \mathbf{k_\parallel r_\parallel}} (E_t^{(j)}(z) + E_r^{(j)}(z))$ being the full solution of the wave equation Eq.~\eqref{eqn:wave_equation} for the ideal multilayer at the $j^\text{th}$ interface. $S_{ij}(q_x)$ is the structure factor describing the influence of the interfacial roughness on the diffuse scattering intensity defined through
+where $q_z^{(i)}$ is the $z$-component of the scattering vector $\gls{q}$ at the $i$th interface, $\vec{X} = \vec{x} - \vec{x}'$ is the lateral distance vector and $C_{ij}(\vec{x}-\vec{x}') = \langle h_i(\vec{x}) h_j(\vec{x}') \rangle$ is the height correlation function of the interface profiles $h(\vec{x})$ of the interfaces $i$ and $j$, respectively. The factor $\sigma_j$ is the \gls{rms} roughness of the $j$th interface.
+
+
+We consider the situation, where the roughness is small in relation to the scattering vector. This assumption is valid especially for high-quality multilayer systems as the mirrors considered in the framework of this thesis. This is the so-called small roughness approximation. In that case, the product of roughness and the $z$-component of the scattering vector is small, i.e.~$q_z^{(j)} \sigma_j \ll 1$. We therefore can approximate the first part of Eq.~\eqref{ch_theo:eqn_full_dwba_roughness_factor} by
 \begin{align}
-S_{ij}(\vec{q}_\parallel; q_z^{(j)}, q_z^{(i)}) = &\frac{\exp \Big[-((q_z^{(j)*})^{2} \sigma_j^2 + (q_z^{(i)})^{2} \sigma_i^2)/2\Big]}{q_z^{(j)*} q_z^{(i)}} \int d^2 \vec{X} \Big(\exp [q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})]-1\Big) \exp(i \vec{q}_\parallel \cdot \vec{X}) \text{,} \label{eqn:full_structure_factor}
-\end{align}
-where $q_z^{(i)}$ is the $z$-component of the scattering vector $\vec{q}$ at the $i$th interface, $\vec{X} = \vec{x} - \vec{x}'$ is the lateral distance vector and $C_{ij}(\vec{x}-\vec{x}') = \langle h_i(\vec{x}) h_j(\vec{x}') \rangle$ is the correlation function of the interface profiles $h(\vec{x})$ of the interfaces $i$ and $j$ \cite{de_boer_x-ray_1995,de_boer_x-ray_1996}. In case of the small roughness approximation, \begin{align}
 \frac{\exp \Big[-((q_z^{(j)*})^2 \sigma_j^2 + (q_z^{(i)})^{2} \sigma_i^2)/2\Big]}{q_z^{(j)*} q_z^{(i)}} \approx \frac{1}{q_z^{(j)*} q_z^{(i)}}
 \end{align}
-and $\exp [q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})]-1 \approx q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})$ apply and Eq.~\eqref{eqn:full_structure_factor} reduces to
+and Taylor expand the integrand as $\exp [q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})]-1 \approx q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})$. With these approximations Eq.~\eqref{ch_theo:eqn_full_dwba_roughness_factor} reduces to
 \begin{align}
 S_{ij}(\vec{q}_\parallel) \approx \int d^2 \vec{X} C_{ij}(\vec{X}) \exp(i \vec{q}_\parallel \cdot \vec{X}) \text{.} \label{eqn:reduced_structure_factor}
 \end{align}
-$S_{ij}(\vec{q}_\parallel)$ is, thus, the Fourier transform of the correlation function $C_{ij}(\vec{X})$. In case of co-planar scattering furthermore $\vec{q}_\parallel \equiv \vec{q}_x$.
-Assuming identical growth for the individual layers, i.e.~a material independent propagation of roughness along the $z$-direction, $S_{ij}(q_x)$ can be expressed in terms of the lateral power spectral density (PSD) $C_{i}(q_x)$ and a vertical replication factor $c_{ij}^{\perp}(q_x)$ \cite{spiller_multilayer_1993},
+$S_{ij}(\vec{q}_\parallel)$ is, thus, the Fourier transform of the correlation function $C_{ij}(\vec{X})$. Assuming identical growth for the individual layers, i.e.~a material independent propagation of roughness along the $z$-direction, $S_{ij}(\vec{q}_\parallel)$ can be expressed in terms of the lateral \gls{psd} $C_{i}(\vec{q}_\parallel)$ and a vertical replication factor $c_{ij}^{\perp}(\vec{q}_\parallel)$ \cite{spiller_multilayer_1993},
 \begin{equation}
-        S_{ij}(q_x) = c_{ij}^{\perp}(q_x) C_{\text{max}(i,j)}(q_x)\text{.} \label{eqn:factorized_structure_factor}
+        S_{ij}(\vec{q}_\parallel) = c_{ij}^{\perp}(\vec{q}_\parallel) C_{\text{max}(i,j)}(\vec{q}_\parallel)\text{.} \label{eqn:factorized_structure_factor}
 \end{equation}
 
-Other PSD functions based on different models of lateral interface roughness correlation have been proposed, e.g.~by Sinha et al.~\cite{sinha_x-ray_1988}. We follow the approach by de Boehr et al.~\cite{boer_influence_1994,de_boer_x-ray_1995} for fractal interface roughness, where the lateral correlation function of the $i$th interface is given by
+Other \gls{psd} functions based on different models of lateral interface roughness correlation have been proposed, e.g.~by Sinha et al.~\cite{sinha_x-ray_1988}. We follow the approach by de Boehr et al.~\cite{boer_influence_1994,de_boer_x-ray_1995} for fractal interface roughness, where the lateral correlation function of the $i$th interface is given by
 \begin{align}
 \tilde{C}_i(\vec{X}) = P_i \xi_\parallel^{H_i} |\vec{X}|^{H_i} K_{H_i}\Big(|\vec{X}|/\xi_\parallel\Big) \text{.} \label{eqn:lateral_correlation_function}
 \end{align}
@@ -317,9 +339,9 @@ $H_i$ is the Hurst factor providing a measure for the jaggedness of the interfac
 P_i = \frac{\sigma_i^2}{\xi_\parallel^{H_i-1} 2^{H_i-1} \Gamma(1+H_i)/H_i}\text{.}
 \end{align}
 
-Our goal is to determine a single average power spectral density. We thus do not distinguish between individual interfaces in the model and assume an identical roughness properties for all interfaces. Hence $\sigma_j = \sigma$, $H_j = H$ and $C_{\text{max}(i,j)}(q_x) = C(q_x)$. The PSD is given by the Fourier transform of Eq.~\eqref{eqn:lateral_correlation_function} with respect to $q_x$, which yields the closed analytic form
+Our goal is to determine a single average power spectral density. We thus do not distinguish between individual interfaces in the model and assume identical roughness properties for all interfaces. Hence $\sigma_j = \sigma$, $H_j = H$ and $C_{\text{max}(i,j)}(\vec{q}_\parallel) = C(\vec{q}_\parallel)$. The PSD is given by the Fourier transform of Eq.~\eqref{eqn:lateral_correlation_function} with respect to $q_x$, which yields the closed analytic form
 \begin{equation}
-        C(q_x) = \frac{4 \pi H \sigma^2 \xi_\parallel^2}{(1+|q_x|^2\xi_\parallel^2)^{1+H}} \text{.} \label{eqn:psd} 
+        C(\vec{q}_\parallel) = \frac{4 \pi H \sigma^2 \xi_\parallel^2}{(1+|\vec{q}_\parallel|^2\xi_\parallel^2)^{1+H}} \text{.} \label{eqn:psd} 
 \end{equation}
 
 \paragraph{Vertical correlation of roughness}
@@ -327,43 +349,40 @@ The high degree of thickness stability for well-defined multilayers as is necess
 \begin{align}
 \frac{\partial w(f)}{\partial t} = - 4 \pi^2 v f^2 w(f) + \frac{\partial \eta(f)}{\partial t} \text{,} \label{eqn:langevin}
 \end{align}
-where $v$ is a diffusion-like parameter, $\eta(f)$ is random noise normalized to the layer thickness and $w(f)$ describes the roughness evolution in dependence of the spacial frequency $f$. The roughness evolution during the growth of a single layer of a specific material can then be evaluated by discritizing Eq.~\eqref{eqn:langevin} for the successive deposition of material of thickness $\delta d$
+where $v$ is a diffusion-like parameter, $\eta(f)$ is random noise normalized to the layer thickness and $w(f)$ describes the roughness evolution in dependence of the spatial frequency $f$. The roughness evolution during the growth of a single layer of a specific material can then be evaluated by discritizing Eq.~\eqref{eqn:langevin} for the successive deposition of material of thickness $\delta d$
 \begin{align}
 w_i(f) = c_\perp(f;\delta d) w_{i-1}(f) + \eta(f) \text{,}
 \end{align}
-where $c_\perp(f;\delta d)$ is the replication factor of roughness for a single deposition. In the limit of repeated infinitesimal depositions until the full $n$th layer of thickness $d_n$ is grown, $c_\perp(f,d_n)$ can be evaluated to be \cite{spiller1993multilayer}
+where $c_\perp(f;\delta d)$ is the replication factor of roughness for a single deposition. In the limit of repeated infinitesimal depositions until the full $n$th layer of thickness $d_n$ is grown, $c_\perp(f,d_n)$ can be evaluated to be \cite{spiller_multilayer_1993}
 \begin{align}
     c_\perp(f,d_n) &= \exp(-4\pi^2 f^2 v \,d_n) \nonumber \\
-                   &= \exp(-q_x^2 v \,d_n)\text{,}
+                   &= \exp(-|\vec{q}_\parallel|^2 v \,d_n)\text{,}
 \end{align}
-with $q_x^2 = 4 \pi^2 f^2$. Assuming identical diffusionlike behavior $v$ for all materials of a multilayer and defining $\xi_\perp(q_x) = 1/(v q_x^2)$, the replication factor in Eq.~\eqref{eqn:factorized_structure_factor} is given by
+with $|\vec{q}_\parallel|^2 = 4 \pi^2 f^2$. Assuming identical diffusionlike behavior $v$ for all materials of a multilayer and defining $\xi_\perp(\vec{q}_\parallel) = 1/(v |\vec{q}_\parallel|^2)$, the replication factor in Eq.~\eqref{eqn:factorized_structure_factor} is given by
 \begin{align}
-c_{ij}^\perp(q_x) =  \exp\Bigg(-\sum \limits_{n = \text{min}(i,j)}^{\text{max}(i,j)-1}d_n/\xi_\perp(q_x) \Bigg)\text{.}
+c_{ij}^\perp(\vec{q}_\parallel) =  \exp\Bigg(-\sum \limits_{n = \text{min}(i,j)}^{\text{max}(i,j)-1}d_n/\xi_\perp(\vec{q}_\parallel) \Bigg)\text{.}
 \end{align}
-Here, $\xi_\perp(q_x)$ can be interpreted as a frequency dependent vertical correlation length, describing the distance perpendicular to the stack until the replication factor decreased to $1/e$.
+Here, $\xi_\perp(\vec{q}_\parallel)$ can be interpreted as a spatial frequency dependent vertical correlation length, describing the distance perpendicular to the stack until the replication factor decreased to $1/e$.
 
-Gullikson et al.~\cite{PhysRevB.59.13273} observed that the direction of the vertical replication of roughness can be tilted with respect to the surface normal. This leads to tilted Bragg planes requiring a coordinate transformation in reciprocal space to account for the tilt angle $\beta$ according to
+\paragraph{Off-Axis Vertical Roughness Correlation}
+Gullikson et al.~\cite{gullikson_asymmetric_1999} observed that the direction of the vertical replication of roughness can be tilted with respect to the surface normal. This leads to tilted Bragg planes requiring a coordinate transformation in reciprocal space to account for the tilt angle $\beta$ according to
 \begin{align}
-\overline{q}_z = q_z - q_x \tan \beta\text{.}
+\overline{q}_z = q_z - \hat{e} \cdot \vec{q}_\parallel   \tan \beta\text{,}
 \end{align}
-Since the vertical scattering vector components enter the calculations through the Fresnel coefficients $r_{id}^{(j)}$ and $t_{id}^{(j)}$, an additional factor enters the calculation of Eq.~\eqref{eqn:factorized_structure_factor} through substitution by
+where $\hat{e}$ is a unit vector in direction of the roughness replication. Since the vertical scattering vector components enter the calculations through the Fresnel coefficients in Eq.~\eqref{ch_theo:eqn_fresnel_reflection_coefficient} and Eq.~\eqref{ch_theo:eqn_fresnel_transmission_coefficient}, an additional factor appears in the calculation of Eq.~\eqref{eqn:factorized_structure_factor} through substitution by
 \begin{align}
-\overline{S_{ij}}(q_x) = \exp\Big(-i q_x \tan \beta (z_i-z_j)\Big)  S_{ij}(q_x) \text{,} \label{eqn:tilt_correction}
+\overline{S_{ij}}(q_x) = \exp\Big(-i \hat{e} \cdot \vec{q}_\parallel \tan \beta (z_i-z_j)\Big)  S_{ij}(q_x) \text{,} \label{eqn:tilt_correction}
 \end{align}
 where $z_i$ is the $z$-position of the $i$th interface.
 
-So far, multiple reflections at the interfaces have been ignored (semi-kinematic approximation). However, in the case of high-reflectance multilayer mirrors, this might not be valid. In order to include first order multiple reflections, i.e.~single reflection and transmission processes before and after the diffuse scattering event, in the theoretical treatment, the reflected fields need to be included in Eq.~\eqref{eqn:incoherent_cross_section}. The explicit expression considering dynamic multiple reflections within the layer is given by
+\paragraph{Full \gls{dwba} expression for near-normal incidence scattering}
+Taking together all the above findings, the full explicit expression for the \gls{dwba} scattering cross section on high-quality multilayer systems is given by
     \begin{align}
-        \overset{\text{dynamic}}{\underset{\text{diffuse}}{\Big(\frac{d \sigma}{d \Omega}\Big)}} = &\Bigg[\frac{A \pi^2}{\lambda^4}\sum \limits_{j=1}^{N}\sum \limits_{i=1}^{N} (n_j^2 - n_{j+1}^2)^* (n_i^2 - n_{i+1}^2)\Big( (T^{(1)}_j + R^{(1)}_j)^* (T^{(2)}_j + R^{(2)}_j)^* \nonumber \\ &\qquad\times(T^{(1)}_i + R^{(1)}_i) (T^{(2)}_i + R^{(2)}_i) \Big) \exp\Big(-i q_x \tan \beta (z_i-z_j)\Big) c_\perp^{i j}\Bigg]\,\, C(q_x) \text{,} \label{eqn:multilayer_enhancement_factor}
+        {\underset{\text{DWBA}}{\Big(\frac{d \sigma}{d \Omega}\Big)}} = &\Bigg[\frac{A \pi^2}{\lambda^4}\sum \limits_{j=1}^{N}\sum \limits_{i=1}^{N} (n_j^2 - n_{j+1}^2)^* (n_i^2 - n_{i+1}^2)\Big( (T^{(1)}_j + R^{(1)}_j)^* (T^{(2)}_j + R^{(2)}_j)^* \nonumber \\ &\qquad\times(T^{(1)}_i + R^{(1)}_i) (T^{(2)}_i + R^{(2)}_i) \Big) \exp\Big(-i q_x \tan \beta (z_i-z_j)\Big) c_\perp^{i j}\Bigg]\,\, C(q_x) \text{.} \label{ch_theo:eqn_full_explicit_dwba_with_approximations}
     \end{align}
-where $R^{(1,2)}_j$ are the reflected field amplitude at interface $j$ for the given incidence angle (1) and exit angle (2), the latter again in a time-inverted representation of a beam originating at the detector.
+Since all experiments in this thesis have been conducted in in co-planar geometry, i.e.~for in-plane scattering measurements with a vanishing azimuthal angle $\theta_f$ in Fig.~\ref{ch_theo:fig_scattering_process}, the parallel component of the scattering vector $\gls{q}$ is given by its $q_x$ component only, i.e.~$\vec{q}_\parallel \equiv q_x$, by choice of the coordinate system for the reciprocal space. We define the $x$, $y$ and $z$ components of the reciprocal space vector in Eq.~\eqref{ch_theo:eqn_q_components} to be parallel to the respectively labeled real space vectors in Fig.~\ref{ch_theo:fig_scattering_process}. The angle $\beta$ is thus determined based on that scattering direction only and dependent on the direction from which the sample is irradiated.
 
-\begin{figure*}[htb]
-    \def\svgwidth{\textwidth}
-    \import{svg/}{DWBA_sheme.pdf_tex}
-    \caption{Illustration of the four scattering processes of the \gls{dwba}\footnote{Figure similar to Pietsch, Hol\'{y} and Baumbach \cite{pietsch_high-resolution_2004}.}. The $T T^*$ process on the left is purely kinematic in nature and equivalent to the Born approximation. The three other processes $RT^*$, $TR^*$ and $RR^*$ are purely dynamic and not described by kinematic theory.}
-    \label{ch_theo:fig_dwba_scheme}
-\end{figure*}
+In addition it should be noted here, that Eq.~\eqref{ch_theo:eqn_full_explicit_dwba_with_approximations} separates the contribution to the scattering distribution of the multilayer and vertical correlation (in square brackets) on the one hand and the in-planar roughness represented through the \gls{psd} $C(q_x)$ on the other hand.
 
 \section{Grazing-incidence X-ray Fluourescence}
 \cite{sherman_theoretical_1955, shiraiwa_theoretical_1966, de_boer_glancing-incidence_1991}
