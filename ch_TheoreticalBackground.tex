@@ -380,7 +380,15 @@ Taking together all the above findings and inserting them into Eq.~\eqref{ch_the
     \begin{align}
         {\underset{\text{DWBA}}{\Big(\frac{d \sigma}{d \Omega}\Big)}} = &\Bigg[\frac{A \pi^2}{\lambda^4}\sum \limits_{j=1}^{N}\sum \limits_{i=1}^{N} (n_j^2 - n_{j+1}^2)^* (n_i^2 - n_{i+1}^2)\Big( (T^{(1)}_j + R^{(1)}_j)^* (T^{(2)}_j + R^{(2)}_j)^* \nonumber \\ &\qquad\times(T^{(1)}_i + R^{(1)}_i) (T^{(2)}_i + R^{(2)}_i) \Big) \exp\Big(-i q_x \tan \beta (z_i-z_j)\Big) c_\perp^{i j}\Bigg]\,\, C(q_x) \text{.} \label{ch_theo:eqn_full_explicit_dwba_with_approximations}
     \end{align}
-Since all experiments in this thesis have been conducted in in co-planar geometry, i.e.~for in-plane scattering measurements with a vanishing azimuthal angle $\theta_f$ in Fig.~\ref{ch_theo:fig_scattering_process}, the parallel component of the scattering vector $\gls{q}$ is given by its $q_x$ component only, i.e.~$\vec{q}_\parallel \equiv q_x$, by choice of the coordinate system for the reciprocal space. We define the $x$, $y$ and $z$ components of the reciprocal space vector in Eq.~\eqref{ch_theo:eqn_q_components} to be parallel to the respectively labeled real space vectors in Fig.~\ref{ch_theo:fig_scattering_process}. The angle $\beta$ is thus determined based on that scattering direction only and dependent on the direction from which the sample is irradiated.
+Since all experiments in this thesis have been conducted in in co-planar geometry, i.e.~for in-plane scattering measurements with a vanishing azimuthal angle $\theta_f$ in Fig.~\ref{ch_theo:fig_scattering_process}, the parallel component of the scattering vector $\gls{q}$ is given by its $q_x$ component only, i.e.~$\vec{q}_\parallel \equiv q_x$, by choice of the coordinate system for the reciprocal space. We define the $x$, $y$ and $z$ components of the reciprocal space vector in Eq.~\eqref{ch_theo:eqn_q_components} to be parallel to the respectively labeled real space vectors in Fig.~\ref{ch_theo:fig_scattering_process}. The angle $\beta$ is thus determined based on that scattering direction only and dependent on the direction from which the sample is irradiated. The replication factor $c_\perp^{i j}$ and the \gls{psd} then read
+\begin{align}
+c_\perp^{i j}(q_x) =  \exp\Bigg(-\sum \limits_{n = \text{min}(i,j)}^{\text{max}(i,j)-1}\frac{d_n q_x^2}{\xi_\perp} \Bigg)\text{,}
+\end{align}
+where the definition $\xi_\perp = 1/v$ holds and
+\begin{align}
+C(q_x) = \frac{4 \pi H \sigma^2 \xi_\parallel^2}{(1+q_x^2\xi_\parallel^2)^{1+H}} \text{,}
+\end{align}
+in the explicit expression of Eq.~\eqref{ch_theo:eqn_full_explicit_dwba_with_approximations}.
 
 In addition it should be noted here, that Eq.~\eqref{ch_theo:eqn_full_explicit_dwba_with_approximations} separates the contribution to the scattering distribution of the multilayer and vertical correlation (in square brackets) on the one hand and the in-planar roughness represented through the \gls{psd} $C(q_x)$ on the other hand.
 
