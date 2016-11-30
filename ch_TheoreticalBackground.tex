@@ -393,10 +393,19 @@ in the explicit expression of Eq.~\eqref{ch_theo:eqn_full_explicit_dwba_with_app
 In addition it should be noted here, that Eq.~\eqref{ch_theo:eqn_full_explicit_dwba_with_approximations} separates the contribution to the scattering distribution of the multilayer and vertical correlation (in square brackets) on the one hand and the in-planar roughness represented through the \gls{psd} $C(q_x)$ on the other hand.
 
 \section{Grazing-incidence X-ray Fluourescence}
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{XRF_multilayer_sheme.pdf_tex}
+    \caption[Calculation scheme for the x-ray fluorescence]{Multilayer scheme to illustrate the method of calculating the x-ray fluorescence yield by the example of Sc in a Cr/Sc multilayer. The multilayer system (a) is split into multiple equidistant sub-layers (b) to obtain the field intensity at discrete points inside the Sc and Cr layers by applying the matrix algorithm in Sec.~\ref{ch_theo:sec_matrix_algorithm}. The relative density of Sc $\rho_\text{Sc}$ is multiplied by the respective intensity inside each sublayer. In case of a more a realistic intermixed system, the intensity is calculated similarly to (b) for discrete equisitant sub-layers. However, they differ by their relative Sc density, which is now generally different for each layer (c). In that case, it is possible that no pure Sc and Cr layers remain and thus $\lceil\rho_\text{Sc}\rceil < 1.0$ and $\lfloor\rho_\text{Sc}\rfloor > 0.0$, respectively.}
+    \label{ch_theo:fig_xrf_multilayer_scheme}
+\end{figure*}
+
+
 \cite{sherman_theoretical_1955, shiraiwa_theoretical_1966, de_boer_glancing-incidence_1991}
 \begin{figure}[htb]
         \includegraphics{img/XRF_scheme}
         \caption[X-ray standing wave fluorescence principle.]{%
-            Illustration of the grazing incidence X-ray standing wave fluorescence analysis. The exemplary system shown is a bilayer multilayer mirror of Cr and Sc irradiated with a $6.25$ keV photon beam at grazing angles. Changing the grazing angle of incidence $\alpha_i^\text{GI}$ across the first Bragg peak (a) causes a standing wave inside the multilayer (total intensity in first top layers shown in (c)) and cause a fluorescence signal for the two different materials as shown in (b).}
+            Illustration of the grazing incidence X-ray standing wave fluorescence analysis. The exemplary system shown is a bilayer multilayer mirror of Cr and Sc irradiated with a $6.25$ keV photon beam at grazing angles. Changing the grazing angle of incidence $\alpha_i^\text{GI}$ across the first Bragg peak (a) causes a standing wave inside the multilayer (total intensity in first top layers shown in (c)) and cause a relative fluorescence yield for the two different materials as shown in (b).}
         \label{ch_theo:fig_xrf_scheme}
 \end{figure}
+
