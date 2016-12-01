@@ -135,7 +135,7 @@ Finally, we should note that the atomic form factor including its dispersion cor
 
 
 
-\subsection{Absorption and Fluorescence Radiation}
+\subsection{Absorption and Fluorescence Radiation} \label{ch_theo:sec_absorption_and_fluorescence}
 Absorption of electromagnetic radiation, more specifically X-ray radiation, in matter is the third main interaction process mentioned here. In that case, the incoming photon is totally absorbed by a bound core shell electron and transfers all its energy to that electron leaving it in a energetically excited state. If the energy of the incoming is sufficient to excite the electron into the continuum above the binding energy, that electron is ejected from the atom leaving a vacancy at one of the core shells. Since this state is no longer the energetically most stable one, relaxation of electrons in energetically higher shells into the vacany cause the release of energy. This can happen through two competing processes known as \emph{X-ray fluorescence} and the \emph{Auger effect}. The general principle of X-ray fluorescence is illustrated in Fig.~\ref{ch_theo:fig_fluorescence_term_sheme}.
 \begin{figure}[htb]
     \def\svgwidth{0.5\textwidth}
@@ -393,6 +393,24 @@ in the explicit expression of Eq.~\eqref{ch_theo:eqn_full_explicit_dwba_with_app
 In addition it should be noted here, that Eq.~\eqref{ch_theo:eqn_full_explicit_dwba_with_approximations} separates the contribution to the scattering distribution of the multilayer and vertical correlation (in square brackets) on the one hand and the in-planar roughness represented through the \gls{psd} $C(q_x)$ on the other hand.
 
 \section{Grazing-incidence X-ray Fluourescence}
+Grazing-incidence X-ray fluorescence analysis is an established method to characterize the chemical composion of materials through the irradiation of samples with x-rays. It is based on the emission of characteristic fluorescence radiation, as elaborated on in Sec.~\ref{ch_theo:sec_absorption_and_fluorescence}. By irradiating an unkown sample with photons of sufficiently high energy, those photons are absorbed leaving the characteristic vacancies in the $K$, $L$ and $M$ core shells. The emission of isotropic fluorescence radiation then follows through recombination processes detected outside the sample. A quantitative analysis was developed by Sherman \cite{sherman_theoretical_1955} and refined by others \cite{shiraiwa_theoretical_1966, criss_calculation_1968, rasberry_calibration_1974}. The \emph{Sherman equation} links the emitted and measured characteristic fluorescence radiation to the material concentration of a specific chemical species via fundamental parameters and the measurement characteristics (experimental parameters) \cite{rousseau_fundamental_1984}.
+
+Here, we focus on the treatment of fluorescence emission by periodic multilayer systems, which posess a Bragg resonance, i.e.~a pair of angle of incidence and photon energy which cause constructive interference at the interfaces. Before entering the details, let us review the aspects of generation of fluorescence radiation. The appearance of fluorescence radiation is linked with the electromagnetic field intensity of the impinging radiation for each infinitesimal volume element inside the sample through a proportionality
+\begin{align}
+ I_\text{GIXRF} = C \int |E(\vec{r})|^2 \rho(\vec{r}) 
+\,\text{d}^3 r \text{,}
+\end{align}
+where $C$ is a constant, $|E(\vec{r})|^2$ is the field intensity and, here, $\rho(z)$ is the relative density of the chemical species of interest at the position $\vec{r}$.
+XRF at layered systems \cite{de_boer_glancing-incidence_1991}
+
+layered materials \cite{de_boer_glancing-incidence_1991}
+
+infinite in two directions
+\begin{align}
+ I_\text{GIXRF} = C \int\limits_0^{D} |E(z)|^2 \rho(z) 
+\,\text{d}z \text{,}
+\end{align}
+
 \begin{figure*}[htb]
     \def\svgwidth{\textwidth}
     \import{svg/}{XRF_multilayer_sheme.pdf_tex}
@@ -401,7 +419,7 @@ In addition it should be noted here, that Eq.~\eqref{ch_theo:eqn_full_explicit_d
 \end{figure*}
 
 
-\cite{sherman_theoretical_1955, shiraiwa_theoretical_1966, de_boer_glancing-incidence_1991}
+
 \begin{figure}[htb]
         \includegraphics{img/XRF_scheme}
         \caption[X-ray standing wave fluorescence principle.]{%
