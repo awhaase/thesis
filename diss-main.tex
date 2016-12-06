@@ -16,9 +16,9 @@
 
 \frontmatter
 
-%    \pagestyle{thesisINTRO}
-%    \input{tub-titlepage}
-%    \input{abstract}
+    \pagestyle{thesisINTRO}
+    \input{tub-titlepage}
+    \input{abstract}
 
 
     \selectlanguage{UKenglish}%
@@ -26,13 +26,13 @@
     \listoffigures
     %\listoftables
 
-%    \printglossary[type=\acronymtype,title=Abbreviations,style=list]
-%    \printglossary[type=symbols,title=Symbols,style=long,nonumberlist=true]
+    \printglossary[type=\acronymtype,title=Abbreviations,style=list]
+    \printglossary[type=symbols,title=Symbols,style=long,nonumberlist=true]
 
 \mainmatter
     %\include{ch_Introduction}
     \include{ch_TheoreticalBackground}
-    %\include{ch_Experimental}
+    \include{ch_Experimental}
     %\include{ch_Specular}
     %\include{ch_Diffuse}
     %\include{ch_Summary}
@@ -40,11 +40,14 @@
     \printbibliography[heading=bibintoc,title={References}]
 
 
-%\backmatter
-%    \pagestyle{thesisINTRO}
-%    \include{danksagung}
-%    \include{tub-eidesstattliche}
-%    \include{tub-publist}
-
+\backmatter
+    \pagestyle{thesisINTRO}
+    \include{danksagung}
+    \include{tub-eidesstattliche}
+    \include{tub-publist}
+    
+\iffalse
+    \bibliography{zotero-full.bib}
+\fi
 
 \end{document}
