@@ -47,7 +47,11 @@ cleanall:
 	rm -fv *.slo
 	rm -fv *.sls
 	rm -fv *.acn
+	rm -fv *.acr
+	rm -fv *.alg
 	rm -fv *.glg
 	rm -fv *.slg
 	rm -fv *.ist
 	rm -fv *.bbl
+	rm -fv svg/*.pdf
+	rm -fv svg/*.pdf_tex
