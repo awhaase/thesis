@@ -19,7 +19,7 @@ It marks the point in the spectrum, where the integrated radiant power for all v
 \begin{align}
  \frac{\text{d}^2 W}{\text{d} \Omega \text{d} \omega} &= \frac{\gls{e}^2 R^2}{36 \pi^3 \gls{epsilon_0} \gamma^4} \omega^2 \big(1+ (\gamma \Psi)^2\big)\Big( K_{2/3}^2(\zeta) + \frac{(\gamma \Psi)^2}{1 + (\gamma \Psi)^2} K_{1/3}^2(\zeta)\Big) \text{,} \label{ch_exp:schwinger_equation_spectral}
 \end{align}
-where $\gamma = \sfrac{E}{\gls{m_0} \gls{c}^2}$ and $\Psi$ is the angle between the orbital plane and the observation direction outside of that plane. The argument of the modified Bessel funktions of second kind $K_{x}(\zeta)$ is defined as
+where $\gamma = \sfrac{E}{\gls{m_0} \gls{c}^2}$ and $\Psi$ is the angle between the orbital plane and the observation direction outside of that plane \cite{schwinger_classical_1949}. The argument of the modified Bessel funktions of second kind $K_{x}(\zeta)$ is defined as
 \begin{align}
  \zeta = \frac{R \omega}{3 c \gamma^3} \big(1 + (\gamma \Psi)^2\big)^\frac{3}{2} \text{.}
 \end{align}
@@ -34,18 +34,17 @@ The dedicated sychrotron radiation facilities, such as \gls{bessy} and the \gls{
     \caption[Schematic overview of BESSY II.]{Schematic overview of the electron storage ring facility \gls{bessy}\footnote{Original image by \gls{hzb}, Ela Strickert, source: \url{https://www.helmholtz-berlin.de/mediathek/bildarchiv/}}. The synchrotron accelerates the electrons coming from the \gls{linac}, which are then injected in the electron storage ring with their full desired energy. Electromagnetic lenses focus and stabilize the beam, as well as deflecting it onto the circular orbit while emitting synchrotron radiation at each dipole (bending) magnet. Cavities reaccelerate the electrons in the storage ring to compensate the energy loss due to the radiation emission.}
     \label{ch_exp:fig_bessy2}
 \end{figure*}
-Undulators of wigglers are inserted in the straight sections of the \gls{bessy} storage ring with a large number of periodically arranged magnets with alternating polarization forcing the electrons on a sinosoidal beam path. The goal of these insertion devices is to shift the critical energy of the storage ring towards higher energies (wigglers) or to dramatically increase the brilliance within a significantly smaller spectral range (undulators). The different effects of the undulators and wigglers on the generated spectrum is determined by the magnetic field strength $B_0$ and the distance between two identical periodic arragnements of the magnets of alternating polarization $\lambda_0$. The deflection parameter quantifies this relation through $K \propto B_0 \lambda_0$. Undulators typically have deflection parameters $K < 1$ while in case of wigglers $K \gg 1$ \cite{munro_chapter_1987}. Technically, the magnetic field strength can be varied by changing the distance (``gap'') between the magnets vertically. By changing the vertical alignment of the magnetic field direction with respect to the beam path, it is even possible to affect the polarization properties of the emitted radiation to obtain circularly polarized radiation.
-\begin{figure*}[htb]
+Undulators of wigglers are inserted in the straight sections of the \gls{bessy} storage ring with a large number of periodically arranged magnets with alternating polarization forcing the electrons on a sinosoidal beam path. The goal of these insertion devices is to shift the critical energy of the storage ring towards higher energies (wigglers) or to dramatically increase the brilliance within a significantly smaller spectral range (undulators). The different effects of the undulators and wigglers on the generated spectrum is determined by the magnetic field strength $B_0$ and the distance between two identical periodic arragnements of the magnets of alternating polarization $\lambda_0$. The deflection parameter quantifies this relation through $K \propto B_0 \lambda_0$. Undulators typically have deflection parameters $K < 1$ while in case of wigglers $K \gg 1$ \cite{munro_chapter_1987}. Technically, the magnetic field strength can be varied by changing the distance (``gap'') between the magnets vertically. By changing the vertical alignment of the magnetic field direction with respect to the beam path, it is even possible to affect the polarization properties of the emitted radiation to obtain circularly or eliptically polarized radiation.
+\begin{figure}[htb]
     \def\svgwidth{0.7\textwidth}
     \import{svg/}{mls.pdf_tex}
     \caption[Schematic overview of the MLS]{Schematic overview of the electron storage ring facility \gls{mls}}
     \label{ch_exp:fig_mls}
-\end{figure*}
+\end{figure}
 
-\begin{enumerate}
- \item Schwinger equation per unit solid angle and unit wavelength interval
- \item \gls{fel}. Invention \cite{madey_stimulated_1971}. Demonstration \cite{deacon_first_1977}. Long undulator \gls{sase} \cite{derbenev_possibility_1982, bonifacio_collective_1984}
-\end{enumerate}
+
+The most advanced light source available today, also known as fourth generation source, is following the concept of a \gls{fel} as first invented by \textcite{madey_stimulated_1971}. In that case radiation is produced by a typically single very long undulator inside a linear accelerator instead of a comparatively short straight section of a storage ring. The concept was first demonstrated by \textcite{deacon_first_1977}. \Gls{fel} sources produce highly coherent radiation in the x-ray regime through the principle of \gls{sase} \cite{derbenev_possibility_1982, bonifacio_collective_1984}. Here, the emitted radiation inside the long undulator has a feedback effect on the electron bunch travelling along the beam path. The result is a microbunching of the electron cloud through the electric field of the emitted radiation connected with a (random) wavelength within a certain spectral range defined by the undulator properties. The microbunching causes amplification of that wavelength, which causes an emission spectrum showing several spikes of amplified wavelengths with a noisy background until a saturation level is reached \cite{milton_exponential_2001}.
+
 
 \section{The SX700 and EUVR Beamlines}
 \begin{figure*}[htb]
