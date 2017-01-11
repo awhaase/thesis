@@ -23,34 +23,34 @@ where $\vec{r}$ is a vector to a point in space. The time-independent wave equat
 \begin{align}
 (\Delta  + \gls{k_0}^2 ) \vec{E} &= 0\text{,}& (\Delta  + \gls{k_0}^2 ) \vec{B} &= 0\text{,} \label{ch_theo:eqn_wave_equation_vacuum_time_indepenend}
 \end{align}
-where $\gls{k_0}= \sfrac{\gls{omega}}{\gls{c}}$, i.e.~the modulus of the vacuum wave vector. A very important solution to this wave equation is the monochromatic plain wave, which is usually presumed to be impinging on scattering problems such as those discussed in this thesis. Hence, for Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} we obtain
+where $\gls{k_0}= \sfrac{\gls{omega}}{\gls{c}} = \sfrac{2 \pi}{\lambda}$, i.e.~the modulus of the vacuum wave vector. A very important and often applied solution to this wave equation is the monochromatic plain wave. Hence, for Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} we obtain
 \begin{align}
 E(\vec{r},t) &= E_0 \, e^{i \gls{omega} t - i \vec{k} \cdot \vec{r}}\text{,} & B(\vec{r},t) &= B_0 \, e^{i \gls{omega} t - i \vec{k} \cdot \vec{r}}\text{,} \label{ch_theo:eqn_plain_wave}
 \end{align}
 where $E_0$ and $B_0$ are the initial electric and magnetic field amplitudes, respectively, and $|\gls{k}| = \gls{k_0}$ \cite{born_principles_1965}.
 
-The radiation propagating as a plane wave has a wavelength of $\gls{lambda}$, where each photon carries an energy of
-\begin{align}
-E_\text{ph} = \frac{h c}{\lambda} = \hbar \gls{omega}\text{,}
-\end{align}
-where $\gls{h}$ is the Planck's constant and $\hbar = \sfrac{h}{2 \pi}$. From this follows that the modulus of the vacuum wave vector, also called the \emph{wave number}, $\gls{k_0} = \sfrac{2 \pi}{\lambda}$. The photon energy is typically expressed in units of the electron charge, which defines the unit \emph{\gls{eV}} used for expressions in this thesis.
-
-This description of the propagation of electromagnetic radiation in vacuum can be extended to the propagation inside a homogeneous medium. This will be discussed in the following section on the interaction of \gls{euv} and x-ray radiation with matter.
-
 \section{Interaction of EUV and X-ray Radiation With Matter} \label{ch_theo:sec_interaction}
-As noted above, the wave equation Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} still holds for the propagation of radiation inside a homogeneous medium in slightly modified form. The speed of light \gls{c}, while being a constant in vacuum with respect to the energy, becomes energy dependent once the wave enters the medium \cite{bergevin_interaction_2009}. This \emph{dispersion} has an impact on the wave number. In addition, in general the radiation will be partially absorbed while propagating through matter. To account for this change of the wave number with respect to the vacuum propagation we introduce a complex, energy dependent \emph{index of refraction},
+The wave equation Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} still holds for the propagation of radiation inside a homogeneous medium in slightly modified form. The Maxwell equations contain the electric permittivity and magnetic permeability, which are different for electric and magnetic fields inside a medium compared to the respective quantities in vacuum (electric and magnetic constants). The curl equations indside a medium are therefore obtained by replacing $\epsilon_0 \rightarrow \epsilon = \epsilon_r \epsilon_0$ and $\mu_0 \rightarrow \mu = \mu_r \mu_0$,
+\begin{align}
+ \nabla \times \vec{E} & = -\frac{\partial \vec{B}}{\partial t}\text{,} & \nabla \times \vec{B} &= \mu_r \mu_0 \epsilon_r \epsilon_0 \frac{\partial E}{\partial t} \text{,}
+\end{align}
+where $\epsilon_r$ is the relative electric permittivity and $\mu_r$ is the relative magnetic permeability. These quantities are defined through the relation of the electric displacement field $\vec{D} = \epsilon \vec{E}$, which remains unchanged at the interface of vacuum and matter, and the magnetic field relation $\vec{B} = \mu \vec{H}$ (for para- and diamagnetic materials with a magnetization parallel to the field lines).  In case of electromagnetic waves in the EUV and x-ray spectral range, the latter does not differ significantly from one and is often approximated by $\mu_r \approx 1$ \cite{bergevin_interaction_2009}. The electric permittivity, however, can take significantly different values inside matter than in vacuum. The relative electric permittivity is directly related to the suszeptibility $\chi = \epsilon_r - 1$, which is defined as the proportionality in the relation of the dielectric polarization density and the electric field
+\begin{align}
+ \vec{P} = \epsilon_0 \chi \vec{E}\text{,}
+\end{align}
+and thus a measure for the polarizability of a material with respect to an electric field.
+
+In terms of the derivation of the wave equations, the electric permittivity and magnetic permeability enter in the speed of light $\gls{c} = \sfrac{1}{\sqrt{\epsilon_r \epsilon_0 \mu_r \mu_0}}$ (for $\epsilon_r$ and $\mu_r$ being real numbers), which is different inside a medium than in vacuum. Also, the changes in polarization of matter under a changing electric field will not be instantaneous but occur with a delay depending on the material. Thus, the electric permittivity will in general be a function of the frequency $\omega$ (or equivalently a function of the photon energy) , i.e.~$\epsilon = \epsilon(\omega)$, also known as dielectric function. In turn, while being a constant in vacuum with respect to the energy, the speed of light becomes energy dependent once the wave enters the medium \cite{bergevin_interaction_2009}. This \emph{dispersion} has consquently also an effect on the value of the wave number $k$ inside the medium in comparison to the vacuum equations in Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend}, which yields
+\begin{align}
+ k = \frac{1}{\sqrt{\mu_r \epsilon_r}} k_0 = n k_0\text{,}
+\end{align}
+where $n$ is the index of refraction taking into account the changes of the wave vector $\vec{k}$ of an electromagnetic field at the interface of vacuum and matter. The delay in polarization response of the material due to electromagnetic waves can be described by a complex valued dielectric function, which accounts for the phase difference due in the polarization density with respect to the electric field. In consequence the wave number $k$ and the index of refraction $n$ become complex quantities, with the imaginary part describing the dissipative effects due to the polarization of matter, i.e.~the absorption of the electromagnetic radiation during the propagation.
+
+The index of refraction can then be written as,
 \begin{align}
 \gls{n} = 1 - \delta - i \beta \text{,} \label{ch_theo:eqn_n}
 \end{align}
-where its real part $\delta$ accounts for the deviation from the vacuum index of refraction. The dispersion is a result of the interaction of the electromagnetic radiation with the electrons in the medium, which is dependent on the wavelength as well as the \emph{\gls{el_dens}}. The factor $\delta$ is therefore proportional to these two quantities $\delta \propto \lambda^2 \gls{el_dens}$ \cite{als-nielsen_x-rays_2011, mikulik_x-ray_1997}. The absorption is accounted for by $\beta$, defined through the linear attenuation coefficient $\mu$,
-\begin{align}
-\beta = \frac{\gls{lambda} \mu}{4 \pi} \text{.}
-\end{align}
-By replacing the vacuum wave number $\gls{k_0}$ with 
-\begin{align}
-k = n \gls{k_0} \label{ch_theo:eqn_k_inside_medium}
-\end{align}
-in the wave equation Eq.~\eqref{ch_theo:eqn_wave_equation_vacuum_time_indepenend} and the plain wave solutions in Eq.~\eqref{ch_theo:eqn_plain_wave}, we obtain the wave equation for the propagation of x-rays and EUV radiation inside a medium and its solutions.
+where its real part $\delta$ accounts for the deviation from the vacuum index of refraction and its imaginary part $\beta$ for the dispersion. The origin of the values of these two parts is strongly dependend on the material and the spectral range of the electromagnetic radiation. Later, we will quickly summarize this dependence for the interaction of matter with EUV and x-ray radiation due to the atomic electronic structure in condensed matter.
 
 \paragraph{Interaction of a Photon With Atoms and its Electrons}
 The continuum description above gives a consistent description of the reflection, refraction and absorption of x-rays and EUV radiation at the interfaces of vacuum and matter in a macroscopic picture. The treatment is analogous to reflection and refraction in classical optics and serves well to describe these processes in case of specular reflectance from homogeneous materials as we shall see later in this chapter. However, it is necessary to also give a more general description on the interaction of a photon with the atoms, and more importantly the electrons, of a medium to describe the origin of the diffuse scattering and fluorescence processes, which are not covered by the continuum description above.
