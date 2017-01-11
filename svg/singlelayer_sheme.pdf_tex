@@ -1,0 +1,72 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'singlelayer_sheme.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{173.62976371bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.64232015)%
+    \put(0,0){\includegraphics[width=\unitlength]{singlelayer_sheme.pdf}}%
+    \put(0.15562858,0.09997113){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\fontfamily{fds}\selectfont\footnotesize
+matter $j=1$, $n^{(1)} = 1-\delta^{(1)}-
+i\beta^{(1)}$}}}}%
+    \put(0.55062792,0.20191879){\color[rgb]{0.65098039,0.02352941,0.15686275}\makebox(0,0)[lb]{\smash{$\vec{k}_t^{(1)}$}}}%
+    \put(0.39882056,0.48654372){\color[rgb]{0.65098039,0.02352941,0.15686275}\makebox(0,0)[lb]{\smash{$\vec{k}^{(0)}_i$}}}%
+    \put(0.56905794,0.48654372){\color[rgb]{0.20392157,0.54117647,0.74117647}\makebox(0,0)[lb]{\smash{$\vec{k}_r^{(0)}$}}}%
+    \put(0,0.61181097){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\fontfamily{fds}
+\selectfont
+\footnotesize
+$z$}}}}%
+    \put(0.15562858,0.61181097){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\fontfamily{fds}
+\selectfont
+\footnotesize
+vacuum $j=0$, $n^{(0)} = 1$}}}}%
+    \put(0.20003916,0.39511636){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k_z^{(0)}$}}}%
+    \put(0.38039054,0.23954529){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k_x^{(0)}$}}}%
+    \put(0.61588666,0.35012541){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k_x^{(1)}$}}}%
+    \put(0.76257315,0.25062184){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k_z^{(1)}$}}}%
+  \end{picture}%
+\endgroup%
