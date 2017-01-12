@@ -44,7 +44,7 @@ In terms of the derivation of the wave equations, the electric permittivity and 
 \begin{align}
  k = \frac{1}{\sqrt{\mu_r \epsilon_r}} k_0 = n k_0\text{,}
 \end{align}
-where $n$ is the index of refraction taking into account the changes of the wave vector $\vec{k}$ of an electromagnetic field at the interface of vacuum and matter. The delay in polarization response of the material due to electromagnetic waves can be described by a complex valued dielectric function, which accounts for the phase difference due in the polarization density with respect to the electric field. In consequence the wave number $k$ and the index of refraction $n$ become complex quantities, with the imaginary part describing the dissipative effects due to the polarization of matter, i.e.~the absorption of the electromagnetic radiation during the propagation.
+where $n$ is the index of refraction taking into account the changes of the wave vector $\vec{k}$ of an electromagnetic field at the interface of vacuum and matter. The delay in polarization response of the material due to electromagnetic waves can be described by a complex valued dielectric function $\gls{epsilon_omega} = \epsilon_1(\omega) + i \epsilon_2(\omega)$, which accounts for the phase difference due in the polarization density with respect to the electric field and dissipative effects in the matter. In consequence the wave number $k$ and the index of refraction $n$ become complex quantities, with the imaginary part describing the absorption of the electromagnetic radiation during the propagation.
 
 The index of refraction can then be written as,
 \begin{align}
@@ -72,10 +72,10 @@ Scattering of an incoming plane wave is described by the quantity of the \emph{d
 \end{align}
 where $I_\text{scattered}$ is the scattered intensity into the solid angle $\Delta \Omega$ and $\Phi_0$ is the total flux of incoming photons of the primary wave per unit area. Due to this proportionality, the goal of calculating the scattering intensity is achieved by determining the differential cross section for the scattering problem at hand. As an example we shall briefly demonstrate the differential cross section at hand of scattering from a single free electron and extend that description to scattering from an arbitrary electron density \gls{el_dens}.
 
-\paragraph{Rayleigh scattering from atoms}
+\paragraph{Thomson scattering from single free electrons}
 The scattering cross section in case of a single free electron is given by
 \begin{align}
- \Big(\gls{dcs}\Big) &= \Big(\frac{e^2}{4 \pi \epsilon_0 m c^2}\Big)^2 |\vec{e_i} \cdot \vec{e_s}|^2 = \gls{r_e}^2 |\vec{e_i} \cdot \vec{e_s}|^2 \text{,}
+ \Big(\gls{dcs}\Big) &= \Big(\frac{e^2}{4 \pi \epsilon_0 m c^2}\Big)^2 |\vec{e_i} \cdot \vec{e_s}|^2 = \gls{r_e}^2 |\vec{e_i} \cdot \vec{e_s}|^2 \text{,} \label{ch_theo:eqn_thomson_scattering}
 \end{align}
 where $e$ is the electron charge and the unit vectors $\vec{e_i}$ and $\vec{e_s}$ describe the direction of the electric field vector before and after the scattering process, respectively. The differential cross section in the case of \emph{Thomson scattering} is proportional to the square of the classical electron radius $\gls{r_e}$. Depending on the polarization properties of the impinging radiation, the scalar product of the two unit vectors yields
 \begin{align}
@@ -85,19 +85,20 @@ where $e$ is the electron charge and the unit vectors $\vec{e_i}$ and $\vec{e_s}
     \frac{1}{2}\big(1+\cos^2(\Delta \Psi)\big) & \text{unpolarized radiation}
 \end{cases} \text{,}
 \end{align}
-where $\Delta \Psi$ is the angle between the incoming beam and the scatter direction (cf.~Fig.~\ref{ch_theo:fig_scattering_process} below) \cite{als-nielsen_x-rays_2011}.
+where $\Delta \Psi$ is the angle between the incoming beam and the scatter direction \cite{als-nielsen_x-rays_2011}.
 
-In general, the scattering from a single free electron will not be an accurate description for most scattering problems of radiation on matter. Instead electrons are bound in an atom and the radiation is scattered by the electron density at a certain position $\vec{r}$ associated with the distribution of electrons in a certain atom. The result is a differential cross section considering the scattering from a volume element $d\vec{r}$ by the electron density \gls{el_dens},
+\paragraph{Rayleigh scattering from bound electrons and Born approximation}
+In general, the scattering from a single free electron will not be an accurate description for most scattering problems of EUV and x-ray radiation impinging on matter. Instead electrons are bound in an atom or molecule (or in the band structure of a solid) and the radiation is scattered by an electron density associated with the distribution of electrons bound in an atom. The bound nature of the electrons also influences the scattering cross section as we shall summarize here. The result is that the differential cross section obtained for Thomson scattering has to be modified by the \emph{atomic form factor} $f(\vec{q})$ defined through,
 \begin{align}
-\Big(\gls{dcs}\Big) &= \gls{r_e}^2 |f^0(\vec{q})|^2 |\vec{e_i} \cdot \vec{e_s}|^2 = \gls{r_e}^2 \Big|\int \gls{el_dens} e^{- i \vec{q} \cdot \vec{r}} \, d\vec{r}\Big|^2 \, |\vec{e_i} \cdot \vec{e_s}|^2 \text{,} \label{ch_theo:eqn_atomic_form_factor}
+\Big(\gls{dcs}\Big) &= \gls{r_e}^2 |f(\vec{q})|^2 |\vec{e_i} \cdot \vec{e_s}|^2 \text{,} \label{ch_theo:eqn_atomic_form_factor}
 \end{align}
-where $f^0(\vec{q})$ is called the \emph{atomic form factor} and $\gls{q} = \vec{k}_f - \vec{k}_{i}$ the \emph{wavevector transfer} or \emph{scattering vector} \cite{daillant_x-ray_2009}. The latter in Eq.~\eqref{ch_theo:eqn_atomic_form_factor} accounts for the phase difference between different scattering centers in the spacial electron distribution and is an important characteristic of any scattering process. Since the scattering processes described in this thesis are considered in reflection geometry only, we shall define it in terms of the corresponding incidence and exit angles below.
+where $\gls{q} = \vec{k}_f - \vec{k}_{i}$ the \emph{wavevector transfer} or \emph{scattering vector}. Let us first consider the case of a free electron cloud. Here, the form factor, which we shall denote $f^{0}(\vec{q})$, is given by
+\begin{align}
+f^0(\vec{q}) &= \int \gls{el_dens}(\vec{r}) e^{- i \vec{q} \cdot \vec{r}} d \vec{r} \text{.} \label{ch_theo:eqn_atomic_form_factor_free}
+\end{align}
+The exponential function in Eq.~\eqref{ch_theo:eqn_atomic_form_factor_free} accounts for the phase difference between different scattering centers in the spatial electron distribution \cite{daillant_x-ray_2009}. The scattering from a free electron cloud is thus characterized by the Fourier transform of the electron density spatial distribution. In the limiting case of a singular isolated electron (described by a delta function for the electron density), the scattering cross section will just yield the Thomson scattering formula in Eq.~\eqref{ch_theo:eqn_thomson_scattering}. It is important to note here, that the form factor found in Eq.~\eqref{ch_theo:eqn_atomic_form_factor_free} is only valid if the scattering is weak compared to the primary incident wave. For solving the corresponding wave equation one approximates the incoming field at all positions $\vec{r}$ of the electron density with the initial primary wave neglecting any scattered contributions from other positions $\vec{r}'$. This is called the \emph{Born approximation}. It implicitly corresponds to considering only one single scattering event per incident photon. Multiple scattering processes are not included in this description (kinematic scattering). Later, we will generalize this approximation to more complex, exactly solvable scattering problems instead of considering only the kinematic processes.
 
-
-
-
-\paragraph{Anomalous scattering and Born approximation}
-The differential cross section found in Eq.~\eqref{ch_theo:eqn_atomic_form_factor} with the atomic form factor $f^{0}(\vec{q})$ follows from a quantum mechanical perturbation calculation and is strictly speaking only valid far away from any electronic resonance. That, however, might not be the case, especially for \gls{euv} and x-ray radiation scattered on light elements. Here, especially the core shell energy levels are close to the energy of the impinging radiation. In that case the electron response will no longer be that of a free or quasi free electron but influenced due to the fact that it is tightly bound. This effect is called \emph{dispersion} and results in two wavelength dependent dispersion correction factors in the atomic form factor \cite{als-nielsen_x-rays_2011, daillant_x-ray_2009}, which is described as
+The differential cross section in Eq.~\eqref{ch_theo:eqn_atomic_form_factor} with the atomic form factor $f^{0}(\vec{q})$ is only valid for free electrons. In case of bound electrons in a atom, molecule or solid, electronic resonances exist which affect the scattering. For \gls{euv} and x-ray radiation dipole scattering on light elements, the core shell energy levels are close to the energy of the impinging radiation. In that case the electron response will no longer be that of a free or quasi free electron but influenced due to the fact that it is tightly bound. This effect is called \emph{dispersion} and results in two additional wavelength dependent dispersion factors in the atomic form factor \cite{als-nielsen_x-rays_2011, daillant_x-ray_2009}, which is now a complex quantity including absorption effects described as
 \begin{align}
  f(\vec{q}, \lambda) &= f^0(\vec{q}) + f'(\lambda) + i f''(\lambda) \text{.} \label{ch_theo:eqn_dispersion_correction}
 \end{align}
@@ -105,17 +106,7 @@ The \emph{atomic scattering factors} $f'(\lambda)$ and $f''(\lambda)$ are strong
 \begin{align}
 n &= 1 - \delta - i \beta = 1 - \frac{\gls{r_e}}{2 \pi} \lambda^2 n_a f(0, \lambda) \text{,}
 \end{align}
-where $n_a$ is the number of atoms per unit volume \cite{thompson_x-ray_2001}.
-
-Finally, we should note that the atomic form factor including its dispersion correction terms in Eq.~\eqref{ch_theo:eqn_dispersion_correction} and consequently the differential scattering cross section from Eq.~\eqref{ch_theo:eqn_atomic_form_factor} is obtained following a perturbation theory approach. In the quantum mechanical description the field driving the scattering process is considered to be the incident wave field (e.g.~a plane wave) instead of the exact total field including the scattered field component. This is an approximation, called the \emph{Born approximation}, only valid if the scattered field is small compared to the incident field. This implicitly corresponds to considering only one single scattering event per incident photon. Multiple scattering processes are not included in this description (kinematic scattering). Later, we will generalize this approximation to more complex, exactly solvable scattering problems instead of considering only the kinematic processes.
-% \begin{description}
-%     \item[Thomson scattering]{Free electron, no resonances, wavelength independend}
-%     \item[Rayleigh scattering]{Bound electron with resonances, in limiting case Thomson (very high energy), at low energy (low frequency) strongly dependent on the frequency}
-%     \item[Anomalous scattering]{X-rays close to resonances, especially of inner shells. Dispersion correction with $f'$ adn $i f''$ needed. This is Thomson scattering plus correction. The so called atomic scattering factors are dependent on the element and enter the calculation of the complex index of refraction.}
-% \end{description}
-
-
-
+where $n_a$ is the number of atoms per unit volume \cite{thompson_x-ray_2001}. The atomic scattering factor is thus connected to the dielectic function \gls{epsilon_omega} of the continuum theory for interaction with EUV and x-ray radiation above.
 
 \subsection{Absorption and Fluorescence Radiation} \label{ch_theo:sec_absorption_and_fluorescence}
 Absorption of electromagnetic radiation, more specifically X-ray radiation, in matter is the third main interaction process mentioned here. In that case, the incoming photon is totally absorbed by a bound core shell electron and transfers all its energy to that electron leaving it in a energetically excited state. If the energy of the incoming is sufficient to excite the electron into the continuum above the binding energy, that electron is ejected from the atom leaving a vacancy at one of the core shells. Since this state is no longer the energetically most stable one, relaxation of electrons in energetically higher shells into the vacancy cause the release of energy. This can happen through two competing processes known as \emph{X-ray fluorescence} and the \emph{Auger effect}. The general principle of X-ray fluorescence is illustrated in Fig.~\ref{ch_theo:fig_fluorescence_term_sheme}.
