@@ -24,7 +24,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
      inkscape:cx="323.79688"
-     inkscape:cy="584.56735"
+     inkscape:cy="584.9209"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -401,7 +401,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -817,25 +817,25 @@
        sodipodi:linespacing="125%"
        id="text5491"
        y="477.68326"
-       x="226.45856"
+       x="210.45856"
        style="font-size:8.40167046px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          id="tspan5499"
          y="477.68326"
-         x="226.45856"
+         x="210.45856"
          sodipodi:role="line">{\fontfamily{fds}</tspan><tspan
          y="488.18533"
-         x="226.45856"
+         x="210.45856"
          sodipodi:role="line"
          id="tspan5521">\selectfont</tspan><tspan
          y="498.68744"
-         x="226.45856"
+         x="210.45856"
          sodipodi:role="line"
          id="tspan5523">\footnotesize</tspan><tspan
          y="509.18951"
-         x="226.45856"
+         x="210.45856"
          sodipodi:role="line"
-         id="tspan5525">kinematic}</tspan></text>
+         id="tspan5525">semi-kinematic}</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.40167046px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"

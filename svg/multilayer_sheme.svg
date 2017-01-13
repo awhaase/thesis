@@ -24,8 +24,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6568544"
-     inkscape:cx="582.24656"
-     inkscape:cy="578.70845"
+     inkscape:cx="372.67847"
+     inkscape:cy="380.80694"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -444,7 +444,7 @@
          sodipodi:role="line"
          id="tspan5332"
          x="322.27008"
-         y="476.15408">$T_{j-1}^{(1)}$</tspan></text>
+         y="476.15408">$T_{j-1}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text5334"
@@ -455,7 +455,7 @@
          y="476.15408"
          x="371.20038"
          id="tspan5336"
-         sodipodi:role="line">$R_{j-1}^{(1)}$</tspan></text>
+         sodipodi:role="line">$R_{j-1}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text5338"
@@ -466,7 +466,7 @@
          y="528.94153"
          x="371.20038"
          id="tspan5340"
-         sodipodi:role="line">$T_{j}^{(1)}$</tspan></text>
+         sodipodi:role="line">$T_{j}$</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path5429"
@@ -525,7 +525,7 @@
          sodipodi:role="line"
          id="tspan11440"
          x="322.27008"
-         y="528.94153">$R_{j}^{(1)}$</tspan></text>
+         y="528.94153">$R_{j}$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.40167046px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
@@ -607,7 +607,7 @@
          y="602.22046"
          x="371.20038"
          id="tspan11462"
-         sodipodi:role="line">$T_{j+1}^{(1)}$</tspan></text>
+         sodipodi:role="line">$T_{j+1}$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.89851379px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -618,7 +618,7 @@
          sodipodi:role="line"
          id="tspan11466"
          x="322.27008"
-         y="602.22046">$R_{j+1}^{(1)}$</tspan></text>
+         y="602.22046">$R_{j+1}$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.89851379px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -629,7 +629,7 @@
          sodipodi:role="line"
          id="tspan11470"
          x="322.27008"
-         y="550.96838">$T_{j}^{(1)}$</tspan></text>
+         y="550.96838">$T_{j}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text11472"
@@ -640,7 +640,7 @@
          y="550.96838"
          x="371.20038"
          id="tspan11474"
-         sodipodi:role="line">$R_{j}^{(1)}$</tspan></text>
+         sodipodi:role="line">$R_{j}$</tspan></text>
     <path
        sodipodi:type="arc"
        style="fill:#000000;fill-opacity:1;stroke:none"
@@ -788,7 +788,7 @@
          sodipodi:role="line"
          id="tspan4028"
          x="371.20038"
-         y="676.22046">$T_{N+1}^{(1)}$</tspan></text>
+         y="676.22046">$T_{N+1}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4034"
@@ -799,7 +799,7 @@
          y="624.96838"
          x="322.27008"
          id="tspan4036"
-         sodipodi:role="line">$T_{N}^{(1)}$</tspan></text>
+         sodipodi:role="line">$T_{N}$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.89851379px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -810,7 +810,7 @@
          sodipodi:role="line"
          id="tspan4040"
          x="371.20038"
-         y="624.96838">$R_{N}^{(1)}$</tspan></text>
+         y="624.96838">$R_{N}$</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path4046"
@@ -869,7 +869,7 @@
          sodipodi:role="line"
          id="tspan4064"
          x="371.20038"
-         y="425.86209">$T_{1}^{(1)}$</tspan></text>
+         y="425.86209">$T_{1}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4066"
@@ -880,7 +880,7 @@
          y="425.86209"
          x="322.27008"
          id="tspan4068"
-         sodipodi:role="line">$R_{1}^{(1)}$</tspan></text>
+         sodipodi:role="line">$R_{1}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4070"
@@ -891,7 +891,7 @@
          y="372.61002"
          x="322.27008"
          id="tspan4072"
-         sodipodi:role="line">$T_{0}^{(1)}$</tspan></text>
+         sodipodi:role="line">$T_{0}$</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:8.89851379px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -902,7 +902,7 @@
          sodipodi:role="line"
          id="tspan4076"
          x="371.20038"
-         y="372.61002">$R_{0}^{(1)}$</tspan></text>
+         y="372.61002">$R_{0}$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4178"
