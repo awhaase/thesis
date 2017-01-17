@@ -386,7 +386,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -457,12 +457,6 @@
          sodipodi:type="arc"
          transform="matrix(0.72945009,-0.0035979,0.06328901,0.79750505,101.1805,140.22717)" />
     </g>
-    <path
-       style="fill:none;stroke:#a60628;stroke-width:0.9375;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:0.9375,0.9375;stroke-dashoffset:0;marker-end:none"
-       d="M 204.98803,635.16025 149.02727,456.8808"
-       id="path5680"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
     <path
        sodipodi:type="arc"
        style="fill:none;stroke:#000000;stroke-width:1.70649803;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-start:url(#Arrow1Sstart);marker-end:url(#Arrow1Send)"
@@ -540,30 +534,6 @@
          id="tspan11889"
          x="159.79457"
          y="478.7186">$\alpha_i$</tspan></text>
-    <path
-       sodipodi:type="arc"
-       style="fill:none;stroke:#000000;stroke-width:1.25594461;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker-start:url(#Arrow1Sstart);marker-end:url(#Arrow1Send)"
-       id="path12473"
-       sodipodi:cx="406.07144"
-       sodipodi:cy="479.14789"
-       sodipodi:rx="102.85714"
-       sodipodi:ry="102.85714"
-       d="M 493.48698,533.35226 A 102.85714,102.85714 0 0 1 304.23392,493.59473"
-       sodipodi:start="0.5550514"
-       sodipodi:end="3.0006713"
-       transform="matrix(-0.19024951,-0.91350781,0.87562903,-0.19847954,-167.23001,1007.25)"
-       sodipodi:open="true" />
-    <text
-       xml:space="preserve"
-       style="font-size:12.02020264px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola Italic"
-       x="263.77466"
-       y="503.18597"
-       id="text12475"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan12477"
-         x="263.77466"
-         y="503.18597">$\Delta\Psi$</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4209"
