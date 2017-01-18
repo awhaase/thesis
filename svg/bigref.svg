@@ -60,7 +60,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="379.09539"
+     inkscape:cx="466.12236"
      inkscape:cy="786.09849"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -95,42 +95,34 @@
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan36790" /></text>
-    <g
-       id="g3058"
-       transform="translate(-36,-2.1428571)">
-      <text
-         xml:space="preserve"
-         style="font-size:9.5654192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-         x="392.49051"
-         y="404.55847"
-         id="text36832"
-         sodipodi:linespacing="125%"
-         transform="scale(0.99877211,1.0012294)"><tspan
-           sodipodi:role="line"
-           x="392.49051"
-           y="404.55847"
-           id="tspan36834">{\fontfamily{fds}\selectfont\footnotesize</tspan><tspan
-           id="tspan36859"
-           sodipodi:role="line"
-           x="392.49051"
-           y="416.51526">(a) Axis labels and movement directions}</tspan></text>
-      <text
-         transform="scale(0.99877211,1.0012294)"
-         sodipodi:linespacing="125%"
-         id="text128251"
-         y="424.53406"
-         x="392.49051"
-         style="font-size:9.5654192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-         xml:space="preserve"><tspan
-           id="tspan128253"
-           y="424.53406"
-           x="392.49051"
-           sodipodi:role="line">{\fontfamily{fds}\selectfont\footnotesize</tspan><tspan
-           y="436.49084"
-           x="392.49051"
-           sodipodi:role="line"
-           id="tspan128257">for the sample holder and the detector}</tspan></text>
-    </g>
+    <text
+       transform="scale(0.99877211,1.0012294)"
+       sodipodi:linespacing="125%"
+       id="text36832"
+       y="418.39871"
+       x="356.44626"
+       style="font-size:9.5654192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         id="tspan36834"
+         y="418.39871"
+         x="356.44626"
+         sodipodi:role="line">{\fontfamily{fds}\selectfont\footnotesize</tspan><tspan
+         y="430.3555"
+         x="356.44626"
+         sodipodi:role="line"
+         id="tspan36859">\shortstack[l]{(a) Axis labels and</tspan><tspan
+         y="442.31226"
+         x="356.44626"
+         sodipodi:role="line"
+         id="tspan3119">movement directions\\</tspan><tspan
+         y="454.26904"
+         x="356.44626"
+         sodipodi:role="line"
+         id="tspan3127">of the sample holder and </tspan><tspan
+         y="466.2258"
+         x="356.44626"
+         sodipodi:role="line"
+         id="tspan3123">the detector}}</tspan></text>
     <g
        id="g3019"
        transform="translate(22.142857,-3.1530086)">
@@ -138,34 +130,22 @@
          transform="scale(0.99877211,1.0012294)"
          sodipodi:linespacing="125%"
          id="text88149"
-         y="405.56738"
+         y="421.54785"
          x="71.665726"
          style="font-size:9.5654192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
          xml:space="preserve"><tspan
            id="tspan88157"
-           y="405.56738"
+           y="421.54785"
            x="71.665726"
-           sodipodi:role="line">{\fontfamily{fds}\selectfont\footnotesize</tspan><tspan
+           sodipodi:role="line">{\fontfamily{fds}\selectfont\footnotesize\shortstack[l]{</tspan><tspan
            id="tspan36836"
-           y="417.52417"
+           y="433.50464"
            x="71.665726"
-           sodipodi:role="line">(b) Detail of the goniometer with sample holder}</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:9.5654192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-         x="71.665726"
-         y="425.54297"
-         id="text128261"
-         sodipodi:linespacing="125%"
-         transform="scale(0.99877211,1.0012294)"><tspan
+           sodipodi:role="line">(b) Detail of the goniometer with sample holder\\</tspan><tspan
+           y="445.4614"
+           x="71.665726"
            sodipodi:role="line"
-           x="71.665726"
-           y="425.54297"
-           id="tspan128263">{\fontfamily{fds}\selectfont\footnotesize</tspan><tspan
-           sodipodi:role="line"
-           x="71.665726"
-           y="437.49976"
-           id="tspan128265">and the detector arm}</tspan></text>
+           id="tspan3129">and the detector arm}}</tspan></text>
     </g>
     <image
        y="175.05954"
