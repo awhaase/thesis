@@ -47,7 +47,7 @@ The most advanced light source available today, also known as fourth generation 
 
 
 \section{The EUV Beamlines at BESSYII and MLS}
-The radiation generated in bending magnets or in insertion devices in synchrotron radiation sources typically requires monochromatization and focussing trough a series of optical elements depending on the experimental requirements or designated use cases. The two \gls{ptb} beamlines for the \gls{euv} spectral range at the two storage rings \gls{bessy} and \gls{mls} operate on the broad spectrum emitted by bending magnets at each facility. The experiments conducted in the framework of this thesis were performed at both beamlines, exploiting the different radiant power in the required spectral range of the respective experiments. The two beamlines share many technical and design aspects. Thus, the description here will introduce most of these aspects with respect to the SX700 beamline at \gls{bessy}. The differences of the \gls{euvr} at the \gls{mls} will be given below.
+The radiation generated in bending magnets or in insertion devices in synchrotron radiation sources typically requires monochromatization and focussing trough a series of optical elements depending on the experimental requirements or designated use cases. In addition, radiation in the \gls{euv} spectral range is absorbed quickly during propagation under atmospheric conditions. It is thus neccessary to maintain a high vacuum from the source points to the experiment and the detector. The two \gls{ptb} beamlines for the \gls{euv} spectral range at the two storage rings \gls{bessy} and \gls{mls} operate on the broad spectrum emitted by bending magnets at each facility. The experiments conducted in the framework of this thesis were performed at both beamlines, exploiting the different radiant power in the required spectral range of the respective experiments. The two beamlines share many technical and design aspects. Thus, the description here will introduce most of these aspects with respect to the SX700 beamline at \gls{bessy}. The differences of the \gls{euvr} at the \gls{mls} will be given below.
 
 \paragraph{The Soft X-ray Beamline SX700}
 The \gls{sx700} at \gls{bessy} provides a monochromatic beam in the spectral range from $\nm{0.7}$ to $\nm{24.8}$ wavelength (corresponding to photon energy range from $\ev{50}$ to $\ev{1800}$) \cite{beckhoff_quarter-century_2009}. The total radiation power and the corresponding relative bandwidth at that beamline are shown in Fig.~\ref{ch_exp:fig_flux_sx700}. The beam size at the entrance aperture to the reflectometer (experimantal end station) is variable through the setting of the exit slits. In the standard setting is approximately \mm{1} by \mm{1} \cite{scholze_high-accuracy_2001} and can be reduced to \mm{0.1} vertical extent (grating dispersion direction) and \mm{0.5} horizontal extent.
@@ -92,12 +92,24 @@ Linear polarization (horizontal)	& $\SI{98}{\percent}$ 		& $\SI{40}{\percent}$ t
     \label{ch_exp:beamline_optics}
 \end{figure*}
 
-\section{The ELLI and BigRef Reflectometers}
+\section{The Experimental Endstations}
+All experimenents in the \gls{euv} spectral range within the framework of this thesis were conducted at the beamlines \gls{euvr} and \gls{sx700}. Each of the beamlines is equipped with an experimental end station containing the detectors, mounts for \gls{ccd} cameras and a goniometer to adjust the angle of the sample holder with respect to the beam. Due to the high absorption of the \gls{euv} radiation in air, both chambers need to be kept under high vacuum conditions, typically below the limit of \mbar{3E-6}.
+
+\paragraph{The large reflectometer at the \gls{sx700} beamline}
+
+\paragraph{The Ellipso-scatterometer at the \gls{euvr} beamline}
 \begin{figure*}[htb]
     \def\svgwidth{\textwidth}
     \import{svg/}{elli.pdf_tex}
     \caption[The EUV ellipso-scatterometer.]{The EUV ellipso-scatterometer.}
     \label{ch_exp:fig_elli}
+\end{figure*}
+
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{bigref.pdf_tex}
+    \caption[The BigRef.]{The BigRef.}
+    \label{ch_exp:fig_bigref}
 \end{figure*}
 BigRef \cite{scholze_high-accuracy_2001}
 ELLI \cite{soltwisch_polarization_2015}
