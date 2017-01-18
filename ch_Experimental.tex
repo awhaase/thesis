@@ -46,21 +46,50 @@ Undulators or wigglers are inserted in the straight sections of the \gls{bessy} 
 The most advanced light source available today, also known as fourth generation source, is following the concept of a \gls{fel} as first invented by \textcite{madey_stimulated_1971}. In that case radiation is produced by a typically single very long undulator inside a linear accelerator instead of a comparatively short straight section of a storage ring. The concept was first demonstrated by \textcite{deacon_first_1977}. \Gls{fel} sources produce highly coherent radiation in the x-ray regime through the principle of \gls{sase} \cite{derbenev_possibility_1982, bonifacio_collective_1984}. Here, the emitted radiation inside the long undulator has a feedback effect on the electron bunch travelling along the beam path. The result is a microbunching of the electron cloud through the electric field of the emitted radiation connected with a (random) wavelength within a certain spectral range defined by the undulator properties. The microbunching causes amplification of that wavelength, which causes an emission spectrum showing several spikes of amplified wavelengths with a noisy background until a saturation level is reached \cite{milton_exponential_2001}.
 
 
-\section{The SX700 and EUVR Beamlines}
-The radiation generated in bending magnets or in insertion devices in synchrotron radiation sources typically requires monochromatization and focussing trough a series of optical elements depending on the experimental requirements or designated use cases. The two \gls{ptb} beamlines for the \gls{euv} spectral range at the two storage rings \gls{bessy} and \gls{mls} operate on the broad spectrum emitted by bending magnets at each facility. The \gls{sx700} at \gls{bessy} provides a monochromatic beam in the spectral range from $\nm{0.7}$ to $\nm{41.3}$ wavelength (corresponding to photon energy range from $\ev{30}$ to $\ev{1800}$) \cite{beckhoff_quarter-century_2009}. The total radiation power and the corresponding relative bandwidth at that beamline are shown in Fig.~\ref{ch_exp:fig_flux_sx700}. The beam size at the entrance aperture to the reflectometer (experimantal end station) is variable through the setting of the exit slits. In the standard setting is approximately \mm{1} by \mm{1} \cite{scholze_high-accuracy_2001} and can be reduced to \mm{0.1} vertical extent (grating dispersion direction) and \mm{0.5} horizontal extent.
+\section{The EUV Beamlines at BESSYII and MLS}
+The radiation generated in bending magnets or in insertion devices in synchrotron radiation sources typically requires monochromatization and focussing trough a series of optical elements depending on the experimental requirements or designated use cases. The two \gls{ptb} beamlines for the \gls{euv} spectral range at the two storage rings \gls{bessy} and \gls{mls} operate on the broad spectrum emitted by bending magnets at each facility. The experiments conducted in the framework of this thesis were performed at both beamlines, exploiting the different radiant power in the required spectral range of the respective experiments. The two beamlines share many technical and design aspects. Thus, the description here will introduce most of these aspects with respect to the SX700 beamline at \gls{bessy}. The differences of the \gls{euvr} at the \gls{mls} will be given below.
+
+\paragraph{The Soft X-ray Beamline SX700}
+The \gls{sx700} at \gls{bessy} provides a monochromatic beam in the spectral range from $\nm{0.7}$ to $\nm{24.8}$ wavelength (corresponding to photon energy range from $\ev{50}$ to $\ev{1800}$) \cite{beckhoff_quarter-century_2009}. The total radiation power and the corresponding relative bandwidth at that beamline are shown in Fig.~\ref{ch_exp:fig_flux_sx700}. The beam size at the entrance aperture to the reflectometer (experimantal end station) is variable through the setting of the exit slits. In the standard setting is approximately \mm{1} by \mm{1} \cite{scholze_high-accuracy_2001} and can be reduced to \mm{0.1} vertical extent (grating dispersion direction) and \mm{0.5} horizontal extent.
 \begin{figure}[htb]
-    \def\svgwidth{0.7\textwidth}
-    \import{svg/}{flux_sx700.pdf_tex}
-    \caption[Radiant power and relative bandwidth of the SX700 beamline.]{Radiant power and relative bandwidth of the SX700 beamline at \gls{bessy} \footnote{Original image taken from \textcite{scholze_high-accuracy_2001}}.}
+    \includegraphics[width=0.7\textwidth]{img/beamline_radiant_power.pdf}
+    \caption[Radiant power of the SX700 beamline.]{Radiant power of the SX700 beamline at \gls{bessy} in W per mA storage ring ring current. The two curves differ by the coating on the premirror in the beamline. The TiO coating provides the ability to achieve energies down to \ev{50}, while the Pt coating ensures high radiant power in the high energy range up to \ev{1800}.}
     \label{ch_exp:fig_flux_sx700}
 \end{figure}
 
-The monochromatization of the radiation is achieved by a plane grating monochromator with a blazed line grating with 1200 lines per millimeter mounted with its rotational axis within the plane of the storage ring and illuminated perpendicular to the grating lines determining the dispersive direction. The schematic layout of the beamline is illustrated in Fig.~\ref{ch_exp:fig_sx700_schematic} including the plane grating position of the monochromator. For the purpose of suppression of higher grating orders, additional filters are installed close to the entrance aperture to the experimental station.
+The monochromatization of the radiation is achieved by a plane grating monochromator with a blazed line grating with 1200 lines per millimeter mounted with its rotational axis within the plane of the storage ring and illuminated perpendicular to the grating lines, yielding the dispersive direction being perpendicular to the storage ring plane. The schematic layout of the beamline is illustrated in Fig.~\ref{ch_exp:fig_sx700_schematic} including the plane grating position of the monochromator, the focussing mirrors and slit positions.
 \begin{figure*}[htb]
     \def\svgwidth{\textwidth}
     \import{svg/}{sx700_scheme.pdf_tex}
     \caption[Schematic setup of the SX700 beamline.]{Schematic setup of the \gls{sx700} beamline at \gls{bessy} in top view (upper part) and side view (lower part) \footnote{Original image taken from \textcite{scholze_high-accuracy_2001}}.}
     \label{ch_exp:fig_sx700_schematic}
+\end{figure*}
+The selection of the desired wavelength at the position of the experimental chamber is done by a horizontal slit at the exit slit. The achievable relative bandwidth depends on the size of this slit as well as on the selected wavelength. It varies between values of $0.5\times 10^{-3}$ and $2.5\times 10^{-3}$ relative bandwidth. As mentioned above, the monochromator grating disperses the incoming broad band radiation into the vertical direction with respect to the storage ring plane. The blaze of the grating ensures high grating efficiency of about $X \%$ in the first diffraction order, but the selected vertical part of the dispersed radiation still contains parts of higher diffraction orders. This leads to a diminished spectral purity, which reduces the energy resolution. For the purpose of suppression of these higher grating orders, thin metal films in transmission geometry acting as filters are installed close to the entrance aperture to the experimental station supressing radiation energetically above the respective absorption edges of the material.
+
+The \gls{sx700} beamline only has one focussing mirror per horizontal and vertical direction, which differs in position in the beamline and produces different focal points for the two directions. The focussing in horizontal direction (grating dispersion direction) is done trough the toroidal mirror (cf.~Fig.~\ref{ch_exp:fig_sx700_schematic}), which also serves as a collector mirror for both axis and parallizes the beam in vertical direction. The focal point is located in the exit slit to ensure high energy resolution. The vertical focussing is done by an additional focussing mirror after the monochromator grating with a focal point about \m{2} behind the exit slit in propagation direction. Due to the large distance of the two focussing elements to the experimental station, a low divergence of the beam of about $1.6$ mrad $\times$ $0.4$ mrad is achieved.
+
+\paragraph{The Extreme Ultraviolet Beamline EUVR}
+The general layout and operation principle of the \gls{euvr} beamline is identical to that of the \gls{sx700} beamline described in the previous paragraph with some differences in the focussing, which are described in the following. Due to the lower electron energy in the \gls{mls} storage ring, the spectrum of both beamlines differs with a spectral range shifted to longer wavelengths in the \gls{euvr} beamline with respect to the \gls{sx700} beamline. The wavelength range covered by the \gls{euvr} beamline is between \nm{5} to \nm{50} (corresponding to photon energies from approximately \ev{25} to \ev{248}). In contrast to the \gls{sx700} beamline, the foci for horizontal and vertical direction are both at the position of the exit slit with an additional refocussing mirror behind that slit. This increases the divergence of the beam to approximately $4$ mrad in both directions, but together with the shifted bending magnet spectrum of the \gls{mls} allows higher photon flux through the larger aperture of the torodial mirror. The main properties of both beamlines and their differences are given in Table~\ref{ch_exp:tbl_beamline_properties}. The optics of both beamlines in comparison are shown in Fig.~\ref{ch_exp:beamline_optics}.
+\begin{table*}
+\centering
+\begin{tabular}{lrr}
+\toprule
+Parameter 			& \gls{sx700} 		& \gls{euvr}\\ \midrule
+Wavelength range 		& $\nm{0.7}$ to $\nm{24.8}$ 	& $\nm{5}$ to $\nm{50}$\\
+Spot size (standard settings)			& $\mm{1} \times \mm{1}$ 		& $\mm{0.1} \times \mm{0.1}$ to\\ 
+&&$\mm{2} \times \mm{2}$\\
+Beam divergence			& $\mrad{1.6}\times \mrad{0.4}$ 	& $\mrad{4}\times \mrad{4}$\\
+Linear polarization (horizontal)	& $\SI{98}{\percent}$ 		& $\SI{40}{\percent}$ to $\SI{98}{\percent}$\\
+ \bottomrule
+\end{tabular}
+\caption{Beamline parameters of the two EUV beamlines \gls{euvr} and {sx700} in comparison.}
+\label{ch_exp:tbl_beamline_properties}
+\end{table*}
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{beamline_optics.pdf_tex}
+    \caption[Schematic optics of the SX700 and EUVR beamlines.]{Schematic optics of the SX700 and EUVR beamlines. The \gls{sx700} beamline has a small beam divergence due to the single focussing in both horizontal and vertical direction. The focal point positions differ by approximately \m{2}. The \gls{euvr} beamline offers significanly higher photon flux due to the larger collector mirror aperture in conjuction with the bending magnet spectrum at the \gls{mls}. The beam spot sizes are variable and can be significanlty smaller in comparison to the \gls{sx700} beamline at the position of the experiment due to refocussing.}
+    \label{ch_exp:beamline_optics}
 \end{figure*}
 
 \section{The ELLI and BigRef Reflectometers}
