@@ -95,24 +95,29 @@ Linear polarization (horizontal)	& $\SI{98}{\percent}$ 		& $\SI{40}{\percent}$ t
 \section{The Experimental Endstations}
 All experimenents in the \gls{euv} spectral range within the framework of this thesis were conducted at the beamlines \gls{euvr} and \gls{sx700}. Each of the beamlines is equipped with an experimental end station containing the detectors, mounts for \gls{ccd} cameras and a goniometer to adjust the angle of the sample holder with respect to the beam. Due to the high absorption of the \gls{euv} radiation in air, both chambers need to be kept under high vacuum conditions, typically below the limit of \mbar{3E-6}.
 
-\paragraph{The large reflectometer at the \gls{sx700} beamline}
+The end stations differ in the size and weight of samples, which can be mounted on the sample holder. The large reflectometer at the \gls{euvr} beamline was designed with heavy and large samples in mind, whereas the ellipso-scatterometer at the \gls{sx700} beamline covers a larger anglular range for both the detector and the sample holder. In the following the two different setups with their primary features are summarized. 
 
-\paragraph{The Ellipso-scatterometer at the \gls{euvr} beamline}
-\begin{figure*}[htb]
-    \def\svgwidth{\textwidth}
-    \import{svg/}{elli.pdf_tex}
-    \caption[The EUV ellipso-scatterometer.]{The EUV ellipso-scatterometer.}
-    \label{ch_exp:fig_elli}
-\end{figure*}
-
+\paragraph{The large reflectometer at the \gls{euvr} beamline}
+The large reflectometer serving as the end station at the \gls{euvr} beamline was designed for reflectometry and scatterometry measurements for samples with a weight of up to \SI{50}{\kg} and a maximum diameter of \mm{550} in mind\cite{tummler_characterization_2003}. The available axis of movement and rotation are shown in Fig.~\ref{ch_exp:fig_bigref}.
 \begin{figure*}[htb]
     \def\svgwidth{\textwidth}
     \import{svg/}{bigref.pdf_tex}
     \caption[The BigRef.]{The BigRef.}
     \label{ch_exp:fig_bigref}
 \end{figure*}
-BigRef \cite{scholze_high-accuracy_2001}
-ELLI \cite{soltwisch_polarization_2015}
+The sample holder plate allows for linear movement in all three orthogonal directions as well as angular rotations in three axis. The latter allows to measure samples, e.g.~samples with an anisotropy, with radiation impinging from all directions, if the sample is mounted in the center position of the sample holder. The rotation around the $\Theta$-axis covers the range from \SI{-7}{\degree}\todo{double check!} to \SI{90}{\degree} relative to the incoming beam. Thus, enabling reflectometry and scatterometry  normal incidence to grazing incidence angles together with the detector arm rotation around the $2\Theta$-axis from \SI{0}{\degree} to \SI{180}{\degree}. The distance of the detector to the sample is variable through the \emph{Det-R} axis from a minimum value of \mm{125}\todo{double check!} to \mm{550}.
+
+The detector mount is equipped with up to X \todo{how many?} diodes, which can be rotated to face either the sample or the incoming beam. The diodes used within the framework of this thesis are $\mm{4.5} \times \mm{4.5}$ and, optionally $\mm{10} \times \mm{10}$, GaAsP photodiodes. The detector holder can be moved along the $\Theta$ and $2\Theta$ rotational axes, which allows to take measurements in the \emph{out-of-plane}\footnote{The out-of-plane scattering direction refers to radiation scattered outside of the scattering plane spanned by the surface normal of the sample and the impinging beam direction.} direction in s-polarization.
+
+\paragraph{The Ellipso-scatterometer at the \gls{sx700} beamline}
+The ellipso-scatterometer is a reflectometer similar to the large reflectometer providing the end station for the \gls{sx700} beamline. Its capabilities differ from the large reflectometer by a wider reachable anglular range for both the detector movement as well as the sample movement. The angular and linear movements and axes are shown in Fig.~\ref{ch_exp:fig_elli} together with a photograph of the goniometer and detector arm.
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{elli.pdf_tex}
+    \caption[The EUV ellipso-scatterometer.]{The EUV ellipso-scatterometer.}
+    \label{ch_exp:fig_elli}
+\end{figure*}
+In contrast to the large end station at the \gls{euvr} beamline, it can hold samples with a size of approximately $\mm{13.5} \times \mm{13.5}$ \todo{double check numbers} and a maximum of \SI{5}{\kg} in weight. However, the rotational movement of both the detector and the sample holder allow for a larger angular range. In consequence, measurements in s-polarization and well as p-polarization can be conducted on the same sample. With the capability to mount a polarization analyzed at the detector holder, polarization resolved measurements are thus possible \cite{soltwisch_polarization_2015}.
 \section{Grazing-incidence X-ray Fluorescence at the FCM Beamline}
 
 \section{Sample systems}

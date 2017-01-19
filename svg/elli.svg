@@ -108,7 +108,7 @@
          y="432.35306"
          x="374.46838"
          sodipodi:role="line"
-         id="tspan36859">\shortstack[l]{(a) Axis labels and movement directions\\</tspan><tspan
+         id="tspan36859">\shortstack[l]{(b) Axis labels and movement directions\\</tspan><tspan
          y="444.30981"
          x="374.46838"
          sodipodi:role="line"
@@ -117,21 +117,21 @@
        xml:space="preserve"
        style="font-size:9.5654192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        x="87.39933"
-       y="420.39627"
+       y="420.82596"
        id="text88149"
        sodipodi:linespacing="125%"
        transform="scale(0.99877211,1.0012294)"><tspan
          sodipodi:role="line"
          x="87.39933"
-         y="420.39627"
+         y="420.82596"
          id="tspan88157">{\fontfamily{fds}\selectfont\footnotesize\shortstack[l]{</tspan><tspan
          sodipodi:role="line"
          x="87.39933"
-         y="432.35306"
-         id="tspan36836">(b) detail of the goniometer with sample holder\\</tspan><tspan
+         y="432.78275"
+         id="tspan36836">(a) detail of the goniometer with sample holder\\</tspan><tspan
          sodipodi:role="line"
          x="87.39933"
-         y="444.30981"
+         y="444.7395"
          id="tspan3229">and the detector arm}}</tspan></text>
     <image
        y="136.83904"
