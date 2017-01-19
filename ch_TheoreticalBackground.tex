@@ -152,7 +152,9 @@ As mentioned above in the beginning of Sec.~\ref{ch_theo:sec_interaction} the re
     \caption[Illustration of \emph{Snell's law}.]{Illustration of \emph{Snell's law}. The parallel component of the wave vector $k_x^{(0)} = k_x^{(1)} = k_x$ remains unchanged when the radiation enters the medium. The perpendicular component changes according to the index of refraction (see main text).}
     \label{ch_theo:fig_singlelayer_scheme}
 \end{figure}
-The refraction process in that case is entirely governed by \emph{Snell's law} known from classical optics \cite{born_principles_1965}. Since all measurements in this thesis were conducted with highly linearly polarized light, we give the description of the refraction processes only for the specific conditions found in our experiments. In our case, the electric field vector oscillates perpendicular to the plane defined by the incoming wave vector $\vec{k}_i$ and the surface normal, also known as \emph{s-polarization}. With the solutions of the wave equation for propagation in homogeneous media in the beginning of Sec.~\ref{ch_theo:sec_interaction}, Snell's law can be expressed in terms of the wave vector by
+The refraction process in that case is entirely governed by \emph{Snell's law} known from classical optics \cite{born_principles_1965}. Since all measurements in this thesis were conducted with highly linearly polarized light, we give the description of the refraction processes only for the specific conditions found in our experiments. In our case, the electric field vector oscillates perpendicular to the \emph{scattering plane} defined by the incoming wave vector $\vec{k}_i$ and the surface normal. This geometry is referred to as \emph{s-polarization}. For the opposite case of an electric field vector oscillating parallel to the aforementioned scattering plane, known as \emph{p-polarization}, modified forms of the corresponding equations apply not mentioned here.
+
+With the solutions of the wave equation for propagation in homogeneous media in the beginning of Sec.~\ref{ch_theo:sec_interaction}, Snell's law can be expressed in terms of the wave vector by
 \begin{align}
 k_z^{(j)} &= \sqrt{\Big(n^{(j)} \gls{k_0}\Big)^2 - k_x^2} \quad \text{, with } k_x = \cos(\alpha_i) \gls{k_0} \text{,} \label{ch_theo:eqn_snells_law}
 \end{align}
@@ -169,13 +171,18 @@ t^{(0)} E_0 \\
 r^{(0)} E_0
 \end{pmatrix} \text{,} \label{ch_theo:eqn_fresnel_reflection}
 \end{align}
-where $E_0$ is the field amplitude of the incident field with wave vector $\vec{k}_i^{(0)}$, $E_t^{(1)}$ is the transmitted field amplitude in layer $j=1$ with wave vector $\vec{k}^{(1)}$ and $E_r^{(0)}$ is the reflected field amplitude with wave vector $\vec{k}_r^{(0)}$. For the transmission and reflection at any two interfaces $j$ and $j+1$ the Fresnel coefficients read
+where $E_0$ is the field amplitude of the incident field with wave vector $\vec{k}_i^{(0)}$, $E_t^{(1)}$ is the transmitted field amplitude in layer $j=1$ with wave vector $\vec{k}^{(1)}$ and $E_r^{(0)}$ is the reflected field amplitude with wave vector $\vec{k}_r^{(0)}$. For the transmission and reflection at any two interfaces $j$ and $j+1$ the Fresnel coefficients in s-polarization read
 \begin{align}
         r^{(j)} &= \frac{k_z^{(j)} - k_z^{(j+1)}}{k_z^{(j)} + 
 k_z^{(j+1)}}\text{,}  \label{ch_theo:eqn_fresnel_reflection_coefficient}\\
         t^{(j)} &= \frac{2 k_z^{(j)}}{k_z^{(j)} + k_z^{(j+1)}}\text{.}  \label{ch_theo:eqn_fresnel_transmission_coefficient}
 \end{align}
 
+For the sake of completeness, we shall also give the corresponding Fresnel coefficients in case of p-polarized light impinging on the surface \cite{born_principles_1965},
+\begin{align}
+        r_\text{p}^{(j)} &= \frac{k_z^{(j+1)} - (n^{(j+1)}/ n^{(j)})^2 \,k_z^{(j)}}{k_z^{(j+1)} + (n^{(j+1)}/ n^{(j)})^2\, k_z^{(j)}}\text{,}  \label{ch_theo:eqn_fresnel_reflection_coefficient}\\
+        t_\text{p}^{(j)} &= \frac{2 k_z^{(j)}}{(n^{(j+1)}/ n^{(j)}) \,k_z^{(j)} +  (n^{(j)}/ n^{(j+1)})\, k_z^{(j+1)}}\text{.}  \label{ch_theo:eqn_fresnel_transmission_coefficient_p_pol}
+\end{align}
 
 
 \paragraph{Matrix Algorithm for Multilayer Systems} \label{ch_theo:sec_matrix_algorithm}
