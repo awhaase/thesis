@@ -121,18 +121,19 @@ In contrast to the large end station at the \gls{euvr} beamline, it can hold sam
 \section{Grazing-incidence X-ray Fluorescence at the FCM Beamline}
 
 \section{Sample systems}
-The samples studied in the framework of this thesis are designed to work as near-normal incidence mirrors for the \gls{euv} spectral range. The underlying principle of an artificial one dimensional Bragg crystal requires the deposition of thin layered systems with high periodicity and stability. The experiments presented here were conducted on two sets of samples as prototypes of mirrors for two different spectral ranges. The theoretical description of the principle of multilayer mirrors in Sec.~\ref{ch_theo:sec_multilayer} of Ch.~\ref{ch_theo}, optical contrast, i.e.~a large as possible difference in the real part of the refractive index $n$, is required to achieve large reflectivities, while maintaining a low absorption.
+The samples studied in the framework of this thesis are designed to work as near-normal incidence mirrors for the \gls{euv} spectral range. The underlying principle of an artificial one dimensional Bragg crystal requires the deposition of thin layered systems with high periodicity and stability. The experiments presented here were conducted on two sets of sample types as prototypes of mirrors for two different spectral ranges. The theoretical description of the principle of multilayer mirrors in Sec.~\ref{ch_theo:sec_multilayer} of Ch.~\ref{ch_theo}, optical contrast, i.e.~a large as possible difference in the real part of the refractive index $n$, is required to achieve large reflectivities, while on the other hand maintaining a low absorption.
 
-This thesis investigates systems designed to reflect radiation in two spectral ranges, the \emph{water window} with wavelengths from \nm{2.2} to \nm{4.4} and the range from \nm{12.4} to \nm{14.0} with a wide range of applications, e.g.~for the next-generation lithography. The choice of the chemical species for the multilayer systems, apart from properties such as non-toxicity, is largely influenced by the electronic structure of the respective materials, since large changes in the refractive index, i.e.~large optical contrast with respect to a second material, can be expected close to that resonances. The requirement of low absorption requires the desired spectrum of operation to be energetically below those edges to avoid loss of radiation.
+This thesis investigates systems designed to reflect radiation in two spectral ranges, the \emph{water window} with wavelengths from \nm{2.2} to \nm{4.4} and the range from \nm{12.4} to \nm{14.0} with a wide range of applications, e.g.~for the next-generation lithography. The choice of the chemical species for the multilayer systems, apart from trivial properties such as non-toxicity and solidity, is largely influenced by the electronic structure of the respective materials, since large changes in the refractive index, i.e.~large optical contrast with respect to a second material, can be expected close to that resonances. The demand for low absorption also requires species, where the absorption edges are energetically higher or far lower than the desired spectral range of operation. For a well defined interface it is also neccessary that the two materials are mostly inert and do not react with one another. The latter would potentially lead to inevitable intermixing and thus a loss of a sharply defined interface.
 
-In case of the water window spectral range, we investigated samples designed for wavelength closely above \nm{3.14}, where the L3 edge of Scandium (Sc) can be found. Fig.~\ref{ch_exp:fig_crsc_contrast} shows the refractive index of Sc and the second material Chromium (Cr) in the water window spectral range. 
+\paragraph{Choice of the Chemical Species and Multilayer Design}
+In case of the water window spectral range, we investigated samples designed for a peak reflectance at a wavelength closely above \nm{3.14}, where the L3 edge of scandium (Sc) is found. Fig.~\ref{ch_exp:fig_crsc_contrast} shows the refractive index of Sc and the second material chromium (Cr) in the water window spectral range. 
 \begin{figure}[htb]
         \includegraphics{img/Cr_Sc_contrast}
         \caption[Refractive indices of Cr and Sc in the water window.]{%
             Refractive indices of Cr and Sc with the water window spectral range. The marked absorption edges are the L2 and L3 edge of Sc. The imaginary part of the refractive index accounts for the absorption and is shown for Sc. Above the L3 edge is the highest contrast for the two materials providing the highest potential reflectivity in a periodic multilayer arrangement.}
         \label{ch_exp:fig_crsc_contrast}
 \end{figure}
-The periodic multilayer was therefore a binary alternating system of Cr and Sc.
+The periodic multilayer of the systems investigated here, were therefore binary alternating layers of Cr and Sc. The required nominal period thickness $D$, i.e.~the thickness each periodically repeated layer stack, for the design goal of a peak reflectivity at $\lambda=\nm{3.14}$ is $D=\nm{1.573}$ with a layer thickness ratio of $\Gamma=0.5$ of both materials. To protect the Sc layers from oxidation, an additional capping layer Cr of approximately $d_\text{cap} = \nm{3}$ was added as the surface layer. The binary layer stack was repeated depending on the sample between $300$ and $600$ bilayers.
 
 The second set of systems under investigation in this thesis is composed out of Molymdenum (Mo) and Silicon (Si). Both materials show a very low absorption in the range from \nm{12.4} to \nm{14.0}, with the Si L2 edge forming the lower wavelength limit for the usage as a mirror system in this combination. The respective refractive indices are given in Fig.~\ref{ch_exp:fig_mosi_contrast}.
 \begin{figure}[htb]
@@ -142,14 +143,22 @@ The second set of systems under investigation in this thesis is composed out of 
         \label{ch_exp:fig_mosi_contrast}
 \end{figure}
 
+Finally, the sample systems can contain additional materials, which serve as barrier layers. The two species used for our samples are Boroncarbite (B$_4$C) and Carbon (C). Those two materials do not have any absorption edges in the given relevant spectral range and additionally show low contrast to the respective spacer materials Si and Cr. The details of the respective sample layouts are discussed in the respective sections of the following chapters.
+
 \paragraph{Multilayer Deposition by Magnetron Sputtering}
-The sample systems described here were fabricated by the magnetron sputtering technique by two different multilayer and optics groups.
+The sample systems described here were fabricated by the magnetron sputtering technique by two different multilayer and optics groups. The Mo/Si multilayer samples were fabricated by Stefan Braun at the Fraunhofer IWS, Dresden, Germany and the Cr/Sc samples are by Sa\v{s}a Bajt from the Optics Group at CFEL, DESY, Hamburg in Germany.
+
+For both samples, silicon substrates in different varieties serve as the basis for the deposition process. The surfaces are super polished with mechanical polishing methods to reduce any prior surface roughness to values below a root mean square roughness of $\sigma_r < \nm{0.2}$ \todo{check this!}. The sample size and shape differ for the systems investigated. In case of the Mo/Si mirror samples, wafer pieces of approximately $\mm{20} \times \mm{20}$ (photograph shown in Fig.~\ref{ch_exp:fig_mosi_sample}) and round substrates with approximately \mm{20} in diameter were used.
 \begin{figure}[htb]
         \includegraphics[width=0.4\textwidth]{img/SAM_1910_v1}
         \caption[Mo/Si multilayer sample.]{%
             Mo/Si multilayer sample.}
         \label{ch_exp:fig_mosi_sample}
 \end{figure}
+In case of the Cr/Sc systems, wafer pieces of varying size but approximately $\mm{10} \times \mm{20}$ served as the substrate.
+
+
+
 \begin{enumerate}
  \item Mo/Si mirrors for $13.5$ nm for EUV lithography and other applications
  \item Cr/Sc for the water window, protein contrast in water, mirrors with bad performance, curved, etc.
