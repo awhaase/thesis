@@ -118,8 +118,20 @@ The ellipso-scatterometer is a reflectometer similar to the large reflectometer 
     \label{ch_exp:fig_elli}
 \end{figure*}
 In contrast to the large end station at the \gls{euvr} beamline, it can hold samples with a size of approximately $\mm{13.5} \times \mm{13.5}$ \todo{double check numbers} and a maximum of \SI{5}{\kg} in weight. However, the rotational movement of both the detector and the sample holder allow for a larger angular range. In consequence, measurements in s-polarization and well as p-polarization can be conducted on the same sample. With the capability to mount a polarization analyzed at the detector holder, polarization resolved measurements are thus possible \cite{soltwisch_polarization_2015}.
+
 \section{Grazing-incidence X-ray Fluorescence at the FCM Beamline}
-FCM beamline \cite{krumrey_design_1998}, GIXRF chamber \cite{lubeck_novel_2013}
+The \gls{gixrf} measurements of the Cr/Sc sample systems were performed at the \gls{fcm} bending magnet beamline \cite{krumrey_design_1998} in the \gls{bessy} laboratory. The necessary photon energies to excite the K-edge x-ray fluorescence of chromium and scandium, are well above the spectral range of the \gls{euvr} and \gls{sx700} beamlines in the order of several \si{\kilo\electronvolt}. The general setup and design of the \gls{fcm} beamline is very similar to that of the \gls{sx700} beamline, with the exception of the four crystal monochromator, which replaces the plane grating monochromator in the x-ray spectral range. It offers tunable photon energies from \kev{1.75} to \kev{10.0}. A high energy resolution of $E/\Delta E = 10^4$ is attained by the convolution of four exchangeable crystal Bragg reflections. The monochromator can be equipped with two monochromator crystals. For the high energy range above approximately \kev{3.5} to \kev{10.0} silicon is used. In the lower energy range between \kev{1.75} and \kev{3.5} higher radiant power is available through the usage of a InSb crystal. A schematic overview of the \gls{fcm} beamline can be found in Fig.~\ref{ch_exp:fig_fcm_scheme}.
+\begin{figure}[htb]
+        \includegraphics[width=0.7\textwidth]{img/FCMScheme.png}
+        \caption[FCM beamline scheme.]{%
+            FCM beamline scheme.}
+        \label{ch_exp:fig_fcm_scheme}
+\end{figure}
+
+The end station used for the \gls{gixrf} experiments is a specialized chamber for \gls{gixrf}, \gls{txrf} and \gls{xrr} \cite{lubeck_novel_2013} depicted in Fig.~\ref{ch_exp:fig_gixrf_chamber}. It is equipped with a detector arm and a sample goniometer allowing to measure grazing incidence angles of \SI{0}{\degree} to \SI{60}{\degree}. The detector arm holds a diode allowing \gls{xrr} measurements. Perpendicular to the beam direction, an energy dispersive \gls{ssd} is mounted close to the sample surface. It allows to detect fluorescence radiation emitted from the sample energetically resolved. The samples can be rotated with respect to the storage ring plane in order to allow a variable polarization impinging on the surface.
+
+
+
 \begin{figure*}[htb]
     \def\svgwidth{\textwidth}
     \import{svg/}{gixrf_chamber.pdf_tex}
