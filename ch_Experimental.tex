@@ -119,6 +119,13 @@ The ellipso-scatterometer is a reflectometer similar to the large reflectometer 
 \end{figure*}
 In contrast to the large end station at the \gls{euvr} beamline, it can hold samples with a size of approximately $\mm{13.5} \times \mm{13.5}$ \todo{double check numbers} and a maximum of \SI{5}{\kg} in weight. However, the rotational movement of both the detector and the sample holder allow for a larger angular range. In consequence, measurements in s-polarization and well as p-polarization can be conducted on the same sample. With the capability to mount a polarization analyzed at the detector holder, polarization resolved measurements are thus possible \cite{soltwisch_polarization_2015}.
 \section{Grazing-incidence X-ray Fluorescence at the FCM Beamline}
+FCM beamline \cite{krumrey_design_1998}, GIXRF chamber \cite{lubeck_novel_2013}
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{gixrf_chamber.pdf_tex}
+    \caption[The GIXRF chamber.]{The GIXRF chamber.}
+    \label{ch_exp:fig_gixrf_chamber}
+\end{figure*}
 
 \section{Sample systems}
 The samples studied in the framework of this thesis are designed to work as near-normal incidence mirrors for the \gls{euv} spectral range. The underlying principle of an artificial one dimensional Bragg crystal requires the deposition of thin layered systems with high periodicity and stability. The experiments presented here were conducted on two sets of sample types as prototypes of mirrors for two different spectral ranges. The theoretical description of the principle of multilayer mirrors in Sec.~\ref{ch_theo:sec_multilayer} of Ch.~\ref{ch_theo}, optical contrast, i.e.~a large as possible difference in the real part of the refractive index $n$, is required to achieve large reflectivities, while on the other hand maintaining a low absorption.
@@ -135,7 +142,7 @@ In case of the water window spectral range, we investigated samples designed for
 \end{figure}
 The periodic multilayer of the systems investigated here, were therefore binary alternating layers of Cr and Sc. The required nominal period thickness $D$, i.e.~the thickness each periodically repeated layer stack, for the design goal of a peak reflectivity at $\lambda=\nm{3.14}$ is $D=\nm{1.573}$ with a layer thickness ratio of $\Gamma=0.5$ of both materials. To protect the Sc layers from oxidation, an additional capping layer Cr of approximately $d_\text{cap} = \nm{3}$ was added as the surface layer. The binary layer stack was repeated depending on the sample between $300$ and $600$ bilayers.
 
-The second set of systems under investigation in this thesis is composed out of Molymdenum (Mo) and Silicon (Si). Both materials show a very low absorption in the range from \nm{12.4} to \nm{14.0}, with the Si L2 edge forming the lower wavelength limit for the usage as a mirror system in this combination. The respective refractive indices are given in Fig.~\ref{ch_exp:fig_mosi_contrast}.
+The second set of systems under investigation in this thesis is composed out of $50$ to $65$ bilayers Molymdenum (Mo) and Silicon (Si). Both materials show a very low absorption in the range from \nm{12.4} to \nm{14.0}, with the Si L2 edge forming the lower wavelength limit for the usage as a mirror system in this combination. The respective refractive indices are given in Fig.~\ref{ch_exp:fig_mosi_contrast}.
 \begin{figure}[htb]
         \includegraphics{img/Mo_Si_contrast}
         \caption[Refractive indices of Mo and Si in the wavelength range from \nm{12.4} to \nm{14.0}.]{%
@@ -146,9 +153,18 @@ The second set of systems under investigation in this thesis is composed out of 
 Finally, the sample systems can contain additional materials, which serve as barrier layers. The two species used for our samples are Boroncarbite (B$_4$C) and Carbon (C). Those two materials do not have any absorption edges in the given relevant spectral range and additionally show low contrast to the respective spacer materials Si and Cr. The details of the respective sample layouts are discussed in the respective sections of the following chapters.
 
 \paragraph{Multilayer Deposition by Magnetron Sputtering}
-The sample systems described here were fabricated by the magnetron sputtering technique by two different multilayer and optics groups. The Mo/Si multilayer samples were fabricated by Stefan Braun at the Fraunhofer IWS, Dresden, Germany and the Cr/Sc samples are by Sa\v{s}a Bajt from the Optics Group at CFEL, DESY, Hamburg in Germany.
+The multilayer samples investigated here were fabricated by the DC magnetron sputtering technique \cite{stearns_fabrication_1991} by two different multilayer and optics groups. The Mo/Si multilayer samples were fabricated by Stefan Braun at the Fraunhofer IWS, Dresden, Germany and the Cr/Sc samples are by Sa\v{s}a Bajt from the Optics Group at CFEL, DESY, Hamburg in Germany.
 
-For both samples, silicon substrates in different varieties serve as the basis for the deposition process. The surfaces are super polished with mechanical polishing methods to reduce any prior surface roughness to values below a root mean square roughness of $\sigma_r < \nm{0.2}$ \todo{check this!}. The sample size and shape differ for the systems investigated. In case of the Mo/Si mirror samples, wafer pieces of approximately $\mm{20} \times \mm{20}$ (photograph shown in Fig.~\ref{ch_exp:fig_mosi_sample}) and round substrates with approximately \mm{20} in diameter were used.
+Magnetron sputtering is a physical vapor deposition technique. A vacuum chamber is equipped with a substrate to be coated, in our case silicon, and one or more sputter targets. Depending on the intended design of the multilayer to be deposited, those targets are the respective materials, which later form the individual layers. In the DC magnetron sputtering system, a strong electric field is applied between the substrate and the sputter targets. The vacuum chamber containing those parts is then filled with a sputter gas, typically ultrapure Ar gas (\SI{99.999}{\percent}), with partial pressures in the range from \mbar{E-3} to \mbar{E-2} \cite{stearns_fabrication_1991}. The strong electric field ionizes the sputter gas causing the ions to be accelerated towards the sputter targets (cathode) and form a charged plasma. Upon impact in the target, atoms and electrons of the condensed matter phase of the respective material are released and travel towards the substrate. The released atoms condense there, forming bonds and creating a slowly growing layer. The thickness of the layer can be fine tuned through the deposition time. The additionally released electrons, while being accelerated towards the substrate (anode), collide with the sputter gas atoms and cause further ionization. In order to avoid damage of the forming layer at the substrate, strong magnetic fields are applied to the sputter targets. This confines the movement of the charged particles (the plasma) sputter gas ions and electrons to the region close to the target surface. Thereby, increasing the collision (ionization) probability of electrons and the gas atoms through the helical movement in the magnetic field while keeping those particles away from the substrate. To ensure homogeneous layer deposition, the substrate is kept under permanent rotation. A schematic DC magnetron sputtering system is depicted in Fig.~\ref{ch_exp:magnetron_sputtering_schematic}.
+\begin{figure}[htb]
+        \includegraphics[width=0.7\textwidth]{img/magnetron_sputtering_schematic.png}
+        \caption[Schematic setup for magnetron sputtering.]{%
+            Schematic setup for magnetron sputtering.}
+        \label{ch_exp:magnetron_sputtering_schematic}
+\end{figure}
+
+
+For both samples, silicon serves as the substrates for the deposition process. The surfaces are super polished with mechanical polishing methods to reduce any prior surface roughness. The sample size and shape differ for the systems investigated. In case of the Mo/Si mirror samples, wafer pieces of approximately $\mm{20} \times \mm{20}$ (photograph shown in Fig.~\ref{ch_exp:fig_mosi_sample}) and round substrates with approximately \mm{20} in diameter were used.
 \begin{figure}[htb]
         \includegraphics[width=0.4\textwidth]{img/SAM_1910_v1}
         \caption[Mo/Si multilayer sample.]{%
@@ -156,10 +172,3 @@ For both samples, silicon substrates in different varieties serve as the basis f
         \label{ch_exp:fig_mosi_sample}
 \end{figure}
 In case of the Cr/Sc systems, wafer pieces of varying size but approximately $\mm{10} \times \mm{20}$ served as the substrate.
-
-
-
-\begin{enumerate}
- \item Mo/Si mirrors for $13.5$ nm for EUV lithography and other applications
- \item Cr/Sc for the water window, protein contrast in water, mirrors with bad performance, curved, etc.
-\end{enumerate}
