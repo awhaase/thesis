@@ -1,22 +1,275 @@
 \chapter{Analysis of Interface Roughness based on Diffuse Scattering} \label{ch_diff}
 
 
-
 \section{Near-normal Incidence Diffuse Scattering}
+In order to gain information on interfacial roughness, the off-specular scattering of the multilayer sample was measured in different geometries. We performed coplanar rocking and detector scans as shown in Fig.~\ref{fig:measurementGeometry}.
+\begin{figure}[htbp]
+	\includegraphics[width=0.7
+	\textwidth]{images/Streugeometrie} \caption{Co-planar measurement geometries. By keeping the opening angle $\Delta\Theta$ between incident and exit beam and the detector fixed, respectively, a rocking scan can be performed by changing the sample angle $\omega$. In a detector scan the sample angle $\omega$ is kept fixed and defines the angle of incidence while the detector is moved along $\Theta$.} \label{fig:measurementGeometry} 
+\end{figure}
+\begin{figure}[htbp]
+	\includegraphics[width=0.7
+	\textwidth]{images/Qspace_paths} \caption{Schematic positions in reciprocal space in dependence on the measurement geometry. The dashed path represents a rocking scan with the angle $\omega$. The solid line shows the movement in $q$-space when changing the detector angle $\Theta$ at a fixed angle of incidence. By tuning the wavelength at each angular position, the $q_z$-direction becomes accessible as indicated by the dotted arrows.} \label{fig:pathsInQ} 
+\end{figure}
+The corresponding paths through reciprocal space are different for these two cases. They are shown schematically in Fig.~\ref{fig:pathsInQ}. In addition, a wavelength scan ($\lambda$-scan) was performed at each angular position. By changing the wavelength and the angle in the same measurement, both degrees of freedom ($q_x$ and $q_z$) in reciprocal space become accessible. Following this method, we recorded two-dimensional reciprocal space maps of the vicinity of the first Bragg resonance. The reciprocal space coordinates in terms of the experimental parameters are given by 
+\begin{align}
+	q_x &= \frac{2 \pi}{\lambda} \big(\sin(\Theta) - \sin(\alpha_i)\big) \text{,}\\
+	q_z &= \frac{2\pi}{\lambda} \big(\cos(\Theta) + \cos(\alpha_i)\big) \text{,} 
+\end{align}
+where $\lambda$ is the wavelength of the incoming light, $\Theta$ is the exit angle with respect to the surface normal (detector angle) and $\alpha_i$ is the angle of incidence with respect to the surface normal.
+
+\begin{figure*}[htbp]
+        \includegraphics[width=
+        \textwidth]{images/measured_maps} \caption{Measured intensity map of a detector scan of a Mo/Si multilayer mirror at an angle of incidence $\alpha_i = 6.75^\circ$ (a) and  measured intensity maps of the identical sample obtained through rocking scans at an opening angle between detector and incident beam of $\Delta \Theta = 13.5^\circ$ (b) and $\Delta \Theta = 30^\circ$ (c). The area close to the specular axis was excluded from this dataset due to its strong intensity compared to the diffuse scattering shown here. The access to the negative $q_x$-axis in (a) is limited due clipping of the incoming beam with the detector.} \label{fig:comparison} 
+\end{figure*}
 
 \subsection{Mapping Reciprocal Space and Bragg Sheets}
+The reciprocal space maps in Fig.~\ref{fig:comparison} for the rocking scan (b) at an opening angle of $\Delta \Theta = 13.5^\circ$ and the rocking scan (c) at an opening angle of $\Delta \Theta = 30^\circ$ (corresponding to an angle of incidence of $\alpha_i = 6.75^\circ$ and $\alpha_i = 15.0^\circ$, respectively, in specular geometry) and for the detector scan with the angle of incidence $\alpha_i = 6.75^\circ$ clearly show different symmetries. We observe a strong enhancement in the off-specular scattering around $q_x\approx0.1$ nm$^{-1}$ (cf.~Fig.~\ref{fig:comparison}(a) and Fig.~\ref{fig:comparison}(c)), which is not replicated on the negative $q_x$-axis in case of (a). The rocking scans \ref{fig:comparison}(b) and \ref{fig:comparison}(c) are symmetric with respect to the specular axis at $q_x=0$, however, no enhanced scattering appears in (b). The latter map shows a triangular-shaped intensity distribution for both the positive and 
+negative $q_x$ range. A minimum in width with respect to the $q_z$ direction can be observed here around $q_x \approx \pm 0.2$ nm$^{-1}$. The triangular shape also appears for the 
+positive $q_x$ range 
+of the detector scan in Fig.~\ref{fig:comparison}(a), where the minimum in width coincides with the intensity maximum.
+
+
+In Fig.~\ref{fig:BraggSheet_DetectorAndRocking}, the three measurements shown above are compared by considering the intensity distribution along $q_z=0.93$ nm$^{-1}$, which corresponds to the momentum transfer at the multilayer resonance. The differences in the off-specular scattering are evident. 
+\begin{figure}[htbp]
+	\includegraphics[width=0.7
+	\textwidth]{images/BraggSheet_DetectorAndRocking} \caption{Averaged diffuse scattering intensity along $q_x$ in the interval  $q_z=(0.930 \pm 0.003$) nm$^{-1}$ corresponding to the resonance of the multilayer. The data shown are two rocking scan and one detector scan geometries (see text for details).} \label{fig:BraggSheet_DetectorAndRocking} 
+\end{figure}
+
+The measurement geometry dependence of the reciprocal space maps indicates that the intensity distributions cannot be the result of multilayer roughness properties alone, i.e. the power spectral density. Scattering intensities caused by roughness occur at identical positions in reciprocal space for any measurement geometry. In order to explain the observations shown here, the proper theoretical description of the diffuse scattering distributions is presented in the following section.
 
 \subsection{Kiessig-like Peaks and Resonant Effects}
+\label{sec:numerical_simulations} We have applied the theory above to the multilayer in our experiments. In order to obtain a model for the layer thicknesses in our multilayer, we measured the reflectivity of the sample in dependence on the wavelength. The recorded curve was fitted using the numerical calculation of the reflectivity curve based on the specular fields including the modified Fresnel coefficients in Eq.~\eqref{eqn:fresnel_r} and Eq.~\eqref{eqn:fresnel_t}. The resulting fit parameters were, then, further used to model the multilayer in the numerical simulations below. The fit of the reflectivity curve was later simultaneously optimized during the fit of the diffuse scattering in order to correct for the change in the mean roughness $\sigma$. The final thicknesses in the stack were fitted to $d_\text{Mo} = 2.0181$ nm, $d_\text{B$_4$C} = 1.3215$ nm, $d_\text{Si} = 3.0388$ nm and $d_\text{C} = 0.5858$ nm. The distorted-wave Born approximation was implemented in the \emph{Python} programming language using a highly parallel algorithm.
+
+\subsection{Dynamic Contributions to the Diffuse Scattering} \label{sec:dynamic_contributions} 
+In order to determine the contribution of dynamic multiple reflections within the stack, we compared the semi-kinematic approximation in Eq.~\eqref{eqn:semi_kinematic_theory} with the dynamic calculations in Eq.~\eqref{eqn:multilayer_enhancement_factor}. For this comparison, we simulated a rocking scan at an opening angle of $\Delta \Theta = 30^\circ$ and compared the simulations with the measured data. The roughness properties for these simulations were determined following the procedure described below in Sec.~\ref{sec:determination_of_the_psd} including a discussion on the influence of the parameters, specifically $\xi_\perp(q_x)$, on these vertical line cuts.
+
+A quantitative comparison of the dynamic contribution to the total scattering intensity in our measurements is shown in Fig.~\ref{fig:Comparison_full_semi} as a line cut along $q_z$ at $q_x=0.05$ nm$^{-1}$. The dynamic calculation yields excellent agreement with the measured data. The results show distinct differences with an increase up to 100\% of the scattered intensity close to the multilayer resonance at $q_z=0.93$ nm$^{-1}$ compared to the semi-kinematic calculation. Hence dynamic contributions are dominant in the vicinity of the Bragg resonance. 
+\begin{figure}[htbp]
+        \includegraphics[width=0.7
+        \textwidth]{images/qz_kinematic_vs_dynamic_100nm} \caption{Scattering intensity along $q_z$ for $q_x=0.05$ nm$^{-1}$ for the dynamic and semi-kinematic calculations for a rocking scan at $\Delta\Theta=30^\circ$ in comparison to the measured data.} \label{fig:Comparison_full_semi} 
+\end{figure}
+
+To evaluate the contribution of multiple reflections due to the subsidiary maxima, Fig.~\ref{fig:kiessig_like_peak} shows the intensity distribution along $q_x$ at $q_z=0.93$ nm$^{-1}$.  These maxima are caused by interference of the reflections from the top surface of the multilayer stack and the substrate interface (Kiessig fringes) \cite{kiessig_interferenz_1931}.
+\begin{figure*}[htbp]
+        \includegraphics[width=0.8
+        \textwidth]{images/qx_kinematic_vs_dynamic} \caption{Scattering intensity distribution at $q_z=0.93$ nm$^{-1}$. The solid line shows the result of the dynamic calculation for a rocking scan with an opening angle of $\Delta\Theta=30^\circ$. The dashed line represents the calculation applying the semi-kinematic approximation, ignoring any multiple reflections within the multilayer. The dashed vertical lines are the limits of the main Bragg peak, while the red solid vertical lines show the position of dynamic contributions of the Kiessig fringes close to the main maximum. Each Kiessig fringe marked in the inset appears for the corresponding positive and negative $q_x$ value. The strong intensity at $q_x\approx0.1$ nm$^{-1}$ results from the overlap of the dynamic maxima of two different Kiessig fringes (see text).} \label{fig:kiessig_like_peak} 
+\end{figure*}
+The solid line corresponds to the dynamic theory, while the dotted line is the result of the semi-kinematic calculation. The dashed vertical lines indicate the limits of the main Bragg peak. These positions are defined through the first minimum on each side of the reflectivity peak (cf.~inset in Fig.~\ref{fig:kiessig_like_peak}). The vertical red lines show the position of multiple reflections due to Kiessig fringes close to the main resonance. Again, the corresponding positions in the specular reflectivity measurement are shown in the inset. Each of the marked fringes appears on the negative and positive $q_x$-axis in the main plot. This is caused by the incidence and exit angle, respectively, being at the resonance angle of the various Kiessig maxima in the reflectivity curve. Thus, a strong increase with respect to the semi-kinematic approximation is observed. The position of the dynamic contribution from the first 
+Kiessig fringes on either side of the main resonance exhibits a pronounced maximum in the diffuse scattering. These fringes contribute most due to their high overall relative 
+intensity compared with the fringes further away from the reflectivity maximum. In addition, the position in reciprocal space coincides with the first two Kiessig fringes marked on either side of the main maximum. This effect of dynamic maxima is similar to the observation of Bragg-like peaks in grazing incidence geometry \cite{kaganer_bragg_1995}, but it is caused by the subsidiary maxima instead. Consequently, we name this enhancement ``Kiessig-like peaks''. The contribution by the main Bragg resonance similar to the observations in Fig.~\ref{fig:Comparison_full_semi} amounts to approximately 100\% at $q_x=0$.
 
 \subsection{Tilted Bragg Sheets}
 
 \subsection{Reconstruction of the PSD and the Multilayer Enhancement Factor}
+\label{sec:multilayer_contribution}
+The total contribution of the multilayer to the diffuse scattering, independent of lateral interface roughness properties, is described by the sum in the square brackets of Eq.~\eqref{eqn:multilayer_enhancement_factor} as a prefactor to the power spectral density $C(q_x)$. It describes the modulation of the scattering intensity due to the multilayer nature of the scattering structure, independent of the interface roughness. We thus consider it as a ``relative multilayer enhancement factor''. The result of the calculations based on the layer model of our multilayer sample is shown in Fig.~\ref{fig:MultilayerInfluence} for one detector and two rocking scan configurations. The vertical correlation length for this specific multilayer mirror is $\xi_\perp(q_x)=7.5/q_x^2$ nm$^{-1}$ as expected for a high-reflectance mirror, where $\xi_\perp$ 
+exceeds the total thickness $D$ of the entire stack for $|q_x| < 0.12$ nm$^{-1}$. The method for the extraction of the vertical correlation length from the measured data is discussed in Sec.~\ref{sec:determination_of_the_psd}. The multilayer enhancement factor was normalized with respect to $q_x=0$, i.e. the calculated diffuse scattering contribution on the specular axis. 
+\begin{figure}[htbp]
+	\includegraphics[width=0.7
+	\textwidth]{images/MEF} \caption{Enhancement factor due to the specific properties of multilayer reflectivity for three different measurement geometries. The simulations shown here were normalized with respect to the diffuse contribution to the specular reflectivity at $q_x=0$.} \label{fig:MultilayerInfluence} 
+\end{figure}
+
+The results clearly show that diffuse scattering from multilayers at near-normal incidence exhibit strong enhancement due to the intrinsically limited bandpass of reflectivity of multilayers. If both the incidence and exit angle is out of the Bragg resonance, the higher penetration depth of the multilayer causes an increase in the number of interfaces contributing to the diffuse scattering intensity. Thus higher total scattering is observed. The Kiessig fringes cause modulations in the enhancement factor increased by the purely dynamic processes described in Sec.~\ref{sec:dynamic_contributions}.
+
+\begin{figure*}[htbp]
+        \includegraphics[width=
+        \textwidth]{images/simulation_vs_measurement} \caption{Measured (a) and simulated (b) reciprocal space maps for a rocking scan at an opening angle of $\Delta\Theta=30^\circ$ with the roughness parameters determined in Sec.~\ref{sec:determination_of_the_psd}.} \label{fig:comparisonWithTheory} 
+\end{figure*}
+
+\subsubsection{Reconstruction of the Power Spectral Density} \label{sec:determination_of_the_psd} In order to extract roughness properties from the off-specular measurements shown above, a correction for the influence of the multilayer as discussed in Sec.~\ref{sec:multilayer_contribution} is required. The scattering intensity after division by the multilayer enhancement factor represents the power spectral density of roughness. The measured PSDs are shown in Fig.~\ref{fig:PSDs_linear} for all three experiments. The excellent agreement with each other within the uncertainty margin confirms the validity and necessity of the dynamic theory to model the diffuse scattering from the multilayer. The reconstruction of the parameters of the power spectral density in Eq.~\eqref{eqn:psd} can be done by considering the overall intensity as well as the asymptotic behavior \cite{salditt_interfacial_1996} of the measured data in Fig.~\ref{fig:PSDs_linear}.
+
+The numerical simulations show a strong sensitivity with respect to the mean roughness parameter $\sigma$ through the total portion of diffusely scattered light. As expected for a high-reflectance mirror, we obtained a small roughness value of $\sigma = 0.2$ nm.
+\begin{figure}[htbp]
+	\includegraphics[width=0.7
+	\textwidth]{images/PSD_zoomed} \caption{Diffuse scattering intensity corrected for the multilayer enhancement factor considering a tilt angle of $\beta=-1^{\circ}$ according to Eq.~\eqref{eqn:tilt_correction}. The black solid line corresponds to a power spectral density with $\xi_\parallel=5.6$ nm, $H=1.0$, $\sigma=0.2$ nm and a vertical correlation length of $\xi_\perp(q_x)=7.5/q_x^2$ nm$^{-1}$.} \label{fig:PSDs_linear} 
+\end{figure}
+
+It follows from the definition of the PSD in Eq.~\eqref{eqn:psd} that the lateral correlation length $\xi_\parallel$ defines a cut-off for the spatial frequencies contributing to the off-specular scattering. We performed several simulations to compare the simulated intensity profile with the cut-off frequency observed in the measured data. A correlation length of $\xi_\parallel=5.6$ nm was obtained following this method. The fractal nature of the interfaces was analyzed by varying the Hurst parameter $H$. The asymptotic behavior of the power spectral density for $q_x>10^{-1}$~nm$^{-1}$ for the multilayer sample measured yields a Hurst factor of $H=1.0$, which corresponds to a smooth roughness profile \cite{sinha_x-ray_1988}. By following this procedure, measurements of power spectral densities are possible, independent of the measurement geometry.
+
+For a full characterization of the multilayer, the determination of the vertical correlation length remains. This parameter is also accessible through the two-dimensional reciprocal space maps. It has been observed elsewhere that the vertical correlation of the interfacial roughness leads to resonant diffuse scattering (``Bragg sheets'')~\cite{holy_nonspecular_1994}. The width of these sheets with respect to the $q_z$-axis provides a measure for the vertical correlation lengths, e.g.~in GISAXS \cite{siffalovic_characterization_2009}. We observe a similar dependence of the scattering intensity close to the Bragg resonance along the vertical axis (cf.~Fig.~\ref{fig:Comparison_full_semi}) with a reduction of the scattering intensity at the resonance for small correlation length but a higher relative scattering intensity far off resonance (cf. $q_z>0.95$ nm$^{-1}$ in Fig.~\ref{fig:Comparison_full_semi}). We varied the vertical correlation length $\xi_\perp(q_x)$ and fitted several vertical cuts of the reciprocal space map simultaneously with the PSD determination. The best model for our sample yields a high vertical correlation length of $\xi_\perp(q_x)=7.5/q_x^2$ nm$^{-1}$, as expected for high-reflectance mirrors, at a tilt angle of $\beta=-1^\circ$ of the Bragg plane. 
+This correlation length exceeds the total thickness of the multilayer coating up to $|q_x|<0.13$ nm$^{-1}$ and thus indicates (almost) full replication of roughness throughout all interfaces for the specified spacial frequencies.
+
+By combining the findings for the properties of roughness in the power spectral density and the multilayer enhancement factor determined by the layer structure of the multilayer, we are able to fully reconstruct the measured intensity distribution for all geometries. The simulated reciprocal space map for a rocking scan with an opening angle of $\Delta\Theta = 30^\circ$ based on the parameters determined in the previous analysis is shown in Fig.~\ref{fig:comparisonWithTheory}(b). The calculation is in excellent agreement with the measured reciprocal space map in Fig.~\ref{fig:comparisonWithTheory}(a). 
 
 
 \section{Roughness for Varying Mo Thickness in Mo/Si Multilayer Samples}
 
-\subsection{PSD Across the Crystallization Threshold}
+Based on the presumed crystallization threshold found from the analysis of the specular reflectance curves, diffuse scattering measurements for selected samples from both sets were performed. In both cases, scattering maps were taken from the samples with lowest and highest Mo layer thickness, respectively, in addition to the samples with Mo thicknesses right before, at and right after the presumed crystallization threshold was investigated (cf.~marked points in Fig.~\ref{fig:fitted_mo_and_fitted_D}). The diffuse scattering was measured by keeping the detector angle with respect to the incoming beam fixed at $\Delta\Theta = 30^\circ$, while the sample was tilted from an AOI of $\alpha_i=15^\circ$ to $\alpha_i=38^\circ$ with a step size $\Delta\alpha_i = 0.5^\circ$. At each angular position, a wavelength scan from $\lambda=12.35$ nm to $\lambda=14.0$ nm in steps of $\Delta\lambda = 0.01$ nm was performed to map the diffuse scattering distribution. The results are shown in a reciprocal space representation for both sets in comparison in Fig.~\ref{fig:diffuse}.
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/diffuse}
+\caption{Measured diffuse scattering distributions in reciprocal space representation shown on linear false-color scale. The selected unpolished samples are shown in a) with increasing Mo layer thickness $d_{Mo}$. The selected samples for the polished set are shown in b) also in order of increasing Mo thickness $d_{Mo}$. The samples with strongest scattering are shown in larger detail in Fig.~\ref{fig:dwba_data_best_model_comparison}.}
+\label{fig:diffuse}
+\end{figure*}
+The maps in Fig.~\ref{fig:diffuse}a show the scattering distribution from the unpolished samples marked with the fitted Mo layer thickness (cf.~Fig.~\ref{fig:fitted_mo_and_fitted_D}). The polished samples are shown in Fig.~\ref{fig:diffuse}b. One sample in each series shows significantly stronger scattering than the others. Both sets show distinctly different scattering distributions. In both cases, the structure visible in the map is dominated by the multilayer-enhancement factor including resonant dynamic enhancement ("Kiessig-like peaks")\cite{haase_role_2014}. For the unpolished samples a downward tilted Bragg sheet can be observed. This is due to a non-orthogonal roughness correlation throughout the stack with respect to the surface \cite{gullikson_asymmetric_1999}. In the case of the polished samples, significantly less scattering can be observed for higher spatial frequencies, whereas more intensity is measured for smaller frequencies.
+
+\subsection{Reconstruction of the Power Spectral Density}
+The theoretical analysis was performed based on the DWBA for all scattering maps measured above. The ideal model for each sample system entering the DWBA calculation was obtained from the analysis in Sec.~\ref{sec:mo_si_model_reconstruction_results}. The optimization functional was calculated according to Eq.~\eqref{eqn:reduced_chi_2} for all off-specular wavelength scans for each angle. The combined likelihood was then calculated similarly to Eq.~\eqref{eqn:total_chi_2_diffuse}, as the sum of all measurement points for all angular positions and wavelengths. The optimization was conducted by the MCMC analysis with respect to the vertical correlation length $\xi_\perp$ in the vertical correlation function $c(q_\parallel)$ and all PSD parameters in $C(q_\parallel)$. The list of the corresponding parameters and their bounds is given in Table~\ref{tbl:diffuse_parameters}.
+\begin{table*}
+\centering
+\caption{Parameters of the DWBA analysis with parameter limits}
+\label{tbl:diffuse_parameters}
+\begin{tabularx}{\textwidth}{@{}lXll@{}}
+\toprule
+Parameter & Definition & Lower bound & Upper bound\\ \midrule
+$\sigma_r$ / nm & root mean square roughness & $0.0$& $1.0$\\ 
+$\xi_\parallel$ / nm & lateral correlation length & $0.0$& $20.0$\\ 
+$\xi_\perp$ / nm$^{-1}$ &vertical correlation parameter yielding vertical correlation length trough $\xi_\perp(q_\parallel) = \xi_\perp/q_\parallel^2$ &$0.0$ & $20.0$\\
+$\beta$ / $^\circ$&angle for off-axis vertical roughness correlation& $-10.0$ & $10.0$\\ 
+ \bottomrule
+\end{tabularx}
+\end{table*}
+
+For this analysis we assumed a Gaussian roughness profile at the interfaces, which is described mathematically by setting $H\equiv1.0$ for all samples. For the two samples, the full maps with the strongest scattering from each set are shown in comparison to the best model DWBA calculation (Fig~\ref{fig:dwba_data_best_model_comparison}). The results for the roughness of the MCMC analysis are shown in Fig.~\ref{fig:PSD_results}. All values are compiled in Table~\ref{tbl:diffuse_parameters_results}. 
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{images/dwba_data_best_model_comparison}
+\caption{Direct comparison of the measured reciprocal space maps with the DWBA calculation resulting from the parameters obtained with the MCMC optimization procedure (see text). a) shows the maps of the unpolished sample with strongest diffuse scattering. Similarly, b) shows the maps of the polished sample at the respective presumed crystallization threshold with strongest scattering.}
+\label{fig:dwba_data_best_model_comparison}
+\end{figure*}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{images/PSD_results}
+\caption{a) Root mean square roughness results from the analysis of the diffuse scattering for the two sample sets. In each set, an increase of roughness is observed at the crystallization threshold. For comparison, the max peak reflectance (cf.~Fig.~\ref{fig:EUV_reflectivity}c) for each sample set is shown in b). The increase in roughness clearly correlates with a significant dip in the peak reflectance as indicated by the dashed vertical lines.}
+\label{fig:PSD_results}
+\end{figure}
+For both sample sets a significant increase of roughness can be observed at the crystallization threshold, which coincides with the lowest reflectance for that sample in each set. Interestingly, the roughness returns to the previous value for further increasing Mo layer thicknesses. The roughening due to the formation of nanocrystallites at the threshold is compensated for even larger thicknesses.
+That indicates a smoothing effect due to additional Mo deposition above the crystallization threshold. We also observe a restored peak reflectance in that case. For the polished samples, the formation of crystallites can be observed with similar effects, but at lower Mo layer thickness with overall significantly lower root mean square roughness values.
+
+\begin{table*}
+\centering
+\caption{Results for the DWBA model parameters}
+\label{tbl:diffuse_parameters_results}
+\begin{tabular}{@{}lllll@{}}
+\toprule
+nom. Mo thickness / nm&$\sigma_r$ / nm & $\xi_\parallel$ / nm & $\xi_\perp$  / nm$^{-1}$ & $\beta$ / $^\circ$ \\ 
+(fitted Mo thickness / nm) & & & &\\ \midrule
+\multicolumn{5}{c}{Unpolished samples}\\
+\midrule
+$1.70$ ($1.81 \pm 0.18$) & $0.227 \pm 0.007$ & $3.14 \pm 0.11$ & $3.69 \pm 0.31$ & $-4.62 \pm 0.11$ \\
+$2.21$ ($2.31 \pm 0.22$)& $0.232 \pm 0.005$ & $3.72 \pm 0.09$ & $4.88 \pm 0.35$ & $-5.02 \pm 0.09$ \\
+$2.38$ ($2.43 \pm 0.12$) & $0.329 \pm 0.006$ & $4.51 \pm 0.10$ & $4.44 \pm 0.34$ & $-5.67 \pm 0.10$ \\
+$2.54$ ($2.68 \pm 0.14$)& $0.211 \pm 0.006$ & $3.61 \pm 0.12$ & $3.80 \pm 0.31$ & $-5.06 \pm 0.12$ \\
+$3.05$ ($3.22 \pm 0.12$)& $0.243 \pm 0.005$ & $2.89 \pm 0.06$ & $5.72 \pm 0.31$ & $-5.06 \pm 0.06$ \\
+\midrule
+\multicolumn{5}{c}{Polished samples}\\
+\midrule
+$1.70$ ($1.77 \pm 0.20$) & $0.129 \pm 0.006$ & $7.05 \pm 0.38$ & $0.53 \pm 0.05$ & $-1.19 \pm 0.56$ \\
+$1.85$ ($1.91 \pm 0.14$)& $0.195 \pm 0.005$ & $10.66 \pm 0.34$ & $0.76 \pm 0.07$ & $-1.50 \pm 0.51$ \\
+$2.00$ ($2.30 \pm 0.20$)& $0.105 \pm 0.002$ & $8.95 \pm 0.25$ & $0.76 \pm 0.06$ & $-2.28 \pm 0.30$ \\
+$2.30$ ($2.59 \pm 0.13$)& $0.106 \pm 0.003$ & $8.22 \pm 0.29$ & $0.86 \pm 0.08$ & $-2.90 \pm 0.23$ \\
+$3.05$ ($3.47 \pm 0.16$)& $0.088 \pm 0.002$ & $10.29 \pm 0.37$ & $1.47 \pm 0.23$ & $-1.62 \pm 0.32$ \\
+ \bottomrule
+\end{tabular}
+\end{table*}
+
+In addition, a large gap between the vertical correlation factors can be observed for comparing the polished and unpolished samples. As is to be expected, the polishing process largely reduces the roughness correlation between different interfaces. In the case of unpolished growth, almost the entire stack is correlated for the observable spatial frequencies. The large values for the in-planar correlation length for the polished samples are also a direct result of the polishing process. 
 
 
 \section{Resolving the Roughness Correlation in Cr/Sc Multilayer Samples}
+Even in the case of the data, methods and model presented here, the combined 
+analysis leaves a correlation between the intermixing parameter $\eta$ and the 
+roughness $\sigma_r$, which could not be resolved (see 
+Fig.~\ref{fig:eta_sigma_correlation}).
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/eta_sigma_correlation}
+  \caption{Correlation of the projected $\chi^2$ surface onto the parameter 
+pair $(\eta, \sigma_r$) by visualization of the position of the MCMC samples in 
+the reduced parameter space. The strong correlation of both parameters in the 
+optimal solution, which is indicated by blue solid lines, is clearly visible. 
+The percentiles corresponding to one and two standard deviations $\sigma$ are 
+indicated by the black contour lines.}
+  \label{fig:eta_sigma_correlation}
+\end{figure}
+This means that none of the methods, not even the combined analysis, contains 
+sufficient information to deduct an unambiguous result for the roughness or 
+intermixing. Intermixing alone merely reduces optical contrast, whereas 
+interface roughness causes diffuse scattering. One should be able to 
+distinguish between the two through the measurement of the diffuse scattering. 
+The distribution of the off-specular scattering with respect to the scattering 
+angle and wavelength provides additional information on the vertical and 
+lateral correlation of spatial roughness frequencies. The latter is described 
+by the power spectral density. We conducted a diffuse scattering experiment as 
+described in Sec.~\ref{sec:experimental}. The analysis was conducted based on 
+the DWBA formalism outlined in Sec.~\ref{sec:matrix_formalism}. The subfigures 
+(a) and (b) of Fig.~\ref{fig:diffuse_meas} show the measured reciprocal space 
+map in direct comparison to the best model found within the DWBA approach.
+\onecolumn
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{images/diffuse_incl_psd}
+  \caption{a) Diffuse scattering measurement in $q$-space representation and 
+log scale. b) DWBA calculation of the optimal PSD model based on the electron 
+density profile with the multilayer parameters for the combined analysis listed 
+in Table~\ref{tbl:results}. c) Vertical cut at the indicated white dashed cut 
+positions in (a) and (b). The blue dashed lines show two limiting cases for the 
+value of the vertical correlation length. The result is a model uncertainty in 
+the PSD. d) Comparison of the extracted effective PSDs from the diffuse 
+scattering measurement (Measured Data) shown in (a) and the DWBA calculation of 
+(b) at the horizontal cut positions indicated by the white dashed lines. The 
+uncertainty interval for the extracted power spectral density is shown by the 
+two dashed PSD profiles (see main text).}
+  \label{fig:diffuse_meas}
+\end{figure*}
 
+The formation of a narrow Bragg sheet \cite{haase_role_2014,salditt_kinetic_1994} 
+confirms the high degree of roughness correlation and thereby justifies the 
+approximations made in Sec.~\ref{sec:matrix_formalism} for identical roughness 
+properties at each interface. To deduct the effective power spectral density 
+shown in Fig.~\ref{fig:diffuse_meas}(c), we have taken a cut along the Bragg 
+sheet as indicated by the horizontal white dashed lines in the reciprocal space 
+maps. We divided the extracted scattering intensity by the multilayer 
+enhancement factor in Eq.~\ref{eqn:dwba}, leaving the contribution of the 
+effective PSD $C(q_\parallel)$ to the diffuse scattering.
+This requires that the vertical correlation factor $\xi_\perp$ be determined 
+first, which enters the calculation of the multilayer enhancement factor 
+through the replication factor in Eq.~\eqref{eqn:vertical_correlation}. Due to 
+the very high computational cost of a MCMC procedure, we have instead 
+calculated two limiting cases of the vertical correlation. This was done by 
+analyzing the width of the Bragg sheet at the vertical white dashed cut 
+positions, indicated in Fig.~\ref{fig:diffuse_meas}(a,b), and comparing the 
+simulated intensity distribution with the measurement uncertainty. The two 
+limiting cases are shown in Fig.~\ref{fig:diffuse_meas}(d) (blue dashed curves) 
+including the best model (solid blue curve) in comparison with the measured 
+data (solid red curve). Proceeding from here, we have evaluated the measured 
+PSD with the corresponding multilayer enhancement factor as described above. 
+Again, the two limiting cases are shown as red dashed curves in 
+Fig.~\ref{fig:diffuse_meas}(c) including the PSD deduced from the best model 
+value for $\xi_\perp$ as a solid red curve. The root mean square (r.m.s.) 
+roughness deducted from these PSDs is given by the two-dimensional integral as
+\begin{align}
+\sigma_r &=\frac{1}{2\pi} \sqrt{\int_{0}^{\infty} q_\parallel C(q_\parallel) \, 
+dq_\parallel} \text{.}
+\end{align}
+The uncertainty of the PSD due to the vertical correlation leads to an 
+uncertainty in the r.m.s. roughness when evaluating the integral. Due to the 
+limited $q_\parallel$ range where measurements can be taken, we have fitted the 
+PSD model of Eq.~\eqref{eqn:psd} to the three resulting PSDs and performed the 
+integration over the full $q_\parallel$ range. The deviation of the integration 
+for the PSD model fit and the data in the available range were negligible. The 
+best model results for the vertical replication factor and the power spectral 
+density are given in Table.~\ref{tbl:psd_results}, together with their 
+uncertainties resulting from the described procedure. The best fit of the PSD 
+model is shown in Fig.~\ref{fig:diffuse_meas}(c) as a solid blue curve.
+\begin{table}
+\centering
+\caption{Best model parameters of the PSD as a result of the diffuse scattering 
+analysis}
+\label{tbl:psd_results}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Parameter & Best model values\\ \midrule
+$\sigma_r$ / nm & $0.17 \pm 0.02$ \\
+$\xi_\parallel$ / nm& $4.00 \pm 0.35$ \\
+$\xi_\perp$  / nm$^{-1}$& $10.5 \pm 3.5$ \\
+$H$ & $1.0$ \\
+$\beta$ & $0.0$ \\
+ \bottomrule
+\end{tabular}
+\end{table}
+The r.m.s.~roughness value found with the analysis of the diffuse scattering is 
+identical within its uncertainty interval to the value obtained from the 
+combined analysis and thus confirms the intermixing and roughness parameters 
+listed in Table.~\ref{tbl:results}.
