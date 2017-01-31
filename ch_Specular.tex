@@ -4,6 +4,20 @@ MCMC use with multilayers: \cite{hobson_markov-chain_2004}
 
 
 \section{Reconstruction Based on Specular EUV and X-ray reflectance}
+\begin{figure}[htbp]
+    \def\svgwidth{0.7\textwidth}
+    \fontfamily{fds}\selectfont\footnotesize
+    \import{svg/}{mo_si_ptb17_model.pdf_tex}
+    \caption{Model of the multilayer stack including the substrate and the capping layers. The periodic part is enclosed between the dashed lines with four layers in each period repeated 49 times. The capping period does not include an interdiffusion layer but has a natural SiO$_2$ layer and a carbon-like layer accounting for contamination on the top surface.}
+    \label{fig:model}
+\end{figure}
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{img/parameter_influence}
+\caption{Parameter influence.}
+\label{ch_spec:fig_mo_si_parameter_influence}
+\end{figure*}
 
 \subsection{Multilayer Model and Particle Swarm Optimization}
 
@@ -36,10 +50,11 @@ The solution to the inverse problem of reconstructing the optimal model paramete
 \paragraph{Model of the Multilayer Stack} \label{sec:mo_si_model}
 The thicknesses of the Mo layers inside the stack were varied nominally from $1.7$ nm to $3.05$ nm from sample to sample. The stacking of the different layers in the multilayer consists of the Mo and Si layers, as well as an additional buffer layer at the Si-to-Mo interface to prevent interdiffusion. For the Mo-to-Si interfaces, no buffer layers were included since interdiffusion is usually less in this case \cite{petford-long_highresolution_1987}. However, for the theoretical description of the sample stack we consider an additional MoSi$_2$ layer, which is well known to form during the deposition process \cite{bajt_investigation_2001}. The full model used in the reconstruction is illustrated in Fig.~\ref{fig:model} with the thickness parameters for each layer. To correct for any contamination on the top sample surface, an additional carbon-like layer on top was considered. In addition to the thicknesses of each layer we also allowed for a variation of the layer density between $80\%$ and $100\%$ of the bulk density. The evaluation of the reflectivity with respect to the model was performed with the matrix algorithm in Eq.~\eqref{eqn:refl_trans} described above. The model parameters and their boundaries are listed in Table~\ref{tbl:multilayer_parameters}.
 \begin{figure}[htbp]
-\centering
-\includegraphics[width=0.7\textwidth]{images/model}
-\caption{Model of the multilayer stack including the substrate and the capping layers. The periodic part is enclosed between the dashed lines with four layers in each period repeated 49 times. The capping period does not include an interdiffusion layer but has a natural SiO$_2$ layer and a carbon-like layer accounting for contamination on the top surface.}
-\label{fig:model}
+    \def\svgwidth{0.7\textwidth}
+    \fontfamily{fds}\selectfont\footnotesize
+    \import{svg/}{mo_si_iws_model.pdf_tex}
+    \caption{Model of the multilayer stack including the substrate and the capping layers. The periodic part is enclosed between the dashed lines with four layers in each period repeated 49 times. The capping period does not include an interdiffusion layer but has a natural SiO$_2$ layer and a carbon-like layer accounting for contamination on the top surface.}
+    \label{fig:model}
 \end{figure}
 \begin{table*}
 \centering
