@@ -7,18 +7,56 @@ MCMC use with multilayers: \cite{hobson_markov-chain_2004}
 \begin{figure}[htbp]
 \centering
 \includegraphics{img/PTB17_reflectance_AOI_15}
-\caption{PTB17 reflectance data.}
+\caption{Specrally resolved reflectance data of the Mo/B$_4$C/Si/C multilayer sample. The irradiation was conduced under a fixed angle of incidence $\alpha_i = 15.0^\circ$. The measurement uncertainty is within the line thickness of the plot.}
 \label{ch_spec:fig_ptb17_reflectance_AOI_15}
 \end{figure}
 
+
+
+\subsection{Multilayer Model and Particle Swarm Optimization}
+\gls{pso}
 \begin{figure}[htbp]
     \def\svgwidth{0.7\textwidth}
     \fontfamily{fds}\selectfont\footnotesize
     \import{svg/}{mo_si_ptb17_model.pdf_tex}
-    \caption{Model of the multilayer stack including the substrate and the capping layers. The periodic part is enclosed between the dashed lines with four layers in each period repeated 49 times. The capping period does not include an interdiffusion layer but has a natural SiO$_2$ layer and a carbon-like layer accounting for contamination on the top surface.}
+    \caption{Model of the multilayer stack including the substrate and the capping layers. The periodic part is enclosed between the dashed lines with four layers in each period repeated $N=64$ times. The capping period does not include an interdiffusion layer but has a natural SiO$_2$ layer.}
     \label{fig:model}
 \end{figure}
 
+\begin{table*}
+\centering
+\caption{Multilayer parametrization and parameter limits}
+\label{tbl:multilayer_parameters}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Parameter & Definition & Lower bound & Upper bound\\ \midrule
+$d_\text{Mo}$ / nm & Mo layer thickness & $0.0$& $7.0$\\ 
+$d_\text{Si}$ / nm & Si layer thickness& $0.0$& $7.0$\\ 
+$d_\text{C}$ / nm &C buffer layer thickness& $0.0$ & $5.0$\\ 
+$d_\text{B$_4$C}$ / nm &B$_4$C buffer layer thickness&$0.0$ & $5.0$\\ 
+$\sigma$ / nm & N\'{e}vot-Croce parameter& $0.0$& $2.0$\\ 
+&(identical for all interfaces)&&\\
+$\rho_\text{Mo}$ &Mo density w.r.t.~bulk density & $0.5$& $1.0$\\ 
+$\rho_\text{Si}$ &Si density w.r.t.~bulk density& $0.5$& $1.0$\\ 
+$\rho_\text{C}$ &C density w.r.t.~bulk density& $0.5$& $1.0$\\ 
+$\rho_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.5$& $1.0$\\
+\midrule
+\multicolumn{4}{c}{Capping layer}\\
+\midrule
+$d_\text{SiO$_2$(cap)}$ / nm & SiO$_2$ capping layer thickness & $0.0$&$5.0$ \\ 
+$\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
+ \bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/PTB17_reflectance_AOI_15_fitted}
+\caption{Theoretical reflectance curve based on the optimal model parameters obtained from the particle swarm optimization.}
+\label{ch_spec:fig_ptb17_reflectance_AOI_15_fitted}
+\end{figure}
+
+\subsection{The Problem of Model Uniqueness}
 \begin{figure*}[htbp]
 \centering
 \includegraphics{img/parameter_influence}
@@ -26,11 +64,13 @@ MCMC use with multilayers: \cite{hobson_markov-chain_2004}
 \label{ch_spec:fig_mo_si_parameter_influence}
 \end{figure*}
 
-\subsection{Multilayer Model and Particle Swarm Optimization}
-
-\subsection{The Problem of Model Uniqueness}
-
 \subsection{Markov-chain Monte Carlo Verification}
+\begin{figure*}[htbp]
+\centering
+\includegraphics{img/PTB17_MCMC_d_Mo_vs_d_Si}
+\caption{Specrally resolved reflectance data of the Mo/B$_4$C/Si/C multilayer sample. The irradiation was conduced under a fixed angle of incidence $\alpha_i = 15.0^\circ$. The measurement uncertainty is within the line thickness of the plot.}
+\label{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}
+\end{figure*}
 
 
 \section{Molybdenum Thickness Variation in Mo/Si Multilayers}
