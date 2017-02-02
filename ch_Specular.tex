@@ -1,15 +1,22 @@
 \chapter{Reconstruction of the Multilayer Structure by Specular Measurement Methods} \label{ch_spec}
-\cite{haase_role_2014}
-MCMC use with multilayers: \cite{hobson_markov-chain_2004}
+The multilayer mirror samples we shall investigate here were fabricated using the magnetron sputtering technique briefly discussed in the chapter~\ref{ch_exp} with nominal layer thicknesses and chemical species, depending on the desired reflection angle and spectral range. Among other parameters of the production process, the achieved layer thickness and sharpness of the interfaces has a direct impact on the performance of these mirrors with respect to their peak reflectance and bandwidth. Although the sputtering process is a well established technique for mirror fabrication, the actual layer thicknesses in the sample may differ from the nominal values and are generally unknown.
+
+Based on the matrix algorithm introduced in chapter~\ref{ch_theo}, the electromagnetic fields   inside and outside an arbitrary layer system can be calculated. Most importantly, this allows to calculate the expected specular reflectance curves across angular or spectral ranges for a given layer model. The comparison of these calculated curves to measured data thus allows to obtain information about the actual layer properties in a given sample. However, the detected reflectance values in a specular reflection experiment are merely intensities of reflected radiation. The information on the phase of the electromagnetic wave can not be obtained in this way and is lost. It is thus not possible to directly reconstruct the layout of the sample with the measured reflection curve. This is known as the inverse problem of scatterometry. Reconstructing the layer properties is therefore an attempt of solving this inverse problem by accumulating prior knowledge about the sample, such as the nominal design goals during the fabrication process, into a model of that system. Starting from this model, the theoretically calculated curve is compared to the measured reflectance and optimized iteratively.
+
+This method is not limited to the optimization of the model with respect to the reflectance of the mirror samples in their designated \gls{euv} spectral range. In order to add complementary information for refining the solution of the inverse problem, additional methods can be applied. In this chapter, depending on the sample system, we analyze several experimental methods. Apart from the aforementioned reflectance in the \gls{euv} spectral range, we apply resonant \gls{euv} reflectance across absorption edges, \gls{xrr} with high photon energy and finally \gls{xrf}. The latter does rely on the measurement of fluorescence radiation and thus requires the calculation of the field intensities inside the layer stack at the position of a specific chemical species for its analysis as described in section~\ref{ch_theo:sec_xrf} of chapter~\ref{ch_theo}.
+
+This method is applied and discussed in detail in section~\ref{ch_spec:sec_reconstruction_PTB17} to a multilayer mirror composed out of Mo/B$_4$C/Si/C optimized for reflection in the spectral range between $\lambda=\nm{12.4}$ and $\lambda=\nm{14.0}$ at angles of incidence below $\alpha_i \leq \SI{15}{\degree}$ based on the specular reflectance at those wavelengths and angles.
 
 
-\section{Reconstruction Based on Specular EUV reflectance}
+\section{Reconstruction Based on Specular EUV reflectance} \label{ch_spec:sec_reconstruction_PTB17}
 \begin{figure}[htbp]
 \centering
 \includegraphics{img/PTB17_reflectance_AOI_15}
 \caption{Specrally resolved reflectance data of the Mo/B$_4$C/Si/C multilayer sample. The irradiation was conduced under a fixed angle of incidence $\alpha_i = 15.0^\circ$. The measurement uncertainty is within the line thickness of the plot.}
 \label{ch_spec:fig_ptb17_reflectance_AOI_15}
 \end{figure}
+
+\cite{haase_role_2014}
 
 
 
@@ -65,6 +72,7 @@ $\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
 \end{figure*}
 
 \subsection{Markov-chain Monte Carlo Verification}
+MCMC use with multilayers: \cite{hobson_markov-chain_2004}
 \begin{figure*}[htbp]
 \centering
 \includegraphics{img/PTB17_MCMC_d_Mo_vs_d_Si}
