@@ -49,9 +49,6 @@ For the purpose of reconstructing the layer layout of the Mo/B$_4$C/Si/C sample,
     \label{ch_spec:fig_Mo_B4C_Si_C_model}
 \end{figure}
 As introduced above, the multilayer coating consists of a periodic arrangement of four layers replicated 64 times. With the top period being different from the others through the missing carbon interdiffusion layer on the top surface. Since the sample was exposed to ambient conditions, a passivation of the top silicon surface through oxidation has to be taken into account through a silicondioxide layer. The parameterization of that model is given by the thicknesses of each layer within one period as well as for the capping silicondioxide layer. Each of the deposited layers may vary in density with respect to the bulk density of that material \cite{braun_mo/si_2002}, which also needs to be reflected in the model. Finally, the Nevot-Croce factor $\sigma$ accounting for roughness and interdiffsion at the interfaces as introduced in chapter \ref{ch_theo} is also included. The required optical constants, i.e.~the indices of refraction, of the respective materials in the relevant spectral range are taken from tabulated values by \textcite{henke_x-ray_1993} and used for the theoretical calculations based on the matrix algorithm. A full list of the model parameters for the multilayer sample can be found in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters} together with physically plausible limits for each of the parameters. Due to the fact that the \gls{euv} reflectivity curve shown in Fig.~\ref{ch_spec:fig_ptb17_reflectance_AOI_15} shows the first order Bragg peak of the layer system, none of the layers can be thicker than \nm{7}, i.e.~in the order of half of the wavelength. The barrier layers were designed to attain thicknesses below \nm{1}. The densities of the various materials within this model was constrained to values between $\SI{50}{\percent}$ and $\SI{100}{\percent}$ with respect to their bulk density, while values above the bulk density are physically highly improbable. Due to the high peak reflectance of the multilayer sample in the \gls{euv} measurement, the maximum value of the Nevot-Croce factor was limited to be below $\sigma \leq \nm{2}$. With its upper limit, the measured peak reflectance can not be attained within this model thus not limiting the generality.
-
-\gls{pso} \cite{kennedy_particle_2011}.
-
 \begin{table*}
 \centering
 \caption{Multilayer parametrization and parameter limits}
@@ -78,12 +75,46 @@ $\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
 \end{tabular}
 \end{table*}
 
+\paragraph{The minimization functional and particle swarm optimization}
+As introduced above, the reconstruction of the model for the multilayer is an optimization problem. Based on the measured reflectivity data an optimization functional defines the goodness of the model with respect to the measured data. The quality is asserted based on the method of least squares \cite{legendre_nouvelles_1805, gauss_theoria_1809, birge_calculation_1932} and the functional is defined as the reduced $\tilde{\chi}^2$
+\begin{align}
+\tilde{\chi}^2 = \frac{1}{m - p} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
+- I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,} 
+\label{ch_spec:eqn_reduced_chi_squared}
+\end{align}
+where $m$ is the number of measurement points, $p$ is the number of parameters used in the model, $I_m^\text{model}$ is the calculated intensity for the corresponding measurement point with index $m$ having the measured intensity $I_m^\text{meas}$. The calculated intensity fur the \gls{euv} reflectivity curve above $I_m^\text{model}$ follows directly from the matrix algorithm and the quantity $R$ in Eq.~\eqref{ch_theo:eqn_refl_trans_ML} in chapter~\ref{ch_theo}. Each point is calculated based on the angle of incidence and wavelength associated with measurement point $m$. The experimental error for each measurement point is described by $\tilde{\sigma}_m$.
+
+For the minimization of the functional in Eq.~\eqref{ch_spec:eqn_reduced_chi_squared} we apply a global optimization algorithm known as \gls{pso} \cite{kennedy_particle_2011}. In contrast to the aforementioned gradient based methods, the particle swarm optimizer operates on the whole parameter space as defined by the upper and lower parameter limits, which are given in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters} for the particular example here, without specific starting parameters influencing the convergence result. We implemented the \gls{pso} algorithm based on the draft by \textcite{carlisle_off--shelf_2001}. The basic mechanism of the algorithm is the definition of a swarm of individual particles, which are initialized randomly distributed across the allowed parameter space. Initially, each of those particles calculates the minimization functional at its random position retaining that result. In an iterative process, the global best solution (``social component'') found as well as the individual best solution (``cognitive component'') of each particle are used to calculate a velocity vector within the parameter space for each particle. Within that iteration each of the particle thus moves to a new position, where the minimization functional is again evaluated and compared the the individual and global best solutions. If a better value is found, the respective retained results are updated with the new value and the next iteration is performed. While following that process the particles eventually converge to the global best solution, which may or may not be the global best optimum of the whole optimization problem. Due to the combination of social and cognitive component, fast convergence into a local optimum can be avoided. The state of full convergence is reached, when either all particles occupy the same place in the parameter space or if stagnation is reached. Due to the statistical nature of the algorithm, convergence can not be guaranteed. Neither is the global best optimum found necessarily the global minimum. The result may be verified by repeated application of the algorithm or simply by  reaching a satisfactory solution through comparison of the measured and calculated curves and thus the desired small $\tilde{\chi}^2$ values.
+
+\paragraph{Model reconstruction based on the \gls{euv} reflectivity data}
+We have applied this optimization procedure to the Mo/B$_4$C/Si/C sample and the measured \gls{euv} reflectivity curve. The fit result is shown together with the measured data in Fig.~\ref{ch_spec:fig_ptb17_reflectance_AOI_15_fitted}.
 \begin{figure}[htbp]
 \centering
 \includegraphics{img/PTB17_reflectance_AOI_15_fitted}
 \caption{Theoretical reflectance curve based on the optimal model parameters obtained from the particle swarm optimization.}
 \label{ch_spec:fig_ptb17_reflectance_AOI_15_fitted}
 \end{figure}
+The parameter results are listed in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters_results}. The solution does indeed provide a very good agreement with the measured data. However, by repeated evaluation of the \gls{pso} procedure, significantly different results for the optimal parameter set with comparable agreement were found. Clearly, this is no desirable situation, since no definite answer of the actual thicknesses found in the sample can be made. To complete the characterization additional methods of model verification are thus required. We shall therefore discuss an additional approach to the optimization problem in the following section on how the model validity and the information content of the measured data can be asserted based on the example of the \gls{pso} results obtained here.
+\begin{table}[htbp]
+\centering
+\caption{Results for the ptimized parameters based on the \gls{pso} of the \gls{euv} reflectivity for the Mo/B$_4$C/Si/C sample.}
+\label{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters_results}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Parameter & Definition& PSO result\\ \midrule
+$d_\text{SiO$_2$(cap)}$ / nm &SiO$_2$ capping layer thickness& $3.195$ \\
+$d_\text{Mo}$ / nm &Mo layer thickness&  $2.460$ \\
+$d_\text{Si}$ / nm &Si layer thickness& $2.421$\\ 
+$d_\text{C}$ / nm &C buffer layer thickness& $0.811$\\ 
+$d_\text{B$_4$C}$ / nm &B$_4$C buffer layer thickness& $1.308$\\ 
+$\sigma$ / nm &N\'{e}vot-Croce parameter& $0.322$\\
+$\rho_\text{Mo}$ &Mo density w.r.t.~bulk density& $0.989$\\ 
+$\rho_\text{Si}$ &Si density w.r.t.~bulk density& $0.883$\\ 
+$\rho_\text{C}$ &C density w.r.t.~bulk density& $0.833$\\ 
+$\rho_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.909$ \\
+ \bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{The Problem of Model Uniqueness and Markov-chain Monte Carlo Verification}
 \begin{figure*}[htbp]
