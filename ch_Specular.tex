@@ -102,7 +102,7 @@ The parameter results are listed in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilaye
 \begin{tabular}{@{}lll@{}}
 \toprule
 Parameter & Definition& PSO result\\ \midrule
-$d_\text{SiO$_2$(cap)}$ / nm &SiO$_2$ capping layer thickness& $3.195$ \\
+$d_\text{SiO$_2$(cap)}$ / nm &SiO$_2$ capping layer thickness& $3.194$ \\
 $d_\text{Mo}$ / nm &Mo layer thickness&  $2.460$ \\
 $d_\text{Si}$ / nm &Si layer thickness& $2.421$\\ 
 $d_\text{C}$ / nm &C buffer layer thickness& $0.811$\\ 
@@ -135,30 +135,50 @@ where $E$ denotes the experiment, i.e.~the measured data and $M(\vec{x})$ repres
 \begin{align}
  L(M(\vec{x}) | E) \propto L(E | M(\vec{x})) L(M(\vec{x})) \text{,} \label{ch_spec:eqn_bayesian_theorem}
 \end{align}
-where $L(M(\vec{x}))$ denotes the likelihood for the model to be valid for a specific set of parameters $\vec{x}$ (the so called ``prior distribution''). The prior distribution does contain any prior knowledge about the model and allowed parameters. For the example in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters} the prior distribution is $L(M(\vec{x})) \rightarrow -\infty$ for any parameter set outside the listed boundaries and $L(M(\vec{x})) = 1$ everywhere else. In addition, we limit the maximum total period thickness, i.e.~the sum of all layers in one period to only allow the appearance of the first Bragg peak within the measured spectral range through the same condition. Combining Eq.~\eqref{ch_spec:eqn_likelihood_experiment_vs_model} and Eq.~\eqref{ch_spec:eqn_bayesian_theorem} then yields the likelihood functional
+where $L(M(\vec{x}))$ denotes the likelihood for the model to be valid for a specific set of parameters $\vec{x}$ (the so called ``prior distribution''). The prior distribution does contain any prior knowledge about the model and allowed parameters. For the example of the model parameters in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters}, the prior distribution is $L(M(\vec{x})) \rightarrow -\infty$ for any parameter set outside the listed boundaries and $L(M(\vec{x})) = 1$ everywhere else. In addition, we limit the maximum total period thickness, i.e.~the sum of all layers in one period to only allow the appearance of the first Bragg peak within the measured spectral range through the same condition. Combining Eq.~\eqref{ch_spec:eqn_likelihood_experiment_vs_model} and Eq.~\eqref{ch_spec:eqn_bayesian_theorem} then yields the likelihood functional
 \begin{align}
- L(\vec{x}) = L(M(\vec{x}) | E) \propto \exp \big(- \tilde{\chi}^2(\vec{x}) / 2 \big) L(M(\vec{x})) \text{.}
+ L(\vec{x}) = L(M(\vec{x}) | E) \propto \exp \big(- \tilde{\chi}^2(\vec{x}) / 2 \big) L(M(\vec{x})) \text{.} \label{ch_spec:eqn_likelihood}
 \end{align}
 
 Solving the optimization problem posed in the previous section within this context is then, equivalently to the minimization of $\tilde{\chi}^2$, the maximization of the likelihood $L(\vec{x})$. The \gls{mcmc} method poses a statistical approach on evaluating (mapping) the likelihood across the parameter space within the previously defined limits as in the \gls{pso} approach. It thus yields an alternative method on solving the optimization problem by extracting the maximum likelihood from the final result. However, in addition to the maximum value, the likelihood distribution in parameter space is obtained allowing to extract confidence intervals for each of the parameters \cite{cox_theoretical_1979}. Thereby, the aforementioned ambiguity of solutions can be quantified within the defined model and the available experimental data. The confidence intervals are defined as the one- or two-sigma standard deviations of the respective distributions for each parameter.
 
 \paragraph{Confidence intervals for the Mo/B$_4$C/Si/C sample}
-We have applied an existing implementation of the \gls{mcmc} algorithm by \textcite{foreman-mackey_emcee:_2013} to the \gls{euv} measurement of the Mo/B$_4$C/Si/C sample in Fig.~\ref{ch_spec:fig_ptb17_reflectance_AOI_15} with the model in Fig.~\ref{ch_spec:fig_Mo_B4C_Si_C_model}. The likelihood is sampled in a high-dimensional space depending on the number of parameters in the model. We therefore need to project the distribution for each parameter by marginalizing over all other parameters. Alternatively, two-parameter correlations can be visualized by projecting on a two-dimensional area, again marginalizing across all other parameters. The projection for the Si and Mo layer thicknesses are shown in Fig.~\ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}b and \ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}c. In both cases, a well defined distribution is obtained. In the two-dimensional projection in Fig.~\ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}a, no correlations are apparent and a two-dimensional Gaussian-like shape results.
+We have applied an existing implementation of the \gls{mcmc} algorithm by \textcite{foreman-mackey_emcee:_2013} to the \gls{euv} measurement of the Mo/B$_4$C/Si/C sample in Fig.~\ref{ch_spec:fig_ptb17_reflectance_AOI_15} with the model in Fig.~\ref{ch_spec:fig_Mo_B4C_Si_C_model}. The likelihood as defined in Eq.~\eqref{ch_spec:eqn_likelihood} with the $\tilde{\chi}^2$ functional from Eq.~\eqref{ch_spec:eqn_reduced_chi_squared} is sampled in a high-dimensional space depending on the number of parameters in the model. We therefore need to project the distribution for each parameter by marginalizing over all other parameters. Alternatively, two-parameter correlations can be visualized by projecting on a two-dimensional area, again marginalizing across all other parameters. The projection for the Si and Mo layer thicknesses are shown in Fig.~\ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}b and \ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}c. In both cases, a well defined distribution is obtained. In the two-dimensional projection in Fig.~\ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}a, no correlations are apparent and a two-dimensional Gaussian-like shape results.
 \begin{figure*}[htbp]
 \centering
 \includegraphics{img/PTB17_MCMC_d_Mo_vs_d_Si}
-\caption{Specrally resolved reflectance data of the Mo/B$_4$C/Si/C multilayer sample. The irradiation was conduced under a fixed angle of incidence $\alpha_i = 15.0^\circ$. The measurement uncertainty is within the line thickness of the plot.}
+\caption{Results of the maximum likelihood estimation obtained via the \gls{mcmc} procedure. a) Two dimensional projection of the likelihood distribution for the parameter pair $d_\text{Si}$ and $d_\text{Mo}$. The projection was obtained by marginalizing over all other parameters of the model. The black contours indicate the areas for one and two standard deviations (one and two sigma contours). The blue lines in all three sub-figures indicate the best parameter set found with the \gls{pso} method. b) One dimensional projection of the likelihood distribution for the silicon layer thickness $d_\text{Si}$. The solid black line marks the center position ($50\%$ percentile) of the distribution. The dotted lines are the limits of one standard deviation. c) The one dimensional distribution similarly to b) for the molybdenum layer thickness.}
 \label{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}
 \end{figure*}
-In all cases, the one-sigma standard deviations are shown together with the weighted center, i.e.~the $50$th percentile. The \gls{pso} result is also indicated. 
-
 \begin{figure*}[htbp]
 \centering
 \includegraphics{img/PTB17_MCMC_other_params}
-\caption{Specrally resolved reflectance data of the Mo/B$_4$C/Si/C multilayer sample. The irradiation was conduced under a fixed angle of incidence $\alpha_i = 15.0^\circ$. The measurement uncertainty is within the line thickness of the plot.}
+\caption{In analogy to Fig.~\ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}b and \ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}c the one dimensional projections of the likelihood distribution estimation for the Mo/B$_4$C/Si/C sample are shown for the remaining parameters of the model with the \gls{pso} result, the center value and one standard deviation.}
 \label{ch_spec:fig_ptb17_MCMC_other_params}
 \end{figure*}
+In all cases, the one-sigma standard deviations for Gaussian distributions are shown together with the weighted center, i.e.~the $50$th percentile. The \gls{pso} result is also indicated, which is compatible with the one sigma standard deviation, but does not match the center of the likelihood result. The reason for that lies in higher order correlations of the parameters. In Fig.~\ref{ch_spec:fig_ptb17_MCMC_other_params}, all one-dimensional projections of the likelihood distribution are shown for all remaining parameters. Clearly, while a reasonably small confidence interval (again, one standard deviation for all distributions) can be found for the thickness of the carbon and boroncarbite layers, the off-center value for the silicon thickness of the PSO result in Fig.~\ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}c is compensated by a larger than center value for the boroncarbite layer in Fig.~\ref{ch_spec:fig_ptb17_MCMC_other_params}. Thus, the thicknesses are correlated and are no independent model parameters. Nevertheless, confidence intervals can be obtained within the given model and the given prior (the boundaries listed in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters} and are listed accordingly in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_mcmc_results} for one and two standard deviations. Within the allowed boundaries, some parameters remain entirely undefined with equal likelihood for any parameter value, such as the SiO$_2$ capping layer thickness, the silicon, carbon and boroncarbite relative densities. Their corresponding total confidence intervals thus cover almost exactly $68.2\%$ (one standard deviation) and $95.4\%$ (two standard deviations) of the allowed respective parameter range. Hence, with respect to the model defined and the measured \gls{euv} reflectivity curve, no reliable value for those sample properties can be reconstructed.
+\begin{table*}[htbp]
+\centering
+\caption{\gls{mcmc} results obtained by the analysis of the \gls{euv} reflectivity for the Mo/B$_4$C/Si/C sample. The center values ($50\%$ percentile) together with confidence intervals (c.i.) of one and two standard deviations are shown.}
+\label{ch_spec:tbl_mo_b4c_si_c_multilayer_mcmc_results}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Parameter & PSO result & center value with $1 \sigma$ c.i.& center value with $2 \sigma$ c.i.\\ \midrule
+$d_\text{SiO$_2$(cap)}$ / nm & $3.194$& $3.677({-2.252}/{+1.944})$ & $3.677({-3.407}/{+3.108})$ \\
+$d_\text{Mo}$ / nm &  $2.460$& $3.137({-0.587}/{+0.560})$ & $3.137({-1.054}/{+1.016})$ \\
+$d_\text{Si}$ / nm & $2.421$& $2.338({-0.497}/{+0.616})$ & $2.338({-0.916}/{+1.294})$ \\
+$d_\text{C}$ / nm& $0.811$ & $0.744({-0.477}/{+0.510})$ & $0.744({-0.696}/{+0.971})$ \\
+$d_\text{B$_4$C}$ / nm & $1.308$& $0.782({-0.471}/{+0.511})$ & $0.782({-0.722}/{+0.973})$ \\
+$\sigma$ / nm & $0.322$& $0.214({-0.143}/{+0.201})$ & $0.214({-0.204}/{+0.347})$\\
+$\rho_\text{Mo}$ & $0.989$& $0.953({-0.048}/{+0.034})$ & $0.953({-0.094}/{+0.045})$ \\
+$\rho_\text{Si}$ & $0.883$& $0.782({-0.167}/{+0.147})$ & $0.782({-0.264}/{+0.208})$ \\
+$\rho_\text{C}$ & $0.833$& $0.739({-0.164}/{+0.175})$ & $0.739({-0.228}/{+0.249})$ \\
+$\rho_\text{B$_4$C}$ & $0.909$& $0.741({-0.162}/{+0.172})$ & $0.741({-0.230}/{+0.247})$ \\
+ \bottomrule
+\end{tabular}
+\end{table*}
 
+It should be noted, that although the aforementioned density values can not be determined based on the available data, they remain possibly highly correlated parameters. A valid optimization result can therefore only be obtained by either applying the \gls{pso} routine or by iterative application of the \gls{mcmc} procedure, fixing single parameters according to their maximum likelihood value in the model and obtaining the resulting likelihood distributions for the remaining parameters according to that restricted model.
 
 
 \section{Molybdenum Thickness Variation in Mo/Si Multilayers}
