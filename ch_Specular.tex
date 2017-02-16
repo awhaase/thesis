@@ -39,7 +39,7 @@ The reconstruction of a given model based on the evaluation of \gls{euv} (or \gl
 
 In contrast to those gradient methods, statistical optimization algorithms exist. They share the aim of minimizing a optimization functional $\chi^2$ with the gradient approaches, but operate on the whole parameter space with predefined limits instead. In the following we shall apply those statistical optimization routines to obtain the reconstruction of the Mo/B$_4$C/Si/C sample and elaborate their application to the characterization of multilayer systems in detail.
 
-\subsection{Multilayer Model and Particle Swarm Optimization}
+\subsection{Multilayer Model and Particle Swarm Optimization} \label{ch_spec:sec_multilayer_model_and_pso}
 For the purpose of reconstructing the layer layout of the Mo/B$_4$C/Si/C sample, a parameterized model is needed entering the theoretical calculations to obtain the reflectivity curve according to the matrix algorithm. The model is largely based on prior knowledge available from the fabrication process. For the multilayer sample investigated here, the nominal layer design is known and a schematic representation is shown in Fig.~\ref{ch_spec:fig_Mo_B4C_Si_C_model}.
 \begin{figure}[htbp]
     \def\svgwidth{0.7\textwidth}
@@ -117,20 +117,30 @@ $\rho_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.909$ \\
 \end{table}
 
 \subsection{The Problem of Model Uniqueness and Markov-chain Monte Carlo Verification}
+With the ambiguous reconstruction result of the previous section, the demand for a verification of the model with respect to the measured data becomes apparent. To clarify the problem of uniqueness of the solution it is instructive to investigate the influence of the individual model parameters on the theoretical reflectivity curve. In Fig.~\ref{ch_spec:fig_mo_si_parameter_influence} we varied a subset of the parameters starting from the \gls{pso} solution from Sec.~\ref{ch_spec:sec_multilayer_model_and_pso}. In each of the subfigures, one parameter or a quotient of parameters is varied while all others are kept fixed.
 \begin{figure*}[htbp]
 \centering
 \includegraphics{img/parameter_influence}
 \caption{Parameter influence.}
 \label{ch_spec:fig_mo_si_parameter_influence}
 \end{figure*}
+By comparison of Fig.~\ref{ch_spec:fig_mo_si_parameter_influence}a, \ref{ch_spec:fig_mo_si_parameter_influence}b, \ref{ch_spec:fig_mo_si_parameter_influence}c and \ref{ch_spec:fig_mo_si_parameter_influence}e it becomes clear that a reduction of the peak reflectivity can originate in either a large roughness and interdiffusion parameter $\sigma$ or similarly from the thickness of the capping layer, the silicon to molybdenum layer thickness ratio of the molybdenum density. A reconstruction based on a single \gls{euv} reflectivity therefore intrinsically produces a highly ambiguous result with strong parameter correlations. The available data, a single \gls{euv} reflectivity curve in this case, does not allow for a unique set of parameters of the model minimizing the $\chi^2$ functional. In reality multiple solutions with equal values for $\tilde{\chi}^2$ exist. Clearly, this raises the question of how accurately a reconstruction may be achieved here and requires to determine the value of $\tilde{\chi}^2$ in vicinity of the \gls{pso} solution or possibly the whole parameter space.
 
-MCMC use with multilayers: \cite{hobson_markov-chain_2004}
+We approach this problem of evaluating $\tilde{\chi}^2$ across the parameter space by numerically sampling the functional based on a \gls{mcmc} method \cite{goodman_ensemble_2010}. An application of this technique to the design process of multilayer mirrors has been demonstrated by \textcite{hobson_markov-chain_2004}. In our case, the match of model and experimental result is evaluated based on a non-centered $\chi^2$ distribution assuming independent parameters defining the model. We further assume that any measured point, if measured multiple times, is distributed around the actual reflectivity curve following a Gaussian distribution, i.e.~we assume Gaussian errors for the experiment. The corresponding probability density function for a measurement result matching with the actual reflectivity curve, which is assumed to be obtainable exactly through the theoretical calculation, is then of Gaussian form \cite{abramowitz_handbook_1964}. The likelihood that the model matches the experimental result is now proportional to this probability density function
+\begin{align}
+ L(\vec{x}) \propto \exp \big(- \tilde{\chi}^2(\vec{x}) / 2 \big) \text{,}
+\end{align}
+where $\vec{x}$ represents the parameter set, e.g.~the parameters of the model in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters}. As we shall elaborate shortly, here we omit any normalization as we seek to merely evaluate confidence intervals and correlations for each parameters rather than absolute probabilities. Solving the optimization problem posed in the previous section within this context is then, equivalently to the minimization of $\tilde{\chi}^2$, the maximization of the likelihood $L(\vec{x})$. The \gls{mcmc} method poses a statistical approach on evaluating (mapping) the likelihood across the parameter space within the previously defined limits as in the \gls{pso} approach. It thus yields an alternative method on solving the optimization problem by extracting the maximum likelihood from the final result. However, in addition to the maximum value, the likelihood distribution in parameter space is obtained allowing to extract confidence intervals for each of the parameters \cite{cox_theoretical_1979}. Thereby, the aforementioned ambiguity of solutions can be quantified within the defined model and the available experimental data. The confidence intervals are defined as the one- or two-sigma standard deviations of the respective distributions for each parameter.
+
+\paragraph{Confidence intervals for the Mo/B$_4$C/Si/C sample}
+We have applied an existing implementation of the \gls{mcmc} algorithm by \textcite{foreman-mackey_emcee:_2013} to the \gls{euv} measurement of the Mo/B$_4$C/Si/C sample in Fig.~\ref{ch_spec:fig_ptb17_reflectance_AOI_15} with the model in Fig.~\ref{ch_spec:fig_Mo_B4C_Si_C_model}. The likelihood is sampled in a high-dimensional space depending on the number of parameters in the model. We therefore need to project the distribution for each parameter by marginalizing over all other parameters. Alternatively, two-parameter correlations can be visualized by projecting on a two-dimensional area, again marginalizing across all other parameters. The projection for the Si and Mo layer thicknesses are shown in Fig.~\ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}b and \ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}c. In both cases, a well defined distribution is obtained. In the two-dimensional projection in Fig.~\ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}a, no correlations are apparent and a two-dimensional Gaussian-like shape results.
 \begin{figure*}[htbp]
 \centering
 \includegraphics{img/PTB17_MCMC_d_Mo_vs_d_Si}
 \caption{Specrally resolved reflectance data of the Mo/B$_4$C/Si/C multilayer sample. The irradiation was conduced under a fixed angle of incidence $\alpha_i = 15.0^\circ$. The measurement uncertainty is within the line thickness of the plot.}
 \label{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}
 \end{figure*}
+In all cases, the one-sigma standard deviations are shown together with the weighted center, i.e.~the $50$th percentile. The \gls{pso} result is also indicated. 
 
 \begin{figure*}[htbp]
 \centering
