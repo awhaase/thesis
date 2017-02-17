@@ -182,6 +182,54 @@ It should be noted, that although the aforementioned density values can not be d
 
 
 \section{Molybdenum Thickness Variation in Mo/Si Multilayers}
+We investigate several samples of Mo/Si multilayer systems with C interdiffusion barriers at the Mo on Si interfaces. It has been shown that optimal reflectance can be achieved with approximately $40 \%$ Mo layer thickness with respect to (w.r.t.) the total period thickness \cite{bajt_investigation_2001,braun_mo/si_2002}. The samples under investigation here were fabricated with increasing relative Mo thickness while keeping the nominal period thickness $D\approx 7$ nm constant. It has been observed that with increasing Mo layer thickness, crystallites start forming at a certain threshold during the sample preparation inside the Mo layer \cite{bajt_investigation_2001}. This has an impact on the interface morphology and potentially increases the roughness and thus the loss of specularly reflected radiation. In this study, we investigate two sets of samples with increasing Mo layer thickness as described above. In the first set, the magnetron sputtered layers were deposited one after another for each sample. In the second set, during deposition, an additional polishing process was used after sputtering each layer.
+
+To obtain the actual layer thicknesses in the samples, we applied EUV reflectivity and X-ray reflectivity (XRR) experiments and reconstructed these parameters by modeling and by combined analysis of the measured data. The analysis was carried out by using a Markov-chain Monte Carlo method (MCMC) \cite{foreman-mackey_emcee:_2013} to deduct reliable parameters including confidence intervals.
+\begin{table}[htbp]
+\centering
+\caption{List of nominal molybdenum layer thicknesses in the two sample sets. Both sets were fabricated with a equidistant increase in thickness from \nm{1.70} to \nm{3.05} with 9 unpolished and 10 polished samples.}
+\label{ch_spec:tbl_mo_si_thickness_nominal}
+\begin{tabular}{@{}ll@{}}
+\toprule
+nominal $d_\text{Mo}$ / nm & nominal $d_\text{Mo}$ / nm\\ 
+(unpolished samples) & (polished samples) \\
+\midrule
+$1.70$& $1.70$\\ 
+$1.87$& $1.85$\\ 
+$2.04$ & $2.00$\\ 
+$2.21$ & $2.15$\\ 
+$2.38$& $2.30$\\ 
+$2.54$& $2.45$\\ 
+$2.71$& $2.60$\\ 
+$2.88$ & $2.75$\\ 
+$3.05$ & $2.90$\\ 
+-& $3.05$\\ 
+ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table*}[htbp]
+\centering
+\caption{List of nominal molybdenum layer thicknesses in the two sample sets. Both sets were fabricated with a equidistant increase in thickness from \nm{1.70} to \nm{3.05} with 9 unpolished and 10 polished samples.}
+\label{ch_spec:tbl_mo_si_thickness_mcmc_result}
+\begin{tabular}{@{}llll@{}}
+\toprule
+nom.~$d_\text{Mo}$ / nm & EUV \& XRR & nom.~$d_\text{Mo}$ / nm& EUV \& XRR\\ 
+(unpolished) && (polished) &\\
+\midrule
+$1.70$ &$2.43({-0.09}/{+0.16})$ & $1.70$ &$1.77({-0.22}/{+0.19})$ \\
+$1.87$ &$1.81({-0.12}/{+0.24})$ & $1.85$ &$1.91({-0.12}/{+0.17})$ \\
+$2.04$ &$1.98({-0.15}/{+0.14})$ & $2.00$ &$2.29({-0.28}/{+0.13})$ \\
+$2.21$ &$2.08({-0.11}/{+0.22})$ & $2.15$ &$2.45({-0.43}/{+0.06})$ \\
+$2.38$ &$2.31({-0.22}/{+0.21})$ & $2.30$ &$2.60({-0.12}/{+0.14})$ \\
+$2.54$ &$2.68({-0.13}/{+0.16})$ & $2.45$ &$2.58({-0.21}/{+0.15})$ \\
+$2.71$ &$2.91({-0.17}/{+0.12})$ & $2.60$ &$2.87({-0.22}/{+0.12})$ \\
+$2.88$ &$3.02({-0.15}/{+0.15})$ & $2.75$ &$3.03({-0.16}/{+0.14})$ \\
+$3.05$ &$3.22({-0.13}/{+0.11})$ & $2.90$ &$3.15({-0.13}/{+0.13})$ \\
+- &- & $3.05$ & $3.47({-0.19}/{+0.13})$ \\
+ \bottomrule
+\end{tabular}
+\end{table*}
 
 \subsection{Combined Analysis of X-ray and EUV reflectance}
 The reconstruction of the model for the multilayer itself as well as of the power spectral density for the interfacial roughness is an optimization problem. Based on the measured reflectivity data and the diffuse scattering, respectively, in each case, an optimization functional defines the goodness of the model. The optimization functional can then be described for each of the methods (EUV, XRR, diffuse scattering) individually by the reduced $\tilde{\chi}^2$
@@ -252,7 +300,7 @@ $\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
 The two sample sets have been measured with respect to their reflectivity at a fixed angle of incidence $\alpha_i=15^\circ$ from the surface normal by varying the wavelength in the spectral range from $\lambda=12.4$ nm to $\lambda=14.0$ nm. The results are shown in Fig.~\ref{fig:EUV_reflectivity} in comparison to each other, with their nominal Mo layer thickness. The max.~peak reflectance is also shown for the two series.
 \begin{figure*}[htbp]
 \centering
-\includegraphics[width=\textwidth]{images/EUV_reflectivity_with_peak}
+\includegraphics[width=\textwidth]{img/EUV_reflectivity_with_peak}
 \caption{a) Reflectivity curves for the unpolished samples across the wavelength at a fixed angle of incidence of $\alpha_i = 15^\circ$ from the surface normal. The nine samples differ by the nominal Mo layer thickness indicated at the bottom axis. b) Reflectivity curves of the ten polished samples measured under the same conditions as for the first sample set. c) Respective peak reflectance values for each sample obtained from the measurements in (a) and (b) in comparison. The maximum theoretical reflectance is shown for a perfect (no roughness or interdiffusion) layer system with the same specifications as the samples.}
 \label{fig:EUV_reflectivity}
 \end{figure*}
@@ -261,7 +309,7 @@ Clear shifts of central peak reflectance wavelength can be observed in both case
 The results of the two-step analysis are shown in Fig.~\ref{fig:fitted_mo_and_fitted_D}.
 \begin{figure*}[htbp]
 \centering
-\includegraphics[width=\textwidth]{images/fitted_mo_and_fitted_D}
+\includegraphics[width=\textwidth]{img/fitted_mo_and_fitted_D}
 \caption{a) Fitted Mo thickness values for both sample sets resulting from the MCMC analysis (see text). The nominal Mo layer thickness is shown in comparison in good agreement with the obtained thicknesses. b) Fitted total period thickness $D$ for both sample sets. For both sample sets, clear jumps can be observed at approx.~$d^\text{nom}_\text{Mo} =2.00$ nm and $d^\text{nom}_\text{Mo} =2.38$ nm, respectively, which is attributed to the crystallization threshold (see text). The marked (circle) samples were measured and analyzed with respect to the diffuse scattering.}
 \label{fig:fitted_mo_and_fitted_D}
 \end{figure*}
