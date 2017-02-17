@@ -1,1 +1,111 @@
 \chapter{Introduction} \label{ch:Intro}
+\paragraph{Intro Kiessig-like peaks}
+Multilayer systems have been of great interest over the past decades. The first applications of multilayers serving as mirrors for soft X-rays were optical components for space probes. The main driving force today is the shift in direction towards the EUV spectral range at 13.5 nm wavelength in optical lithography for the semiconductor industry. Lenses in classic lithography systems are replaced by multilayer mirrors. High  reflectivities are achieved by utilizing the constructive interference of the reflected light at each interface when fulfilling the Bragg condition. State of the art Mo/Si multilayer mirrors reach reflectivities of up to 70\% \cite{braun_mo/si_2002, feigl_euv_2006} in the case of near-normal incidence EUV radiation. This value is still well below the theoretical limit of approx.~75\% for an ideal multilayer. An important reason for the loss of reflectivity is interface imperfections such as roughness and interdiffusion causing diffuse scattering. The analysis of the off-
+specular scattering 
+thus serves as a 
+natural tool for the characterization of interfacial roughness. 
+
+At the Physikalisch-Technische Bundesanstalt (PTB), angle and energy resolved scatterometric measurements have been performed to analyze the off-specular scattering using EUV radiation. The tunability of synchrotron radiation in conjunction with angular resolution allows obtaining two-dimensional intensity maps close to the relevant multilayer resonance for near-normal incidence geometries. The diffuse scattering from interface roughness contains information on its morphology, such as lateral and vertical correlations, its jaggedness, and mean amplitude. A rigorous analysis of the reciprocal space represented through the scattering pattern, thus, provides access to the interface morphology.
+
+Scatterometry poses an inverse problem of gaining information about the properties of the interfaces. A theoretical model of the diffuse scattering is required to yield a reconstruction of the actual sample and deduct the power spectral density (PSD) of roughness. The topic of experimental and theoretical analysis towards the characterization of roughness involving optical wavelengths has been largely studied by others and published in the optical community \cite{amra_light_1993, amra_light_1994, elson_light_1980, elson_relationship_1983, schroder_angle-resolved_2011, schroder_spectral_2014}. We take a different approach involving the analysis of diffuse EUV scattering employing numerical simulations of the expected scattering distribution based on the distorted-wave Born approximation (DWBA)~\cite{holy_nonspecular_1994, holy_x-ray_1993}.
+
+We will show that a rigorous, dynamic calculation of the EUV radiation interacting with the multilayer is required to obtain the power spectral densities. The influence of multiple reflections at the layer boundaries cannot be neglected in this analysis. The simulations are compared to measured data obtained for high-reflectance Mo/Si multilayers. The influence of the measurement geometry of the diffuse scattering is discussed in detail.
+
+\paragraph{Intro Mo/Si}
+Magnetron sputtered EUV multilayer thin-film systems serve as well-established optical elements for near-normal incidence mirrors in the EUV spectral range \cite{martinez-galarce_high_2000,barbee_multi-spectral_1991,toyoda_soft-x-ray_2000,finkenthal_near_1990}. Since the reflectance of single metallic surfaces is negligible for these wavelengths, those systems, instead, provide a periodic arrangement of interfaces between typically two materials with a significantly different index of refraction. Thereby, an artificial one-dimensional Bragg crystal is formed, leading to constructive interference for a designated angle of incidence and wavelength range \cite{spiller_low-loss_1972}. A system of great relevance nowadays is the multilayer of Mo/Si alternating layers used to design near-normal incidence mirrors for the EUV wavelength at $13.5$ nm. The ability to design high-reflectance mirrors for this wavelength has a large impact on the future of the semiconductor industry, where integrated circuits are fabricated using optical lithography on the nano scale. With regularly shrinking feature sizes on silicon wafers, a shorter wavelength than the established 193 nm DUV lithography is required to reach the designated level of miniaturization. The next step is EUV lithography at $13.5$ nm wavelength with radiation produced using laser plasma sources. Because of the limited radiant power of the sources, the margins for radiation loss inside optical elements are minimal. Mo/Si multilayers with additional diffusion barriers at selected interfaces have demonstrated a yield of reflectances above $70\%$ close to the theoretical threshold at near-normal incidence \cite{barbee_molybdenum-silicon_1985,stearns_fabrication_1991,bajt_improved_2002,braun_grenzflachen-optimierte_2003}. The period thickness required for high near-normal incidence reflectance at 13.5 nm wavelength is at approx.~ $D=7$ nm, in order to achieve constructive interference with $N=50$ multilayer periods. The main reasons for radiation loss beyond unavoidable absorption inside the materials of the multilayer are imperfections at the interfaces, such as interdiffusion and roughness. In both cases the perfect multilayer system is distorted, since the interfaces are not chemically abrupt anymore. Thus, interdiffusion leads to a diminished optical contrast and consequently to lower reflectance at the respective interface \cite{nakajima_interdiffusion_1988}. Interdiffusion is a known problem for multilayer optics, and measures to counteract this effect are the introduction of barrier layers hindering the formation of interdiffusion layers \cite{braun_grenzflachen-optimierte_2003,braun_mo/si_2002}. In the case of roughness, the result of reduced optical contrast at the interfaces is the same on average due to the finite beam size, however, in this case with the addition of diffuse scattering outside the specular beam direction \cite{sinha_x-ray_1994}, which is not present in the case of pure interdiffusion.
+
+Analyzing the diffuse scattering pattern provides valuable information on the interface morphology in terms of the power spectral density (PSD) of roughness and thus the cause of roughness-induced reflectance loss. We investigate several samples of Mo/Si multilayer systems with C interdiffusion barriers at the Mo on Si interfaces. It has been shown that optimal reflectance can be achieved with approximately $40 \%$ Mo layer thickness with respect to (w.r.t.) the total period thickness \cite{bajt_investigation_2001,braun_mo/si_2002}. The samples under investigation here were fabricated with increasing relative Mo thickness while keeping the nominal period thickness $D\approx 7$ nm constant. It has been observed that with increasing Mo layer thickness, crystallites start forming at a certain threshold during the sample preparation inside the Mo layer \cite{bajt_investigation_2001}. This has an impact on the interface morphology and potentially increases the roughness and thus the loss of specularly reflected radiation. In this study, we investigate two sets of samples with increasing Mo layer thickness as described above. In the first set, the magnetron sputtered layers were deposited one after another for each sample. In the second set, during deposition, an additional polishing process was used after sputtering each layer. To investigate the interface morphology and to observe the amorphous-to-crystalline transition in each set, we measure and analyze the diffuse scattering pattern. The theoretical diffuse scattering maps expected from a certain multilayer model are calculated based on the distorted-wave Born approximation (DWBA) to deduct the PSD by reconstruction \cite{holy_nonspecular_1994,holy_x-ray_1993,haase_role_2014}. To obtain the actual layer thicknesses in the samples, we applied EUV reflectivity and X-ray reflectivity (XRR) experiments and reconstructed these parameters by modeling and by combined analysis of the measured data. The analysis was carried out by using a Markov-chain Monte Carlo method (MCMC) \cite{foreman-mackey_emcee:_2013} to deduct reliable parameters including confidence intervals. Based on these models, the diffuse scattering was calculated and the parameters of the PSD and the vertical roughness correlation were reconstructed again using the MCMC method.
+
+\paragraph{Intro Cr/Sc}
+The wavelength range of the so-called ``water window'' between $2.3$ nm and 
+$4.4$ nm is of special interest, because radiation in this spectral range shows 
+low absorption in water, while it is absorbed by many elements naturally 
+occurring in organic molecules such as proteins \cite{kirz_soft_1995}. 
+This allows the study of biological systems in their native environment 
+(water), where many proteins are biologically active. In addition to the short 
+wavelength required to achieve high resolution imaging of such samples, one 
+also needs sufficient intensity, which can be achieved with high reflectance 
+optical elements \cite{hertz_normal-incidence_1999,legall_compact_2012}.
+
+The strong absorption of soft X-ray radiation in most materials poses a 
+challenge in the fabrication of such optics. Refractive optical elements are 
+not available due to the high absorption in solids. The same holds for 
+reflective optical elements close to normal incidence, where reflectivities 
+from a single surface are well below $10^{-4}$ for all materials \cite{henke_x-ray_1993}. 
+A candidate system for building highly-reflective mirrors for short wavelengths 
+is a layered structure with alternating materials of significantly different 
+refractive indices \cite{spiller_low-loss_1972}. Such multiple repeated bilayer 
+systems constitute an artificial one-dimensional Bragg crystal. Their layer 
+layout, more specifically the total layer thickness $D$ of a single layer 
+period, is intrinsically related to the desired peak reflectance wavelength and 
+incidence angle. Such systems are well established as mirrors for an EUV 
+wavelength of $13.5$ nm, where they reflect more than $60\%$ of the radiation 
+close to normal incidence with a choice of Mo and Si as layer materials 
+\cite{barbee_molybdenum-silicon_1985,stearns_fabrication_1991}. By applying additional interface 
+shaping techniques and adding barrier layers to prevent interdiffusion, 
+reflectivities of above $70\%$, close to the theoretical limit, are achievable 
+\cite{bajt_improved_2002,braun_grenzflachen-optimierte_2003}.
+
+Theoretical calculations show that constructing multilayer mirrors in the water 
+window spectral range for normal incidence allows peak reflectivities above 
+$50\%$ \cite{schafers_cr/sc_1998}. A typical choice of materials for these bilayer 
+systems is Cr and Sc for wavelengths above $3.1$ nm \cite{salashchenko_short-period_1997, 
+schafers_cr/sc_1998}. The proximity to the Sc L edge causes the required significant 
+difference in the refractive index due to anomalous dispersion while 
+maintaining relatively low absorption. In order to function as a 
+one-dimensional Bragg crystal, those layer systems demand a high quality of the 
+layer interfaces. Chemically abrupt and smooth interfaces are required to reach 
+high reflectivities and to minimize loss processes such as diffuse scattering 
+or contrast reduction due to interdiffusion. This requirement becomes even more 
+stringent when moving towards shorter wavelengths due to the necessary 
+reduction in layer thickness for fulfilling the Bragg condition.
+The relative influence of interface morphology and interdiffusion as loss 
+mechanisms for peak reflectance rises in importance compared to established 
+Mo/Si multilayer systems with significantly larger layer thicknesses. The 
+measured peak reflectance of state-of-the-art Cr/Sc multilayer systems designed 
+for the above specifications scores at reflectivities below $20\%$, less than 
+half of the theoretically possible value \cite{eriksson_14.5_2003, 
+yulin_high-performance_2004}.
+
+Roughness causes diffuse scattering out of the specular beam direction 
+\cite{sinha_x-ray_1994}. Interdiffusion, on the other hand, 
+reduces the optical contrast, i.e.~the local difference in the refractive 
+index, thereby reducing the reflectance at each interface 
+\cite{nakajima_interdiffusion_1988}. In order to gain a deeper understanding of the 
+interface morphology, a characterization of the individual contributions of 
+interface diffusion and roughness is required. Both lead to a damping of the 
+peak reflectance \cite{croce_p._etude_1976}. The inspection of diffusely scattered 
+light is a natural tool for the investigation of the roughness at the 
+interfaces. At-wavelength in-plane diffuse scattering contains information on 
+the interface morphology. An important advantage of this analysis as compared 
+to established methods for interface characterization of thin films such as 
+grazing-incidence small-angle X-ray scattering (GISAXS) \cite{levine_grazing-incidence_1989} is 
+that the angle of incidence is close to the surface normal. This allows the 
+investigation of the multilayer stack locally even for strongly curved 
+surfaces, e.g.~in the case of focusing optics.
+
+
+Standard characterization methods such as EUV reflectance and X-ray reflectance 
+(XRR) with simple binary layer models have proven useful for the 
+characterization of similar multilayer systems, e.g.~Mo/Si mirrors designed for 
+$13.5$ nm wavelength \cite{lim_fabrication_2001, bajt_investigation_2001, braun_mo/si_2002}. However, these systems typically have 
+thicknesses of $3$ to $4$ nm for the individual Mo and Si layers. With the 
+efforts of reducing the peak reflectance wavelength, those methods fail to 
+yield consistent information in the framework of simple models that describe the measured 
+reflectivities. This has already been observed in the case of La/B multilayer 
+mirrors designed for peak reflectivities at $6.7$ nm wavelength 
+\cite{yakunin_combined_2014}.
+
+The reason for this might be an increase in disturbances at the interfaces, 
+which potentially break the symmetry condition. This needs to be taken into 
+account explicitly in the model and leaves the simple binary approach with 
+Nevot-Croce damping factors as an insufficient description of the physical 
+situation. However, the increased number of parameters required to describe 
+such a realistic model also requires more data (information) from analytical 
+measurements. We thus apply a set of different experimental methods to obtain a 
+consistent reconstruction of the multilayer structure with a non-destructive 
+approach. We demonstrate that in the case of layer systems in the subnanometer 
+region, a combined analysis of these experiments is required. We describe the 
+layer system with graded interface profiles to account for the intermixing of 
+the two materials. The validation of the derived model is conducted by applying 
+a Markov-chain Monte Carlo sampler.
