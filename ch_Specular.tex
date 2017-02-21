@@ -180,9 +180,13 @@ $\rho_\text{B$_4$C}$ & $0.909$& $0.741({-0.162}/{+0.172})$ & $0.741({-0.230}/{+0
 
 It should be noted, that although the aforementioned density values can not be determined based on the available data, they remain possibly highly correlated parameters. A valid optimization result can therefore only be obtained by either applying the \gls{pso} routine or by iterative application of the \gls{mcmc} procedure, fixing single parameters according to their maximum likelihood value in the model and obtaining the resulting likelihood distributions for the remaining parameters according to that restricted model.
 
+The results listed in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_mcmc_results} serve as the model parameters for the analysis of diffuse scattering from the Mo/B$_4$C/Si/C sample in chapter~\ref{ch_diff} below.
 
 \section{Molybdenum Thickness Variation in Mo/Si Multilayers}
-We investigate several samples of Mo/Si multilayer systems with C interdiffusion barriers at the Mo on Si interfaces. It has been shown that optimal reflectance can be achieved with approximately $40 \%$ Mo layer thickness with respect to (w.r.t.) the total period thickness \cite{bajt_investigation_2001,braun_mo/si_2002}. The samples under investigation here were fabricated with increasing relative Mo thickness while keeping the nominal period thickness $D\approx 7$ nm constant. It has been observed that with increasing Mo layer thickness, crystallites start forming at a certain threshold during the sample preparation inside the Mo layer \cite{bajt_investigation_2001}. This has an impact on the interface morphology and potentially increases the roughness and thus the loss of specularly reflected radiation. In this study, we investigate two sets of samples with increasing Mo layer thickness as described above. In the first set, the magnetron sputtered layers were deposited one after another for each sample. In the second set, during deposition, an additional polishing process was used after sputtering each layer.
+In the following we shall apply and extend the reconstruction procedure discussed in the above section to the problem of multilayer sample systems deposited with varying molybdenum layer thicknesses. For the engineering of a near-normal incidence mirror, the ratio of molybdenum layer thickness to total period thickness has a clear impact on the reflectivity curve as seen in Fig.~\ref{ch_spec:fig_mo_si_parameter_influence}c. Studies have shown, that an optimal value for high reflectivity is achieved by depositing $40\%$ molybdenum layer thickness $d_\text{Mo}$ with respect to the total period thickness $D$. \cite{bajt_investigation_2001,braun_mo/si_2002}. During the deposition process, the layer of molybdenum grows in thickness and at a certain threshold, crystallites may begin to form \cite{bajt_investigation_2001} inside the layer. Those may affect the interface morphology of the layer system at the boundaries to the molybdenum layer and possibly at further interfaces through correlation effects. This potentially increases the roughness and thus the loss of specularly reflected radiation. For the deeper understanding of those effects, we shall reconstruct the layer structure and determine the molybdenum layer thickness in each sample in comparison to the nominal values for the magnetron sputtering deposition.
+
+\paragraph{Sample systems}
+As a specific prototype for high-reflectance multilayer mirrors for the spectral range between \nm{12.4} and \nm{14.0} serve two sets of several samples of Mo/Si multilayer systems with C interdiffusion barriers at the Mo on Si interfaces. As mentioned above, the samples under investigation here were fabricated with increasing relative Mo thickness while keeping the nominal period thickness $D\approx 7$ nm constant. In this study, we investigate two sets of samples. In the first set, the magnetron sputtered layers were deposited one after another for each sample. In the second set, during deposition, an additional polishing process was used after sputtering each molybdenum layer to counteract the possible roughening due to the crystallization. The nominal values of the molybdenum layers in the two sample sets are listed in table~\ref{ch_spec:tbl_mo_si_thickness_nominal}.
 
 To obtain the actual layer thicknesses in the samples, we applied EUV reflectivity and X-ray reflectivity (XRR) experiments and reconstructed these parameters by modeling and by combined analysis of the measured data. The analysis was carried out by using a Markov-chain Monte Carlo method (MCMC) \cite{foreman-mackey_emcee:_2013} to deduct reliable parameters including confidence intervals.
 \begin{table}[htbp]
@@ -208,30 +212,20 @@ $3.05$ & $2.90$\\
 \end{tabular}
 \end{table}
 
-\begin{table*}[htbp]
+\begin{figure*}[htbp]
 \centering
-\caption{List of nominal molybdenum layer thicknesses in the two sample sets. Both sets were fabricated with a equidistant increase in thickness from \nm{1.70} to \nm{3.05} with 9 unpolished and 10 polished samples.}
-\label{ch_spec:tbl_mo_si_thickness_mcmc_result}
-\begin{tabular}{@{}llll@{}}
-\toprule
-nom.~$d_\text{Mo}$ / nm & EUV \& XRR & nom.~$d_\text{Mo}$ / nm& EUV \& XRR\\ 
-(unpolished) && (polished) &\\
-\midrule
-$1.70$ &$2.43({-0.09}/{+0.16})$ & $1.70$ &$1.77({-0.22}/{+0.19})$ \\
-$1.87$ &$1.81({-0.12}/{+0.24})$ & $1.85$ &$1.91({-0.12}/{+0.17})$ \\
-$2.04$ &$1.98({-0.15}/{+0.14})$ & $2.00$ &$2.29({-0.28}/{+0.13})$ \\
-$2.21$ &$2.08({-0.11}/{+0.22})$ & $2.15$ &$2.45({-0.43}/{+0.06})$ \\
-$2.38$ &$2.31({-0.22}/{+0.21})$ & $2.30$ &$2.60({-0.12}/{+0.14})$ \\
-$2.54$ &$2.68({-0.13}/{+0.16})$ & $2.45$ &$2.58({-0.21}/{+0.15})$ \\
-$2.71$ &$2.91({-0.17}/{+0.12})$ & $2.60$ &$2.87({-0.22}/{+0.12})$ \\
-$2.88$ &$3.02({-0.15}/{+0.15})$ & $2.75$ &$3.03({-0.16}/{+0.14})$ \\
-$3.05$ &$3.22({-0.13}/{+0.11})$ & $2.90$ &$3.15({-0.13}/{+0.13})$ \\
-- &- & $3.05$ & $3.47({-0.19}/{+0.13})$ \\
- \bottomrule
-\end{tabular}
-\end{table*}
+\includegraphics[width=\textwidth]{img/XRR_MoSi}
+\caption{Combined analysis}
+\label{ch_spec:fig_MoSi_XRR}
+\end{figure*}
+
+
 
 \subsection{Combined Analysis of X-ray and EUV reflectance}
+\begin{itemize}
+ \item Conservative estimation of errors through reduced $\chi^2$
+\end{itemize}
+
 The reconstruction of the model for the multilayer itself as well as of the power spectral density for the interfacial roughness is an optimization problem. Based on the measured reflectivity data and the diffuse scattering, respectively, in each case, an optimization functional defines the goodness of the model. The optimization functional can then be described for each of the methods (EUV, XRR, diffuse scattering) individually by the reduced $\tilde{\chi}^2$
 \begin{align}
 \tilde{\chi}^2 = \frac{1}{m - p} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
@@ -315,6 +309,28 @@ The results of the two-step analysis are shown in Fig.~\ref{fig:fitted_mo_and_fi
 \end{figure*}
 The confidence intervals shown in Fig.~\ref{fig:fitted_mo_and_fitted_D}a are one standard deviation of the likelihood determined for the Mo layer thickness by the first-step MCMC procedure. The results show good agreement with the nominal thicknesses for both sample sets. The corresponding total period thicknesses $D$ in Fig.~\ref{fig:fitted_mo_and_fitted_D}b show clear jumps correlated with the presumed crystallization thresholds inferred from the max.~peak reflectivity in Fig.~\ref{fig:EUV_reflectivity}c. The results from this layer thickness and density characterization form the basis for the following analysis of the diffuse scattering.
 
+\begin{table*}[htbp]
+\centering
+\caption{List of nominal molybdenum layer thicknesses in the two sample sets. Both sets were fabricated with a equidistant increase in thickness from \nm{1.70} to \nm{3.05} with 9 unpolished and 10 polished samples.}
+\label{ch_spec:tbl_mo_si_thickness_mcmc_result}
+\begin{tabular}{@{}llll@{}}
+\toprule
+nom.~$d_\text{Mo}$ / nm & EUV \& XRR & nom.~$d_\text{Mo}$ / nm& EUV \& XRR\\ 
+(unpolished) && (polished) &\\
+\midrule
+$1.70$ &$1.81({-0.12}/{+0.24})$ & $1.70$ &$1.77({-0.22}/{+0.19})$ \\
+$1.87$ &$1.98({-0.15}/{+0.14})$ & $1.85$ &$1.91({-0.12}/{+0.17})$ \\
+$2.04$ &$2.08({-0.11}/{+0.22})$ & $2.00$ &$2.29({-0.28}/{+0.13})$ \\
+$2.21$ &$2.31({-0.22}/{+0.21})$ & $2.15$ &$2.45({-0.43}/{+0.06})$ \\
+$2.38$ &$2.43({-0.09}/{+0.16})$  & $2.30$ &$2.60({-0.12}/{+0.14})$ \\
+$2.54$ &$2.68({-0.13}/{+0.16})$ & $2.45$ &$2.58({-0.21}/{+0.15})$ \\
+$2.71$ &$2.91({-0.17}/{+0.12})$ & $2.60$ &$2.87({-0.22}/{+0.12})$ \\
+$2.88$ &$3.02({-0.15}/{+0.15})$ & $2.75$ &$3.03({-0.16}/{+0.14})$ \\
+$3.05$ &$3.22({-0.13}/{+0.11})$ & $2.90$ &$3.15({-0.13}/{+0.13})$ \\
+- &- & $3.05$ & $3.47({-0.19}/{+0.13})$ \\
+ \bottomrule
+\end{tabular}
+\end{table*}
 \subsection{Obervation of the Crystallization Threshold}
 
 
