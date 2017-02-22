@@ -1,5 +1,5 @@
 
-\chapter{Reconstruction of the Multilayer Structure by Specular Measurement Methods} \label{ch_spec}
+\chapter{Characterization of the Multilayer Structure for Different Systems} \label{ch_spec}
 The multilayer mirror samples we shall investigate here were fabricated using the magnetron sputtering technique briefly discussed in the chapter~\ref{ch_exp} with nominal layer thicknesses and chemical species, depending on the desired reflection angle and spectral range. Among other parameters of the production process, the achieved layer thickness and sharpness of the interfaces has a direct impact on the performance of these mirrors with respect to their peak reflectance and bandwidth. Although the sputtering process is a well established technique for mirror fabrication, the actual layer thicknesses in the sample may differ from the nominal values and are generally unknown.
 
 Based on the matrix algorithm introduced in chapter~\ref{ch_theo}, the electromagnetic fields   inside and outside an arbitrary layer system can be calculated. Most importantly, this allows to calculate the expected specular reflectance curves across angular or spectral ranges for a given layer model. The comparison of these calculated curves to measured data thus allows to obtain information about the actual layer properties in a given sample. However, the detected reflectance values in a specular reflection experiment are merely intensities of reflected radiation. The information on the phase of the electromagnetic wave can not be obtained in this way and is lost. It is thus not possible to directly reconstruct the layout of the sample with the measured reflection curve. This is known as the inverse problem of scatterometry. Reconstructing the layer properties is therefore an attempt of solving this inverse problem by accumulating prior knowledge about the sample, such as the nominal design goals during the fabrication process, into a model of that system. Starting from this model, the theoretically calculated curve is compared to the measured reflectance and optimized iteratively.
@@ -116,7 +116,7 @@ $\rho_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.909$ \\
 \end{tabular}
 \end{table}
 
-\subsection{The Problem of Model Uniqueness and Markov-chain Monte Carlo Verification}
+\subsection{The Problem of Model Uniqueness and Maximum Likelihood Estimation}
 With the ambiguous reconstruction result of the previous section, the demand for a verification of the model with respect to the measured data becomes apparent. To clarify the problem of uniqueness of the solution it is instructive to investigate the influence of the individual model parameters on the theoretical reflectivity curve. In Fig.~\ref{ch_spec:fig_mo_si_parameter_influence} we varied a subset of the parameters starting from the \gls{pso} solution from Sec.~\ref{ch_spec:sec_multilayer_model_and_pso}. In each of the subfigures, one parameter or a quotient of parameters is varied while all others are kept fixed.
 \begin{figure*}[htbp]
 \centering
@@ -183,12 +183,10 @@ It should be noted, that although the aforementioned density values can not be d
 The results listed in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_mcmc_results} serve as the model parameters for the analysis of diffuse scattering from the Mo/B$_4$C/Si/C sample in chapter~\ref{ch_diff} below.
 
 \section{Molybdenum Thickness Variation in Mo/Si Multilayers}
-In the following we shall apply and extend the reconstruction procedure discussed in the above section to the problem of multilayer sample systems deposited with varying molybdenum layer thicknesses. For the engineering of a near-normal incidence mirror, the ratio of molybdenum layer thickness to total period thickness has a clear impact on the reflectivity curve as seen in Fig.~\ref{ch_spec:fig_mo_si_parameter_influence}c. Studies have shown, that an optimal value for high reflectivity is achieved by depositing $40\%$ molybdenum layer thickness $d_\text{Mo}$ with respect to the total period thickness $D$. \cite{bajt_investigation_2001,braun_mo/si_2002}. During the deposition process, the layer of molybdenum grows in thickness and at a certain threshold, crystallites may begin to form \cite{bajt_investigation_2001} inside the layer. Those may affect the interface morphology of the layer system at the boundaries to the molybdenum layer and possibly at further interfaces through correlation effects. This potentially increases the roughness and thus the loss of specularly reflected radiation. For the deeper understanding of those effects, we shall reconstruct the layer structure and determine the molybdenum layer thickness in each sample in comparison to the nominal values for the magnetron sputtering deposition.
+In the following we shall apply and extend the reconstruction procedure discussed in the above section to the problem of multilayer sample systems deposited with varying molybdenum layer thicknesses. For the engineering of a near-normal incidence mirror, the ratio of molybdenum layer thickness to total period thickness has a clear impact on the reflectivity curve as seen in Fig.~\ref{ch_spec:fig_mo_si_parameter_influence}c. Studies have shown, that an optimal value for high reflectivity is achieved by depositing $40\%$ molybdenum layer thickness $d_\text{Mo}$ with respect to the total period thickness $D$ \cite{bajt_investigation_2001,braun_mo/si_2002}. During the deposition process, the layer of molybdenum grows in thickness and at a certain threshold, crystallites may begin to form \cite{bajt_investigation_2001} inside the layer. Those may affect the interface morphology of the layer system at the boundaries to the molybdenum layer and possibly at further interfaces through correlation effects. This potentially increases the roughness and thus the loss of specularly reflected radiation. For the deeper understanding of those effects, we shall reconstruct the layer structure and determine the molybdenum layer thickness in each sample in comparison to the nominal values for the magnetron sputtering deposition.
 
-\paragraph{Sample systems}
-As a specific prototype for high-reflectance multilayer mirrors for the spectral range between \nm{12.4} and \nm{14.0} serve two sets of several samples of Mo/Si multilayer systems with C interdiffusion barriers at the Mo on Si interfaces. As mentioned above, the samples under investigation here were fabricated with increasing relative Mo thickness while keeping the nominal period thickness $D\approx 7$ nm constant. In this study, we investigate two sets of samples. In the first set, the magnetron sputtered layers were deposited one after another for each sample. In the second set, during deposition, an additional polishing process was used after sputtering each molybdenum layer to counteract the possible roughening due to the crystallization. The nominal values of the molybdenum layers in the two sample sets are listed in table~\ref{ch_spec:tbl_mo_si_thickness_nominal}.
-
-To obtain the actual layer thicknesses in the samples, we applied EUV reflectivity and X-ray reflectivity (XRR) experiments and reconstructed these parameters by modeling and by combined analysis of the measured data. The analysis was carried out by using a Markov-chain Monte Carlo method (MCMC) \cite{foreman-mackey_emcee:_2013} to deduct reliable parameters including confidence intervals.
+\subsection{Sample systems and experimental procedure}
+As a specific prototype for high-reflectance multilayer mirrors for the spectral range between \nm{12.4} and \nm{14.0} serve two sets of several samples of Mo/Si multilayer systems with C interdiffusion barriers with thicknesses of nominally below \nm{0.5} at the Mo on Si interfaces (a detailed figure of the model for those samples is given below in Fig.~\ref{ch_spec:fig_model_unpolished_and_polished_samples} of the following sections). As mentioned above, the samples under investigation here were fabricated with increasing relative Mo thickness while keeping the nominal period thickness $D\approx 7$ nm constant. In this study, we investigate two sets of samples. In the first set, the magnetron sputtered layers were deposited one after another for each sample. In the second set, during deposition, an additional polishing process was used after sputtering each molybdenum layer to counteract the possible roughening due to the crystallization. The nominal values of the molybdenum layers in the two sample sets are listed in table~\ref{ch_spec:tbl_mo_si_thickness_nominal}.
 \begin{table}[htbp]
 \centering
 \caption{List of nominal molybdenum layer thicknesses in the two sample sets. Both sets were fabricated with a equidistant increase in thickness from \nm{1.70} to \nm{3.05} with 9 unpolished and 10 polished samples.}
@@ -212,45 +210,33 @@ $3.05$ & $2.90$\\
 \end{tabular}
 \end{table}
 
+All samples were measured after deposition using a lab-based Cu-K$_\alpha$ hard x-ray diffractometer at the Fraunhofer IWS Dresden, Germany. The \gls{xrr} data is shown in Fig.~\ref{ch_spec:fig_MoSi_XRR} for the set of unpolished and polished samples in direct comparison.
 \begin{figure*}[htbp]
 \centering
 \includegraphics[width=\textwidth]{img/XRR_MoSi}
-\caption{Combined analysis}
+\caption{\gls{xrr} data for all unpolished and polished samples shown in dependence on the nominal molybdenum layer thickness $d_\text{Mo}^\text{nom}$. In each of the subfigures a) and b) the \gls{xrr} measurements for the sample with smallest and largest $d_\text{Mo}^\text{nom}$ are shown on the bottom and the top of the subfigure, respectively. In between, the \gls{xrr} curves are illustrated in as a color map plot.}
 \label{ch_spec:fig_MoSi_XRR}
 \end{figure*}
+The position of the Bragg peaks and their respective intensity give additional information on the layer stack thicknesses and its interface properties. In both cases, shifts of the peak positions become apparent. Especially the higher orders towards larger grazing incidence angles show differences. Those shifts indicate a difference in the period thickness $D$ of the individual samples. In addition, in direct comparison of the \gls{xrr} curves for the respective sample with $d_\text{Mo}^\text{nom} = \nm{3.05}$ from the unpolished and polished sets (on the top of Fig.~\ref{ch_spec:fig_MoSi_XRR}a and Fig.~\ref{ch_spec:fig_MoSi_XRR}b), a higher intensity for higher-order Bragg peaks above grazing angles of incidence of $\alpha_i^\text{GI} > \SI{7}{\degree}$ can be observed for the polished sample. This hints towards an improved interface definition and sharpness due to the polishing process.
 
+Apart from the \gls{xrr} measurement, spectrally resolved \gls{euv} reflectivity curves at an angle of incidence from the surface normal of $\alpha_i=\SI{15}{\degree}$ and in the wavelength range from \nm{12.4} to \nm{14.0} have been measured for all samples at the \gls{euvr} beamline at the \gls{mls}. The data obtained is shown in Fig.~\ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}a and Fig.~\ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}b together with the respective maximum reflectance value in Fig.~\ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}c sorted by the nominal molybdenum layer thickness.
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{img/EUV_reflectivity_with_peak}
+\caption{a) Reflectivity curves for the unpolished samples across the wavelength at a fixed angle of incidence of $\alpha_i = 15^\circ$ from the surface normal. The nine samples differ by the nominal Mo layer thickness indicated at the bottom axis. b) Reflectivity curves of the ten polished samples measured under the same conditions as for the first sample set. c) Respective peak reflectance values for each sample obtained from the measurements in (a) and (b) in comparison. The maximum theoretical reflectance is shown for a perfect (no roughness or interdiffusion) layer system with the same specifications as the samples.}
+\label{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}
+\end{figure*}
+The reflectivity curves in Fig.~\ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}a and Fig.~\ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}b show the same shifts of the peak center position as the \gls{xrr} data in Fig.~\ref{ch_spec:fig_MoSi_XRR} for the respective sample sets. Clear differences in the peak reflectance value can also be observed in the two subfigures. To better illustrate the differences, the peak value is shown in \ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}c together with a theoretical curve as reference. The latter illustrates the maximum achievable reflectance based on the nominal layer layout without any roughness or interdiffusion present. The comparison of the two sample sets yields a higher peak reflectance value for the polished samples for most molybdenum layer thicknesses. Both curves for both sample sets show significant drops in the reflectance for the values between $d_\text{Mo}^\text{nom} = \nm{2.21}$ and $d_\text{Mo}^\text{nom} = \nm{2.38}$ for the unpolished samples and $d_\text{Mo}^\text{nom} = \nm{1.70}$ and $d_\text{Mo}^\text{nom} = \nm{1.85}$ for the polished samples, respectively. For both curves, a peak reflectance value dependency on the respective molybdenum thickness similar to the ideal theoretical curve can be identified, excluding the aforementioned dips. This is in good agreement with the mention on an ideal molybdenum layer thickness ratio of approximately $40\%$ above. In accordance with the literature \cite{bajt_investigation_2001}, the appearance of the dip for the unpolished samples at approximately $d_\text{Mo}^\text{nom} \approx \nm{2.4}$ is most likely associated with the crystallization threshold for the appearance of crystallites inside the molybdenum layer. In case of the polished samples, this threshold appears to occur earlier, i.e.~at lower thickness values.
 
+In the following section we shall analyze the data discussed here to reconstruct a model of the samples using the \gls{mcmc} approach introduced in Sec.~\ref{ch_spec:sec_reconstruction_PTB17} in order to verify the observations made here.
 
+\newpage
 \subsection{Combined Analysis of X-ray and EUV reflectance}
+To obtain the actual layer thicknesses in the samples, we analyzed the data of the \gls{euv} reflectivity and \gls{xrr} experiments and reconstructed these parameters by modeling and by combined analysis of the measured data. The data analysis was conduced in analogy to the procedure in Sec.~\ref{ch_spec:sec_reconstruction_PTB17}, but with a combined definition of the likelihood functional.
 \begin{itemize}
  \item Conservative estimation of errors through reduced $\chi^2$
 \end{itemize}
 
-The reconstruction of the model for the multilayer itself as well as of the power spectral density for the interfacial roughness is an optimization problem. Based on the measured reflectivity data and the diffuse scattering, respectively, in each case, an optimization functional defines the goodness of the model. The optimization functional can then be described for each of the methods (EUV, XRR, diffuse scattering) individually by the reduced $\tilde{\chi}^2$
-\begin{align}
-\tilde{\chi}^2 = \frac{1}{m - p} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
-- I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,} 
-\label{eqn:reduced_chi_2}
-\end{align}
-where $m$ is the number of measurement points, $p$ is the number of parameters used in the model, $I_m^\text{model}$ is the calculated intensity for the corresponding measurement point with index $m$ having the measured intensity $I_m^\text{measured}$. The calculated intensity $I_m^\text{model}$ follows directly from $R$ in Eq.~\eqref{eqn:refl_trans} for the EUV and XRR measurements and $\big(d \sigma/d \Omega\big)$ in Eq.~\eqref{eqn:dwba} for the diffuse scattering, respectively, in each case, for the angle of incidence and wavelength associated with measurement point $m$. The experimental error for each measurement point is described by $\tilde{\sigma}_m$. The combined functional for the analysis of the EUV and X-ray reflectance experiments to be optimized with respect to the measured data is defined as
-\begin{align}
-\chi^2 = \tilde{\chi}^2_\text{EUV} +\tilde{\chi}^2_\text{XRR} \text{,}
-\label{eqn:total_chi_2}
-\end{align}
-and for the diffuse scattering as
-\begin{align}
-\chi^2 = \tilde{\chi}^2_\text{diff} \text{.} \label{eqn:total_chi_2_diffuse}
-\end{align}
-The solution to the inverse problem of reconstructing the optimal model parameters is conducted by minimizing the $\chi^2$ functional. To minimize the functional with respect to the best choice of parameters, we apply a Markov-chain Monte Carlo method \cite{goodman_ensemble_2010,foreman-mackey_emcee:_2013,haase_multiparameter_2016}. As a starting point, a random set of parameters is generated with respect to predefined boundaries. The limits are chosen in reference to prior knowledge and physical plausibility. The advantage of this procedure with respect to other optimization methods such as Levenberg-Marquart \cite{levenberg_method_1944,marquardt_algorithm_1963} or particle swarm optimization \cite{kennedy_particle_2011} is that the distribution of the Monte Carlo walkers after convergence reflects the set of parameters with maximum likelihood, correlations in between the parameters as well as confidence intervals for each value within the underlying model. The latter ones are estimated from the MCMC as one standard deviation of the sample distribution in each parameter.
-\begin{figure}[htbp]
-\centering
-\includegraphics{img/PS5657}
-\caption{Combined analysis}
-\label{ch_spec:fig_EUV_XRR_combined}
-\end{figure}
-
-
-\subsection{Reconstruction of the Mo Layer Thickness}
 \paragraph{Model of the Multilayer Stack} \label{sec:mo_si_model}
 The thicknesses of the Mo layers inside the stack were varied nominally from $1.7$ nm to $3.05$ nm from sample to sample. The stacking of the different layers in the multilayer consists of the Mo and Si layers, as well as an additional buffer layer at the Si-to-Mo interface to prevent interdiffusion. For the Mo-to-Si interfaces, no buffer layers were included since interdiffusion is usually less in this case \cite{petford-long_highresolution_1987}. However, for the theoretical description of the sample stack we consider an additional MoSi$_2$ layer, which is well known to form during the deposition process \cite{bajt_investigation_2001}. The full model used in the reconstruction is illustrated in Fig.~\ref{fig:model} with the thickness parameters for each layer. To correct for any contamination on the top sample surface, an additional carbon-like layer on top was considered. In addition to the thicknesses of each layer we also allowed for a variation of the layer density between $80\%$ and $100\%$ of the bulk density. The evaluation of the reflectivity with respect to the model was performed with the matrix algorithm in Eq.~\eqref{eqn:refl_trans} described above. The model parameters and their boundaries are listed in Table~\ref{tbl:multilayer_parameters}.
 \begin{figure}[htbp]
@@ -258,7 +244,7 @@ The thicknesses of the Mo layers inside the stack were varied nominally from $1.
     \fontfamily{fds}\selectfont\footnotesize
     \import{svg/}{mo_si_iws_model.pdf_tex}
     \caption{Model of the multilayer stack including the substrate and the capping layers. The periodic part is enclosed between the dashed lines with four layers in each period repeated 49 times. The capping period does not include an interdiffusion layer but has a natural SiO$_2$ layer and a carbon-like layer accounting for contamination on the top surface.}
-    \label{fig:model}
+    \label{ch_spec:fig_model_unpolished_and_polished_samples}
 \end{figure}
 \begin{table*}
 \centering
@@ -288,16 +274,39 @@ $\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
 \end{tabular}
 \end{table*}
 
+\paragraph{Reconstruction of the model}
+
+The reconstruction of the model for the multilayer itself as well as of the power spectral density for the interfacial roughness is an optimization problem. Based on the measured reflectivity data and the diffuse scattering, respectively, in each case, an optimization functional defines the goodness of the model. The optimization functional can then be described for each of the methods (EUV, XRR, diffuse scattering) individually by the reduced $\tilde{\chi}^2$
+\begin{align}
+\tilde{\chi}^2 = \frac{1}{m - p} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
+- I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,} 
+\label{eqn:reduced_chi_2}
+\end{align}
+where $m$ is the number of measurement points, $p$ is the number of parameters used in the model, $I_m^\text{model}$ is the calculated intensity for the corresponding measurement point with index $m$ having the measured intensity $I_m^\text{measured}$. The calculated intensity $I_m^\text{model}$ follows directly from $R$ in Eq.~\eqref{eqn:refl_trans} for the EUV and XRR measurements and $\big(d \sigma/d \Omega\big)$ in Eq.~\eqref{eqn:dwba} for the diffuse scattering, respectively, in each case, for the angle of incidence and wavelength associated with measurement point $m$. The experimental error for each measurement point is described by $\tilde{\sigma}_m$. The combined functional for the analysis of the EUV and X-ray reflectance experiments to be optimized with respect to the measured data is defined as
+\begin{align}
+\chi^2 = \tilde{\chi}^2_\text{EUV} +\tilde{\chi}^2_\text{XRR} \text{,}
+\label{eqn:total_chi_2}
+\end{align}
+and for the diffuse scattering as
+\begin{align}
+\chi^2 = \tilde{\chi}^2_\text{diff} \text{.} \label{eqn:total_chi_2_diffuse}
+\end{align}
+The solution to the inverse problem of reconstructing the optimal model parameters is conducted by minimizing the $\chi^2$ functional. To minimize the functional with respect to the best choice of parameters, we apply a Markov-chain Monte Carlo method \cite{goodman_ensemble_2010,foreman-mackey_emcee:_2013,haase_multiparameter_2016}. As a starting point, a random set of parameters is generated with respect to predefined boundaries. The limits are chosen in reference to prior knowledge and physical plausibility. The advantage of this procedure with respect to other optimization methods such as Levenberg-Marquart \cite{levenberg_method_1944,marquardt_algorithm_1963} or particle swarm optimization \cite{kennedy_particle_2011} is that the distribution of the Monte Carlo walkers after convergence reflects the set of parameters with maximum likelihood, correlations in between the parameters as well as confidence intervals for each value within the underlying model. The latter ones are estimated from the MCMC as one standard deviation of the sample distribution in each parameter.
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/PS5657}
+\caption{Combined analysis}
+\label{ch_spec:fig_EUV_XRR_combined}
+\end{figure}
+
+
+
+
 %In order to obtain a unique reconstruction of the multilayer stack thicknesses and densities, a combination of several methods is necessary \cite{}\todo{citation Cr/Sc paper}. This is in general a very time consuming procedure, since many complementary methods have to be applied for all samples. In case of the sample system of interest here, the samples ideally only differ in the thickness of the Mo layers. We therefore focus on the unambiguous determination of the corresponding thicknesses here. In this case the combined analysis of EUV reflectivity and X-ray reflectivity suffice.
 
 \paragraph{Specular Measurement Results and Optimization} \label{sec:mo_si_model_reconstruction_results}
 The two sample sets have been measured with respect to their reflectivity at a fixed angle of incidence $\alpha_i=15^\circ$ from the surface normal by varying the wavelength in the spectral range from $\lambda=12.4$ nm to $\lambda=14.0$ nm. The results are shown in Fig.~\ref{fig:EUV_reflectivity} in comparison to each other, with their nominal Mo layer thickness. The max.~peak reflectance is also shown for the two series.
-\begin{figure*}[htbp]
-\centering
-\includegraphics[width=\textwidth]{img/EUV_reflectivity_with_peak}
-\caption{a) Reflectivity curves for the unpolished samples across the wavelength at a fixed angle of incidence of $\alpha_i = 15^\circ$ from the surface normal. The nine samples differ by the nominal Mo layer thickness indicated at the bottom axis. b) Reflectivity curves of the ten polished samples measured under the same conditions as for the first sample set. c) Respective peak reflectance values for each sample obtained from the measurements in (a) and (b) in comparison. The maximum theoretical reflectance is shown for a perfect (no roughness or interdiffusion) layer system with the same specifications as the samples.}
-\label{fig:EUV_reflectivity}
-\end{figure*}
+
 Clear shifts of central peak reflectance wavelength can be observed in both cases. This coincides with a dip in the max.~peak reflectance in both cases, which most likely is associated with the crystallization threshold of the Mo layer. There is a notable difference in the observed jumps for the two sample sets. For the unpolished samples, the crystallization threshold seems to be around $d^\text{nom}_\text{Mo} =2.38$ nm, whereas it appears at much lower nom. Mo thickness values for the polished sample set at around  $d^\text{nom}_\text{Mo} =2.00$ nm. For all of the samples additional XRR measurements exist (not shown here), which were analyzed based on the combined principle using the MCMC method as described in Sec.~\ref{sec:max_likelihood}. An unambiguous result was only found with respect to the thickness parameters of Mo and Si, as well as for the N\'{e}vot-Croce parameter $\sigma$, whereas all other parameters show equal likelihood within the predefined boundaries. Therefore, the best model was obtained in a two-step process. First an MCMC optimization was performed including all parameters. Proceeding from this, the value of the Mo thickness with its confidence interval was obtained by marginalizing over all other parameters. In a second step, another MCMC optimization was performed on a reduced parameter set, fixing the layer thicknesses of the C barrier layer and the MoSi$_2$ interdiffusion layer to their nominal values of $d_C = d_{\text{MoSi}_2} = 0.5 $ nm. Thereby, comparable models could be derived for all samples without constraining the applicability of the model with respect to the data available. This comes with no consequences for the goal of analyzing the at-wavelength diffuse scattering, since the relative thickness of the barrier layer and the intermixing layer has only negligible effect on the fields inside the stack if the model fits the EUV reflectivity curve in the same spectral range. It should be noted here that for an entirely unambiguous characterization more complementary characterization methods, such as resonant EUV reflectivity and X-ray standing wave analysis, would be required as described in~\cite{haase_multiparameter_2016}.
 
 The results of the two-step analysis are shown in Fig.~\ref{fig:fitted_mo_and_fitted_D}.
@@ -331,7 +340,6 @@ $3.05$ &$3.22({-0.13}/{+0.11})$ & $2.90$ &$3.15({-0.13}/{+0.13})$ \\
  \bottomrule
 \end{tabular}
 \end{table*}
-\subsection{Obervation of the Crystallization Threshold}
 
 
 \section{Analysis of Cr/Sc Multilayers with Sub-nanometer Layer Thickness}
