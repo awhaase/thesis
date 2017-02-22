@@ -272,27 +272,33 @@ $\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
 \end{table*}
 
 \paragraph{Optimization functional and procedure}
-The data analysis was conduced in analogy to the procedure in Sec.~\ref{ch_spec:sec_reconstruction_PTB17}, but with a combined definition of the likelihood functional.
-\begin{itemize}
- \item Conservative estimation of errors through reduced $\chi^2$
-\end{itemize}
-
-The reconstruction of the model for the multilayer itself as well as of the power spectral density for the interfacial roughness is an optimization problem. Based on the measured reflectivity data and the diffuse scattering, respectively, in each case, an optimization functional defines the goodness of the model. The optimization functional can then be described for each of the methods (EUV, XRR, diffuse scattering) individually by the reduced $\tilde{\chi}^2$
-\begin{align}
+The data analysis was conduced similarly to the procedure described in Sec.~\ref{ch_spec:sec_reconstruction_PTB17}. Due to the increased amount of data through the additional \gls{xrr} measurements, a definition for a combined $\chi^2$ functional is required to allow an analysis based on both data sets. The two data sets, i.e.~the \gls{euv} and \gls{xrr} reflectivity curves have significantly different number of points. We therefore define the combined $\chi^2$ functional as the sum of the reduced $\tilde{\chi}^2$ functionals instead of defining it as the reduced $\tilde{\chi}^2$ of the combined dataset. The $\tilde{\chi}^2$ is equivalently defined to Eq.~\eqref{ch_spec:eqn_reduced_chi_squared} through,\begin{align}
 \tilde{\chi}^2 = \frac{1}{m - p} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
-- I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,} 
-\label{eqn:reduced_chi_2}
+- I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,}
 \end{align}
-where $m$ is the number of measurement points, $p$ is the number of parameters used in the model, $I_m^\text{model}$ is the calculated intensity for the corresponding measurement point with index $m$ having the measured intensity $I_m^\text{measured}$. The calculated intensity $I_m^\text{model}$ follows directly from $R$ in Eq.~\eqref{eqn:refl_trans} for the EUV and XRR measurements and $\big(d \sigma/d \Omega\big)$ in Eq.~\eqref{eqn:dwba} for the diffuse scattering, respectively, in each case, for the angle of incidence and wavelength associated with measurement point $m$. The experimental error for each measurement point is described by $\tilde{\sigma}_m$. The combined functional for the analysis of the EUV and X-ray reflectance experiments to be optimized with respect to the measured data is defined as
+for each of the datasets separately. The reduced $\tilde{\chi}^2$ can be interpreted as the average of the squared residuals of model prediction and experiment. Thereby, each experiment is reduced to a single comparable quantity. By the definition of
 \begin{align}
 \chi^2 = \tilde{\chi}^2_\text{EUV} +\tilde{\chi}^2_\text{XRR} \text{,}
-\label{eqn:total_chi_2}
+\label{ch_spec:eqn_Mo_Si_C_total_chi_2}
 \end{align}
-and for the diffuse scattering as
-\begin{align}
-\chi^2 = \tilde{\chi}^2_\text{diff} \text{.} \label{eqn:total_chi_2_diffuse}
-\end{align}
+we are therefore enabled to obtain confidence intervals for the parameters of the model, which represent a conservative (upper limit) estimation for the combined analysis of both experiments, similarly to the procedure for a single \gls{euv} curve as described in Sec.~\ref{ch_spec:sec_reconstruction_PTB17} above. The combined $\chi^2$ functional enters the likelihood though Eq.~\ref{ch_spec:eqn_likelihood}.
+
+
+% The reconstruction of the model for the multilayer itself as well as of the power spectral density for the interfacial roughness is an optimization problem. Based on the measured reflectivity data and the diffuse scattering, respectively, in each case, an optimization functional defines the goodness of the model. The optimization functional can then be described for each of the methods (EUV, XRR, diffuse scattering) individually by the reduced $\tilde{\chi}^2$
+% 
+% where $m$ is the number of measurement points, $p$ is the number of parameters used in the model, $I_m^\text{model}$ is the calculated intensity for the corresponding measurement point with index $m$ having the measured intensity $I_m^\text{measured}$. The calculated intensity $I_m^\text{model}$ follows directly from $R$ in Eq.~\eqref{eqn:refl_trans} for the EUV and XRR measurements and $\big(d \sigma/d \Omega\big)$ in Eq.~\eqref{eqn:dwba} for the diffuse scattering, respectively, in each case, for the angle of incidence and wavelength associated with measurement point $m$. The experimental error for each measurement point is described by $\tilde{\sigma}_m$. The combined functional for the analysis of the EUV and X-ray reflectance experiments to be optimized with respect to the measured data is defined as
+% \begin{align}
+% \chi^2 = \tilde{\chi}^2_\text{EUV} +\tilde{\chi}^2_\text{XRR} \text{,}
+% \label{eqn:total_chi_2}
+% \end{align}
+% and for the diffuse scattering as
+% \begin{align}
+% \chi^2 = \tilde{\chi}^2_\text{diff} \text{.} \label{eqn:total_chi_2_diffuse}
+% \end{align}
+
 The solution to the inverse problem of reconstructing the optimal model parameters is conducted by minimizing the $\chi^2$ functional. To minimize the functional with respect to the best choice of parameters, we apply a Markov-chain Monte Carlo method \cite{goodman_ensemble_2010,foreman-mackey_emcee:_2013,haase_multiparameter_2016}. As a starting point, a random set of parameters is generated with respect to predefined boundaries. The limits are chosen in reference to prior knowledge and physical plausibility. The advantage of this procedure with respect to other optimization methods such as Levenberg-Marquart \cite{levenberg_method_1944,marquardt_algorithm_1963} or particle swarm optimization \cite{kennedy_particle_2011} is that the distribution of the Monte Carlo walkers after convergence reflects the set of parameters with maximum likelihood, correlations in between the parameters as well as confidence intervals for each value within the underlying model. The latter ones are estimated from the MCMC as one standard deviation of the sample distribution in each parameter.
+
+An unambiguous result was only found with respect to the thickness parameters of Mo and Si, as well as for the N\'{e}vot-Croce parameter $\sigma$, whereas all other parameters show equal likelihood within the predefined boundaries. Therefore, the best model was obtained in a two-step process. First an MCMC optimization was performed including all parameters. Proceeding from this, the value of the Mo thickness with its confidence interval was obtained by marginalizing over all other parameters. In a second step, another MCMC optimization was performed on a reduced parameter set, fixing the layer thicknesses of the C barrier layer and the MoSi$_2$ interdiffusion layer to their nominal values of $d_C = d_{\text{MoSi}_2} = 0.5 $ nm. Thereby, comparable models could be derived for all samples without constraining the applicability of the model with respect to the data available.
 \begin{figure}[htbp]
 \centering
 \includegraphics{img/PS5657}
@@ -324,7 +330,9 @@ The solution to the inverse problem of reconstructing the optimal model paramete
 \paragraph{Specular Measurement Results and Optimization} \label{sec:mo_si_model_reconstruction_results}
 The two sample sets have been measured with respect to their reflectivity at a fixed angle of incidence $\alpha_i=15^\circ$ from the surface normal by varying the wavelength in the spectral range from $\lambda=12.4$ nm to $\lambda=14.0$ nm. The results are shown in Fig.~\ref{fig:EUV_reflectivity} in comparison to each other, with their nominal Mo layer thickness. The max.~peak reflectance is also shown for the two series.
 
-Clear shifts of central peak reflectance wavelength can be observed in both cases. This coincides with a dip in the max.~peak reflectance in both cases, which most likely is associated with the crystallization threshold of the Mo layer. There is a notable difference in the observed jumps for the two sample sets. For the unpolished samples, the crystallization threshold seems to be around $d^\text{nom}_\text{Mo} =2.38$ nm, whereas it appears at much lower nom. Mo thickness values for the polished sample set at around  $d^\text{nom}_\text{Mo} =2.00$ nm. For all of the samples additional XRR measurements exist (not shown here), which were analyzed based on the combined principle using the MCMC method as described in Sec.~\ref{sec:max_likelihood}. An unambiguous result was only found with respect to the thickness parameters of Mo and Si, as well as for the N\'{e}vot-Croce parameter $\sigma$, whereas all other parameters show equal likelihood within the predefined boundaries. Therefore, the best model was obtained in a two-step process. First an MCMC optimization was performed including all parameters. Proceeding from this, the value of the Mo thickness with its confidence interval was obtained by marginalizing over all other parameters. In a second step, another MCMC optimization was performed on a reduced parameter set, fixing the layer thicknesses of the C barrier layer and the MoSi$_2$ interdiffusion layer to their nominal values of $d_C = d_{\text{MoSi}_2} = 0.5 $ nm. Thereby, comparable models could be derived for all samples without constraining the applicability of the model with respect to the data available. This comes with no consequences for the goal of analyzing the at-wavelength diffuse scattering, since the relative thickness of the barrier layer and the intermixing layer has only negligible effect on the fields inside the stack if the model fits the EUV reflectivity curve in the same spectral range. It should be noted here that for an entirely unambiguous characterization more complementary characterization methods, such as resonant EUV reflectivity and X-ray standing wave analysis, would be required as described in~\cite{haase_multiparameter_2016}.
+Clear shifts of central peak reflectance wavelength can be observed in both cases. This coincides with a dip in the max.~peak reflectance in both cases, which most likely is associated with the crystallization threshold of the Mo layer. There is a notable difference in the observed jumps for the two sample sets. For the unpolished samples, the crystallization threshold seems to be around $d^\text{nom}_\text{Mo} =2.38$ nm, whereas it appears at much lower nom. Mo thickness values for the polished sample set at around  $d^\text{nom}_\text{Mo} =2.00$ nm. For all of the samples additional XRR measurements exist (not shown here), which were analyzed based on the combined principle using the MCMC method as described in Sec.~\ref{sec:max_likelihood}. 
+
+This comes with no consequences for the goal of analyzing the at-wavelength diffuse scattering, since the relative thickness of the barrier layer and the intermixing layer has only negligible effect on the fields inside the stack if the model fits the EUV reflectivity curve in the same spectral range. It should be noted here that for an entirely unambiguous characterization more complementary characterization methods, such as resonant EUV reflectivity and X-ray standing wave analysis, would be required as described in~\cite{haase_multiparameter_2016}.
 
 The results of the two-step analysis are shown in Fig.~\ref{fig:fitted_mo_and_fitted_D}.
 \begin{figure*}[htbp]
