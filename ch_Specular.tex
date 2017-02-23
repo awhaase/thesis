@@ -78,11 +78,11 @@ $\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
 \paragraph{The minimization functional and particle swarm optimization}
 As introduced above, the reconstruction of the model for the multilayer is an optimization problem. Based on the measured reflectivity data an optimization functional defines the goodness of the model with respect to the measured data. The quality is asserted based on the method of least squares \cite{legendre_nouvelles_1805, gauss_theoria_1809, birge_calculation_1932} and the functional is defined as the reduced $\tilde{\chi}^2$
 \begin{align}
-\tilde{\chi}^2 = \frac{1}{m - p} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
+\tilde{\chi}^2 = \frac{1}{M-P} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
 - I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,} 
 \label{ch_spec:eqn_reduced_chi_squared}
 \end{align}
-where $m$ is the number of measurement points, $p$ is the number of parameters used in the model, $I_m^\text{model}$ is the calculated intensity for the corresponding measurement point with index $m$ having the measured intensity $I_m^\text{meas}$. The calculated intensity fur the \gls{euv} reflectivity curve above $I_m^\text{model}$ follows directly from the matrix algorithm and the quantity $R$ in Eq.~\eqref{ch_theo:eqn_refl_trans_ML} in chapter~\ref{ch_theo}. Each point is calculated based on the angle of incidence and wavelength associated with measurement point $m$. The experimental error for each measurement point is described by $\tilde{\sigma}_m$.
+where $M$ is the number of measurement points, $P$ is the number of parameters used in the model, $I_m^\text{model}$ is the calculated intensity for the corresponding measurement point with index $m$ having the measured intensity $I_m^\text{meas}$. The calculated intensity fur the \gls{euv} reflectivity curve above $I_m^\text{model}$ follows directly from the matrix algorithm and the quantity $R$ in Eq.~\eqref{ch_theo:eqn_refl_trans_ML} in chapter~\ref{ch_theo}. Each point is calculated based on the angle of incidence and wavelength associated with measurement point $m$. The experimental error for each measurement point is described by $\tilde{\sigma}_m$.
 
 For the minimization of the functional in Eq.~\eqref{ch_spec:eqn_reduced_chi_squared} we apply a global optimization algorithm known as \gls{pso} \cite{kennedy_particle_2011}. In contrast to the aforementioned gradient based methods, the particle swarm optimizer operates on the whole parameter space as defined by the upper and lower parameter limits, which are given in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters} for the particular example here, without specific starting parameters influencing the convergence result. We implemented the \gls{pso} algorithm based on the draft by \textcite{carlisle_off--shelf_2001}. The basic mechanism of the algorithm is the definition of a swarm of individual particles, which are initialized randomly distributed across the allowed parameter space. Initially, each of those particles calculates the minimization functional at its random position retaining that result. In an iterative process, the global best solution (``social component'') found as well as the individual best solution (``cognitive component'') of each particle are used to calculate a velocity vector within the parameter space for each particle. Within that iteration each of the particle thus moves to a new position, where the minimization functional is again evaluated and compared the the individual and global best solutions. If a better value is found, the respective retained results are updated with the new value and the next iteration is performed. While following that process the particles eventually converge to the global best solution, which may or may not be the global best optimum of the whole optimization problem. Due to the combination of social and cognitive component, fast convergence into a local optimum can be avoided. The state of full convergence is reached, when either all particles occupy the same place in the parameter space or if stagnation is reached. Due to the statistical nature of the algorithm, convergence can not be guaranteed. Neither is the global best optimum found necessarily the global minimum. The result may be verified by repeated application of the algorithm or simply by  reaching a satisfactory solution through comparison of the measured and calculated curves and thus the desired small $\tilde{\chi}^2$ values.
 
@@ -116,7 +116,7 @@ $\rho_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.909$ \\
 \end{tabular}
 \end{table}
 
-\subsection{The Problem of Model Uniqueness and Maximum Likelihood Estimation}
+\subsection{The Problem of Model Uniqueness and Maximum Likelihood Estimation} \label{ch_spec:sec_maximum_likelihood}
 With the ambiguous reconstruction result of the previous section, the demand for a verification of the model with respect to the measured data becomes apparent. To clarify the problem of uniqueness of the solution it is instructive to investigate the influence of the individual model parameters on the theoretical reflectivity curve. In Fig.~\ref{ch_spec:fig_mo_si_parameter_influence} we varied a subset of the parameters starting from the \gls{pso} solution from Sec.~\ref{ch_spec:sec_multilayer_model_and_pso}. In each of the subfigures, one parameter or a quotient of parameters is varied while all others are kept fixed.
 \begin{figure*}[htbp]
 \centering
@@ -246,7 +246,7 @@ To account for any contamination on the top sample surface, an additional carbon
 \begin{table*}
 \centering
 \caption{Parametrization of the Mo/Si/C multilayer samples with varying molybdenum layer thicknesses.}
-\label{tbl:multilayer_parameters}
+\label{ch_spec:tbl_mo_si_c_multilayer_parameters}
 \begin{tabular}{@{}llll@{}}
 \toprule
 Parameter & Definition & Lower bound & Upper bound\\ \midrule
@@ -273,7 +273,7 @@ $\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
 
 \paragraph{Optimization functional and procedure}
 The data analysis was conduced similarly to the procedure described in Sec.~\ref{ch_spec:sec_reconstruction_PTB17}. Due to the increased amount of data through the additional \gls{xrr} measurements, a definition for a combined $\chi^2$ functional is required to allow an analysis based on both data sets. The two data sets, i.e.~the \gls{euv} and \gls{xrr} reflectivity curves have significantly different number of points. We therefore define the combined $\chi^2$ functional as the sum of the reduced $\tilde{\chi}^2$ functionals instead of defining it as the reduced $\tilde{\chi}^2$ of the combined dataset. The $\tilde{\chi}^2$ is equivalently defined to Eq.~\eqref{ch_spec:eqn_reduced_chi_squared} through,\begin{align}
-\tilde{\chi}^2 = \frac{1}{m - p} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
+\tilde{\chi}^2 = \frac{1}{M-P} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
 - I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,}
 \end{align}
 for each of the datasets separately. The reduced $\tilde{\chi}^2$ can be interpreted as the average of the squared residuals of model prediction and experiment. Thereby, each experiment is reduced to a single comparable quantity. By the definition of
@@ -296,29 +296,63 @@ we are therefore enabled to obtain confidence intervals for the parameters of th
 % \chi^2 = \tilde{\chi}^2_\text{diff} \text{.} \label{eqn:total_chi_2_diffuse}
 % \end{align}
 
-The solution to the inverse problem of reconstructing the optimal model parameters is conducted by minimizing the $\chi^2$ functional. To minimize the functional with respect to the best choice of parameters, we apply a Markov-chain Monte Carlo method \cite{goodman_ensemble_2010,foreman-mackey_emcee:_2013,haase_multiparameter_2016}. As a starting point, a random set of parameters is generated with respect to predefined boundaries. The limits are chosen in reference to prior knowledge and physical plausibility. The advantage of this procedure with respect to other optimization methods such as Levenberg-Marquart \cite{levenberg_method_1944,marquardt_algorithm_1963} or particle swarm optimization \cite{kennedy_particle_2011} is that the distribution of the Monte Carlo walkers after convergence reflects the set of parameters with maximum likelihood, correlations in between the parameters as well as confidence intervals for each value within the underlying model. The latter ones are estimated from the MCMC as one standard deviation of the sample distribution in each parameter.
+The solution to the inverse problem of reconstructing the optimal model parameters is conducted by minimizing  the $\chi^2$ functional (or equivalently maximizing the likelihood). To minimize the functional with respect to the best choice of parameters, we apply the \gls{mcmc} method as described above for the Mo/B$_4$C/Si/C sample system. We do not start with a \gls{pso} optimization, since the sample system is numerically simpler due to the decreased amount of layers and interfaces. The \gls{mcmc} method itself yields an optimization result, although slower in convergence, as mentioned in the discussion of the procedure above in Sec.~\ref{ch_spec:sec_maximum_likelihood}. As a starting point, again a random set of parameters is generated with respect to predefined boundaries listed in table~\ref{ch_spec:tbl_mo_si_c_multilayer_parameters}. The limits are chosen in reference to prior knowledge and physical plausibility. Confidence intervals for each value within the underlying model are estimated from the likelihood distribtion resulting from the \gls{mcmc} as one standard deviation of the sample distribution in each parameter.
 
-An unambiguous result was only found with respect to the thickness parameters of Mo and Si, as well as for the N\'{e}vot-Croce parameter $\sigma$, whereas all other parameters show equal likelihood within the predefined boundaries. Therefore, the best model was obtained in a two-step process. First an MCMC optimization was performed including all parameters. Proceeding from this, the value of the Mo thickness with its confidence interval was obtained by marginalizing over all other parameters. In a second step, another MCMC optimization was performed on a reduced parameter set, fixing the layer thicknesses of the C barrier layer and the MoSi$_2$ interdiffusion layer to their nominal values of $d_C = d_{\text{MoSi}_2} = 0.5 $ nm. Thereby, comparable models could be derived for all samples without constraining the applicability of the model with respect to the data available.
-\begin{figure}[htbp]
-\centering
-\includegraphics{img/PS5657}
-\caption{Combined analysis}
-\label{ch_spec:fig_EUV_XRR_combined}
-\end{figure}
+We shall discuss the results of the optimization procedure at the example of the unpolished sample with nominal molybdenum layer thickness of $d_\text{Mo}^\text{nom} = \nm{3.05}$. The results of the \gls{mcmc} maximum likelihood estimation for the other samples were found to show the same properties and the same findings discussed in the following with the only distinction of broader or even improved distributions in some cases. The latter causes the confidence intervals to be different for the respective parameters. The reason for the broader likelihood distribution is clearly a decreased applicability of the model in some cases possibly due to changes through crystallization. Nevertheless, the model still shows sufficiently good agreement with the data.
 
+As a first step, the \gls{mcmc} procedure was performed within the defined boundaries for all parameters. An unambiguous result was only found with respect to the thickness parameters of Mo, with the smallest confindence intervals in comparison to all other parameters, and Si, as well as for the N\'{e}vot-Croce parameter $\sigma$, whereas all other parameters show broad likelihood distributions within the predefined boundaries not allowing a unequivocal parameter determination. Therefore, the best model was obtained in a two-step process. First the \gls{mcmc} optimization was performed including all parameters as mentioned above. Proceeding from this, the value of the Mo thickness with its confidence interval was obtained by marginalizing over all other parameters, yielding the most precise parameter estimation from the procedure. The results for the molybdenum and silicon layer thickness parameters are shown in Fig.~\ref{ch_spec:fig_Mo_Si_C_d_Mo_vs_d_Si}.
 \begin{figure*}[htbp]
 \centering
 \includegraphics{img/Mo_Si_C_d_Mo_vs_d_Si}
 \caption{Combined analysis}
 \label{ch_spec:fig_Mo_Si_C_d_Mo_vs_d_Si}
 \end{figure*}
+In comparison to the analysis based on only \gls{euv} data for the Mo/B$_4$C/Si/C in Fig.~\ref{ch_spec:fig_ptb17_MCMC_d_Mo_vs_d_Si}, the inclusion of additional \gls{xrr} measurements lead to significantly smaller confidence intervals and thus higher accuracy of the reconstruction, although the two systems have a limited comparability due their different layer layouts. The method of combining the analysis of two datasets of \gls{euv} and \gls{xrr} measurements has been previously apllied by others \cite{yakunin_combined_2014}, which have come to the same result of a significantly improved model reconstruction.
+
+In a second step, another \gls{mcmc} optimization was performed on a reduced parameter set, fixing the determined molybdenum layer thickness to its optimal value, i.e.~the $50\%$ percentile of its distribution. Finally, the layer thicknesses of the C barrier layer and the MoSi$_2$ interdiffusion layer were fixed to their nominal values of $d_C = d_{\text{MoSi}_2} = 0.5 $ nm. Due to the broad distribtion result for the likelihoods of those parameters, this comes without a limitation of the generality for this analysis, since any value is valid within the predefined boundaries. Additionally, this ensures comparability of the models for all samples without constraining the applicability of the model with respect to the data available.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics{img/Mo_Si_C_correlation_Si_C}
-\caption{Combined analysis}
+\caption{Two-dimensional likelihood distribution indicating the correlation of silicon and carbon layer thickness. The distribution was obtained by marginalizing over all remaining parameters of the model. The blue lines indicate the fit obtained through the two-step \gls{mcmc} optimization procedure (see main text).}
 \label{ch_spec:fig_Mo_Si_C_correlation_Si_C}
 \end{figure}
+The results of the second \gls{mcmc} procedure of the resticted model yield the remaining values for the model parameters by obtaining the globally best solution found. The final result is indicated by the blue solid lines in Fig.~\ref{ch_spec:fig_Mo_Si_C_d_Mo_vs_d_Si}. Due to the choice to restict the model to a buffer layer thickness of $d_\text{C} = \nm{0.5}$, we find the optimal solution for the silicon layer thickness at the limit of one standard deviation in Fig.~\ref{ch_spec:fig_Mo_Si_C_d_Mo_vs_d_Si}b. The distributions shown represent the \gls{mcmc} results of the unrestricted model, where the silicon and carbon layer thicknesses are strongly correlated as shown in Fig.~\ref{ch_spec:fig_Mo_Si_C_correlation_Si_C}. By restricting the carbon layer thickness to its nominal value, this correlation is resolved and the corresponding silicon layer thickness is well within the interval of one standard deviation as indicated through the solid black contours in Fig.~\ref{ch_spec:fig_Mo_Si_C_correlation_Si_C}.
+
+\paragraph{Optimization results}
+The theoretical reflectivity curves calculated from the optimal model parameters for the unpolished sample with $d_\text{Mo}^\text{nom} = \nm{3.05}$ are shown in Fig.~\ref{ch_spec:fig_EUV_XRR_combined}.
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/PS5657}
+\caption{Experimental data in comparison with the theoretical curves calculated with the model parameters obtained from the combined analysis of \gls{euv} and \gls{xrr} data. The data shown here was measured on the unpolished sample with nominal molybdenum thickness of $d_\text{Mo}^\text{nom} = \nm{3.05}$.}
+\label{ch_spec:fig_EUV_XRR_combined}
+\end{figure}
+The results for the molybdenum layer thickness and the respective confidence intervals for all samples in comparison to their nominal layer thickness are given in table~\ref{ch_spec:tbl_mo_si_thickness_mcmc_result}
+\begin{table*}[htbp]
+\centering
+\caption{List of nominal molybdenum layer thicknesses in the two sample sets. Both sets were fabricated with a equidistant increase in thickness from \nm{1.70} to \nm{3.05} with 9 unpolished and 10 polished samples.}
+\label{ch_spec:tbl_mo_si_thickness_mcmc_result}
+\begin{tabular}{@{}llll@{}}
+\toprule
+nom.~$d_\text{Mo}$ / nm & EUV \& XRR & nom.~$d_\text{Mo}$ / nm& EUV \& XRR\\ 
+(unpolished) && (polished) &\\
+\midrule
+$1.70$ &$1.81({-0.12}/{+0.24})$ & $1.70$ &$1.77({-0.22}/{+0.19})$ \\
+$1.87$ &$1.98({-0.15}/{+0.14})$ & $1.85$ &$1.91({-0.12}/{+0.17})$ \\
+$2.04$ &$2.08({-0.11}/{+0.22})$ & $2.00$ &$2.29({-0.28}/{+0.13})$ \\
+$2.21$ &$2.31({-0.22}/{+0.21})$ & $2.15$ &$2.45({-0.43}/{+0.06})$ \\
+$2.38$ &$2.43({-0.09}/{+0.16})$  & $2.30$ &$2.60({-0.12}/{+0.14})$ \\
+$2.54$ &$2.68({-0.13}/{+0.16})$ & $2.45$ &$2.58({-0.21}/{+0.15})$ \\
+$2.71$ &$2.91({-0.17}/{+0.12})$ & $2.60$ &$2.87({-0.22}/{+0.12})$ \\
+$2.88$ &$3.02({-0.15}/{+0.15})$ & $2.75$ &$3.03({-0.16}/{+0.14})$ \\
+$3.05$ &$3.22({-0.13}/{+0.11})$ & $2.90$ &$3.15({-0.13}/{+0.13})$ \\
+- &- & $3.05$ & $3.47({-0.19}/{+0.13})$ \\
+ \bottomrule
+\end{tabular}
+\end{table*}
+
+
+
 
 
 
@@ -343,28 +377,6 @@ The results of the two-step analysis are shown in Fig.~\ref{fig:fitted_mo_and_fi
 \end{figure*}
 The confidence intervals shown in Fig.~\ref{fig:fitted_mo_and_fitted_D}a are one standard deviation of the likelihood determined for the Mo layer thickness by the first-step MCMC procedure. The results show good agreement with the nominal thicknesses for both sample sets. The corresponding total period thicknesses $D$ in Fig.~\ref{fig:fitted_mo_and_fitted_D}b show clear jumps correlated with the presumed crystallization thresholds inferred from the max.~peak reflectivity in Fig.~\ref{fig:EUV_reflectivity}c. The results from this layer thickness and density characterization form the basis for the following analysis of the diffuse scattering.
 
-\begin{table*}[htbp]
-\centering
-\caption{List of nominal molybdenum layer thicknesses in the two sample sets. Both sets were fabricated with a equidistant increase in thickness from \nm{1.70} to \nm{3.05} with 9 unpolished and 10 polished samples.}
-\label{ch_spec:tbl_mo_si_thickness_mcmc_result}
-\begin{tabular}{@{}llll@{}}
-\toprule
-nom.~$d_\text{Mo}$ / nm & EUV \& XRR & nom.~$d_\text{Mo}$ / nm& EUV \& XRR\\ 
-(unpolished) && (polished) &\\
-\midrule
-$1.70$ &$1.81({-0.12}/{+0.24})$ & $1.70$ &$1.77({-0.22}/{+0.19})$ \\
-$1.87$ &$1.98({-0.15}/{+0.14})$ & $1.85$ &$1.91({-0.12}/{+0.17})$ \\
-$2.04$ &$2.08({-0.11}/{+0.22})$ & $2.00$ &$2.29({-0.28}/{+0.13})$ \\
-$2.21$ &$2.31({-0.22}/{+0.21})$ & $2.15$ &$2.45({-0.43}/{+0.06})$ \\
-$2.38$ &$2.43({-0.09}/{+0.16})$  & $2.30$ &$2.60({-0.12}/{+0.14})$ \\
-$2.54$ &$2.68({-0.13}/{+0.16})$ & $2.45$ &$2.58({-0.21}/{+0.15})$ \\
-$2.71$ &$2.91({-0.17}/{+0.12})$ & $2.60$ &$2.87({-0.22}/{+0.12})$ \\
-$2.88$ &$3.02({-0.15}/{+0.15})$ & $2.75$ &$3.03({-0.16}/{+0.14})$ \\
-$3.05$ &$3.22({-0.13}/{+0.11})$ & $2.90$ &$3.15({-0.13}/{+0.13})$ \\
-- &- & $3.05$ & $3.47({-0.19}/{+0.13})$ \\
- \bottomrule
-\end{tabular}
-\end{table*}
 
 
 \section{Analysis of Cr/Sc Multilayers with Sub-nanometer Layer Thickness}
