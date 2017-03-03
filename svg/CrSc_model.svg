@@ -438,6 +438,61 @@
        y1="177.21931"
        x2="197.85715"
        y2="147.79076" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3536">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect3538"
+         width="69.285713"
+         height="51.785713"
+         x="58.928581"
+         y="-181.60255" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3540">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect3542"
+         width="69.285713"
+         height="51.785713"
+         x="58.928581"
+         y="-181.60255" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3544">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect3546"
+         width="69.285713"
+         height="51.785713"
+         x="58.928581"
+         y="-181.60255" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3548">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect3550"
+         width="69.285713"
+         height="51.785713"
+         x="58.928581"
+         y="-181.60255" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3552">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect3554"
+         width="69.285713"
+         height="51.785713"
+         x="58.928581"
+         y="-181.60255" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -446,9 +501,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="347.11927"
-     inkscape:cy="814.83156"
+     inkscape:zoom="2.8"
+     inkscape:cx="483.05983"
+     inkscape:cy="664.9473"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -556,13 +611,15 @@
        style="fill:none;stroke:#000000;stroke-width:0.34917799;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:0.34917803, 0.34917803;stroke-dashoffset:0"
        d="m 66.12682,-176.34653 53.87318,0"
        id="path4896"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       clip-path="url(#clipPath3552)" />
     <path
        sodipodi:nodetypes="ccsccsc"
        inkscape:connector-curvature="0"
        id="path4922"
        d="m 66.12682,-176.29666 0,6.48474 c 0,6.22667 6.340513,17.17318 27.186002,21.69892 C 113.76245,-143.67321 120,-128.74831 120,-121.30112 l 0,11.47299 c 0,5.90197 -16.32783,6.54807 -28.183654,8.10592 -9.838451,1.29277 -25.689526,4.240019 -25.689526,11.722407"
-       style="fill:none;stroke:url(#linearGradient3424);stroke-width:1.04753411;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:none;stroke:url(#linearGradient3424);stroke-width:1.04753411;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       clip-path="url(#clipPath3548)" />
     <rect
        style="opacity:0.2;fill:#a60628;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="rect4932"
@@ -726,12 +783,14 @@
        style="fill:none;stroke:#000000;stroke-width:0.34917799px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 120.10585,-141.86861 0,-4.23268"
        id="path6445"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       clip-path="url(#clipPath3544)" />
     <path
        inkscape:connector-curvature="0"
        id="path6447"
        d="m 66.332431,-141.86861 0,-4.23268"
-       style="fill:none;stroke:#000000;stroke-width:0.34917799px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:0.34917799px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       clip-path="url(#clipPath3540)" />
     <text
        sodipodi:linespacing="125%"
        id="text6449"
@@ -762,7 +821,8 @@
        y="-135.14561"
        x="62.734802"
        style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       clip-path="url(#clipPath3536)"><tspan
          y="-135.14561"
          x="62.734802"
          id="tspan6459"
@@ -948,7 +1008,7 @@
        sodipodi:cy="232.36218"
        sodipodi:rx="1.5"
        sodipodi:ry="1.5"
-       d="m 121.75614,232.36218 a 1.5,1.5 0 1 1 -3,0 1.5,1.5 0 1 1 3,0 z"
+       d="m 121.75614,232.36218 c 0,0.82843 -0.67157,1.5 -1.5,1.5 -0.82843,0 -1.5,-0.67157 -1.5,-1.5 0,-0.82842 0.67157,-1.5 1.5,-1.5 0.82843,0 1.5,0.67158 1.5,1.5 z"
        transform="matrix(0.34917803,0,0,0.34917803,24.225457,-333.653)" />
     <path
        style="fill:none;stroke:#ff0000;stroke-width:1.04753411;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -957,59 +1017,22 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccccccccccccccccccc" />
     <text
-       xml:space="preserve"
-       style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
-       x="69.461815"
-       y="-254.40291"
-       id="text4267"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         x="69.461815"
-         y="-254.40291"
-         id="tspan4271">gradual interface</tspan><tspan
-         sodipodi:role="line"
-         x="69.461815"
-         y="-246.31413"
-         id="tspan4303">profile</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
-       x="71.794098"
-       y="-207.07675"
-       id="text4267-2"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         x="71.794098"
-         y="-207.07675"
-         id="tspan4271-9">ideal interface</tspan><tspan
-         sodipodi:role="line"
-         x="71.794098"
-         y="-198.98798"
-         id="tspan4297">profile</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
-       x="-104.57251"
-       y="-286.82413"
-       id="text3129"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3131"
-         x="-104.57251"
-         y="-286.82413"
-         style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium">a)</tspan></text>
-    <text
        sodipodi:linespacing="125%"
        id="text3133"
        y="-286.82413"
        x="42.082272"
-       style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
        xml:space="preserve"><tspan
-         style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+         style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
          y="-286.82413"
          x="42.082272"
          id="tspan3135"
-         sodipodi:role="line">b)</tspan></text>
+         sodipodi:role="line">{\fontfamily{fds}\selectfont</tspan><tspan
+         style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+         y="-277.26468"
+         x="42.082272"
+         sodipodi:role="line"
+         id="tspan3498">\footnotesize b)}</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot3377"
@@ -1021,5 +1044,70 @@
            height="74.246216"
            x="-26.263966"
            y="-18.904591" /></flowRegion><flowPara
-         id="flowPara3383" /></flowRoot>  </g>
+         id="flowPara3383" /></flowRoot>    <text
+       transform="scale(0.99877211,1.0012294)"
+       sodipodi:linespacing="125%"
+       id="text36832"
+       y="-245.09381"
+       x="73.117683"
+       style="font-size:5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         id="tspan36834"
+         y="-245.09381"
+         x="73.117683"
+         sodipodi:role="line">{\fontfamily{fds}\selectfont</tspan><tspan
+         y="-238.84381"
+         x="73.117683"
+         sodipodi:role="line"
+         id="tspan3530">\footnotesize</tspan><tspan
+         y="-232.59381"
+         x="73.117683"
+         sodipodi:role="line"
+         id="tspan3241">\shortstack[l]{gradual interface\\</tspan><tspan
+         y="-226.34381"
+         x="73.117683"
+         sodipodi:role="line"
+         id="tspan3467">profile}}</tspan></text>
+    <text
+       transform="scale(0.99877211,1.0012294)"
+       sodipodi:linespacing="125%"
+       id="text36832-1"
+       y="-199.00865"
+       x="73.60997"
+       style="font-size:5px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         id="tspan36834-2"
+         y="-199.00865"
+         x="73.60997"
+         sodipodi:role="line">{\fontfamily{fds}\selectfont</tspan><tspan
+         y="-192.75865"
+         x="73.60997"
+         sodipodi:role="line"
+         id="tspan3532">\footnotesize</tspan><tspan
+         y="-186.50865"
+         x="73.60997"
+         sodipodi:role="line"
+         id="tspan3241-1">\shortstack[l]{ideal interface\\</tspan><tspan
+         y="-180.25865"
+         x="73.60997"
+         sodipodi:role="line"
+         id="tspan3467-3">profile}}</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3133-4"
+       y="-286.82413"
+       x="-107.29761"
+       style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       xml:space="preserve"><tspan
+         style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+         y="-286.82413"
+         x="-107.29761"
+         id="tspan3135-5"
+         sodipodi:role="line">{\fontfamily{fds}\selectfont\footnotesize</tspan><tspan
+         style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+         y="-277.26468"
+         x="-107.29761"
+         sodipodi:role="line"
+         id="tspan3498-5">a)}</tspan></text>
+  </g>
 </svg>

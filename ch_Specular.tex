@@ -183,7 +183,7 @@ It should be noted, that although the aforementioned density values can not be d
 The results listed in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_mcmc_results} serve as the model parameters for the analysis of diffuse scattering from the Mo/B$_4$C/Si/C sample in chapter~\ref{ch_diff} below.
 
 \section{Molybdenum Thickness Variation in Mo/Si/C Multilayers}
-In the following we shall apply and extend the reconstruction procedure discussed in the above section to the problem of multilayer sample systems deposited with varying molybdenum layer thicknesses. For the engineering of a near-normal incidence mirror, the ratio of molybdenum layer thickness to total period thickness has a clear impact on the reflectivity curve as seen in Fig.~\ref{ch_spec:fig_mo_si_parameter_influence}c. Studies have shown, that an optimal value for high reflectivity is achieved by depositing $40\%$ molybdenum layer thickness $d_\text{Mo}$ with respect to the total period thickness $D$ \cite{bajt_investigation_2001,braun_mo/si_2002}. During the deposition process, the layer of molybdenum grows in thickness and at a certain threshold, crystallites may begin to form \cite{bajt_investigation_2001} inside the layer. Those may affect the interface morphology of the layer system at the boundaries to the molybdenum layer and possibly at further interfaces through correlation effects. This potentially increases the roughness and thus the loss of specularly reflected radiation. For the deeper understanding of those effects, we shall reconstruct the layer structure and determine the molybdenum layer thickness in each sample in comparison to the nominal values for the magnetron sputtering deposition.
+In the following we shall apply and extend the reconstruction procedure discussed in the above section to the problem of multilayer sample systems deposited with varying molybdenum layer thicknesses. For the engineering of a near-normal incidence mirror, the ratio of molybdenum layer thickness to total period thickness has a clear impact on the reflectivity curve as seen in Fig.~\ref{ch_spec:fig_mo_si_parameter_influence}c. Studies have shown, that an optimal value for high reflectivity is achieved by depositing $40\%$ molybdenum layer thickness $d_\text{Mo}$ with respect to the total period thickness $D$ \cite{bajt_investigation_2001,braun_mo/si_2002}. During the deposition process, the layer of molybdenum grows in thickness and at a certain threshold, crystallites may begin to form \cite{verhoeven_ion_1992,bajt_investigation_2001} inside the layer. Those may affect the interface morphology of the layer system at the boundaries to the molybdenum layer and possibly at further interfaces through correlation effects. This potentially increases the roughness and thus the loss of specularly reflected radiation. For the deeper understanding of those effects, we shall reconstruct the layer structure and determine the molybdenum layer thickness in each sample in comparison to the nominal values for the magnetron sputtering deposition.
 
 \subsection{Sample systems and experimental procedure}
 As a specific prototype for high-reflectance multilayer mirrors for the spectral range between \nm{12.4} and \nm{14.0} serve two sets of several samples of Mo/Si/C multilayer systems with C interdiffusion barriers with thicknesses of nominally below \nm{0.5} at the Mo on Si interfaces (a detailed figure of the model for those samples is given below in Fig.~\ref{ch_spec:fig_model_unpolished_and_polished_samples} of the following sections). As mentioned above, the samples under investigation here were fabricated with increasing relative Mo thickness while keeping the nominal period thickness $D\approx 7$ nm constant. In this study, we investigate two sets of samples. In the first set, the magnetron sputtered layers were deposited one after another for each sample. In the second set, during deposition, an additional polishing process was used after sputtering each molybdenum layer to counteract the possible roughening due to the crystallization. The nominal values of the molybdenum layers in the two sample sets are listed in table~\ref{ch_spec:tbl_mo_si_thickness_nominal}.
@@ -197,14 +197,14 @@ nominal $d_\text{Mo}$ / nm & nominal $d_\text{Mo}$ / nm\\
 (unpolished samples) & (polished samples) \\
 \midrule
 $1.70$& $1.70$\\ 
-$1.87$& $1.85$\\ 
-$2.04$ & $2.00$\\ 
-$2.21$ & $2.15$\\ 
-$2.38$& $2.30$\\ 
-$2.54$& $2.45$\\ 
-$2.71$& $2.60$\\ 
-$2.88$ & $2.75$\\ 
-$3.05$ & $2.90$\\ 
+$1.85$& $1.85$\\ 
+$2.00$ & $2.00$\\ 
+$2.15$ & $2.15$\\ 
+$2.30$& $2.30$\\ 
+$2.45$& $2.45$\\ 
+$2.60$& $2.60$\\ 
+$2.75$ & $2.75$\\ 
+$2.90$ & $2.90$\\ 
 -& $3.05$\\ 
  \bottomrule
 \end{tabular}
@@ -328,40 +328,29 @@ The theoretical reflectivity curves calculated from the optimal model parameters
 \label{ch_spec:fig_EUV_XRR_combined}
 \end{figure}
 The results for the molybdenum layer thickness and the respective confidence intervals for all samples in comparison to their nominal layer thickness are given in table~\ref{ch_spec:tbl_mo_si_thickness_mcmc_result}
-\begin{table*}[htbp]
+\begin{table}[htbp]
 \centering
 \caption{List of nominal molybdenum layer thicknesses in the two sample sets. Both sets were fabricated with a equidistant increase in thickness from \nm{1.70} to \nm{3.05} with 9 unpolished and 10 polished samples.}
 \label{ch_spec:tbl_mo_si_thickness_mcmc_result}
-\begin{tabular}{@{}llll@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
-nom.~$d_\text{Mo}$ / nm & EUV \& XRR & nom.~$d_\text{Mo}$ / nm& EUV \& XRR\\ 
-(unpolished) && (polished) &\\
+nom.~$d_\text{Mo}$ / nm & EUV \& XRR &EUV \& XRR\\ 
+&(unpolished) & (polished) \\
 \midrule
-$1.70$ &$1.81({-0.12}/{+0.24})$ & $1.70$ &$1.77({-0.22}/{+0.19})$ \\
-$1.87$ &$1.98({-0.15}/{+0.14})$ & $1.85$ &$1.91({-0.12}/{+0.17})$ \\
-$2.04$ &$2.08({-0.11}/{+0.22})$ & $2.00$ &$2.29({-0.28}/{+0.13})$ \\
-$2.21$ &$2.31({-0.22}/{+0.21})$ & $2.15$ &$2.45({-0.43}/{+0.06})$ \\
-$2.38$ &$2.43({-0.09}/{+0.16})$  & $2.30$ &$2.60({-0.12}/{+0.14})$ \\
-$2.54$ &$2.68({-0.13}/{+0.16})$ & $2.45$ &$2.58({-0.21}/{+0.15})$ \\
-$2.71$ &$2.91({-0.17}/{+0.12})$ & $2.60$ &$2.87({-0.22}/{+0.12})$ \\
-$2.88$ &$3.02({-0.15}/{+0.15})$ & $2.75$ &$3.03({-0.16}/{+0.14})$ \\
-$3.05$ &$3.22({-0.13}/{+0.11})$ & $2.90$ &$3.15({-0.13}/{+0.13})$ \\
-- &- & $3.05$ & $3.47({-0.19}/{+0.13})$ \\
+$1.70$ &$1.81({-0.12}/{+0.24})$  &$1.77({-0.22}/{+0.19})$ \\
+$1.85$ &$1.98({-0.15}/{+0.14})$  &$1.91({-0.12}/{+0.17})$ \\
+$2.00$ &$2.08({-0.11}/{+0.22})$  &$2.29({-0.28}/{+0.13})$ \\
+$2.15$ &$2.31({-0.22}/{+0.21})$  &$2.45({-0.43}/{+0.06})$ \\
+$2.30$ &$2.43({-0.09}/{+0.16})$   &$2.60({-0.12}/{+0.14})$ \\
+$2.45$ &$2.68({-0.13}/{+0.16})$  &$2.58({-0.21}/{+0.15})$ \\
+$2.60$ &$2.91({-0.17}/{+0.12})$ &$2.87({-0.22}/{+0.12})$ \\
+$2.75$ &$3.02({-0.15}/{+0.15})$  &$3.03({-0.16}/{+0.14})$ \\
+$2.90$ &$3.22({-0.13}/{+0.11})$ &$3.15({-0.13}/{+0.13})$ \\
+$3.05$ &-  & $3.47({-0.19}/{+0.13})$ \\
  \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 
-
-
-
-
-
-
-
-
-%In order to obtain a unique reconstruction of the multilayer stack thicknesses and densities, a combination of several methods is necessary \cite{}\todo{citation Cr/Sc paper}. This is in general a very time consuming procedure, since many complementary methods have to be applied for all samples. In case of the sample system of interest here, the samples ideally only differ in the thickness of the Mo layers. We therefore focus on the unambiguous determination of the corresponding thicknesses here. In this case the combined analysis of EUV reflectivity and X-ray reflectivity suffice.
-
-\paragraph{Specular Measurement Results and Optimization} \label{sec:mo_si_model_reconstruction_results}
 The two sample sets have been measured with respect to their reflectivity at a fixed angle of incidence $\alpha_i=15^\circ$ from the surface normal by varying the wavelength in the spectral range from $\lambda=12.4$ nm to $\lambda=14.0$ nm. The results are shown in Fig.~\ref{fig:EUV_reflectivity} in comparison to each other, with their nominal Mo layer thickness. The max.~peak reflectance is also shown for the two series.
 
 Clear shifts of central peak reflectance wavelength can be observed in both cases. This coincides with a dip in the max.~peak reflectance in both cases, which most likely is associated with the crystallization threshold of the Mo layer. There is a notable difference in the observed jumps for the two sample sets. For the unpolished samples, the crystallization threshold seems to be around $d^\text{nom}_\text{Mo} =2.38$ nm, whereas it appears at much lower nom. Mo thickness values for the polished sample set at around  $d^\text{nom}_\text{Mo} =2.00$ nm. For all of the samples additional XRR measurements exist (not shown here), which were analyzed based on the combined principle using the MCMC method as described in Sec.~\ref{sec:max_likelihood}. 
@@ -380,6 +369,31 @@ The confidence intervals shown in Fig.~\ref{fig:fitted_mo_and_fitted_D}a are one
 
 
 \section{Analysis of Cr/Sc Multilayers with Sub-nanometer Layer Thickness}
+
+\subsection{Experimental details} \label{sec:experimental}
+
+The Cr/Sc multilayer sample was prepared at the DESY X-ray multilayer 
+laboratory by DC magnetron sputtering. The deposition was performed at $0.133$ 
+Pa ultrahigh purity Ar ($99.999\%$) and a power of $200$ W for both Sc and Cr 
+sputtering targets. The multilayer is composed of alternating layers of Cr and 
+Sc with periodic replication of the bilayer stack by $N=400$ times. The 
+substrate is a superpolished Si wafer piece. The sample dimensions measure 
+approximately $(20 \times 20)$ mm$^2$. More details can be found elsewhere 
+\cite{prasciolu_thermal_2014}. The multilayer mirror was designed to reflect 
+radiation in the water window energetically, just below the Sc L edge, close to 
+a $3.1$ nm wavelength at an angle of incidence (AOI) of $\alpha_i = 
+88.5^\circ$.
+
+The characterization via XRR (Fig.~\ref{fig:EUV_XRR_REUV_XRF_data}b) was 
+conducted in the DESY laboratory using a laboratory-based X-ray diffractometer 
+(X'Pert PRO MRD, Panalytical). It is equipped with a high-resolution goniometer 
+and uses Cu-K$_\alpha$ radiation. The XRR intensities were recorded using a 
+PIXcel counting detector. The dynamic range achieved in the measurements 
+extended down to a reflectance of $10^{-6}$ for grazing angles of incidence of 
+$\alpha_i=0^\circ$ to $\alpha_i=3^\circ$. Due to the short period of the 
+multilayer sample, only two Bragg peaks could be observed in this angular 
+range. All higher order peaks were below the detection threshold of $10^{-6}$ 
+in reflected intensity.
 
 \subsection{Reconstruction with a Binary Model Approach}
 To better illustrate the requirement of an improved model, we have conducted an 
@@ -422,10 +436,10 @@ Instead of the simple binary layer model, a gradual interface model is
 introduced to better reflect the electron density profile due to 
 interdiffusion. A corresponding profile is shown in Fig.~\ref{fig:CrScModel} 
 for illustration in comparison to the binary model.
-\begin{figure*}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{images/CrSc_model}
-  \caption{a) Binary Cr/Sc multilayer model with total period thickness $D$ and 
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{CrSc_model.pdf_tex}
+    \caption[Binary and gradual Cr/Sc multilayer models.]{a) Binary Cr/Sc multilayer model with total period thickness $D$ and 
 the individual layer thicknesses $d_\text{Sc}$ and $d_\text{Cr}$. b) Model with 
 explicit gradual interfaces following a sinusoidal profile. The ideal interface 
 profile is approximated through discrete sublayers as indicated in red, forming 
@@ -434,7 +448,7 @@ The thickness of the interdiffusion zones can differ for the top and bottom
 interface in each period. Their total thicknesses are given by $s_\text{Sc}$ 
 and $s_\text{Cr}$. The effective index of refraction for both layers is given 
 by $\tilde{n}_\text{Sc}$ and $\tilde{n}_\text{Cr}$, respectively.}
-  \label{fig:CrScModel}
+    \label{ch_spec:fig_CrScModel}
 \end{figure*}
 The calculation of the electromagnetic fields is then conducted based on this 
 model with the matrix formalism introduced in the preceding section. The 
@@ -541,6 +555,12 @@ deconvolution using detector response functions.
 \subsubsection{EUV and X-ray reflectivity}
 \subsubsection{Resonant EUV Reflectivity}
 \subsubsection{Grazing Incidence X-ray Fluorescence}
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics{img/CrSc_fluorescence_data}
+  \caption{XRF}
+  \label{ch_spec:fig_CrSc_fluorescence_data}
+\end{figure*}
 
 \subsection{Model Uniqueness and Confidence Intervals}
 The solution of the inverse problem based on the particle swarm optimization 
@@ -639,7 +659,7 @@ illustrated each confidence interval in Fig.~\ref{fig:confidence_intervals}.
 \begin{figure}[htbp]
   \centering
   
-\includegraphics[width=0.6\textwidth]{images/spiderplot_confidence_intervals_empty}
+\includegraphics[width=0.6\textwidth]{img/CrSc_confidence_intervals_radar}
   \caption{Visual representation of the total confidence intervals for each of 
 the parameters with respect to each of the individual experiments as well as 
 the combined analysis.}
@@ -675,10 +695,10 @@ across the sample.
 \onecolumn
 \begin{figure*}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{images/combined_fit_result}
+  \includegraphics[width=\textwidth]{img/CrSc_combined_fit_result}
   \caption{Measured and calculated reflectance and intensity curves for the 
 optimized parameters with the combined analysis of all experiments as listed in 
-Table~\ref{tbl:parametrization}.}
+Table~\ref{tbl_parametrization}.}
   \label{fig:combined_fit_result}
 \end{figure*}
 %\twocolumn
@@ -687,7 +707,7 @@ Fig.~\ref{fig:electron_density_profile} together with the initial binary model
 for comparison.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.7\textwidth]{images/real_model}
+  \includegraphics[width=0.7\textwidth]{img/CrSc_binary_vs_fitted_gradual_model}
   \caption{Real part of the index of refraction $n$  based on the results of 
 the optimized parameters listed in Table~\ref{tbl:results} for the combined 
 analysis for a selected wavelength. The gradual interface model is shown in 
