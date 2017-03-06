@@ -417,9 +417,9 @@ $\Gamma_\text{Sc}\approx 0.5$, the second Bragg peak is additionally suppressed
 due to symmetry reasons. Thus, there is a clear mismatch with the experimental 
 observation as seen in the comparison of the fitted and measured XRR curves in 
 Fig.~\ref{fig:EUV_XRR_reflectance}.
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{images/binary_model_and_theo_refl}
+  \includegraphics[width=0.45\textwidth]{img/CrSc_binary_fit_vs_max_refl}
   \caption{a) Fitted experimental EUV reflectance curves across the wavelength 
 of the radiation impinging at $1.5^\circ$ from normal, based on the binary 
 model. The green curve shows the maximum possible reflectance in the water 
@@ -428,7 +428,21 @@ interdiffusion. b) The optimal model based on the analysis of the EUV
 reflectance (cf.~Fig.~\ref{fig:EUV_XRR_reflectance}a) shows a clear mismatch 
 with the measured XRR curve in the second Bragg peak.
 }
-  \label{fig:EUV_XRR_reflectance}
+  \label{ch_spec:fig_CrSc_binary_fit_vs_max_refl}
+\end{figure}
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{img/CrSc_binary_model_EUV_vs_XRR}
+  \caption{a) Fitted experimental EUV reflectance curves across the wavelength 
+of the radiation impinging at $1.5^\circ$ from normal, based on the binary 
+model. The green curve shows the maximum possible reflectance in the water 
+window assuming a perfect multilayer system without roughness or 
+interdiffusion. b) The optimal model based on the analysis of the EUV 
+reflectance (cf.~Fig.~\ref{fig:EUV_XRR_reflectance}a) shows a clear mismatch 
+with the measured XRR curve in the second Bragg peak.
+}
+  \label{ch_spec:fig_CrSc_binary_model_EUV_vs_XRR}
 \end{figure*}
 
 \subsection{Extending The Model to Graded Interfaces and Interdiffusion}
@@ -505,6 +519,13 @@ interfaces and is limited to the interval $\Gamma_\sigma \in [0,1]$. Note that
 $s_\text{Sc}$ and $s_\text{Cr}$ are half periods of the sinus functions used to 
 describe the interface profiles. Therefore the condition $s_\text{Sc} + 
 s_\text{Cr} \leq D$ holds.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{img/CrSc_numerical_uncertainty_mixlayer}
+  \caption{Numerical uncertainty}
+  \label{ch_spec:fig_CrSc_numerical_uncertainty_mixlayer}
+\end{figure}
+
 
 \subsection{Combination of Complementary Experimental Methods}
 The reconstruction of the multilayer structure was conducted with a series of 
@@ -553,11 +574,23 @@ at an excitation photon energy of $6.25$ keV for the Sc-K and Cr-K lines by spec
 deconvolution using detector response functions.
 
 \subsubsection{EUV and X-ray reflectivity}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{img/CrSc_EUV_XRR_data}
+  \caption{EUV and XRR}
+  \label{ch_spec:fig_CrSc_EUV_XRR_data}
+\end{figure}
 \subsubsection{Resonant EUV Reflectivity}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{img/CrSc_REUV_data}
+  \caption{REUV}
+  \label{ch_spec:fig_CrSc_REUV_data}
+\end{figure}
 \subsubsection{Grazing Incidence X-ray Fluorescence}
 \begin{figure*}[htbp]
   \centering
-  \includegraphics{img/CrSc_fluorescence_data}
+  \includegraphics[width=\textwidth]{img/CrSc_fluorescence_data}
   \caption{XRF}
   \label{ch_spec:fig_CrSc_fluorescence_data}
 \end{figure*}
@@ -659,7 +692,7 @@ illustrated each confidence interval in Fig.~\ref{fig:confidence_intervals}.
 \begin{figure}[htbp]
   \centering
   
-\includegraphics[width=0.6\textwidth]{img/CrSc_confidence_intervals_radar}
+\includegraphics{img/CrSc_confidence_intervals_radar}
   \caption{Visual representation of the total confidence intervals for each of 
 the parameters with respect to each of the individual experiments as well as 
 the combined analysis.}
