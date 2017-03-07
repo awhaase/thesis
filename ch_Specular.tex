@@ -182,7 +182,7 @@ It should be noted, that although the aforementioned density values can not be d
 
 The results listed in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_mcmc_results} serve as the model parameters for the analysis of diffuse scattering from the Mo/B$_4$C/Si/C sample in chapter~\ref{ch_diff} below.
 
-\section{Molybdenum Thickness Variation in Mo/Si/C Multilayers}
+\section{Molybdenum Thickness Variation in Mo/Si/C Multilayers} \label{ch_spec:sec_mo_si_c}
 In the following we shall apply and extend the reconstruction procedure discussed in the above section to the problem of multilayer sample systems deposited with varying molybdenum layer thicknesses. For the engineering of a near-normal incidence mirror, the ratio of molybdenum layer thickness to total period thickness has a clear impact on the reflectivity curve as seen in Fig.~\ref{ch_spec:fig_mo_si_parameter_influence}c. Studies have shown, that an optimal value for high reflectivity is achieved by depositing $40\%$ molybdenum layer thickness $d_\text{Mo}$ with respect to the total period thickness $D$ \cite{bajt_investigation_2001,braun_mo/si_2002}. During the deposition process, the layer of molybdenum grows in thickness and at a certain threshold, crystallites may begin to form \cite{verhoeven_ion_1992,bajt_investigation_2001} inside the layer. Those may affect the interface morphology of the layer system at the boundaries to the molybdenum layer and possibly at further interfaces through correlation effects. This potentially increases the roughness and thus the loss of specularly reflected radiation. For the deeper understanding of those effects, we shall reconstruct the layer structure and determine the molybdenum layer thickness in each sample in comparison to the nominal values for the magnetron sputtering deposition.
 
 \subsection{Sample systems and experimental procedure}
@@ -265,7 +265,7 @@ $\rho_\text{MoSi$_2$}$ &MoSi$_2$ density w.r.t.~bulk density& $0.8$& $1.0$\\
 \midrule
 $d_\text{C(cap)}$ / nm & C capping layer thickness & $0.0$&$3.0$ \\ 
 $d_\text{SiO$_2$(cap)}$ / nm & SiO$_2$ capping layer thickness & $0.0$&$1.5$ \\ 
-$\rho_\text{C(cap)}$ &C capping layer density w.r.t.~bulk density& $0.0$& $1.0$\\ 
+$\rho_\text{C(cap)}$ &C density w.r.t.~bulk density& $0.0$& $1.0$\\ 
 $\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
  \bottomrule
 \end{tabular}
@@ -369,20 +369,10 @@ The confidence intervals shown in Fig.~\ref{fig:fitted_mo_and_fitted_D}a are one
 
 
 \section{Analysis of Cr/Sc Multilayers with Sub-nanometer Layer Thickness}
+In the previous sections we have characterized multilayer systems specifically designed to reflect radiation in the \gls{euv} spectral range from \nm{12.5} to \nm{14.0} wavelength. There, the three to four layer systems per period with period thicknesses of $D\approx\nm{7}$ were used to achieve constructive interference at the desired reflection angles. We shall now expand the analysis to a different system. Multilayer mirrors designed to reflect radiation in the spectral range between \nm{2.2} and \nm{4.4} wavelength, the so called \emph{water window}. Those systems share the basic principle of a one-dimensional Bragg crystal with the Mo/Si multilayer stacks from the previous sections, but differ in the selection of materials. The intrinsic relationship between spectral range and period thickness to achieve constructive interference, requires period thicknesses of $D\approx \nm{1.5}$ for this case and higher period replication.
 
-\subsection{Experimental details} \label{sec:experimental}
 
-The Cr/Sc multilayer sample was prepared at the DESY X-ray multilayer 
-laboratory by DC magnetron sputtering. The deposition was performed at $0.133$ 
-Pa ultrahigh purity Ar ($99.999\%$) and a power of $200$ W for both Sc and Cr 
-sputtering targets. The multilayer is composed of alternating layers of Cr and 
-Sc with periodic replication of the bilayer stack by $N=400$ times. The 
-substrate is a superpolished Si wafer piece. The sample dimensions measure 
-approximately $(20 \times 20)$ mm$^2$. More details can be found elsewhere 
-\cite{prasciolu_thermal_2014}. The multilayer mirror was designed to reflect 
-radiation in the water window energetically, just below the Sc L edge, close to 
-a $3.1$ nm wavelength at an angle of incidence (AOI) of $\alpha_i = 
-88.5^\circ$.
+The system we focus on in the rest of this chapter is composed out of a bilayer stack of chromium (Cr) and scandium (Sc). A detailed description of the sample preparation process and the choice of the layer materials can be found in Ch.~\ref{ch_exp}, Sec.~\ref{ch_exp:sec_multilayer_design}. The sample is optimized to reflect radiation of $\lambda = \nm{3.14}$ at an angle of incidence of $\alpha_i = \SI{1.5}{\degree}$. Its periodicity is $N=400$ bilayer periods, where the last period has a larger Cr capping layer thickness. The model of the sample is shown in Fig.~\ref{ch_spec:fig_Cr_Sc_model}.
 \begin{figure}[htbp]
     \def\svgwidth{0.7\textwidth}
     \fontfamily{fds}\selectfont\footnotesize
@@ -390,73 +380,104 @@ a $3.1$ nm wavelength at an angle of incidence (AOI) of $\alpha_i =
     \caption{Model of the multilayer stack including the substrate and the capping layers. The periodic part is enclosed between the dashed lines with four layers in each period repeated $N=64$ times. The capping period does not include an interdiffusion layer but has a natural SiO$_2$ layer.}
     \label{ch_spec:fig_Cr_Sc_model}
 \end{figure}
-The characterization via XRR (Fig.~\ref{fig:EUV_XRR_REUV_XRF_data}b) was 
-conducted in the DESY laboratory using a laboratory-based X-ray diffractometer 
-(X'Pert PRO MRD, Panalytical). It is equipped with a high-resolution goniometer 
-and uses Cu-K$_\alpha$ radiation. The XRR intensities were recorded using a 
-PIXcel counting detector. The dynamic range achieved in the measurements 
-extended down to a reflectance of $10^{-6}$ for grazing angles of incidence of 
-$\alpha_i=0^\circ$ to $\alpha_i=3^\circ$. Due to the short period of the 
-multilayer sample, only two Bragg peaks could be observed in this angular 
-range. All higher order peaks were below the detection threshold of $10^{-6}$ 
-in reflected intensity.
+The small period thickness of only $D\approx\nm{1.5}$ for this type of sample yields individual layer thicknesses in the sub-nanometer regime, for a bilayer period with approximately equal individual layer thicknesses. This is a significant difference to the Mo/Si systems treated in the beginning of this chapter, where the molybedum and silicon layers were well above $>\nm{1.7}$, even in the smallest case existed. The buffer and interdiffsion layers, which nominally have thicknesses in the same order of magnitude as expected for the Cr/Sc system, could not be characterized based on the methods employed above. We shall therefore first compare the results obtained with an approach similar to the methods in the previous sections to establish a limit to the applicability of discrete layer models.
 
-\subsection{Reconstruction with a Binary Model Approach}
-\subsubsection{EUV and X-ray reflectivity}
+\subsection{Reconstruction with a discrete layer model approach}
+In analogy to Sec.~\ref{ch_spec:sec_mo_si_c}, we seek to reconstruct the individual layer thicknesses based on experimental data. For this we construct a discrete layer model as illustrated in Fig.~\ref{ch_spec:fig_Cr_Sc_model} in analogy to the procedure applied for the Mo/Si multilayer systems. The parameters of this discrete layer model are listed in table~\ref{ch_spec:tbl_cr_sc_binary_parameters} together with the upper and lower bound for the particle swarm optimization procedure.
+\begin{table*}[htbp]
+\centering
+\caption{Parametrization of the Cr/Sc binary multilayer model.}
+\label{ch_spec:tbl_cr_sc_binary_parameters}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Parameter & Definition & Lower bound & Upper bound\\ \midrule
+$d_\text{Cr}$ / nm & Cr layer thickness & $0.0$& $1.5$\\ 
+$d_\text{Sc}$ / nm & Sc layer thickness& $0.0$& $1.5$\\ 
+$\sigma$ / nm & N\'{e}vot-Croce parameter& $0.0$& $0.5$\\ 
+&(identical for all interfaces)&&\\
+$\rho_\text{Cr}$ &Cr density w.r.t.~bulk density & $0.5$& $1.0$\\ 
+$\rho_\text{SC}$ &Sc density w.r.t.~bulk density& $0.5$& $1.0$\\ 
+\midrule
+\multicolumn{4}{c}{Capping layer}\\
+\midrule
+$d_\text{C (cap)}$ / nm & C capping layer thickness & $0.0$&$1.0$ \\ 
+$d_\text{CrO (cap)}$ / nm & SiO$_2$ capping layer thickness & $0.0$&$1.5$ \\ 
+$d_\text{Cr (cap)}$ / nm & SiO$_2$ capping layer thickness & $0.0$&$3.0$ \\ 
+$\rho_\text{C (cap)}$ &C density w.r.t.~bulk density& $0.0$& $1.0$\\ 
+$\rho_\text{CrO (cap)}$& CrO density w.r.t.~bulk density& $0.0$& $1.0$\\
+$\rho_\text{Cr (cap)}$& Cr (cap) density w.r.t.~bulk density & $0.5$& $1.0$  \\
+ \bottomrule
+\end{tabular}
+\end{table*}
+
+The reflectivity of the sample in the water window spectral range from \nm{3.12} to \nm{3.16} was measured at the \gls{sx700} beamline at \gls{bessy}. The angle of incidence was $\alpha_i=\SI{1.5}{\degree}$ (corresponding to a grazing angle of incidence of $\alpha_i^\text{GI} = \SI{88.5}{\degree}$), which corresponds to the design goal for this mirror prototype. In addition, similar to the Mo/Si samples, a \gls{xrr} measurement was 
+conducted in the DESY laboratory using a laboratory-based X-ray diffractometer 
+(X'Pert PRO MRD, Panalytical). The diffractometer is equipped with a high-resolution goniometer and uses Cu-K$_\alpha$ radiation. The \gls{xrr} intensities were recorded using a PIXcel counting detector. The dynamic range achieved in the measurements 
+extended down to a reflectance of $10^{-6}$ for grazing angles of incidence of 
+$\alpha_i=0^\circ$ to $\alpha_i=3^\circ$.
+
+Both measurement curves are shown together in Fig.~\ref{ch_spec:fig_CrSc_EUV_XRR_data}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.6\textwidth]{img/CrSc_EUV_XRR_data}
   \caption{EUV and XRR}
   \label{ch_spec:fig_CrSc_EUV_XRR_data}
 \end{figure}
-To better illustrate the requirement of an improved model, we have conducted an 
-analysis based on the standard binary model of a Cr/Sc multilayer. The analysis 
-was done based on the EUV data shown in Fig.~\ref{fig:EUV_XRR_REUV_XRF_data}a. 
-The results are shown in Fig.~\ref{fig:EUV_XRR_reflectance} in comparison with 
-the expected XRR curve from this optimization result and the theoretically 
-achievable maximum reflectance without any roughness or interdiffusion. The Sc 
-to Cr ratio was found to be $\Gamma_\text{Sc}=0.48$ with roughness and 
-interdiffusion considered via a Nevot-Croce factor using $\sigma=0.385$ nm. The 
-individual layer thicknesses for this sample were fitted to be $d_\text{Cr} = 
-0.81$ nm and $d_\text{Sc}= 0.75$ nm. While the EUV reflectance curve (cf.~inset 
-in Fig.~\ref{fig:EUV_XRR_reflectance}) shows excellent agreement with the 
-measured data, there is a significant offset in the case of the XRR measurement 
-with the (binary) model derived from the EUV reflectance experiment. Even a 
-combined analysis could not yield a consistent result, since the Nevot-Croce 
-factor required to reduce the theoretical EUV reflectance down to the measured 
-level could not be brought into agreement with the XRR curve (result not shown 
-here). In a strictly binary model with a layer thickness ratio of 
-$\Gamma_\text{Sc}\approx 0.5$, the second Bragg peak is additionally suppressed 
-due to symmetry reasons. Thus, there is a clear mismatch with the experimental 
-observation as seen in the comparison of the fitted and measured XRR curves in 
-Fig.~\ref{fig:EUV_XRR_reflectance}.
+Due to the short period of the multilayer sample, only two Bragg peaks could be observed in this angular range. All higher order peaks were below the detection threshold of $10^{-6}$ in reflected intensity. The dominating experimental uncertainty was the inhomogenity of the sample stack across the sample area. The given uncertainty values for each of the measurement points were estimated, by measuring the peak reflectance on positions marking a cross of \mm{2} by \mm{2} in the sample center. This data was compared to theoretical expectance value based on a \gls{pso} fit of the discrete layer model above for the \gls{euv} curve (for details of the optimization results see below). From this a drift of the period thickness $D$ was obtained and uncertainties were calculated as the difference of two theoretical curves attaining the maximum and minimum $D$ values. Similarly, uncertainties for the \gls{xrr} curves were calculated by simulating theoretical curves based on the same period drifts.
+
+In comparison, the most remarkable difference with respect to the Mo/Si mirrors is the significantly reduced peak reflectance of the \gls{euv} curve in Fig.~\ref{ch_spec:fig_CrSc_EUV_XRR_data}a compared to the curves in Fig.~\ref{ch_spec:fig_ptb17_reflectance_AOI_15} and Fig.~\ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}c. The maximum value attained is only approximately $R_\text{max} \approx 15\%$ while it is up to $R_\text{max} \approx \SI{70}{\percent}$ for the Mo/Si systems. The reasons for this are the different spectral range and the material properties at the water window wavelengths.
+
+To better illustrate the differences to the Mo/Si systems, we have conducted an 
+analysis based on the discrete layer model of a Cr/Sc multilayer as described above. The particle swarm optimization was done based on the EUV data shown in Fig.~\ref{ch_spec:fig_CrSc_EUV_XRR_data}a and the parameters and limits listed in table~\ref{ch_spec:tbl_cr_sc_binary_parameters}. The resulting parameters are listed in table~\ref{ch_spec:tbl_cr_sc_binary_pso_results}.
+\begin{table}[htbp]
+\centering
+\caption{\gls{pso} fit results for the discrete layer Cr/Sc multilayer model. The bulk multilayer parameters were obtained by exclusively applying the \gls{pso} method to the \gls{euv} data. The capping layer parameters were deducted from the \gls{xrr} data excluding the Bragg peaks in a combined analysis.}
+\label{ch_spec:tbl_cr_sc_binary_pso_results}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Parameter &  \gls{pso} result\\ \midrule
+$d_\text{Cr}$ / nm &  $0.8224$\\ 
+$d_\text{Sc}$ / nm &  $0.7510$\\ 
+$\sigma$ / nm &  $0.375$\\ 
+$\rho_\text{Cr}$  & $0.876$\\ 
+$\rho_\text{Sc}$ & $0.957$\\ 
+\midrule
+\multicolumn{2}{c}{Capping layer}\\
+\midrule
+$d_\text{C (cap)}$ / nm  & $0.462$ \\ 
+$d_\text{CrO (cap)}$ / nm  & $1.143$ \\ 
+$d_\text{Cr (cap)}$ / nm  & $2.322$ \\ 
+$\rho_\text{C (cap)}$ & $0.502$\\ 
+$\rho_\text{CrO (cap)}$& $0.618$\\
+$\rho_\text{Cr (cap)}$ & $0.851$\\
+ \bottomrule
+\end{tabular}
+\end{table}
+The capping layer results were obtained in a combined \gls{pso} analysis based on the \gls{euv} and \gls{xrr} data excluding the areas of the Bragg peaks. This grazing incidence reflectivity data has a very high sensitivity for the top surface layers, which can not be deducted from an \gls{euv} curve alone as demonstrated in Sec.~\ref{ch_spec:sec_reconstruction_PTB17}.
+
+The theoretical curve obtained from the \gls{pso} procedure is shown in Fig.~\ref{ch_spec:fig_CrSc_binary_model_EUV_vs_XRR} in direct comparison with the theoretically achievable maximum reflecticity curve.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.45\textwidth]{img/CrSc_binary_fit_vs_max_refl}
-  \caption{a) Fitted experimental EUV reflectance curves across the wavelength 
-of the radiation impinging at $1.5^\circ$ from normal, based on the binary 
-model. The green curve shows the maximum possible reflectance in the water 
-window assuming a perfect multilayer system without roughness or 
-interdiffusion. b) The optimal model based on the analysis of the EUV 
-reflectance (cf.~Fig.~\ref{fig:EUV_XRR_reflectance}a) shows a clear mismatch 
-with the measured XRR curve in the second Bragg peak.
-}
+  \caption{Fitted experimental EUV reflectance curves across the wavelength 
+of the radiation impinging at $\alpha_i=1.5^\circ$ from normal, based on the binary 
+model. The green curve shows the maximum possible reflectance assuming a perfect multilayer system without roughness or interdiffusion.}
   \label{ch_spec:fig_CrSc_binary_fit_vs_max_refl}
 \end{figure}
-
+The latter was obtained by calculating the resulting reflectivity based on the parameter results in table~\ref{ch_spec:tbl_cr_sc_binary_pso_results}, but without any roughness or interdiffusion, i.e.~by requiring $\sigma \equiv 0.0$. The Sc 
+to Cr ratio was found to be $\Gamma_\text{Sc}= d_\text{Sc}/d_\text{Cr} = 0.48$ with a high \gls{rms} value of $\sigma=0.385$ nm for the Nevot-Croce factor. While the EUV reflectance curve shows excellent agreement with the measured data, there is a significant offset to the theoretically achievable maximum reflectance. For the particular model derived above, theoretical reflectance values of $R_\text{max} > \SI{50}{\percent}$ are possible. This large difference, especially compared to Mo/Si systems which are very close to the theoretically achievable maximum reflectance (cf.~Fig.~\ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}c), hints at strong roughness or intermixing of the two materials. To verify the applicability of the discrete (binary) layer model used here, the calculated curves for both experiments, the \gls{euv} and \gls{xrr} curve, are shown together in Fig.~\ref{ch_spec:fig_CrSc_binary_model_EUV_vs_XRR}.
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{img/CrSc_binary_model_EUV_vs_XRR}
-  \caption{a) Fitted experimental EUV reflectance curves across the wavelength 
-of the radiation impinging at $1.5^\circ$ from normal, based on the binary 
-model. The green curve shows the maximum possible reflectance in the water 
-window assuming a perfect multilayer system without roughness or 
-interdiffusion. b) The optimal model based on the analysis of the EUV 
-reflectance (cf.~Fig.~\ref{fig:EUV_XRR_reflectance}a) shows a clear mismatch 
-with the measured XRR curve in the second Bragg peak.
-}
+  \caption{a) Measured \gls{euv} reflectivity curve for and near-normal angle of incidence of $\alpha_i=\SI{1.5}{\degree}$ together with calculated curve of the \gls{pso}-based binary model reconstruction. b) Measured and calculated \gls{xrr} curves for the same sample and model parameters at grazing angles of incidence using radiation at the Cu-K$_\alpha$ wavelength. A clear mismatch of the theoretical curve and the measured data can be observed for the second Bragg peak between $\alpha_i^\text{GI} = \SI{5.0}{\degree}$ and $\alpha_i^\text{GI} = \SI{6.0}{\degree}$.}
   \label{ch_spec:fig_CrSc_binary_model_EUV_vs_XRR}
 \end{figure*}
+
+Again, the \gls{euv} data is matched excellently, while in the case of the XRR measurement the first Bragg peak is found to be matched by the model also in the hard x-ray regime. However, the second Bragg resonance, clearly visible with a peak reflectance value of approximately $10^{-3}$ is not represented by the model at all. A fully
+combined analysis similarly to the approach in Sec.~\ref{ch_spec:sec_mo_si_c} could not yield a consistent result. The \gls{rms} value for $\sigma$ required to reduce the theoretical EUV reflectance down to the measured 
+level could not be brought into agreement with the XRR curves second Bragg peaks appearance. In a strictly binary model like this one with a layer thickness ratio of 
+$\Gamma_\text{Sc}\approx 0.5$, the second Bragg peak is additionally suppressed 
+due to symmetry reasons. Thus, there is a clear mismatch of the model reconstruction and the experimental observations, mostly due to the complementary data delivered through the measurement of the second Bragg peak of the \gls{xrr} curve. This is a strong indicator, that the simple model as defined above does not suffice to describe the physical situation of the sample. Therefore, a more elaborate model is required introducing additional parameters to account for the increased complexity of the samples layer properties compared to the Mo/Si sample systems above.
 
 \subsection{Extending The Model to Graded Interfaces and Interdiffusion}
 Instead of the simple binary layer model, a gradual interface model is 
@@ -483,7 +504,7 @@ interface region with sinusoidal profiles is sampled with a fixed number of
 equally spaced points in $z$-direction, effectively creating a region of thin 
 sublayers with a gradually changing index of refraction. The parameters of our 
 multilayer model are listed in Table~\ref{tbl:parametrization},
-\begin{table*}
+\begin{table*}[htbp]
 \centering
 \caption{Multilayer parametrization and parameter limits}
 \label{tbl:parametrization}
@@ -532,6 +553,13 @@ interfaces and is limited to the interval $\Gamma_\sigma \in [0,1]$. Note that
 $s_\text{Sc}$ and $s_\text{Cr}$ are half periods of the sinus functions used to 
 describe the interface profiles. Therefore the condition $s_\text{Sc} + 
 s_\text{Cr} \leq D$ holds.
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{img/CrSc_bianry_vs_gradual_model_fits}
+  \caption{Comparison of the reconstructions of both models for the \gls{euv} and \gls{xrr} data. a) Measured \gls{euv} reflectivity curve for and near-normal angle of incidence of $\alpha_i=\SI{1.5}{\degree}$ together with calculated curve of the \gls{pso}-based binary model reconstruction. b) Measured and calculated \gls{xrr} curves for the same sample and model parameters at grazing angles of incidence using radiation at the Cu-K$_\alpha$ wavelength. A clear mismatch of the theoretical curve and the measured data can be observed for the second Bragg peak between $\alpha_i^\text{GI} = \SI{5.0}{\degree}$ and $\alpha_i^\text{GI} = \SI{6.0}{\degree}$.
+  c) Measured \gls{euv} reflectivity curve for and near-normal angle of incidence of $\alpha_i=\SI{1.5}{\degree}$ together with calculated curve of the \gls{pso}-based gradual model reconstruction. d) Measured and calculated \gls{xrr} curves for the same sample and model parameters at grazing angles of incidence using radiation at the Cu-K$_\alpha$ wavelength.}
+  \label{ch_spec:fig_CrSc_bianry_vs_gradual_model_fits}
+\end{figure*}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.45\textwidth]{img/CrSc_numerical_uncertainty_mixlayer}
