@@ -363,9 +363,6 @@ The identical blue solid line in both subfigures indicates the maximum peak refl
 
 For a deeper investigation of the interface morphology during the presumed crystallization threshold, \gls{euv} diffuse scattering experiments have been conducted for selected samples of the respective set. The selection is marked with open circles in Fig.~\ref{ch_spec:fig_MoSi_fitted_mo_and_fitted_D}. To gain a deeper understanding of the rflectivity dip and the period increase, the samples in vicinity of this feature in the Fig.~\ref{ch_spec:fig_EUV_peak_refl} and Fig.~\ref{ch_spec:fig_MoSi_fitted_mo_and_fitted_D} were investigated in comparison to reference samples above and below the threshold. This analysis is the topic of chapter~\ref{ch_diff} of this thesis and described and discussed in detail there based on the reconstruction results obtained here.
 
-% To better illustrate the differences, the peak value is shown in \ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}c together with a theoretical curve as reference. The latter illustrates the maximum achievable reflectance based on the nominal layer layout without any roughness or interdiffusion present. The comparison of the two sample sets yields a higher peak reflectance value for the polished samples for most molybdenum layer thicknesses. Both curves for both sample sets show significant drops in the reflectance for the values between $d_\text{Mo}^\text{nom} = \nm{2.21}$ and $d_\text{Mo}^\text{nom} = \nm{2.38}$ for the unpolished samples and $d_\text{Mo}^\text{nom} = \nm{1.70}$ and $d_\text{Mo}^\text{nom} = \nm{1.85}$ for the polished samples, respectively. For both curves, a peak reflectance value dependency on the respective molybdenum thickness similar to the ideal theoretical curve can be identified, excluding the aforementioned dips. This is in good agreement with the mention on an ideal molybdenum layer thickness ratio of approximately $40\%$ above. In accordance with the literature \cite{bajt_investigation_2001}, the appearance of the dip for the unpolished samples at approximately $d_\text{Mo}^\text{nom} \approx \nm{2.4}$ is most likely associated with the crystallization threshold for the appearance of crystallites inside the molybdenum layer. In case of the polished samples, this threshold appears to occur earlier, i.e.~at lower thickness values.
-
-
  
 
 
@@ -469,7 +466,7 @@ model. The green curve shows the maximum possible reflectance assuming a perfect
   \label{ch_spec:fig_CrSc_binary_fit_vs_max_refl}
 \end{figure}
 The latter was obtained by calculating the resulting reflectivity based on the parameter results in table~\ref{ch_spec:tbl_cr_sc_binary_pso_results}, but without any roughness or interdiffusion, i.e.~by requiring $\sigma \equiv 0.0$. The Sc 
-to Cr ratio was found to be $\Gamma_\text{Sc}= d_\text{Sc}/d_\text{Cr} = 0.48$ with a high \gls{rms} value of $\sigma=0.385$ nm for the Nevot-Croce factor. While the EUV reflectance curve shows excellent agreement with the measured data, there is a significant offset to the theoretically achievable maximum reflectance. For the particular model derived above, theoretical reflectance values of $R_\text{max} > \SI{50}{\percent}$ are possible. This large difference, especially compared to Mo/Si systems which are very close to the theoretically achievable maximum reflectance (cf.~Fig.~\ref{ch_spec:fig_EUV_reflectivity_unpolished_and_polished_with_peak_refl}c), hints at strong roughness or intermixing of the two materials. To verify the applicability of the discrete (binary) layer model used here, the calculated curves for both experiments, the \gls{euv} and \gls{xrr} curve, are shown together in Fig.~\ref{ch_spec:fig_CrSc_binary_model_EUV_vs_XRR}.
+to Cr ratio was found to be $\Gamma_\text{Sc}= d_\text{Sc}/d_\text{Cr} = 0.48$ with a high \gls{rms} value of $\sigma=0.385$ nm for the N\'{e}vot-Croce factor. While the EUV reflectance curve shows excellent agreement with the measured data, there is a significant offset to the theoretically achievable maximum reflectance. For the particular model derived above, theoretical reflectance values of $R_\text{max} > \SI{50}{\percent}$ are possible. This large difference, especially compared to Mo/Si systems which are very close to the theoretically achievable maximum reflectance (cf.~Fig.~\ref{ch_spec:fig_EUV_peak_refl}), hints at strong roughness or intermixing of the two materials. To verify the applicability of the discrete (binary) layer model used here, the calculated curves for both experiments, the \gls{euv} and \gls{xrr} curve, are shown together in Fig.~\ref{ch_spec:fig_CrSc_binary_model_EUV_vs_XRR}.
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{img/CrSc_binary_model_EUV_vs_XRR}
@@ -484,10 +481,7 @@ $\Gamma_\text{Sc}\approx 0.5$, the second Bragg peak is additionally suppressed
 due to symmetry reasons. Thus, there is a clear mismatch of the model reconstruction and the experimental observations, mostly due to the complementary data delivered through the measurement of the second Bragg peak of the \gls{xrr} curve. This is a strong indicator, that the simple model as defined above does not suffice to describe the physical situation of the sample. Therefore, a more elaborate model is required introducing additional parameters to account for the increased complexity of the samples layer properties compared to the Mo/Si sample systems above.
 
 \subsection{Extending The Model to Graded Interfaces and Interdiffusion}
-Instead of the simple binary layer model, a gradual interface model is 
-introduced to better reflect the electron density profile due to 
-interdiffusion. A corresponding profile is shown in Fig.~\ref{fig:CrScModel} 
-for illustration in comparison to the binary model.
+The physical situation of Cr/Sc multilayer systems with individual layer thicknesses in the sub-nanometer regime is significanly different than in comparably large thicknesses of several nanometers such as in the Mo/Si case of the two preceeding sections. It is well known \cite{prasciolu_thermal_2014}, that magnetron sputtered Cr and Sc multilayer systems, similarly to the Mo/Si systems, suffer from imperfect interfaces. The main reason for that is interdiffusion of the two materials into each other. In addition, roughness at the interfaces exsists and further dimnishes an ideal chemically abrupt transition from one material to the next. Due to the small layer thicknesses required to achieve the first Bragg resonance upon near-normal incidence with radiation of $\lambda=\nm{3.14}$, roughness and interdiffusion may occur over an interdiffusion zone as large as the total layer thickness itself. The results from the specular \gls{euv} and \gls{xrr} measurements shown above, clearly demonstrate that a binary model with only a N\'{e}vot-Croce daming parameter $\sigma$ due not provide an accurate model for the physical reality. Instead, a more complex model is required. Here, we define a periodic model, repeated in units of one bilayer period, to account for possible interdiffusion gradients and intermixing between the two materials in the stack. The symmetry of two identically thick layers within one period in the simple model above leads to a supression of the second order Bragg peak. Nevertheless, physically this symmetry effect can be broken by accounting for interdiffusion zones with different thicknesses, depending on whether Cr was deposited on Sc or vice versa. Thereby, the second Bragg peak is no longer supressed even though both layers have the same thickness if the interdiffusion zones are asymmetric. Physical causality further dictates, that the two layers intermix gradually. The model, which we use to reconstruct the Cr/Sc multliayer sample measured above is illustrated in Fig.~\ref{ch_spec:fig_CrScModel} in direct comparison to the simple model used before.
 \begin{figure*}[htb]
     \def\svgwidth{\textwidth}
     \import{svg/}{CrSc_model.pdf_tex}
@@ -502,16 +496,22 @@ and $s_\text{Cr}$. The effective index of refraction for both layers is given
 by $\tilde{n}_\text{Sc}$ and $\tilde{n}_\text{Cr}$, respectively.}
     \label{ch_spec:fig_CrScModel}
 \end{figure*}
-The calculation of the electromagnetic fields is then conducted based on this 
-model with the matrix formalism introduced in the preceding section. The 
-interface region with sinusoidal profiles is sampled with a fixed number of 
-equally spaced points in $z$-direction, effectively creating a region of thin 
-sublayers with a gradually changing index of refraction. The parameters of our 
-multilayer model are listed in Table~\ref{tbl:parametrization},
+The interdiffsion zones are modeled following a sinosodial profile, which represents a smooth transition from the refractive index of the Cr layer to the Sc layer and vice versa. The thickness of those zones is given by the parameters $s_\text{Sc}$ and $s_\text{Cr}$. For the calculation of the electromagnetic fields inside the stack, the interface region is sampled with a fixed number of equally spaced points in $z$-direction, effectively creating a region of thin sublayers with a gradually changing index of refraction (illustrated by the red steped function in Fig.~\ref{ch_spec:fig_CrScModel}). To take into account intermixing extending across the full period, we introduced an intermixing parameter $\eta$. The effective indices of refraction of the individual Cr and Sc layers are then given through
+\begin{align}
+\tilde{n}_\text{Cr} &=(\eta/2) n_\text{Sc} + (1-\eta/2) n_\text{Cr} \text{,} 
+\nonumber\\
+\tilde{n}_\text{Sc} &=(1-\eta/2) n_\text{Sc} + (\eta/2) n_\text{Cr} \text{,} 
+\label{eqn:effective_n} \\
+&\text{for} \quad \eta \in [0,1] \text{,}\nonumber
+\end{align}
+where $n_\text{Cr}$ and $n_\text{Sc}$ are the tabulated values \cite{henke_x-ray_1993} 
+with densities $\rho_\text{Cr}$ and $\rho_\text{Sc}$.
+
+With the definition of the model as outlined above, natural restrictions arise for the parameters. As an example, the interdiffusion zone region can not extend across half of the thickness of the original layers total thickness described by the parameter $d_\text{Cr}$ or $d_\text{Sc}$, respectively. Instead, the intermixing parameter would have to be increased to account for that situation. The model is therefore parameterized according to the list of effective parameters given in table~\ref{ch_spec:tbl_CrSc_gradual_parametrization} together with their allowed ranges for the optimization procedure in analogy to the analysis conducted in the previous sections. The range limits arise either from physical plausibility or are intrinsic properties of the parameter definition.
 \begin{table*}[htbp]
 \centering
 \caption{Multilayer parametrization and parameter limits}
-\label{tbl:parametrization}
+\label{ch_spec:tbl_CrSc_gradual_parametrization}
 \begin{tabular}{@{}llll@{}}
 \toprule
 Parameter & Definition & Lower bound & Upper bound\\ \midrule
@@ -526,37 +526,22 @@ $\rho_{Cr}$ &Cr density w.r.t.~bulk density& 0.5& 1.0\\
  \bottomrule
 \end{tabular}
 \end{table*}
-where $D$ is the full period thickness, $d_\text{Sc}$ and $d_\text{Cr}$ are the 
+Here, $D$ is the full period thickness, $d_\text{Sc}$ and $d_\text{Cr}$ are the 
 nominal layer thicknesses of the Cr and Sc layers as indicated in 
-Fig.~\ref{fig:CrScModel}, and $\rho_\text{Sc}$ and $\rho_\text{Cr}$ their 
+Fig.~\ref{ch_spec:fig_CrScModel}, and $\rho_\text{Sc}$ and $\rho_\text{Cr}$ their 
 respective densities with respect to their bulk densities 
 $\tilde{\rho_\text{Sc}} = 2.989$ g/cm$^3$ and $\tilde{\rho_\text{Cr}} = 7.19$ 
-g/cm$^3$ \cite{henke_x-ray_1993}. The parameters $s_\text{Sc}$ and $s_\text{Cr}$ describe 
-the full width of the interdiffusion layers as shown in 
-Fig.~\ref{fig:CrScModel}. To take into account intermixing extending across the 
-full period, we introduced an intermixing parameter $\eta$. The effective 
-indices of refraction of the individual Cr and Sc layers are then given through
-\begin{align}
-\tilde{n}_\text{Cr} &=(\eta/2) n_\text{Sc} + (1-\eta/2) n_\text{Cr} \text{,} 
-\nonumber\\
-\tilde{n}_\text{Sc} &=(1-\eta/2) n_\text{Sc} + (\eta/2) n_\text{Cr} \text{,} 
-\label{eqn:effective_n} \\
-&\text{for} \quad \eta \in [0,1] \text{,}\nonumber
-\end{align}
-where $n_\text{Cr}$ and $n_\text{Sc}$ are the tabulated values \cite{henke_x-ray_1993} 
-with densities $\rho_\text{Cr}$ and $\rho_\text{Sc}$. The loss of specular 
+g/cm$^3$ \cite{henke_x-ray_1993}. The loss of specular 
 reflectance due to roughness-induced scattering is considered through the 
-Nevot-Croce factor using $\sigma_\text{r}$ identical at each interface for the 
-reasons described in the above section. To improve the optimization procedure 
-and to reduce correlations between individual parameters, we have selected some 
-effective parameters as defined in Table~\ref{tbl:parametrization}. The 
-parameter $\Gamma_\text{Sc}$ indicates the portion of the Sc layer thickness 
-with respect to the full period thickness $D$; $\Gamma_\sigma$ describes the 
-asymmetry of the widths of the sinusoidal profiles at the Cr/Sc and Sc/Cr 
-interfaces and is limited to the interval $\Gamma_\sigma \in [0,1]$. Note that 
+N\'{e}vot-Croce factor using $\sigma_\text{r}$ identical at each interface. This is necessary to account for diffusely scattered light, which is missing in the measured specularly reflected radiation but can not be attributed to contrast loss due to interdiffusion. The parameter $\Gamma_\text{Sc}$ indicates the portion of the Sc layer thickness 
+with respect to the full period thickness $D$, which together uniquely define the thickness $d_\text{Cr}$; $\Gamma_\sigma$ describes the 
+asymmetry of the widths of the interdiffusion zones at the Cr on Sc and Sc on Cr 
+interfaces and is intrinsically limited to the interval $\Gamma_\sigma \in [0,1]$. Note that 
 $s_\text{Sc}$ and $s_\text{Cr}$ are half periods of the sinus functions used to 
 describe the interface profiles. Therefore the condition $s_\text{Sc} + 
 s_\text{Cr} \leq D$ holds.
+
+
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{img/CrSc_bianry_vs_gradual_model_fits}
