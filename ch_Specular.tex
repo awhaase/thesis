@@ -270,7 +270,7 @@ $\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
 \end{tabular}
 \end{table*}
 
-\paragraph{Optimization functional and procedure}
+\paragraph{Optimization functional and procedure} \label{ch_spec:sec_MoSi_euv_xrr_combined}
 The data analysis was conduced similarly to the procedure described in Sec.~\ref{ch_spec:sec_reconstruction_PTB17}. However, for the samples studied here, data from two seperate experiments was measured with the goal to improve the reconstruction of the model. Due to the increased amount of data through the additional \gls{xrr} measurements, a definition for a combined $\chi^2$ functional is required to allow an analysis based on both data sets. The two data sets, i.e.~the \gls{euv} and \gls{xrr} reflectivity curves have significantly different number of points data points, which are not entirely idependend of each other. In case of the \gls{xrr} curve increasing the number of data points, e.g.~by reducing the angular step size by half does not lead to better statistics due to systematic errors. Defining a $\chi^2$ functional as the total sum of all measured data point residuals, i.e.~both the \gls{euv} data and the \gls{xrr} data would therefore create an unwanted weighting due to the large amount of \gls{xrr} data points in comparison to far fewer \gls{euv} data points. To avoid this effect, we define the combined $\chi^2$ functional as the sum of the reduced $\tilde{\chi}^2$ functionals. The $\tilde{\chi}^2$ is equivalently defined to Eq.~\eqref{ch_spec:eqn_reduced_chi_squared} through,\begin{align}
 \tilde{\chi}^2 = \frac{1}{M-P} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
 - I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,}
@@ -541,7 +541,23 @@ $s_\text{Sc}$ and $s_\text{Cr}$ are half periods of the sinus functions used to
 describe the interface profiles. Therefore the condition $s_\text{Sc} + 
 s_\text{Cr} \leq D$ holds.
 
+The discretization of the smooth interface profile in the interdiffusion zones introduces an additional numerical uncertainty through the number of discretization points $n$ required to reflect the physical situation of a smooth transition. To assert a lower limit for this number, we have evaluated the mean error introduced by coarse sampling. The most accurate experiment of the analysis within this chapter is given by the \gls{euv} reflectivity curve, which serves as a reference for this assertation through the sum of the squared uncertainty of each data point in Fig.~\ref{ch_spec:fig_CrSc_EUV_XRR_data}a, $\sum_m \tilde{\sigma}_m$. 
 
+The numerical error of the model depending on the interface sampling through gradual sublayers was evaluated by comparing the sum of squares
+\begin{align}
+\chi_n &= \sum\limits_m (I^{n=100}_m - I^n_m)^2
+\end{align}
+of the difference theoretical \gls{euv} curves with increasing numbers of gradual interfaces and an ``ideal'' smooth transition represented by $100$ sublayers. The model parameters used for this analysis were obtained through a \gls{pso} optimization of the model with respect to the \gls{euv} reflectivity curve.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{img/CrSc_numerical_uncertainty_mixlayer}
+  \caption{Numerical uncertainty}
+  \label{ch_spec:fig_CrSc_numerical_uncertainty_mixlayer}
+\end{figure}
+As illustrated in Fig.~\ref{ch_spec:fig_CrSc_numerical_uncertainty_mixlayer}, the experimental uncertainty dominates at the lower limit of $n=10$ sublayers for the interface zone.
+For the analysis is this chapter, and due to reasons of numerical efford required to calculate the electromagnetic field for all measurements discussed here, we use $n=15$ sublayers for all calculations. At that value, the experimental uncertainty is clearly dominant and only a marginal additional uncertainty is aquired due to insufficient sampling.
+
+As a verification of the applicability of the model to the problem of accurately representing a physical situation that could describe the \gls{euv} and \gls{xrr} data shown in Fig.~\ref{ch_spec:fig_CrSc_EUV_XRR_data} above, we have applied the combined analysis technique for the two data sets described in Sec.~\ref{ch_spec:sec_MoSi_euv_xrr_combined} to the improved gradual model. The particle swarm optimization approach applied to obtain a global solution for the model parameters by minimizing the functional defined in Eq.~\eqref{ch_spec:eqn_Mo_Si_C_total_chi_2}. The results found for the binary model (cf.~Fig.~\ref{ch_spec:fig_CrSc_binary_model_EUV_vs_XRR}) and the gradual model are shown in direct comparison with each other in Fig.~\ref{ch_spec:fig_CrSc_bianry_vs_gradual_model_fits}.
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{img/CrSc_bianry_vs_gradual_model_fits}
@@ -549,12 +565,8 @@ s_\text{Cr} \leq D$ holds.
   c) Measured \gls{euv} reflectivity curve for and near-normal angle of incidence of $\alpha_i=\SI{1.5}{\degree}$ together with calculated curve of the \gls{pso}-based gradual model reconstruction. d) Measured and calculated \gls{xrr} curves for the same sample and model parameters at grazing angles of incidence using radiation at the Cu-K$_\alpha$ wavelength.}
   \label{ch_spec:fig_CrSc_bianry_vs_gradual_model_fits}
 \end{figure*}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.45\textwidth]{img/CrSc_numerical_uncertainty_mixlayer}
-  \caption{Numerical uncertainty}
-  \label{ch_spec:fig_CrSc_numerical_uncertainty_mixlayer}
-\end{figure}
+The \gls{euv} reflectivity curves show visually indistinguishable fits for both, the binary model as already found above and also the gradual model in Fig.~\ref{ch_spec:fig_CrSc_bianry_vs_gradual_model_fits}a and Fig.~\ref{ch_spec:fig_CrSc_bianry_vs_gradual_model_fits}c. For the binary model, we have seen the distinct mismatch with the second order Bragg peak, which is shown once again in Fig.~\ref{ch_spec:fig_CrSc_bianry_vs_gradual_model_fits}b. For the gradual interface model, we see a significant imrovement of the optimized result with perfectly match in both Bragg peaks of the \gls{xrr} curve in Fig.~\ref{ch_spec:fig_CrSc_bianry_vs_gradual_model_fits}d while also maintaining an excellent argeement with the \gls{euv} curve.
+
 
 
 \subsection{Combination of Complementary Experimental Methods}
