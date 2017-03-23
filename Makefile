@@ -31,14 +31,18 @@ clean:
 	@echo '----------------------------------------'
 	@echo '| Lösche temporäre LaTeX-files         |'
 	@echo '----------------------------------------'
-	latexmk -c
+	latexmk -C
 	rm -fv *.glo
 	rm -fv *.gls
 	rm -fv *.slo
 	rm -fv *.sls
 	rm -fv *.acn
+	rm -fv *.acr
+	rm -fv *.alg
 	rm -fv *.glg
 	rm -fv *.slg
+	rm -fv *.ist
+	rm -fv *.bbl
 
 cleanall:
 	latexmk -C
