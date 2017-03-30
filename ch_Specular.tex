@@ -383,7 +383,7 @@ The system we focus on in the rest of this chapter is composed out of a bilayer 
 \end{figure}
 The small period thickness of only $D\approx\nm{1.5}$ for this type of sample yields individual layer thicknesses in the sub-nanometer regime, for a bilayer period with approximately equal individual layer thicknesses. This is a significant difference to the Mo/Si systems treated in the beginning of this chapter, where the molybedum and silicon layers were well above $>\nm{1.7}$, even in the smallest case existed. The buffer and interdiffsion layers, which nominally have thicknesses in the same order of magnitude as expected for the Cr/Sc system, could not be characterized based on the methods employed above. We shall therefore first compare the results obtained with an approach similar to the methods in the previous sections to establish a limit to the applicability of discrete layer models.
 
-\subsection{Reconstruction with a discrete layer model approach}
+\subsection{Reconstruction with a discrete layer model approach} \label{ch_spec:sec_CrSc_resconstrution_binary}
 In analogy to Sec.~\ref{ch_spec:sec_mo_si_c}, we seek to reconstruct the individual layer thicknesses based on experimental data. For this we construct a discrete layer model as illustrated in Fig.~\ref{ch_spec:fig_Cr_Sc_model} in analogy to the procedure applied for the Mo/Si multilayer systems. The parameters of this discrete layer model are listed in table~\ref{ch_spec:tbl_cr_sc_binary_parameters} together with the upper and lower bound for the particle swarm optimization procedure.
 \begin{table*}[htbp]
 \centering
@@ -480,7 +480,7 @@ level could not be brought into agreement with the XRR curves second Bragg peaks
 $\Gamma_\text{Sc}\approx 0.5$, the second Bragg peak is additionally suppressed 
 due to symmetry reasons. Thus, there is a clear mismatch of the model reconstruction and the experimental observations, mostly due to the complementary data delivered through the measurement of the second Bragg peak of the \gls{xrr} curve. This is a strong indicator, that the simple model as defined above does not suffice to describe the physical situation of the sample. Therefore, a more elaborate model is required introducing additional parameters to account for the increased complexity of the samples layer properties compared to the Mo/Si sample systems above.
 
-\subsection{Extending The Model to Graded Interfaces and Interdiffusion}
+\subsection{Extending The Model to Graded Interfaces and Interdiffusion} \label{ch_spec:sec_CrSc_gradual_model}
 The physical situation of Cr/Sc multilayer systems with individual layer thicknesses in the sub-nanometer regime is significanly different than in comparably large thicknesses of several nanometers such as in the Mo/Si case of the two preceeding sections. It is well known \cite{prasciolu_thermal_2014}, that magnetron sputtered Cr and Sc multilayer systems, similarly to the Mo/Si systems, suffer from imperfect interfaces. The main reason for that is interdiffusion of the two materials into each other. In addition, roughness at the interfaces exsists and further dimnishes an ideal chemically abrupt transition from one material to the next. Due to the small layer thicknesses required to achieve the first Bragg resonance upon near-normal incidence with radiation of $\lambda=\nm{3.14}$, roughness and interdiffusion may occur over an interdiffusion zone as large as the total layer thickness itself. The results from the specular \gls{euv} and \gls{xrr} measurements shown above, clearly demonstrate that a binary model with only a N\'{e}vot-Croce daming parameter $\sigma$ due not provide an accurate model for the physical reality. Instead, a more complex model is required. Here, we define a periodic model, repeated in units of one bilayer period, to account for possible interdiffusion gradients and intermixing between the two materials in the stack. The symmetry of two identically thick layers within one period in the simple model above leads to a supression of the second order Bragg peak. Nevertheless, physically this symmetry effect can be broken by accounting for interdiffusion zones with different thicknesses, depending on whether Cr was deposited on Sc or vice versa. Thereby, the second Bragg peak is no longer supressed even though both layers have the same thickness if the interdiffusion zones are asymmetric. Physical causality further dictates, that the two layers intermix gradually. The model, which we use to reconstruct the Cr/Sc multliayer sample measured above is illustrated in Fig.~\ref{ch_spec:fig_CrScModel} in direct comparison to the simple model used before.
 \begin{figure*}[htb]
     \def\svgwidth{\textwidth}
@@ -579,13 +579,27 @@ At that point, it should be noted that other distortions of a perfect layer syst
 % \end{figure}
 
 \subsection{Combination of Complementary Experimental Methods}
-Due to the increased complexity of the model, the question arises how accurately any parameter of the model can be determined and whether correlations exist (cf.~Fig.~\ref{ch_spec:fig_Mo_Si_C_correlation_Si_C} as an example for correlated model parameters in case of Mo/Si multilayer systems) based on the available data and whether further analytical measurements can improve the result as this was clearly the result for the \gls{euv} and \gls{xrr} experiments shown above. For the particular case of the gradual interface model for periodic multilayer systems with sub-nanometer layer thicknesses, two additional analytic methods could possibly provide complementary information on the spacial distribution of the Cr and Sc. For that purpose, two additional experiments adding to the \gls{euv} and \gls{xrr} experiments were conducted on the sample system.
+Due to the increased complexity of the model, the question arises how accurately any parameter of the model can be determined and whether correlations exist and can be resolved (cf.~Fig.~\ref{ch_spec:fig_Mo_Si_C_correlation_Si_C} as an example for correlated model parameters in case of Mo/Si multilayer systems) based on the available data and whether further analytical measurements can improve the result as this was clearly the result for the \gls{euv} and \gls{xrr} experiments shown above. For the particular case of the gradual interface model for periodic multilayer systems with sub-nanometer layer thicknesses, in total four experiments were conducted with the goal to find a unequivocal reconstruction including low enough confidence intervals. 
 
+\subsubsection{Resonant EUV Reflectivity}
+As seen for the four layer system discussed in Sec.~\ref{ch_spec:sec_reconstruction_PTB17}, confidence intervals for the individual layer thicknesses in the range below \nm{1} could not be obtained by exclusively analyzing the \gls{euv} curve. Similarly, the combined analysis of \gls{euv} and \gls{xrr} experiments in Sec.~\ref{ch_spec:sec_MoSi_euv_xrr_combined} did improve the result but still shows fairly large confidence intervals concerning the small total layer thickness in the Cr/Sc systems. For the particular system discussed here with possibly strong interdiffusion, a technique is required that yields the total amount of Sc and equivalently Cr within a single period. For that purpose, resonant reflectivity experiments in the \gls{euv} spectral range are promising. The knowledge of the optical constants are a necessary requirement for deducting quantitative information from that kind of experiment. In case of Sc, those were measured precisely for the Sc L3 and L2 absorption edges at approximately $\lambda_\text{Sc-L} \approx \nm{3.1}$ and below by \textcite{aquila_measurements_2004}. The real and imaginary parts obtained from that experiments are shown together with the respective optical constants of Cr in Fig.~\ref{ch_exp:fig_crsc_contrast} of Sec.~\ref{ch_exp:sec_multilayer_design} in  Ch.~\ref{ch_exp}. To exploit the information contained in the optical constants of Sc, angular resolved reflectivity curves across the first Bragg peak were recorded at several wavelengths across the Sc L-edge. As the Cr dispersion is changing only marginally and smoothly across that wavelength range, any change of contrast and absorption can be attributed to the Sc in the multilayer. The corresponding measurements are shown in Fig.~\ref{ch_spec:fig_CrSc_REUV_data}.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{img/CrSc_REUV_data}
+  \caption{REUV}
+  \label{ch_spec:fig_CrSc_REUV_data}
+\end{figure}
+Each reflectivity curve was recorded within the interval from $\alpha_i = \SI{2.5}{\degree}$ to $\alpha_i = \SI{19.0}{\degree}$, depending on the selected wavelength. The wavelength range was chosen between $\lambda = \nm{2.986}$ and $\lambda = \nm{3.128}$ including the Sc L2 and L3 edges. The resulting data is analyzed in analogy to the \gls{euv} reflectivity curves in Sec.~\ref{ch_spec:sec_CrSc_gradual_model} by applying the matrix algorithm on basis of the gradual layer model and the optical constants by \textcite{aquila_measurements_2004}. The experimental uncertainties taken into account for the \gls{reuv} experiment were estimated on basis of the multilayer inhomogenity deducted as described for the \gls{euv} experiment in Sec.~\ref{ch_spec:sec_CrSc_resconstrution_binary}. The details of the reconstruction based on this dataset are shown below in this section.
 
-\begin{description}
- \item [\Gls{reuv}] The reflectivity of the sample was measured angular resolved across the first Bragg peak while tuning the wavelength in steps across the Sc L-edge. Optical constants by \cite{henke_x-ray_1993,aquila_measurements_2004}, Ch.~\ref{ch_exp}, Sec.~\ref{ch_exp:sec_multilayer_design}, Fig.~\ref{ch_exp:fig_crsc_contrast}
- \item [\Gls{xsw}] The fluorescence of the Cr K$_\alpha$ and Sc K$_\alpha$ lines were measured across the first Bragg peak as described in detail in Ch.~\ref{ch_theo}, Sec.~\ref{ch_theo:sec_xrf}
-\end{description}
+\subsubsection{Grazing Incidence X-ray Fluorescence}
+In addition to the reconstruction of the Sc content via the \gls{reuv} experiment, spacial resolved measurements are necessary to deduct the interface profile in the gradual layer model. As discussed in Sec.~\ref{ch_spec:sec_CrSc_gradual_model}, asymmetric interface regions provide a possibility to observe a second Bragg peak in the \gls{xrr} measurement, even though both layers in the period have equal nominal thickness. To obtain information on that spacial distribution of both materials within a period, \gls{xrf} experiments exploiting the formation of a standing wave when scanning across the first Bragg peak were performed. The details of the method are described in detail in Ch.~\ref{ch_theo}, Sec.~\ref{ch_theo:sec_xrf}.
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{img/CrSc_fluorescence_data}
+  \caption{XRF}
+  \label{ch_spec:fig_CrSc_fluorescence_data}
+\end{figure*}
 
 
 Following the maximum likelihood approach employing the \gls{mcmc} method as outlined in Sec.~\ref{ch_spec:sec_maximum_likelihood}, each parameter of the model was evaluated for each measurement.
@@ -637,20 +651,6 @@ at an excitation photon energy of $6.25$ keV for the Sc-K and Cr-K lines by spec
 deconvolution using detector response functions.
 
 
-\subsubsection{Resonant EUV Reflectivity}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.7\textwidth]{img/CrSc_REUV_data}
-  \caption{REUV}
-  \label{ch_spec:fig_CrSc_REUV_data}
-\end{figure}
-\subsubsection{Grazing Incidence X-ray Fluorescence}
-\begin{figure*}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{img/CrSc_fluorescence_data}
-  \caption{XRF}
-  \label{ch_spec:fig_CrSc_fluorescence_data}
-\end{figure*}
 
 \subsection{Model Uniqueness and Confidence Intervals}
 The solution of the inverse problem based on the particle swarm optimization 
