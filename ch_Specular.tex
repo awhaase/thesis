@@ -606,57 +606,42 @@ Since the photon energy of $E_\text{ph} = \ev{5500}$ is below the K-edge of Cr, 
 The fluorescence curves for Cr and Sc show distinctly different behavior, of the expected s-curve-shape (cf.~Fig.~\ref{ch_theo:fig_xrf_scheme}). For the analysis, the result at photon energies of $E_\text{ph}=\ev{5500}$ (Fig.~\ref{ch_spec:fig_CrSc_fluorescence_data}a)  was not taken into account, as the information is redundant to the result at  $E_\text{ph}=\ev{6250}$ (Fig.~\ref{ch_spec:fig_CrSc_fluorescence_data}b). As mentioned above, the theoretical description on how the relative fluorescence is calculated based on the gradual model is elaborated on in detail in Ch.~\ref{ch_exp}, Sec.~\ref{ch_exp:sec_xrf_at_fcm}.
 
 \subsubsection{Combined Analysis}
-Following the maximum likelihood approach employing the \gls{mcmc} method as outlined in Sec.~\ref{ch_spec:sec_maximum_likelihood}, each parameter of the model was evaluated for each measurement.
-
-
-The reconstruction of the multilayer structure was conducted with a series of 
-experiments. The minimization functional of the combined analysis of the 
-optimization problem $\chi^2$ is defined as the total sum of the reduced 
-least-squares functionals for each experiment,
+With the two additional measurements described above, the total of four data sets (\gls{euv}, \gls{xrr}, \gls{reuv} and \gls{xrf}) exists for the Cr/Sc multilayer sample to reconstruct the parameters of the gradual interface model. In analogy to the combined analysis conducted for the Mo/Si/C systems in Sec.~\ref{ch_spec:sec_MoSi_euv_xrr_combined}, we define the minimization functional for the combined analysis of all the datasets as
 \begin{align}
 \chi^2 = \tilde{\chi}^2_\text{EUV} +\tilde{\chi}^2_\text{XRR} 
 +\tilde{\chi}^2_\text{REUV} + 
 \tilde{\chi}^2_\text{GIXRF(Sc)}+\tilde{\chi}^2_\text{GIXRF(Cr)}\text{,} 
-\label{eqn:total_chi_2}
+\label{ch_spec:eqn_CrSc_total_chi_2}
 \end{align}
 where each of the reduced functionals is defined as
 \begin{align}
 \tilde{\chi}^2 = \frac{1}{m - p} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
 - I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,} 
-\label{eqn:reduced_chi_2}
+\label{ch_spec:eqn_CrSc_reduced_chi_2}
 \end{align}
 with $m$ being the number of measurement points in each experiment and $p$ the 
 number of parameters for the model. Statistical and systematic uncertainties 
 for each data point are included in $\tilde{\sigma}_m$. The definition of 
-Eq.~\eqref{eqn:total_chi_2} ensures that all experiments are weighted equally 
-considering their respective uncertainties.
+Eq.~\eqref{ch_spec:eqn_CrSc_total_chi_2} ensures that all experiments are weighted equally 
+considering their respective uncertainties. This functional corresponds to the combined $\chi^2$ functional defined in \eqref{ch_spec:eqn_Mo_Si_C_total_chi_2}, augmented by the additional measurements conducted here.
 
-The minimization is performed with a particle-swarm optimizer (PSO) 
-\cite{kennedy_particle_2011}. In the case of an optimization problem with many local 
-minima, this provides an advantage with respect to gradient methods, where the 
-fit result is dependent on the choice of starting values. Similar approaches 
-employing genetic algorithms for solving the inverse problem of scatterometry 
-can be found in the literature \cite{del_rio_modeling_2000}. In the case of the model 
-parametrization given in Sec.~\ref{sec:model}, the choice of the parameter 
-intervals is defined either by physical plausibility or the fact that the 
-parameter is intrinsically defined in a certain interval, the same as for the 
-intermixing $\eta$, for example. The intervals used in our analysis are listed 
-in Table \ref{tbl:parametrization}.
+Similar, as for the other two sample systems treated in this chapter, the parameters or the model, here the gradual interface model with the parameters and their limits listed in table~\ref{ch_spec:tbl_CrSc_gradual_parametrization}, were first obtained using the \gls{pso} method to find a solution reproducing the experimental results. Secondly, following the maximum likelihood approach employing the \gls{mcmc} method as detailed in Sec.~\ref{ch_spec:sec_maximum_likelihood}, starting from this the uniqueness and confidence intervals for each parameter were obtained.
 
-The PSO analysis was conducted for each experiment individually and for the 
-combination of all experiments. In the case of the XRR measurements, only the 
+In order to assess the information content within each of the experimental methods, the \gls{pso} and \gls{mcmc} analysis was conducted for each experiment individually and for the 
+combination of all experiments. In the case of the \gls{xrr} measurements, only the 
 first and second Bragg peaks were considered for the combined analysis. The 
 region in between mainly reflects the top surface layers, i.e.~capping layers, 
 and potential surface contamination layers, which were analyzed separately 
-based exclusively on the XRR data. The results were added as fixed surface 
-layers to the model for all theoretical calculations of all experiments. The 
-analysis of the GIXRF experiment was conducted based on the fluorescence data 
-at an excitation photon energy of $6.25$ keV for the Sc-K and Cr-K lines by spectral 
+based exclusively on the \gls{xrr} data. The results were added as fixed surface 
+layers to the model for all theoretical calculations of all experiments (cf.~model illustration in Fig.~\ref{ch_spec:fig_Cr_Sc_model}). The 
+analysis of the \gls{xrf} experiment was conducted based on the fluorescence data 
+at an excitation photon energy of \ev{6250} for the Sc-K and Cr-K lines by spectral 
 deconvolution using detector response functions.
 
 
 
-\subsection{Model Uniqueness and Confidence Intervals}
+
+\subsection{Results of the reconstruction}
 The solution of the inverse problem based on the particle swarm optimization 
 technique ideally delivers the global minimum of the total $\chi^2$ functional 
 in the specified parameter space. However, no information is obtained about the 
