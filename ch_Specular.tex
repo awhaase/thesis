@@ -578,7 +578,7 @@ At that point, it should be noted that other distortions of a perfect layer syst
 %   \label{ch_spec:fig_CrSc_drift}
 % \end{figure}
 
-\subsection{Combination of Complementary Experimental Methods}
+\subsection{Addition of Complementary Experimental Methods}
 Due to the increased complexity of the model, the question arises how accurately any parameter of the model can be determined and whether correlations exist and can be resolved (cf.~Fig.~\ref{ch_spec:fig_Mo_Si_C_correlation_Si_C} as an example for correlated model parameters in case of Mo/Si multilayer systems) based on the available data and whether further analytical measurements can improve the result as this was clearly the result for the \gls{euv} and \gls{xrr} experiments shown above. For the particular case of the gradual interface model for periodic multilayer systems with sub-nanometer layer thicknesses, in total four experiments were conducted with the goal to find a unequivocal reconstruction including low enough confidence intervals. 
 
 \subsubsection{Resonant EUV Reflectivity}
@@ -605,8 +605,16 @@ Since the photon energy of $E_\text{ph} = \ev{5500}$ is below the K-edge of Cr, 
 
 The fluorescence curves for Cr and Sc show distinctly different behavior, of the expected s-curve-shape (cf.~Fig.~\ref{ch_theo:fig_xrf_scheme}). For the analysis, the result at photon energies of $E_\text{ph}=\ev{5500}$ (Fig.~\ref{ch_spec:fig_CrSc_fluorescence_data}a)  was not taken into account, as the information is redundant to the result at  $E_\text{ph}=\ev{6250}$ (Fig.~\ref{ch_spec:fig_CrSc_fluorescence_data}b). As mentioned above, the theoretical description on how the relative fluorescence is calculated based on the gradual model is elaborated on in detail in Ch.~\ref{ch_exp}, Sec.~\ref{ch_exp:sec_xrf_at_fcm}.
 
-\subsubsection{Combined Analysis}
-With the two additional measurements described above, the total of four data sets (\gls{euv}, \gls{xrr}, \gls{reuv} and \gls{xrf}) exists for the Cr/Sc multilayer sample to reconstruct the parameters of the gradual interface model. In analogy to the combined analysis conducted for the Mo/Si/C systems in Sec.~\ref{ch_spec:sec_MoSi_euv_xrr_combined}, we define the minimization functional for the combined analysis of all the datasets as
+\subsection{Reconstruction and Maximum Likelihood Evaluation}
+With the two additional measurements described above, the total of four data sets (\gls{euv}, \gls{xrr}, \gls{reuv} and \gls{xrf}) are available for the Cr/Sc multilayer sample to reconstruct the parameters of the gradual interface model. The full dataset is compiled in Fig.~\ref{ch_spec:fig_CrSc_all_data}.
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{img/CrSc_all_data}
+  \caption{All relevant data}
+  \label{ch_spec:fig_CrSc_all_data}
+\end{figure*}
+
+As in the combined analysis conducted for the Mo/Si/C systems in Sec.~\ref{ch_spec:sec_MoSi_euv_xrr_combined}, we define the minimization functional for the combined analysis of all the datasets as
 \begin{align}
 \chi^2 = \tilde{\chi}^2_\text{EUV} +\tilde{\chi}^2_\text{XRR} 
 +\tilde{\chi}^2_\text{REUV} + 
@@ -625,8 +633,39 @@ for each data point are included in $\tilde{\sigma}_m$. The definition of
 Eq.~\eqref{ch_spec:eqn_CrSc_total_chi_2} ensures that all experiments are weighted equally 
 considering their respective uncertainties. This functional corresponds to the combined $\chi^2$ functional defined in \eqref{ch_spec:eqn_Mo_Si_C_total_chi_2}, augmented by the additional measurements conducted here.
 
-Similar, as for the other two sample systems treated in this chapter, the parameters or the model, here the gradual interface model with the parameters and their limits listed in table~\ref{ch_spec:tbl_CrSc_gradual_parametrization}, were first obtained using the \gls{pso} method to find a solution reproducing the experimental results. Secondly, following the maximum likelihood approach employing the \gls{mcmc} method as detailed in Sec.~\ref{ch_spec:sec_maximum_likelihood}, starting from this the uniqueness and confidence intervals for each parameter were obtained.
+Firstly, similar as for the other two sample systems treated in this chapter, the parameters of the model, here the gradual interface model with the parameters and their limits listed in table~\ref{ch_spec:tbl_CrSc_gradual_parametrization}, were first obtained using the \gls{pso} method to find a solution reproducing the experimental results. Secondly, following the maximum likelihood approach employing the \gls{mcmc} method as detailed in Sec.~\ref{ch_spec:sec_maximum_likelihood}, starting from this the uniqueness and confidence intervals for each parameter were obtained.
 
+Through the minimization of the combined $\chi^2$ functional in Eq.~\eqref{ch_spec:eqn_CrSc_total_chi_2} via the \gls{pso} method, the best model parameters were obtained and are listed in table~\ref{ch_spec:tbl_CrSc_best_model}
+\begin{table}[htbp]
+\centering
+\caption{Optimized model parameters obtained by \gls{pso} analysis}
+\label{ch_spec:tbl_CrSc_best_model}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Parameter &  Combined \\ \midrule
+$D$ / nm& $1.5737$  \\ 
+$\Gamma_{Sc}$ & $0.48$  \\ 
+$s_d$ / nm& $1.34$  \\ 
+$\Gamma_\sigma$ & $0.16$  \\ 
+$\eta$ & $0.56$  \\ 
+$\sigma_r$ / nm& $0.11$  \\ 
+$\rho_{Sc}$ & $0.94$  \\ 
+$\rho_{Cr}$ & $0.98$  \\ 
+ \bottomrule
+\end{tabular}
+\end{table}
+The resulting theoretical curves are shown in comparison with the data from Fig.~\ref{ch_spec:fig_CrSc_all_data} including the respective uncertainties in Fig.~\ref{ch_spec:fig_combined_fit_result}.
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{img/CrSc_combined_fit_result}
+  \caption{Measured and calculated reflectance and intensity curves for the 
+optimized parameters with the combined analysis of all experiments as listed in 
+Table~\ref{tbl_parametrization}.}
+  \label{ch_spec:fig_combined_fit_result}
+\end{figure*}
+The data and the best model show excellent agreement indicating that the gradual interface model as defined above indeed provides a very good representation of physical reality with respect to the experiments conducted here.
+
+\subsubsection{Confidence Intervals an Evaluation of the Experimental Methods}
 In order to assess the information content within each of the experimental methods, the \gls{pso} and \gls{mcmc} analysis was conducted for each experiment individually and for the 
 combination of all experiments. In the case of the \gls{xrr} measurements, only the 
 first and second Bragg peaks were considered for the combined analysis. The 
@@ -637,40 +676,6 @@ layers to the model for all theoretical calculations of all experiments (cf.~mod
 analysis of the \gls{xrf} experiment was conducted based on the fluorescence data 
 at an excitation photon energy of \ev{6250} for the Sc-K and Cr-K lines by spectral 
 deconvolution using detector response functions.
-
-
-
-
-\subsection{Results of the reconstruction}
-The solution of the inverse problem based on the particle swarm optimization 
-technique ideally delivers the global minimum of the total $\chi^2$ functional 
-in the specified parameter space. However, no information is obtained about the 
-sensitivity of an experiment with respect to certain aspects of the model, 
-i.e.~specific parameters. As an example one might consider the case of an EUV 
-reflectance experiment, where the influence of the interdiffusion layer 
-asymmetry on the expected reflectance curve is negligible. The model reflects 
-this geometry through the parameter $\Gamma_\sigma$. Most likely, an optimal 
-choice for $\Gamma_\sigma$ minimizing $\chi^2$ exists and can be found by using 
-the particle swarm optimizer. Nevertheless, varying the parameter 
-$\Gamma_\sigma$ causes only marginally larger $\chi^2$, resulting in a limited 
-credibility and validity of this parameter and leaving it essentially undefined 
-based on the available data. To solve this issue and quantify confidence 
-intervals for each parameter in each experiment, we apply a Markov-chain Monte 
-Carlo (MCMC) sampling technique. The likelihood of the model describing the 
-actual sample based on the data available is given by
-\begin{align}
-\mathcal{L}(\vec{x}) \propto \exp \big(-\chi^2 / 2 \big) \text{,} 
-\label{eqn:likelihood}
-\end{align}
-where $\vec{x}$ is the set of parameters of the model and $\chi^2$ is the total 
-$\chi^2$ for the validation of the combined analysis 
-(cf.~Eq.~\eqref{eqn:total_chi_2}) or the reduced $\tilde{\chi}^2$ for the 
-validation of the individual experiments according to the definition in 
-Eq.~\eqref{eqn:reduced_chi_2}.
-We employ an existing Python-based implementation of this sampling technique 
-\cite{foreman-mackey_emcee:_2013} to numerically sample the likelihood functional in 
-Eq.~\eqref{eqn:likelihood}. As a starting point we use the optimum parameter 
-set obtained as a result of the particle swarm optimization.
 
 Consequently, in addition to fitting the data with a particle swarm optimizer, 
 each result was verified based on the MCMC method described above to evaluate 
@@ -700,7 +705,6 @@ to evaluate the distribution according to Eq.~\eqref{eqn:likelihood}.
   \caption{Cornerplot}
   \label{ch_spec:fig_CrSc_cornerplot_combined}
 \end{figure*}
-\onecolumn
 \begin{table*}
 \centering
 \caption{Optimized model parameters with confidence intervals derived from MCMC 
@@ -778,14 +782,7 @@ EUV reflectivity at positions $\pm 2$ mm from the center position and fitting
 the model. The result was a $\Delta D = 2$ pm shift in the period over $4$ mm 
 across the sample.
 \onecolumn
-\begin{figure*}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{img/CrSc_combined_fit_result}
-  \caption{Measured and calculated reflectance and intensity curves for the 
-optimized parameters with the combined analysis of all experiments as listed in 
-Table~\ref{tbl_parametrization}.}
-  \label{fig:combined_fit_result}
-\end{figure*}
+
 %\twocolumn
 The resulting depth dependence of the index of refraction is shown in 
 Fig.~\ref{fig:electron_density_profile} together with the initial binary model 
