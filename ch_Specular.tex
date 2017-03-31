@@ -623,93 +623,46 @@ As in the combined analysis conducted for the Mo/Si/C systems in Sec.~\ref{ch_sp
 \end{align}
 where each of the reduced functionals is defined as
 \begin{align}
-\tilde{\chi}^2 = \frac{1}{m - p} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
+\tilde{\chi}^2 = \frac{1}{M - P} \bigg[\sum\limits_{m} \frac{(I_m^\text{model} 
 - I_m^\text{meas})^2}{\tilde{\sigma}_m^2} \bigg] \text{,} 
 \label{ch_spec:eqn_CrSc_reduced_chi_2}
 \end{align}
-with $m$ being the number of measurement points in each experiment and $p$ the 
+with $M$ being the number of measurement points in each experiment and $P$ the 
 number of parameters for the model. Statistical and systematic uncertainties 
 for each data point are included in $\tilde{\sigma}_m$. The definition of 
 Eq.~\eqref{ch_spec:eqn_CrSc_total_chi_2} ensures that all experiments are weighted equally 
 considering their respective uncertainties. This functional corresponds to the combined $\chi^2$ functional defined in \eqref{ch_spec:eqn_Mo_Si_C_total_chi_2}, augmented by the additional measurements conducted here.
 
-Firstly, similar as for the other two sample systems treated in this chapter, the parameters of the model, here the gradual interface model with the parameters and their limits listed in table~\ref{ch_spec:tbl_CrSc_gradual_parametrization}, were first obtained using the \gls{pso} method to find a solution reproducing the experimental results. Secondly, following the maximum likelihood approach employing the \gls{mcmc} method as detailed in Sec.~\ref{ch_spec:sec_maximum_likelihood}, starting from this the uniqueness and confidence intervals for each parameter were obtained.
+Firstly, similar as for the other two sample systems treated in this chapter, the parameters of the model, here the gradual interface model with the parameters and their limits listed in table~\ref{ch_spec:tbl_CrSc_gradual_parametrization}, were obtained using the \gls{pso} method to find a solution reproducing the experimental results. Secondly, following the maximum likelihood approach employing the \gls{mcmc} method as detailed in Sec.~\ref{ch_spec:sec_maximum_likelihood}, starting from this the uniqueness and confidence intervals for each parameter were obtained. The \gls{pso} result was further refined by taking the $50\%$ percentile of the resulting likelihood distribution for each parameter.
 
-Through the minimization of the combined $\chi^2$ functional in Eq.~\eqref{ch_spec:eqn_CrSc_total_chi_2} via the \gls{pso} method, the best model parameters were obtained and are listed in table~\ref{ch_spec:tbl_CrSc_best_model}
+Through the minimization of the combined $\chi^2$ functional in Eq.~\eqref{ch_spec:eqn_CrSc_total_chi_2} via the \gls{pso} method, the best model parameters were obtained. It should be noted here, that in case of the \gls{xrr} curve, the analyzed data set was restricted to the two visible Bragg peaks which contain the information on the periodic part of the layer system. The data in between those does reflect the top surface layer thicknesses and was therefore analyzed separately to obtain the capping layer thicknesses after the optimization of the periodic part. The results for the capping layer thicknesses listed in table~\ref{ch_spec:tbl_CrSc_best_model_capping} was consequently used throughout the theoretical analysis for all experiments described here.
 \begin{table}[htbp]
 \centering
 \caption{Optimized model parameters obtained by \gls{pso} analysis}
-\label{ch_spec:tbl_CrSc_best_model}
+\label{ch_spec:tbl_CrSc_best_model_capping}
 \begin{tabular}{@{}ll@{}}
 \toprule
-Parameter &  Combined \\ \midrule
-$D$ / nm& $1.5737$  \\ 
-$\Gamma_{Sc}$ & $0.48$  \\ 
-$s_d$ / nm& $1.34$  \\ 
-$\Gamma_\sigma$ & $0.16$  \\ 
-$\eta$ & $0.56$  \\ 
-$\sigma_r$ / nm& $0.11$  \\ 
-$\rho_{Sc}$ & $0.94$  \\ 
-$\rho_{Cr}$ & $0.98$  \\ 
+Parameter &  \gls{xrr} (areas in between the peaks)\\ \midrule
+$d_\text{C (cap)}$ / nm  & $0.709$ \\ 
+$d_\text{CrO (cap)}$ / nm  & $0.913$ \\ 
+$d_\text{Cr (cap)}$ / nm  & $ 2.495$ \\ 
+$\rho_\text{C (cap)}$ & $0.527$\\ 
+$\rho_\text{CrO (cap)}$& $0.548$\\
+$\rho_\text{Cr (cap)}$ & $0.791$\\
  \bottomrule
 \end{tabular}
 \end{table}
-The resulting theoretical curves are shown in comparison with the data from Fig.~\ref{ch_spec:fig_CrSc_all_data} including the respective uncertainties in Fig.~\ref{ch_spec:fig_combined_fit_result}.
-\begin{figure*}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{img/CrSc_combined_fit_result}
-  \caption{Measured and calculated reflectance and intensity curves for the 
-optimized parameters with the combined analysis of all experiments as listed in 
-Table~\ref{tbl_parametrization}.}
-  \label{ch_spec:fig_combined_fit_result}
-\end{figure*}
-The data and the best model show excellent agreement indicating that the gradual interface model as defined above indeed provides a very good representation of physical reality with respect to the experiments conducted here.
 
-\subsubsection{Confidence Intervals an Evaluation of the Experimental Methods}
-In order to assess the information content within each of the experimental methods, the \gls{pso} and \gls{mcmc} analysis was conducted for each experiment individually and for the 
-combination of all experiments. In the case of the \gls{xrr} measurements, only the 
-first and second Bragg peaks were considered for the combined analysis. The 
-region in between mainly reflects the top surface layers, i.e.~capping layers, 
-and potential surface contamination layers, which were analyzed separately 
-based exclusively on the \gls{xrr} data. The results were added as fixed surface 
-layers to the model for all theoretical calculations of all experiments (cf.~model illustration in Fig.~\ref{ch_spec:fig_Cr_Sc_model}). The 
-analysis of the \gls{xrf} experiment was conducted based on the fluorescence data 
-at an excitation photon energy of \ev{6250} for the Sc-K and Cr-K lines by spectral 
-deconvolution using detector response functions.
+\subsubsection{Confidence Intervals and Evaluation of the Experimental Methods}
+As discussed numerously throughout this chapter, the single optimization based on an \gls{pso} result ideally delivers a global minimum of the respective optimization functional. However, no information is obtained about the uniqueness and accuracy of the solution or correlation of parameters causing ambiguity of the results. Consequently, in addition to fitting the data with a particle swarm optimizer, each result was verified based on the \gls{mcmc} method described above to evaluate the confidence intervals for each parameter. To assess the performance of each of the experimental methods individually, the two step process, i.e.~the \gls{pso} fitting procedure followed by the \gls{mcmc} sampling, was conducted for each standalone experiment as well as for the combined optimization problem stated in Eq.~\eqref{ch_spec:eqn_CrSc_total_chi_2}.
 
-Consequently, in addition to fitting the data with a particle swarm optimizer, 
-each result was verified based on the MCMC method described above to evaluate 
-the confidence intervals for each parameter. The two step process, i.e.~the PSO 
-fitting procedure followed by the MCMC sampling, was conducted for each 
-standalone experiment as well as for the combined optimization problem stated 
-in Eq.~\eqref{eqn:total_chi_2}. The results are compiled in Table 
-\ref{tbl:results}. The confidence intervals were calculated by evaluating the 
-probability distribution as a result of the MCMC procedure for each parameter 
-around its PSO fit results. The confidence intervals given here represent 
-percentiles of the number of samples found in the interval defined by the upper 
-and lower bounds used for the PSO procedure for each parameter. In the case of 
-a centered Gaussian distribution, percentiles of $2.3\%$ and $97.8\%$ of the 
-integrated number of samples forming the distribution, mark the interval of 
-four times the standard deviation, i.e.~$\pm 2\sigma$ in statistical terms. Due 
-to potential asymmetries in the actual distributions found by the MCMC method, 
-explicit upper and lower bounds of the confidence intervals are given in Table 
-\ref{tbl:results} based on these percentiles. The best model value is based on 
-the PSO fit result and is refined by the MCMC sampling by calculating the mean 
-value, i.e.~the 50\% percentile, of the distribution of samples following the 
-MCMC procedure. The best model is thus the result of a two-step optimization 
-routine starting with a PSO analysis and sampling based on the resulting values 
-to evaluate the distribution according to Eq.~\eqref{eqn:likelihood}.
-\begin{figure*}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{img/CrSc_cornerplot_combined}
-  \caption{Cornerplot}
-  \label{ch_spec:fig_CrSc_cornerplot_combined}
-\end{figure*}
+The results are compiled in Table \ref{ch_spec:tbl_CrSc_MCMC_results}. The confidence intervals were calculated by evaluating the probability distribution as a result of the \gls{mcmc} procedure for each parameter around its \gls{pso} fit results. The confidence intervals given here represent percentiles of the number of samples found in the interval defined by the upper and lower bounds used for the \gls{pso} procedure for each parameter. In the case of 
+a centered Gaussian distribution, percentiles of $2.3\%$ and $97.8\%$ of the integrated number of samples forming the distribution, mark the interval of four times the standard deviation, i.e.~$\pm 2\sigma$ in statistical terms. Due to potential asymmetries in the actual distributions found by the \gls{mcmc} method, explicit upper and lower bounds of the confidence intervals are given in table \ref{ch_spec:tbl_CrSc_MCMC_results} based on these percentiles. The best model value is based on the \gls{pso} fit result and is refined by the \gls{mcmc} sampling by calculating the mean value, i.e.~the 50\% percentile, of the distribution of samples following the \gls{mcmc} procedure.
 \begin{table*}
 \centering
 \caption{Optimized model parameters with confidence intervals derived from MCMC 
 validation for each individual experiment and the combined analysis}
-\label{tbl:results}
+\label{ch_spec:tbl_CrSc_MCMC_results}
 \begin{tabular}{@{}llllll@{}}
 \toprule
 Parameter &  Combined & EUV  & XRR  & REUV  & GIXRF\\ \midrule
@@ -740,6 +693,37 @@ $0.83_{-0.27}^{+0.16}$& $0.90_{-0.21}^{+0.09}$& $0.86_{-0.28}^{+0.14}$ \\
  \bottomrule
 \end{tabular}
 \end{table*}
+
+Before discussing the achieved reconstruction and the corresponding confidence intervals of each of the methods in detail, we shall view the theoretical curves calculated from the best model of the combined analysis. The curves are shown in direct comparison with the data from Fig.~\ref{ch_spec:fig_CrSc_all_data} including the respective experimental uncertainties in Fig.~\ref{ch_spec:fig_combined_fit_result}.
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{img/CrSc_combined_fit_result}
+  \caption{Measured and calculated reflectance and intensity curves for the 
+optimized parameters with the combined analysis of all experiments as listed in 
+Table~\ref{tbl_parametrization}.}
+  \label{ch_spec:fig_combined_fit_result}
+\end{figure*}
+Clearly, the data and the solution found in the optimization procedure show excellent agreement indicating that the gradual interface model indeed provides a very good representation of physical reality with respect to the experiments conducted here. Nevertheless, differences can be observed. The reason lies 
+in the fact that the model is potentially still too ideal. Small variations 
+during the deposition process, for example, could lead to imperfections, which 
+are not described in a strictly periodic model. However, including these by 
+explicitly breaking the periodicity would again lead to an ill-defined model 
+with a vastly increased number of parameters and is thus not practical. Another 
+reason is the deviation in the homogeneity of the sample, e.g.~a varying period 
+across the sample, which cause mismatches if the measurement position varies 
+slightly between the different experimental setups. The latter effects were 
+considered in the uncertainties of the individual measurements by measuring the 
+EUV reflectivity at positions $\pm 2$ mm from the center position and fitting 
+the model. The result was a $\Delta D = 2$ pm shift in the period over $4$ mm 
+across the sample.
+
+\begin{figure*}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{img/CrSc_cornerplot_combined}
+  \caption{Cornerplot}
+  \label{ch_spec:fig_CrSc_cornerplot_combined}
+\end{figure*}
+
 %\twocolumn
 The confidence intervals of each experimental method differ significantly 
 depending on the parameter. To better demonstrate the different sensitivities 
@@ -747,7 +731,6 @@ for the model parameters depending on the experimental method, we have
 illustrated each confidence interval in Fig.~\ref{fig:confidence_intervals}.
 \begin{figure}[htbp]
   \centering
-  
 \includegraphics{img/CrSc_confidence_intervals_radar}
   \caption{Visual representation of the total confidence intervals for each of 
 the parameters with respect to each of the individual experiments as well as 
@@ -762,28 +745,6 @@ parameter has a large uncertainty, whereas the combined analysis delivers a
 significant result of a clearly asymmetric interdiffusion layer thickness.
 
 
-%\section{Results and Discussion} \label{sec:results}
-
-The best fit result based on the two-step optimization procedure of the 
-combined data set of all experiments is shown in 
-Fig.~\ref{fig:combined_fit_result} together with the experimental data. The 
-theoretical calculations based on the above model and the experimental data 
-show good agreement. Nevertheless, differences can be observed. The reason lies 
-in the fact that the model is potentially still too ideal. Small variations 
-during the deposition process, for example, could lead to imperfections, which 
-are not described in a strictly periodic model. However, including these by 
-explicitly breaking the periodicity would again lead to an ill-defined model 
-with a vastly increased number of parameters and is thus not practical. Another 
-reason is the deviation in the homogeneity of the sample, e.g.~a varying period 
-across the sample, which cause mismatches if the measurement position varies 
-slightly between the different experimental setups. The latter effects were 
-considered in the uncertainties of the individual measurements by measuring the 
-EUV reflectivity at positions $\pm 2$ mm from the center position and fitting 
-the model. The result was a $\Delta D = 2$ pm shift in the period over $4$ mm 
-across the sample.
-\onecolumn
-
-%\twocolumn
 The resulting depth dependence of the index of refraction is shown in 
 Fig.~\ref{fig:electron_density_profile} together with the initial binary model 
 for comparison.
