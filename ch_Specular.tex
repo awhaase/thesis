@@ -694,7 +694,6 @@ $0.83_{-0.27}^{+0.16}$& $0.90_{-0.21}^{+0.09}$& $0.86_{-0.28}^{+0.14}$ \\
 \end{tabular}
 \end{table*}
 
-Before discussing the achieved reconstruction and the corresponding confidence intervals of each of the methods in detail, we shall view the theoretical curves calculated from the best model of the combined analysis. The curves are shown in direct comparison with the data from Fig.~\ref{ch_spec:fig_CrSc_all_data} including the respective experimental uncertainties in Fig.~\ref{ch_spec:fig_combined_fit_result}.
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{img/CrSc_combined_fit_result}
@@ -703,7 +702,7 @@ optimized parameters with the combined analysis of all experiments as listed in
 Table~\ref{tbl_parametrization}.}
   \label{ch_spec:fig_combined_fit_result}
 \end{figure*}
-Clearly, the data and the solution found in the optimization procedure show excellent agreement indicating that the gradual interface model indeed provides a very good representation of physical reality with respect to the experiments conducted here. Nevertheless, differences can be observed. The reason lies 
+Before discussing the achieved reconstruction and the corresponding confidence intervals of each of the methods in detail, we shall view the theoretical curves calculated from the best model of the combined analysis. The curves are shown in direct comparison with the data from Fig.~\ref{ch_spec:fig_CrSc_all_data} including the respective experimental uncertainties in Fig.~\ref{ch_spec:fig_combined_fit_result}. Clearly, the data and the solution found in the optimization procedure show excellent agreement indicating that the gradual interface model indeed provides a very good representation of physical reality with respect to the experiments conducted here. Nevertheless, differences can be observed. The reason lies 
 in the fact that the model is potentially still too ideal. Small variations 
 during the deposition process, for example, could lead to imperfections, which 
 are not described in a strictly periodic model. However, including these by 
@@ -717,14 +716,28 @@ EUV reflectivity at positions $\pm 2$ mm from the center position and fitting
 the model. The result was a $\Delta D = 2$ pm shift in the period over $4$ mm 
 across the sample.
 
+
+\paragraph{Confidence intervals and parameter correlations}
+With the optimized model parameters listed in table~\ref{ch_spec:tbl_CrSc_MCMC_results} and shown in Fig.~\ref{ch_spec:fig_combined_fit_result}, a model reconstruction could be obtained explaining the data for each of the experiments. The \gls{mcmc} sampling of the likelihood functional based on the $\chi^2$ definition in Eq.~\eqref{ch_spec:eqn_CrSc_total_chi_2} yields the corresponding confidence intervals for all parameters and experiments given through the upper and lower bound as described above. Here, we shall illustrate and discuss in detail the resulting likelihood distributions obtained from the combined analysis, as they show that correlations of the parameters could be resolved and only persist for a single important case. For that, Fig.~\ref{ch_spec:fig_CrSc_cornerplot_combined} shows the full matrix of two- and one-dimensional likelihood distribution projections marginalizing over all other parameters. The details of how this figure is to be interpreted are described in detail above in Sec.~\ref{ch_spec:sec_maximum_likelihood} for the example of Mo and Si layer thicknesses obtained through fitting \gls{euv} reflectivity data.
 \begin{figure*}[htbp]
   \centering
   \includegraphics[width=\textwidth]{img/CrSc_cornerplot_combined}
   \caption{Cornerplot}
   \label{ch_spec:fig_CrSc_cornerplot_combined}
 \end{figure*}
+Here, all possible gradual interface model parameter combinations are shown as two dimensional histograms together with the one-dimensional projection at the diagonal of the plot matrix. The solid blue line represents the values of the optimized model after both, the \gls{pso} and refining through the \gls{mcmc} method. They correspond to the values listed in table~\ref{ch_spec:tbl_CrSc_MCMC_results} for the combined analysis column.
 
-%\twocolumn
+Generally, most of the parameter combinations do not show distinct correlations but approach the shape of a two-dimensional Gaussian distribution, which would be expected for a unique solution with corresponding uncertainty. It should be noted that in some cases, the distribution is truncated by parameter limits, which follow from physical or mathematical restrictions on the parameters as discussed in Sec.~\ref{ch_spec:sec_CrSc_gradual_model}, such as for the densities $\rho_\text{Sc}$ and $\rho_\text{Cr}$ as well as for the interface region ratio $\Gamma_\sigma$. In addition, the latter parameter shows a bimodal distribution for all two-dimensional histograms with clear emphasis on the lower value. That is a particularly interesting result of the combined analysis as it clearly demonstrates that only strongly asymmetric interface regions are minimizing the $\chi^2$ functional and it may thus be concluded that this corresponds to the physical reality in the sample.
+
+Finally, the parameter set of the \gls{rms} roughness $\sigma_r$ and the interdiffusion parameter $\eta$ show a ``banana shaped'' correlation significantly broadening the confidence intervals for both parameters. Fig.~\ref{ch_spec:fig_CrSc_eta_rho_correlation} shows a magnification of that particular histogram to better illustrate this property.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics{img/CrSc_eta_rho_correlation}
+  \caption{CrSc eta rho correlation}
+  \label{ch_spec:fig_CrSc_eta_rho_correlation}
+\end{figure}
+The broad spectrum of values covered by the distribution in both parameters hints at a indistinguishability of those two model parameters, and consequently physical properties of the sample, based on the analyzed data. In fact, this conclusion can easily be understood as none of the applied experimental methods can separate the effect of roughness and interdiffusion. For better understanding this, we shall consider the relatively large beam footprint, with the smallest one of all experiments covering and area of approximately \mm{1} by \mm{1}, in comparison to the roughness dimensions and frequencies expected in the order of nanometers. Thereby, any reflected radiation or fluorescence radiation excited within the multilayer always represents an average of the rough interface morphology. That, however, can not be distinguished from a homogeneous layer with gradual interdiffusion along the surface normal of the sample. The solution to this problem is the analysis of diffuse scattering from the sample in addition to the combined analysis, which is the topic of the Ch.~\ref{ch_diff} of this thesis.
+
 The confidence intervals of each experimental method differ significantly 
 depending on the parameter. To better demonstrate the different sensitivities 
 for the model parameters depending on the experimental method, we have 
@@ -773,12 +786,7 @@ the heavier Mo shows higher penetration into the Si layer than vice versa
 thus has higher momentum leading to a broader interdiffusion layer.
 The validation using the MCMC procedure also yields possible correlations 
 between single parameters of the model.
-\begin{figure}[htbp]
-  \centering
-  \includegraphics{img/CrSc_eta_rho_correlation}
-  \caption{CrSc eta rho correlation}
-  \label{ch_spec:fig_CrSc_eta_rho_correlation}
-\end{figure}
+
 \cite{haase_multiparameter_2016}
 
 
