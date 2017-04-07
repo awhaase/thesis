@@ -3,13 +3,18 @@
 
 \section{Near-normal Incidence Diffuse Scattering}
 In order to gain information on interfacial roughness, the off-specular scattering of the multilayer sample was measured in different geometries. We performed coplanar rocking and detector scans as shown in Fig.~\ref{fig:measurementGeometry}.
-\begin{figure}[htbp]
-	\includegraphics[width=0.7
-	\textwidth]{images/Streugeometrie} \caption{Co-planar measurement geometries. By keeping the opening angle $\Delta\Theta$ between incident and exit beam and the detector fixed, respectively, a rocking scan can be performed by changing the sample angle $\omega$. In a detector scan the sample angle $\omega$ is kept fixed and defines the angle of incidence while the detector is moved along $\Theta$.} \label{fig:measurementGeometry} 
+
+\begin{figure}[htb]
+    \def\svgwidth{0.6\textwidth}
+    \import{svg/}{Streugeometrie_diffuse.pdf_tex}
+    \caption{Co-planar measurement geometries. By keeping the opening angle $\Delta\Theta$ between incident and exit beam and the detector fixed, respectively, a rocking scan can be performed by changing the sample angle $\omega$. In a detector scan the sample angle $\omega$ is kept fixed and defines the angle of incidence while the detector is moved along $\Theta$.}
+    \label{fig:measurementGeometry}
 \end{figure}
-\begin{figure}[htbp]
-	\includegraphics[width=0.7
-	\textwidth]{images/Qspace_paths} \caption{Schematic positions in reciprocal space in dependence on the measurement geometry. The dashed path represents a rocking scan with the angle $\omega$. The solid line shows the movement in $q$-space when changing the detector angle $\Theta$ at a fixed angle of incidence. By tuning the wavelength at each angular position, the $q_z$-direction becomes accessible as indicated by the dotted arrows.} \label{fig:pathsInQ} 
+
+\begin{figure}[htb]
+    \def\svgwidth{0.7\textwidth}
+    \import{svg/}{Qspace_paths.pdf_tex}
+    \caption{Schematic positions in reciprocal space in dependence on the measurement geometry. The dashed path represents a rocking scan with the angle $\omega$. The solid line shows the movement in $q$-space when changing the detector angle $\Theta$ at a fixed angle of incidence. By tuning the wavelength at each angular position, the $q_z$-direction becomes accessible as indicated by the dotted arrows.} \label{fig:pathsInQ} 
 \end{figure}
 The corresponding paths through reciprocal space are different for these two cases. They are shown schematically in Fig.~\ref{fig:pathsInQ}. In addition, a wavelength scan ($\lambda$-scan) was performed at each angular position. By changing the wavelength and the angle in the same measurement, both degrees of freedom ($q_x$ and $q_z$) in reciprocal space become accessible. Following this method, we recorded two-dimensional reciprocal space maps of the vicinity of the first Bragg resonance. The reciprocal space coordinates in terms of the experimental parameters are given by 
 \begin{align}
@@ -96,7 +101,7 @@ By combining the findings for the properties of roughness in the power spectral 
 Based on the presumed crystallization threshold found from the analysis of the specular reflectance curves, diffuse scattering measurements for selected samples from both sets were performed. In both cases, scattering maps were taken from the samples with lowest and highest Mo layer thickness, respectively, in addition to the samples with Mo thicknesses right before, at and right after the presumed crystallization threshold was investigated (cf.~marked points in Fig.~\ref{fig:fitted_mo_and_fitted_D}). The diffuse scattering was measured by keeping the detector angle with respect to the incoming beam fixed at $\Delta\Theta = 30^\circ$, while the sample was tilted from an AOI of $\alpha_i=15^\circ$ to $\alpha_i=38^\circ$ with a step size $\Delta\alpha_i = 0.5^\circ$. At each angular position, a wavelength scan from $\lambda=12.35$ nm to $\lambda=14.0$ nm in steps of $\Delta\lambda = 0.01$ nm was performed to map the diffuse scattering distribution. The results are shown in a reciprocal space representation for both sets in comparison in Fig.~\ref{fig:diffuse}.
 \begin{figure*}[htbp]
 \centering
-\includegraphics[width=\textwidth]{images/diffuse}
+\includegraphics[width=\textwidth]{img/MoSiC_diffuse_measurements}
 \caption{Measured diffuse scattering distributions in reciprocal space representation shown on linear false-color scale. The selected unpolished samples are shown in a) with increasing Mo layer thickness $d_{Mo}$. The selected samples for the polished set are shown in b) also in order of increasing Mo thickness $d_{Mo}$. The samples with strongest scattering are shown in larger detail in Fig.~\ref{fig:dwba_data_best_model_comparison}.}
 \label{fig:diffuse}
 \end{figure*}
@@ -104,7 +109,12 @@ The maps in Fig.~\ref{fig:diffuse}a show the scattering distribution from the un
 
 
 \subsection{Tilted Bragg Sheets}
-
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{img/MoSiC_diffuse_tilt_vs_notilt}
+\caption{Direct comparison of the measured reciprocal space maps with the DWBA calculation resulting from the parameters obtained with the MCMC optimization procedure (see text). a) shows the maps of the unpolished sample with strongest diffuse scattering. Similarly, b) shows the maps of the polished sample at the respective presumed crystallization threshold with strongest scattering.}
+\label{fig:dwba_data_best_model_comparison}
+\end{figure*}
 \subsection{Reconstruction of the Power Spectral Density}
 The theoretical analysis was performed based on the DWBA for all scattering maps measured above. The ideal model for each sample system entering the DWBA calculation was obtained from the analysis in Sec.~\ref{sec:mo_si_model_reconstruction_results}. The optimization functional was calculated according to Eq.~\eqref{eqn:reduced_chi_2} for all off-specular wavelength scans for each angle. The combined likelihood was then calculated similarly to Eq.~\eqref{eqn:total_chi_2_diffuse}, as the sum of all measurement points for all angular positions and wavelengths. The optimization was conducted by the MCMC analysis with respect to the vertical correlation length $\xi_\perp$ in the vertical correlation function $c(q_\parallel)$ and all PSD parameters in $C(q_\parallel)$. The list of the corresponding parameters and their bounds is given in Table~\ref{tbl:diffuse_parameters}.
 \begin{table*}
@@ -125,20 +135,20 @@ $\beta$ / $^\circ$&angle for off-axis vertical roughness correlation& $-10.0$ & 
 For this analysis we assumed a Gaussian roughness profile at the interfaces, which is described mathematically by setting $H\equiv1.0$ for all samples. For the two samples, the full maps with the strongest scattering from each set are shown in comparison to the best model DWBA calculation (Fig~\ref{fig:dwba_data_best_model_comparison}). The results for the roughness of the MCMC analysis are shown in Fig.~\ref{fig:PSD_results}. All values are compiled in Table~\ref{tbl:diffuse_parameters_results}. 
 \begin{figure*}[htbp]
 \centering
-\includegraphics[width=\textwidth]{images/dwba_data_best_model_comparison}
+\includegraphics[width=\textwidth]{img/MoSiC_dwba_data_best_model_comparison}
 \caption{Direct comparison of the measured reciprocal space maps with the DWBA calculation resulting from the parameters obtained with the MCMC optimization procedure (see text). a) shows the maps of the unpolished sample with strongest diffuse scattering. Similarly, b) shows the maps of the polished sample at the respective presumed crystallization threshold with strongest scattering.}
 \label{fig:dwba_data_best_model_comparison}
 \end{figure*}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{images/PSD_results}
+\includegraphics[width=0.7\textwidth]{img/MoSiC_PSD_results}
 \caption{a) Root mean square roughness results from the analysis of the diffuse scattering for the two sample sets. In each set, an increase of roughness is observed at the crystallization threshold. For comparison, the max peak reflectance (cf.~Fig.~\ref{fig:EUV_reflectivity}c) for each sample set is shown in b). The increase in roughness clearly correlates with a significant dip in the peak reflectance as indicated by the dashed vertical lines.}
 \label{fig:PSD_results}
 \end{figure}
 For both sample sets a significant increase of roughness can be observed at the crystallization threshold, which coincides with the lowest reflectance for that sample in each set. Interestingly, the roughness returns to the previous value for further increasing Mo layer thicknesses. The roughening due to the formation of nanocrystallites at the threshold is compensated for even larger thicknesses.
 That indicates a smoothing effect due to additional Mo deposition above the crystallization threshold. We also observe a restored peak reflectance in that case. For the polished samples, the formation of crystallites can be observed with similar effects, but at lower Mo layer thickness with overall significantly lower root mean square roughness values.
 
-\begin{table*}
+\begin{table*}[htbp]
 \centering
 \caption{Results for the DWBA model parameters}
 \label{tbl:diffuse_parameters_results}
@@ -151,6 +161,7 @@ nom. Mo thickness / nm&$\sigma_r$ / nm & $\xi_\parallel$ / nm & $\xi_\perp$  / n
 $1.70$ ($1.81 \pm 0.18$) & $0.227 \pm 0.007$ & $3.14 \pm 0.11$ & $3.69 \pm 0.31$ & $-4.62 \pm 0.11$ \\
 $2.21$ ($2.31 \pm 0.22$)& $0.232 \pm 0.005$ & $3.72 \pm 0.09$ & $4.88 \pm 0.35$ & $-5.02 \pm 0.09$ \\
 $2.38$ ($2.43 \pm 0.12$) & $0.329 \pm 0.006$ & $4.51 \pm 0.10$ & $4.44 \pm 0.34$ & $-5.67 \pm 0.10$ \\
+verification rot.~$90^\circ$ & $0.317 \pm 0.009$ & $4.56 \pm 0.18$ & $3.62 \pm 0.37$ & $+0.55 \pm 0.14$ \\
 $2.54$ ($2.68 \pm 0.14$)& $0.211 \pm 0.006$ & $3.61 \pm 0.12$ & $3.80 \pm 0.31$ & $-5.06 \pm 0.12$ \\
 $3.05$ ($3.22 \pm 0.12$)& $0.243 \pm 0.005$ & $2.89 \pm 0.06$ & $5.72 \pm 0.31$ & $-5.06 \pm 0.06$ \\
 \midrule
