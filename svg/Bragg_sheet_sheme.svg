@@ -22,9 +22,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568544"
-     inkscape:cx="446.36272"
-     inkscape:cy="488.38938"
+     inkscape:zoom="4.0000001"
+     inkscape:cx="416.12215"
+     inkscape:cy="496.8648"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1027,24 +1027,24 @@
     <text
        sodipodi:linespacing="125%"
        id="text6793"
-       y="512.60474"
+       y="506.60474"
        x="457.57513"
        style="font-size:8.40167046px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#348abd;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
        xml:space="preserve"><tspan
          id="tspan6795"
-         y="512.60474"
+         y="506.60474"
          x="457.57513"
          sodipodi:role="line">{\fontfamily{fds}</tspan><tspan
          id="tspan6797"
-         y="523.10681"
+         y="517.10681"
          x="457.57513"
          sodipodi:role="line">\selectfont</tspan><tspan
          id="tspan6799"
-         y="533.60889"
+         y="527.60889"
          x="457.57513"
          sodipodi:role="line">\footnotesize</tspan><tspan
          id="tspan6801"
-         y="544.11102"
+         y="538.11102"
          x="457.57513"
          sodipodi:role="line">resonant reflection}</tspan></text>
     <text
@@ -1102,36 +1102,36 @@
     <path
        inkscape:connector-curvature="0"
        id="path7214"
-       d="m 270.37499,524.3549 0.0307,44.44842"
-       style="fill:none;stroke:#348abd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1,2;stroke-dashoffset:0;marker-start:url(#Arrow1MstartSw);marker-mid:none;marker-end:none"
+       d="m 270.37499,513.78393 0.0307,54.96029"
+       style="fill:none;stroke:#348abd;stroke-width:0.99999994;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.00000001, 2.00000003;stroke-dashoffset:0;marker-start:url(#Arrow1MstartSw);marker-mid:none;marker-end:none"
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#348abd;fill-opacity:1;stroke:none;font-family:Sans"
        x="275.30716"
-       y="548.07373"
+       y="544.07373"
        id="text7218"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan7220"
          x="275.30716"
-         y="548.07373"
+         y="544.07373"
          style="font-size:10px">$q_z$</tspan></text>
     <path
        sodipodi:nodetypes="cc"
-       style="fill:none;stroke:#348abd;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1, 2;stroke-dashoffset:0;marker-start:url(#Arrow1MstartSw);marker-mid:none;marker-end:none"
-       d="m 496.62498,524.6049 0.0307,44.44842"
+       style="fill:none;stroke:#348abd;stroke-width:0.99999994;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.00000001, 2.00000003;stroke-dashoffset:0;marker-start:url(#Arrow1MstartSw);marker-mid:none;marker-end:none"
+       d="m 496.62498,514.09305 0.0307,54.96029"
        id="path7222"
        inkscape:connector-curvature="0" />
     <text
        sodipodi:linespacing="125%"
        id="text7224"
-       y="548.32373"
+       y="544.32373"
        x="501.55716"
        style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#348abd;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:10px"
-         y="548.32373"
+         y="544.32373"
          x="501.55716"
          id="tspan7226"
          sodipodi:role="line">$q_z$</tspan></text>

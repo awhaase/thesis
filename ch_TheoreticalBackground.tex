@@ -316,7 +316,7 @@ We consider the situation, where the roughness is small in relation to the scatt
 \end{align}
 and Taylor expand the integrand as $\exp [q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})]-1 \approx q_z^{(j)*} q_z^{(i)} C_{ij}(\vec{X})$. With these approximations Eq.~\eqref{ch_theo:eqn_full_dwba_roughness_factor} reduces to
 \begin{align}
-S_{ij}(\vec{q}_\parallel) \approx \int d^2 \vec{X} C_{ij}(\vec{X}) \exp(i \vec{q}_\parallel \cdot \vec{X}) \text{.} \label{eqn:reduced_structure_factor}
+S_{ij}(\vec{q}_\parallel) \approx \int d^2 \vec{X} C_{ij}(\vec{X}) \exp(i \vec{q}_\parallel \cdot \vec{X}) \text{.} \label{ch_theo:eqn_reduced_structure_factor}
 \end{align}
 $S_{ij}(\vec{q}_\parallel)$ is, thus, the Fourier transform of the correlation function $C_{ij}(\vec{X})$. Assuming identical growth for the individual layers, i.e.~a material independent propagation of roughness along the $z$-direction, $S_{ij}(\vec{q}_\parallel)$ can be expressed in terms of the lateral \gls{psd} $C_{i}(\vec{q}_\parallel)$ and a vertical replication factor $c_{ij}^{\perp}(\vec{q}_\parallel)$ \cite{spiller_multilayer_1993},
 \begin{equation}
@@ -340,9 +340,9 @@ The multilayer mirror samples investigated within this thesis are highly-reflect
 \paragraph{Vertical correlation of roughness}
 The high degree of thickness stability for well-defined multilayers as is necessary for high-performance mirrors implies a high degree of vertical correlation of individual interfaces roughness throughout the stack. In order to derive the replication factor in Eq.~\eqref{eqn:factorized_structure_factor}, we follow Stearns et al.~\cite{stearns_x-ray_1992}. In this model, the evolution of the surface roughness $w(x,y)$ during the growth of a single layer is described by the Langevin equation. In its Fourier transformed form, 
 \begin{align}
-\frac{\partial w(f)}{\partial t} = - 4 \pi^2 v f^2 w(f) + \frac{\partial \eta(f)}{\partial t} \text{,} \label{eqn:langevin}
+\frac{\partial w(f)}{\partial t} = - 4 \pi^2 v f^2 w(f) + \frac{\partial \eta(f)}{\partial t} \text{,} \label{ch_theo:eqn_langevin}
 \end{align}
-where $v$ is a diffusion-like parameter, $\eta(f)$ is random noise normalized to the layer thickness and $w(f)$ describes the roughness evolution in dependence of the spatial frequency $f$. The roughness evolution during the growth of a single layer of a specific material can then be evaluated by discretizing Eq.~\eqref{eqn:langevin} for the successive deposition of material of thickness $\delta d$
+where $v$ is a diffusion-like parameter, $\eta(f)$ is random noise normalized to the layer thickness and $w(f)$ describes the roughness evolution in dependence of the spatial frequency $f$. The roughness evolution during the growth of a single layer of a specific material can then be evaluated by discretizing Eq.~\eqref{ch_theo:eqn_langevin} for the successive deposition of material of thickness $\delta d$
 \begin{align}
 w_i(f) = c_\perp(f;\delta d) w_{i-1}(f) + \eta(f) \text{,}
 \end{align}
@@ -353,7 +353,7 @@ where $c_\perp(f;\delta d)$ is the replication factor of roughness for a single 
 \end{align}
 with $|\vec{q}_\parallel|^2 = 4 \pi^2 f^2$. Assuming identical diffusion-like behavior $v$ for all materials of a multilayer and defining $\xi_\perp(\vec{q}_\parallel) = 1/(v |\vec{q}_\parallel|^2)$, the replication factor in Eq.~\eqref{eqn:factorized_structure_factor} is given by
 \begin{align}
-c_{ij}^\perp(\vec{q}_\parallel) =  \exp\Bigg(-\sum \limits_{n = \text{min}(i,j)}^{\text{max}(i,j)-1}d_n/\xi_\perp(\vec{q}_\parallel) \Bigg)\text{.}
+c_{ij}^\perp(\vec{q}_\parallel) =  \exp\Bigg(-\sum \limits_{n = \text{min}(i,j)}^{\text{max}(i,j)-1}d_n/\xi_\perp(\vec{q}_\parallel) \Bigg)\text{.} \label{ch_theo:eqn_replication_factor}
 \end{align}
 Here, $\xi_\perp(\vec{q}_\parallel)$ can be interpreted as a spatial frequency dependent vertical correlation length, describing the distance perpendicular to the stack until the replication factor decreased to $1/e$.
 
