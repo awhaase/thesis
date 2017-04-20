@@ -22,9 +22,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.0000001"
-     inkscape:cx="416.12215"
-     inkscape:cy="496.8648"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="467.15292"
+     inkscape:cy="558.78318"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -719,8 +719,8 @@
        style="fill:none;stroke:#000000;stroke-width:1.375;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1MstartSL);marker-mid:none;marker-end:none"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.00000001, 1.00000001;stroke-dashoffset:0;marker-start:none;marker-end:none"
-       d="m 393.92857,487.72133 0,103.86777"
+       style="fill:none;stroke:#000000;stroke-width:0.99999994;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.00000003, 1.00000003;stroke-dashoffset:0;marker-start:none;marker-end:none"
+       d="m 393.92857,469.30956 0,122.27957"
        id="path9873"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -1073,25 +1073,25 @@
     <text
        xml:space="preserve"
        style="font-size:8.40167046px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="399.13828"
-       y="480.60809"
+       x="429.63828"
+       y="492.10809"
        id="text6833"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="399.13828"
-         y="480.60809"
+         x="429.63828"
+         y="492.10809"
          id="tspan6835">{\fontfamily{fds}</tspan><tspan
          sodipodi:role="line"
-         x="399.13828"
-         y="491.11017"
+         x="429.63828"
+         y="502.61017"
          id="tspan6837">\selectfont</tspan><tspan
          sodipodi:role="line"
-         x="399.13828"
-         y="501.61227"
+         x="429.63828"
+         y="513.11224"
          id="tspan6839">\footnotesize</tspan><tspan
          sodipodi:role="line"
-         x="399.13828"
-         y="512.11438"
+         x="429.63828"
+         y="523.61438"
          id="tspan6841">impinging radiation}</tspan></text>
     <path
        inkscape:connector-curvature="0"
@@ -1158,5 +1158,51 @@
          x="438.91302"
          y="620.12494"
          id="tspan7236">diffuse scattering}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.40167046px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       x="201.05222"
+       y="476.91751"
+       id="text7253"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="201.05222"
+         y="476.91751"
+         id="tspan7255">{\fontfamily{fds}</tspan><tspan
+         sodipodi:role="line"
+         x="201.05222"
+         y="487.41959"
+         id="tspan7257">\selectfont</tspan><tspan
+         sodipodi:role="line"
+         x="201.05222"
+         y="497.92169"
+         id="tspan7259">\footnotesize</tspan><tspan
+         sodipodi:role="line"
+         x="201.05222"
+         y="508.42377"
+         id="tspan7261">a)}</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text7263"
+       y="476.91751"
+       x="399.05222"
+       style="font-size:8.40167046px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       xml:space="preserve"><tspan
+         id="tspan7265"
+         y="476.91751"
+         x="399.05222"
+         sodipodi:role="line">{\fontfamily{fds}</tspan><tspan
+         id="tspan7267"
+         y="487.41959"
+         x="399.05222"
+         sodipodi:role="line">\selectfont</tspan><tspan
+         id="tspan7269"
+         y="497.92169"
+         x="399.05222"
+         sodipodi:role="line">\footnotesize</tspan><tspan
+         id="tspan7271"
+         y="508.42377"
+         x="399.05222"
+         sodipodi:role="line">b)}</tspan></text>
   </g>
 </svg>
