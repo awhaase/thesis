@@ -45,7 +45,7 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:zoom="2.4722548"
-     inkscape:cx="315.15335"
+     inkscape:cx="335.0779"
      inkscape:cy="311.30259"
      inkscape:window-x="-2"
      inkscape:window-y="-3"
@@ -1172,7 +1172,7 @@
        id="tspan10070"
        x="139.79141"
        y="286.32272"
-       style="font-size:10.95677185px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">$\frac{2\pi}{D}$</tspan></text>
+       style="font-size:10.95677185px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">$2\pi / \tilde{D}$</tspan></text>
   <path
      sodipodi:nodetypes="cc"
      inkscape:connector-curvature="0"
@@ -1196,7 +1196,7 @@
        y="140.07541"
        x="139.79141"
        id="tspan10078"
-       sodipodi:role="line">$\frac{2\pi}{D}$</tspan></text>
+       sodipodi:role="line">$2\pi / \tilde{D}$</tspan></text>
   <rect
      style="fill:#e8e8e8;fill-opacity:1;fill-rule:evenodd;stroke:none"
      id="rect8242"
@@ -1387,7 +1387,7 @@
        y="286.6463"
        x="432.3179"
        id="tspan11383"
-       sodipodi:role="line">$D$</tspan></text>
+       sodipodi:role="line">$D=d_i + d_j$</tspan></text>
   <path
      sodipodi:nodetypes="cc"
      inkscape:connector-curvature="0"
@@ -1405,5 +1405,5 @@
        id="tspan11389"
        x="432.3179"
        y="137.84634"
-       style="font-size:10.95677185px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">$D$</tspan></text>
+       style="font-size:10.95677185px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola">$D=d_i + d_j$</tspan></text>
 </svg>
