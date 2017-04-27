@@ -195,14 +195,13 @@ The downward tilt of the Bragg sheet is clearly observed for all samples in the 
 \caption{Direct comparison of the measured reciprocal space maps with the DWBA calculation resulting from the parameters obtained with the MCMC optimization procedure (see text). a) shows the maps of the unpolished sample with strongest diffuse scattering. Similarly, b) shows the maps of the polished sample at the respective presumed crystallization threshold with strongest scattering.}
 \label{ch_diff:fig_diffuse_tilt_vs_notilt}
 \end{figure*}
-The tilt direction is clearly different from the map of the rotated sample, we obtain a similarly horizontal Bragg sheet as for the Mo/B$_4$C/Si/C sample in Sec.~\ref{ch_diff:sec_PTB17}. Based on the evaluation of the tilt angle in both maps, it is possible to deduce the direction and total angle of the roughness correlation direction with respect to the surface normal and the orientation directions of the sample. This angle $\beta$ is given by the two orthogonally measured Bragg sheet tilt angles $\beta_1$ and $\beta_2$ through
+The tilt direction is clearly different from the map of the rotated sample, we obtain a similarly horizontal Bragg sheet as for the Mo/B$_4$C/Si/C sample in Sec.~\ref{ch_diff:sec_PTB17}. Based on the evaluation of the tilt angle in both maps, it is possible to deduce the direction and total angle $\beta$ of the roughness correlation direction with respect to the surface normal and the orientation directions of the sample during the measurement. This angle is given by the two orthogonally measured Bragg sheet tilt angles $\beta^{\SI{0}{\degree}}$ and $\beta^{\SI{90}{\degree}}$ through
 \begin{align}
- \tan^2(\beta) &= \tan^2(\beta_1) + \tan^2(\beta_2) \text{.}
+ \tan^2(\beta) &= \tan^2(\beta^{\SI{0}{\degree}}) + \tan^2(\beta^{\SI{90}{\degree}}) \text{.}
 \end{align}
+These two independent measurements can be additionally used to verify the results of the reconstruction. We shall thus perform the analysis described in Sec.~\ref{ch_diff:sec_PTB17} and deduce the \gls{psd} parameters including the vertical correlation length as well as the non-orthogonal correlation direction for this sample in particular. For all other measured samples we shall also perform this analysis, where there only the in-planar Bragg sheet tilt angle is determined.
 
-
-
-\subsection{Reconstruction of the Power Spectral Density}
+\subsection{Reconstruction of the Interface Morphology}
 The theoretical analysis was performed based on the DWBA for all scattering maps measured above. The ideal model for each sample system entering the DWBA calculation was obtained from the analysis in Sec.~\ref{sec:mo_si_model_reconstruction_results}. The optimization functional was calculated according to Eq.~\eqref{eqn:reduced_chi_2} for all off-specular wavelength scans for each angle. The combined likelihood was then calculated similarly to Eq.~\eqref{eqn:total_chi_2_diffuse}, as the sum of all measurement points for all angular positions and wavelengths. The optimization was conducted by the MCMC analysis with respect to the vertical correlation length $\xi_\perp$ in the vertical correlation function $c(q_\parallel)$ and all PSD parameters in $C(q_\parallel)$. The list of the corresponding parameters and their bounds is given in Table~\ref{tbl:diffuse_parameters}.
 \begin{table*}
 \centering
@@ -260,7 +259,7 @@ $3.05$ ($3.47 \pm 0.16$)& $0.088 \pm 0.002$ & $10.29 \pm 0.37$ & $1.47 \pm 0.23$
 
 In addition, a large gap between the vertical correlation factors can be observed for comparing the polished and unpolished samples. As is to be expected, the polishing process largely reduces the roughness correlation between different interfaces. In the case of unpolished growth, almost the entire stack is correlated for the observable spatial frequencies. The large values for the in-planar correlation length for the polished samples are also a direct result of the polishing process. 
 
-\subsection{Summary of the Results}
+\subsection{Discussion of the Results}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\textwidth]{img/MoSiC_PSD_results}
