@@ -338,7 +338,14 @@ The multilayer mirror samples investigated within this thesis are highly-reflect
 \end{equation}
 
 \paragraph{Vertical correlation of roughness}
-The high degree of thickness stability for well-defined multilayers as is necessary for high-performance mirrors implies a high degree of vertical correlation of individual interfaces roughness throughout the stack. In order to derive the replication factor in Eq.~\eqref{eqn:factorized_structure_factor}, we follow Stearns et al.~\cite{stearns_x-ray_1992}. In this model, the evolution of the surface roughness $w(x,y)$ during the growth of a single layer is described by the Langevin equation. In its Fourier transformed form, 
+The high degree of thickness stability for well-defined multilayers as is necessary for high-performance mirrors implies a high degree of vertical correlation of individual interfaces roughness throughout the stack. To better illustrate the correlation of roughness, Fig.~\ref{ch_theo:fig_vertical_roughness_correlation} shows two situations where a weak and a strong correlation exist.
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{roughness_correlation.pdf_tex}
+    \caption{Illustration of correlated roughness in a binary periodic multilayer stack. If the roughness is fully correlated, each interface replicates the morphology of the previous. A mathematical expression introducing a vertical correlation length parameter is used to characterize this property.}
+    \label{ch_theo:fig_vertical_roughness_correlation}
+\end{figure*}
+In order to derive the replication factor in Eq.~\eqref{eqn:factorized_structure_factor}, we follow Stearns et al.~\cite{stearns_x-ray_1992}. In this model, the evolution of the surface roughness $w(x,y)$ during the growth of a single layer is described by the Langevin equation. In its Fourier transformed form, 
 \begin{align}
 \frac{\partial w(f)}{\partial t} = - 4 \pi^2 v f^2 w(f) + \frac{\partial \eta(f)}{\partial t} \text{,} \label{ch_theo:eqn_langevin}
 \end{align}
@@ -357,8 +364,17 @@ c_{ij}^\perp(\vec{q}_\parallel) =  \exp\Bigg(-\sum \limits_{n = \text{min}(i,j)}
 \end{align}
 Here, $\xi_\perp(\vec{q}_\parallel)$ can be interpreted as a spatial frequency dependent vertical correlation length, describing the distance perpendicular to the stack until the replication factor decreased to $1/e$.
 
+
+
 \paragraph{Off-axis vertical roughness correlation}
-Gullikson et al.~\cite{gullikson_asymmetric_1999} observed that the direction of the vertical replication of roughness can be tilted with respect to the surface normal. Including this effect in the differential cross section, requires a coordinate transformation in reciprocal space to account for the tilt angle $\beta$ according to
+Gullikson et al.~\cite{gullikson_asymmetric_1999} observed that the direction of the vertical replication of roughness can be tilted with respect to the surface normal as shown in schematically in Fig.~\ref{}
+\begin{figure*}[htb]
+    \def\svgwidth{\textwidth}
+    \import{svg/}{non-orthogonal_roughness_correlation.pdf_tex}
+    \caption{Illustration of orthogonal and non-orthogonal correlated roughness in a binary periodic multilayer stack.}
+    \label{ch_theo:fig_non-orthogonal_vertical_roughness_correlation}
+\end{figure*}
+Including this effect in the differential cross section, requires a coordinate transformation in reciprocal space to account for the tilt angle $\beta$ according to
 \begin{align}
 \overline{q}_z = q_z - \hat{e} \cdot \vec{q}_\parallel   \tan \beta\text{,}
 \end{align}
