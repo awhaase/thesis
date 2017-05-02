@@ -259,10 +259,7 @@ The interpretation of these findings is in line with the observation of the form
 Finally, we note that the based on the analysis methods introduced in Sec.~\ref{ch_spec:sec_mo_si_c} and the diffuse scatter analysis explained in beginning of this chapter is is possible to consistently determine the molybdenum layer thickness and the average power spectral density roughness for the interfaces throughout the full multilayer stack. The application of these methods to Mo/Si multilayer samples with varying molybdenum thickness with/without polishing confirmed previous findings on the onset of molybdenum crystallization in the literature. The results presented in Sec.~\ref{ch_spec:sec_mo_si_c} and the analysis of the diffuse scatter discussed here are published together in \fullcite{haase_interface_2017}.
 
 \section{Roughness and Intermixing in Cr/Sc Multilayers} \label{ch_diff:sec_CrSc}
-Even in the case of the data, methods and model presented here, the combined 
-analysis leaves a correlation between the intermixing parameter $\eta$ and the 
-roughness $\sigma_r$, which could not be resolved (see 
-Fig.~\ref{fig:eta_sigma_correlation}).
+In Sec.~\ref{ch_spec:sec_CrSc}, we have demonstrated the analysis of Cr/Sc multilayer mirrors with sub-nanometer layer thicknesses. A more complex model was required to reconstruct the structural parameters unambiguously. The combination of several experiments conducted, could indeed provide a unequivocal solution to most of the parameters shown in table~\ref{ch_spec:tbl_CrSc_gradual_parametrization}, with the results and their confidence intervals listed in table~\ref{ch_spec:tbl_CrSc_MCMC_results} and illustrated in Fig.~\ref{ch_spec:fig_CrSc_confidence_intervals}. However, as for the Mo/Si systems investigated in this thesis, the methods applied in Ch~\ref{ch_spec} do not yield a possibility to distinguish roughness from intermixing. Even though, the spatially resolved methods such as \gls{xrf} did in combination yield the interface profile asymmetry, a correlation between the intermixing parameter $\eta$ and the \gls{rms} roughness parameter $\sigma_r$ remain, as seen in Fig.~\ref{ch_diff:fig_eta_sigma_correlation}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{images/eta_sigma_correlation}
@@ -272,8 +269,25 @@ the reduced parameter space. The strong correlation of both parameters in the
 optimal solution, which is indicated by blue solid lines, is clearly visible. 
 The percentiles corresponding to one and two standard deviations $\sigma$ are 
 indicated by the black contour lines.}
-  \label{fig:eta_sigma_correlation}
+  \label{ch_diff:fig_eta_sigma_correlation}
 \end{figure}
+
+Based on the analysis of the diffuse scatter, as we have shown above, that distinction becomes possible. Here, we shall proceed with the analysis of the Cr/Sc sample system studied in Sec.~\ref{ch_spec:sec_CrSc} and complete the characterization with respect to that correlation. For that purpose, we have measured the diffuse scattering intensity from the Cr/Sc sample similarly to the Mo/Si sample systems above in a rocking scan geometry. As the theoretical model for the \gls{dwba} calculation, we applied the gradual interface model as defined in the previous chapter with the optimal parameters listed in table~\ref{ch_spec:tbl_CrSc_MCMC_results} for the combination of all analytic experiments conducted there.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.7\textwidth]{img/CrSc_diffuse_measured}
+  \caption{a) Diffuse scattering measurement in $q$-space representation and 
+log scale. b) DWBA calculation of the optimal PSD model based on the electron 
+density profile with the multilayer parameters for the combined analysis listed 
+in Table~\ref{tbl:results}.}
+  \label{ch_diff:fig_CrSc_diffuse_meas}
+\end{figure}
+
+Even in the case of the data, methods and model presented here, the combined 
+analysis leaves a correlation between the intermixing parameter $\eta$ and the 
+roughness $\sigma_r$, which could not be resolved (see 
+Fig.~\ref{fig:eta_sigma_correlation}).
+
 This means that none of the methods, not even the combined analysis, contains 
 sufficient information to deduct an unambiguous result for the roughness or 
 intermixing. Intermixing alone merely reduces optical contrast, whereas 
@@ -287,7 +301,7 @@ described in Sec.~\ref{sec:experimental}. The analysis was conducted based on
 the DWBA formalism outlined in Sec.~\ref{sec:matrix_formalism}. The subfigures 
 (a) and (b) of Fig.~\ref{fig:diffuse_meas} show the measured reciprocal space 
 map in direct comparison to the best model found within the DWBA approach.
-\onecolumn
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{img/CrSc_diffuse_measured_vs_dwba}
