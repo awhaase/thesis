@@ -232,11 +232,11 @@ $2.90$ $(3.22[{-0.13}/{+0.11}])$& $0.243^{+ 0.009}_{- 0.002}$ & $2.89^{+ 0.43}_{
 \midrule
 \multicolumn{5}{c}{Polished samples}\\
 \midrule
-$1.70$ $(1.77[{-0.22}/{+0.19}])$ & $0.129^{+ 0.004}_{- 0.002}$ & $7.05^{+ 0.15}_{- 0.23}$ & $0.53^{+ 0.03}_{- 0.02}$ & $-1.19^{+ 0.28}_{- 0.28}$ \\ \addlinespace
-$1.85$ $(1.91[{-0.12}/{+0.17}])$ & $0.195^{+ 0.003}_{- 0.002}$ & $10.66^{+ 0.16}_{- 0.19}$ & $0.76^{+ 0.04}_{- 0.04}$ & $-1.50^{+ 0.25}_{- 0.26}$ \\ \addlinespace
-$2.00$ $(2.29[{-0.28}/{+0.13}])$& $0.105^{+ 0.001}_{- 0.001}$ & $8.95^{+ 0.12}_{- 0.13}$ & $0.76^{+ 0.03}_{- 0.03}$ & $-2.28^{+ 0.16}_{- 0.14}$ \\ \addlinespace
-$2.30$ $(2.60[{-0.12}/{+0.14}])$& $0.106^{+ 0.002}_{- 0.001}$ & $8.22^{+ 0.12}_{- 0.17}$ & $0.86^{+ 0.04}_{- 0.04}$ & $-2.90^{+ 0.16}_{- 0.07}$ \\ \addlinespace
-$3.05$ $(3.47[{-0.19}/{+0.13}])$& $0.088^{+ 0.001}_{- 0.001}$ & $10.29^{+ 0.18}_{- 0.19}$ & $1.47^{+ 0.13}_{- 0.11}$ & $-1.62^{+ 0.16}_{- 0.16}$ \\ \addlinespace
+$1.70$ $(1.77[{-0.22}/{+0.19}])$ & $0.129^{+ 0.009}_{- 0.002}$ & $7.05^{+ 0.55}_{- 0.23}$ & $0.53^{+ 0.03}_{- 0.02}$ & $-1.19^{+ 0.28}_{- 0.28}$ \\ \addlinespace
+$1.85$ $(1.91[{-0.12}/{+0.17}])$ & $0.195^{+ 0.008}_{- 0.002}$ & $10.66^{+ 0.56}_{- 0.19}$ & $0.76^{+ 0.04}_{- 0.04}$ & $-1.50^{+ 0.25}_{- 0.26}$ \\ \addlinespace
+$2.00$ $(2.29[{-0.28}/{+0.13}])$& $0.105^{+ 0.005}_{- 0.001}$ & $8.95^{+ 0.52}_{- 0.13}$ & $0.76^{+ 0.03}_{- 0.03}$ & $-2.28^{+ 0.16}_{- 0.14}$ \\ \addlinespace
+$2.30$ $(2.60[{-0.12}/{+0.14}])$& $0.106^{+ 0.006}_{- 0.001}$ & $8.22^{+ 0.52}_{- 0.17}$ & $0.86^{+ 0.04}_{- 0.04}$ & $-2.90^{+ 0.16}_{- 0.07}$ \\ \addlinespace
+$3.05$ $(3.47[{-0.19}/{+0.13}])$& $0.088^{+ 0.005}_{- 0.001}$ & $10.29^{+ 0.58}_{- 0.19}$ & $1.47^{+ 0.13}_{- 0.11}$ & $-1.62^{+ 0.16}_{- 0.16}$ \\ \addlinespace
  \bottomrule
 \end{tabular}
 \end{table*}
@@ -331,22 +331,21 @@ dq_\parallel} \text{.}
 The uncertainty of the PSD due to the vertical correlation leads to an 
 uncertainty in the \gls{rms} roughness when evaluating the integral. Due to the 
 limited $q_\parallel$ range where measurements can be taken, we have fitted the 
-PSD model of Eq.~\eqref{ch_theo:eqn_psd} to the three resulting \gls{psd}s by applying the \gls{mcmc} procedure based on the parameter limits shown in table~\ref{ch_diff:tbl_PTB17_diffuse_optimization_limits_and_results}. The tilt angle beta was fixed to $\beta=\SI{0}{\degree}$ in this analysis, since no non-orthogonal roughness correlation was determined by comparison of vertical cuts at different $q_\parallel$ positions in the map. The computational cost for that is very low, since the relevant multiplications are done in the evaluation of the multilayer enhancement factor. After that, the integration over the full $q_\parallel$ range was performed for the best model. The deviation of the integration for the PSD model fit and the data in the available range were negligible. The best model results for the vertical replication factor and the power spectral 
+PSD model of Eq.~\eqref{ch_theo:eqn_psd} to the resulting \gls{psd} by applying the \gls{mcmc} procedure based on the parameter limits shown in table~\ref{ch_diff:tbl_PTB17_diffuse_optimization_limits_and_results} and considering the additional uncertainty introduced through the model estimate. The tilt angle beta was fixed to $\beta=\SI{0}{\degree}$ in this analysis, since no non-orthogonal roughness correlation was determined by comparison of vertical cuts at different $q_\parallel$ positions in the map. The computational cost for that is very low, since the relevant multiplications are done in the evaluation of the multilayer enhancement factor. After that, the integration over the full $q_\parallel$ range was performed for the best model. The deviation of the integration for the PSD model fit and the data in the available range were negligible. The best model results for the vertical replication factor and the power spectral 
 density are given in Table.~\ref{ch_diff:tbl_CrSc_psd_results}, together with their 
 uncertainties resulting from the \gls{mcmc} evaluation. It should be noted here, that similarly to the other systems treated within this chapter, only limited data is available to determine the Hurst factor.
 \begin{table}
 \centering
-\caption{Best model parameters of the PSD as a result of the diffuse scattering 
-analysis}
+\caption{Best model parameters and confidence intervals of the PSD as a result of the diffuse scattering analysis for the gradual Cr/Sc system.}
 \label{ch_diff:tbl_CrSc_psd_results}
-\begin{tabular}{@{}ll@{}}
+\begin{tabular}{@{}lll@{}}
 \toprule
-Parameter & Best model values\\ \midrule
-$\sigma_r$ / nm & $0.17 \pm 0.02$ \\
-$\xi_\parallel$ / nm& $4.00 \pm 0.35$ \\
-$\xi_\perp$  / nm$^{-1}$& $10.5 \pm 3.5$ \\
-$H$ & $1.0$ \\
-$\beta$ & $0.0$ \\
+Parameter & Best model values & Confidence interval\\ \midrule
+$\sigma_r$ / nm & $0.169  $&$(-0.02/+0.02)$ \\
+$\xi_\parallel$ / nm& $3.929 $&$(-0.279 / +0.421)$ \\
+$\xi_\perp$  / nm$^{-1}$& $10.5 $&$ (-3.5/+3.5)$\footnote{This confidence interval is the result of the estimate done based on the vertical cut (see main text).} \\
+$H$ & $1.0$ & $(-0.972 /+0.0)$ \\
+$\beta$ / $^\circ$ & $0.0$ & - \\
  \bottomrule
 \end{tabular}
 \end{table}
