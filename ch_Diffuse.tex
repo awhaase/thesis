@@ -333,7 +333,7 @@ uncertainty in the \gls{rms} roughness when evaluating the integral. Due to the
 limited $q_\parallel$ range where measurements can be taken, we have fitted the 
 PSD model of Eq.~\eqref{ch_theo:eqn_psd} to the resulting \gls{psd} by applying the \gls{mcmc} procedure based on the parameter limits shown in table~\ref{ch_diff:tbl_PTB17_diffuse_optimization_limits_and_results} and considering the additional uncertainty introduced through the model estimate. The tilt angle beta was fixed to $\beta=\SI{0}{\degree}$ in this analysis, since no non-orthogonal roughness correlation was determined by comparison of vertical cuts at different $q_\parallel$ positions in the map. The computational cost for that is very low, since the relevant multiplications are done in the evaluation of the multilayer enhancement factor. After that, the integration over the full $q_\parallel$ range was performed for the best model. The deviation of the integration for the PSD model fit and the data in the available range were negligible. The best model results for the vertical replication factor and the power spectral 
 density are given in Table.~\ref{ch_diff:tbl_CrSc_psd_results}, together with their 
-uncertainties resulting from the \gls{mcmc} evaluation. It should be noted here, that similarly to the other systems treated within this chapter, only limited data is available to determine the Hurst factor.
+uncertainties resulting from the \gls{mcmc} evaluation.
 \begin{table}
 \centering
 \caption{Best model parameters and confidence intervals of the PSD as a result of the diffuse scattering analysis for the gradual Cr/Sc system.}
@@ -349,21 +349,15 @@ $\beta$ / $^\circ$ & $0.0$ & - \\
  \bottomrule
 \end{tabular}
 \end{table}
-The\gls{rms} roughness value found with the analysis of the diffuse scattering is 
-identical within its confidence interval to the value obtained from the 
-combined analysis and thus confirms the intermixing and roughness parameters 
-listed in Table.~\ref{ch_spec:tbl_CrSc_MCMC_results}.
-
 
 \subsection{Results and Conclusions}
-In conclusion, we have demonstrated a robust method to characterize ultra-thin 
+In Sec.~\ref{ch_spec:sec_CrSc}, we have demonstrated a robust method to characterize ultra-thin 
 multilayer systems with subnanometer layer thicknesses unambiguously. Layer 
 thicknesses in the subnanometer region are necessary for near-normal incidence 
 reflective mirrors in the water window spectral range. However, they come with 
 the cost of increasing susceptibility to disturbances in the interfaces at the 
 layer boundaries. This limits the achievable reflectance to values well below 
-the theoretical threshold, posing a demand for ideally non-destructive 
-characterization methods. The main mechanisms for diminished reflectance are 
+the theoretical threshold. The main mechanisms for diminished reflectance are 
 interdiffusion and roughness. With these effects ranging on the order of the 
 layer thickness, models based on binary layer stacks become inadequate to 
 describe the physical situation. In order to find a proper representation of 
@@ -377,35 +371,15 @@ We performed a rigorous analysis of several experimental methods to determine
 the model parameters representing one Cr/Sc sample. The optimal set of 
 parameters was determined by applying a particle swarm optimizer in conjunction 
 with a Markov-chain Monte Carlo method to verify the uniqueness of the solution 
-and derive confidence intervals for all parameters in all experiments. The set 
-of analytical methods we employed were EUV and X-ray reflectance, resonant EUV 
-reflectance across the Sc L edge as well as X-ray standing wave fluorescence at 
-the Sc-K and Cr-K lines across the first Bragg peak. The analysis of each 
-method shows different sensitivities for specific parameters of the model. The 
-EUV reflectance shows sensitivity for the optical contrast, i.e. the 
-intermixing $\eta$ and the roughness $\sigma_r$. With the resonant EUV 
-reflectance this is further improved and additional sensitivity is added with 
-respect to the ratio of Sc and Cr as well as the total period thickness $D$. 
-The XRR measurement, on the other hand, yields better confidence intervals for 
-the roughness $\sigma_r$ due to the appearance of the second Bragg peak.
-Finally, GIXRF delivers a method to resolve the 
-multilayer structure spatially and thus the interdiffusion layer thickness 
-$\sigma_d$ and the Sc to Cr ratio.
-
-Within the verified confidence intervals the MCMC methods reveal a remaining 
-correlation between the intermixing parameter and the roughness factor, which 
-could not be resolved with the experiments in specular geometry. We therefore 
+and derive confidence intervals for all parameters in all experiments. Within the verified confidence intervals the \gls{mcmc} method reveals a remaining 
+correlation between the intermixing parameter $\eta$ and the roughness factor $\sigma_r$, which 
+could not be resolved with the experiments in specular geometry and the fluorescence measurements. In this chapter, we therefore 
 performed a measurement of the off-specular diffuse scattering to distinguish 
-between the roughness and the interdiffusion. The results of these analyses 
-reveal a high degree of roughness correlation throughout the multilayer with 
-interface roughness values comparable with the best fit obtained in the 
-combined analysis. With the combination of all these methods, a robust result 
-could be derived with improved confidence intervals. Most notably, only the 
-combined analysis can detect the asymmetry of the interdiffusion layers 
-$\Gamma_\sigma$. It should also be noted here that the interdiffusion width 
+between the roughness and the interdiffusion similarly to the approach used for the Mo/Si systems. The \gls{rms} roughness value found with the analysis of the diffuse scattering is identical within its confidence interval to the value obtained from the combined analysis and thus confirms the intermixing and roughness parameters listed in Table.~\ref{ch_spec:tbl_CrSc_MCMC_results}. The results of this analysis further reveal a high degree of roughness correlation throughout the multilayer, which is in agreement with observations made for the unpolished Mo/Si systems and hints at a strong roughness replication during deposition of each layer. It should also be noted here that the interdiffusion width 
 $s_d$ is much larger than the roughness values $\sigma_r$. Also none of the 
 layers was found to have the index of refraction of pure Cr or Sc, 
 respectively. This is reflected through the non-vanishing intermixing parameter 
 $\eta>0$. Thus, it can be concluded that while roughness still exists, 
-intermixing and interdiffusion are the main cause of diminished reflectance for 
-the Cr/Sc multilayer system studied here.
+Intermixing and interdiffusion of the two materials in these sub-nanometer layer systems are the main cause of diminished reflectance for the Cr/Sc multilayer system studied here.
+
+The findings made in Sec.~\ref{ch_spec:sec_CrSc} together with the diffuse scattering analysis presented here have been published in \fullcite{haase_multiparameter_2016}.
