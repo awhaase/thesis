@@ -272,7 +272,9 @@ indicated by the black contour lines.}
   \label{ch_diff:fig_eta_sigma_correlation}
 \end{figure}
 
-Based on the analysis of the diffuse scatter, as we have shown above, that distinction becomes possible. Here, we shall proceed with the analysis of the Cr/Sc sample system studied in Sec.~\ref{ch_spec:sec_CrSc} and complete the characterization with respect to that correlation. For that purpose, we have measured the diffuse scattering intensity from the Cr/Sc sample similarly to the Mo/Si sample systems above in a rocking scan geometry. As the theoretical model for the \gls{dwba} calculation, we applied the gradual interface model as defined in the previous chapter with the optimal parameters listed in table~\ref{ch_spec:tbl_CrSc_MCMC_results} for the combination of all analytic experiments conducted there.
+Based on the analysis of the diffuse scatter, as we have shown above, that distinction becomes possible. Here, we shall proceed with the analysis of the Cr/Sc sample system studied in Sec.~\ref{ch_spec:sec_CrSc} and complete the characterization with respect to that parameter correlation. For that purpose, we have measured the diffuse scattering intensity from the Cr/Sc sample similarly to the Mo/Si sample systems above in a rocking scan geometry. As the theoretical model for the \gls{dwba} calculation, we applied the gradual interface model as defined in the previous chapter with the optimal parameters listed in table~\ref{ch_spec:tbl_CrSc_MCMC_results} for the combination of all analytic experiments conducted there.
+
+The reciprocal space map was taken at an opening angle of $\Delta \Theta = \SI{3}{\degree}$, where the specular reflectance condition corresponds to the situation where the \gls{euv} reflectivity was evaluated in the previous chapter. The measurement results are shown in Fig.~\ref{ch_diff:fig_CrSc_diffuse_meas}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{img/CrSc_diffuse_measured}
@@ -282,26 +284,10 @@ density profile with the multilayer parameters for the combined analysis listed
 in Table~\ref{tbl:results}.}
   \label{ch_diff:fig_CrSc_diffuse_meas}
 \end{figure}
+A clear difference to the maps in case of Mo/Si samples is the lack of Kiessig-like peaks and a similar triangular shaped intensity distribution due to the Bragg-like peak. Here, rather the expectation issued at the beginning of the chapter of the observation of a well formed Bragg sheet is met. The reasons behind this different behavior are the fundamental differences with respect to the quality as a mirror of the Cr/Sc system compared to the Mo/Si system and the different measurement geometry. With a \gls{euv} peak reflectance of only about $\SI{15}{\percent}$, only approximately $\SI{27}{\percent}$ of the maximum theoretical reflectivity is attained. In the previous chapter, it was found that the gradually shaped interfaces regions and intermixing of the sub-nanometer thick layers play a fundamental role in diminishing the reflectivity. This, however, does also crucially reduce the impact of multiple dynamic reflections, which were found to have a strong impact on the measured diffuse scatter intensity for the Mo/Si multilayer systems investigated above. In addition, this causes significantly higher penetration depth causing more layers to contribute to the diffuse scatter, even if the Bragg condition is fulfilled for both the incidence and exit angles. Apart from the general lack of dynamic effects due to bad reflectivity at the interfaces, the non-appearance of Kiessig-like peaks is also related to the rocking scan geometry with a significantly smaller opening angle. In the comparison of geometries done at the beginning of this chapter in Fig.~\ref{ch_diff:fig_kiessig_like_peaks_diffuse_map}, we have shown that the resonance conditions move to higher absolute values of $q_\parallel$, if the opening angle is reduced. Thus, no peaks are to be expected in the accessible range for the scan geometry chosen here.
 
-Even in the case of the data, methods and model presented here, the combined 
-analysis leaves a correlation between the intermixing parameter $\eta$ and the 
-roughness $\sigma_r$, which could not be resolved (see 
-Fig.~\ref{fig:eta_sigma_correlation}).
-
-This means that none of the methods, not even the combined analysis, contains 
-sufficient information to deduct an unambiguous result for the roughness or 
-intermixing. Intermixing alone merely reduces optical contrast, whereas 
-interface roughness causes diffuse scattering. One should be able to 
-distinguish between the two through the measurement of the diffuse scattering. 
-The distribution of the off-specular scattering with respect to the scattering 
-angle and wavelength provides additional information on the vertical and 
-lateral correlation of spatial roughness frequencies. The latter is described 
-by the power spectral density. We conducted a diffuse scattering experiment as 
-described in Sec.~\ref{sec:experimental}. The analysis was conducted based on 
-the DWBA formalism outlined in Sec.~\ref{sec:matrix_formalism}. The subfigures 
-(a) and (b) of Fig.~\ref{fig:diffuse_meas} show the measured reciprocal space 
-map in direct comparison to the best model found within the DWBA approach.
-
+\subsection{Estimation of the Vertical Roughness Correlation and the \gls{psd}}
+The sample investigated here is represented by the gradual interface model introduced in Sec.~\ref{ch_spec:sec_mo_si_c} above. With total number of $N=400$ bilayers and subsequent subdivision in sublayers, a substantial increase of interfaces has to be considered for the \gls{dwba} analysis compared to the Mo/Si systems. As pointed out above, the computation cost growth quadratically with the order $O(N^2)$ and thus renders the \gls{mcmc} method very unpractical for this particular system. However, in order to deduct an estimate of the \gls{psd} and the vertical roughness correlation, we shall apply the approach introduced in Sec.~\ref{ch_diff:sec_PTB17} at the beginning of the chapter by analyzing only selected cuts of the map to obtain the relevant parameters. The best \gls{psd} model parameters are then obtained by analyzing a horizontal cut of the Bragg sheet divided by the multilayer enhancement factor. The two cut positions are shown in Fig.~\ref{ch_diff:fig_CrSc_diffuse_measured_vs_dwba} as dashed lines in both, the measured maps and the best model \gls{dwba} calculation that was obtained with this approach.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{img/CrSc_diffuse_measured_vs_dwba}
@@ -309,9 +295,9 @@ map in direct comparison to the best model found within the DWBA approach.
 log scale. b) DWBA calculation of the optimal PSD model based on the electron 
 density profile with the multilayer parameters for the combined analysis listed 
 in Table~\ref{tbl:results}.}
-  \label{fig:diffuse_meas}
+  \label{ch_diff:fig_CrSc_diffuse_measured_vs_dwba}
 \end{figure}
-
+The comparison shows a good agreement of the model with the measured data. The data and the simulation results at the vertical cut position are shown in detail in Fig.~\ref{ch_diff:fig_CrSc_diffuse_vertical_correlation}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{img/CrSc_diffuse_vertical_correlation}
@@ -319,65 +305,40 @@ in Table~\ref{tbl:results}.}
 positions in (a) and (b). The blue dashed lines show two limiting cases for the 
 value of the vertical correlation length. The result is a model uncertainty in 
 the PSD.}
-  \label{fig:diffuse_meas}
+  \label{ch_diff:fig_CrSc_diffuse_vertical_correlation}
 \end{figure}
-
+The solid red line represents the measured data extracted at the aforementioned vertical cut position. The best model result was obtained using the \gls{pso} algorithm and is shown as solid blue line providing a good match with the data. The measurement uncertainty is indicated through the red shaded area. Due to the very high computational cost of the MCMC procedure mentioned above, we have instead
+calculated two limiting cases of the vertical correlation to assess the confidence intervals for that parameter. The results of that calculation are shown as dashed blue lines framing the measurement uncertainty at the position of the peak. This parameter enters the calculation of the multilayer enhancement factor marked in Eq.~\eqref{ch_diff:eqn_full_explicit_dwba_with_approximations} and thus affects the absolute values of the \gls{psd} extracted from the horizontal cut by dividing through that term. It thus introduces a numerical or model uncertainty to the deduction of the \gls{psd}. Proceeding from here, we have evaluated the measured 
+\gls{psd}. To deduct the effective power spectral density, we have taken the cut along the Bragg sheet as indicated by the horizontal white dashed lines in the reciprocal space 
+maps. We divided the extracted scattering intensity by the multilayer 
+enhancement factor, leaving the contribution of the effective \gls{psd} $C(q_\parallel)$ to the diffuse scattering. Again, the two limiting cases are shown as red dashed curves in 
+Fig.~\ref{ch_diff:fig_CrSc_diffuse_PSD} including the \gls{psd} deduced from the best model 
+value for $\xi_\perp$ as a solid red curve.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{img/CrSc_diffuse_PSD}
   \caption{Comparison of the extracted effective PSDs from the diffuse 
-scattering measurement (Measured Data) shown in (a) and the DWBA calculation of 
-(b) at the horizontal cut positions indicated by the white dashed lines. The 
+scattering measurement. The 
 uncertainty interval for the extracted power spectral density is shown by the 
 two dashed PSD profiles (see main text).}
-  \label{fig:diffuse_meas}
+  \label{ch_diff:fig_CrSc_diffuse_PSD}
 \end{figure}
-
-
-The formation of a narrow Bragg sheet \cite{haase_role_2014,salditt_kinetic_1994} 
-confirms the high degree of roughness correlation and thereby justifies the 
-approximations made in Sec.~\ref{sec:matrix_formalism} for identical roughness 
-properties at each interface. To deduct the effective power spectral density 
-shown in Fig.~\ref{fig:diffuse_meas}(c), we have taken a cut along the Bragg 
-sheet as indicated by the horizontal white dashed lines in the reciprocal space 
-maps. We divided the extracted scattering intensity by the multilayer 
-enhancement factor in Eq.~\ref{eqn:dwba}, leaving the contribution of the 
-effective PSD $C(q_\parallel)$ to the diffuse scattering.
-This requires that the vertical correlation factor $\xi_\perp$ be determined 
-first, which enters the calculation of the multilayer enhancement factor 
-through the replication factor in Eq.~\eqref{eqn:vertical_correlation}. Due to 
-the very high computational cost of a MCMC procedure, we have instead 
-calculated two limiting cases of the vertical correlation. This was done by 
-analyzing the width of the Bragg sheet at the vertical white dashed cut 
-positions, indicated in Fig.~\ref{fig:diffuse_meas}(a,b), and comparing the 
-simulated intensity distribution with the measurement uncertainty. The two 
-limiting cases are shown in Fig.~\ref{fig:diffuse_meas}(d) (blue dashed curves) 
-including the best model (solid blue curve) in comparison with the measured 
-data (solid red curve). Proceeding from here, we have evaluated the measured 
-PSD with the corresponding multilayer enhancement factor as described above. 
-Again, the two limiting cases are shown as red dashed curves in 
-Fig.~\ref{fig:diffuse_meas}(c) including the PSD deduced from the best model 
-value for $\xi_\perp$ as a solid red curve. The root mean square (r.m.s.) 
-roughness deducted from these PSDs is given by the two-dimensional integral as
+The \gls{rms} roughness, which we seek to determine to solve the correlation problem illustrated in Fig.~\ref{ch_diff:fig_eta_sigma_correlation} above, deducted from these \gls{psd}s is given by the two-dimensional integral as
 \begin{align}
 \sigma_r &=\frac{1}{2\pi} \sqrt{\int_{0}^{\infty} q_\parallel C(q_\parallel) \, 
 dq_\parallel} \text{.}
 \end{align}
 The uncertainty of the PSD due to the vertical correlation leads to an 
-uncertainty in the r.m.s. roughness when evaluating the integral. Due to the 
+uncertainty in the \gls{rms} roughness when evaluating the integral. Due to the 
 limited $q_\parallel$ range where measurements can be taken, we have fitted the 
-PSD model of Eq.~\eqref{eqn:psd} to the three resulting PSDs and performed the 
-integration over the full $q_\parallel$ range. The deviation of the integration 
-for the PSD model fit and the data in the available range were negligible. The 
-best model results for the vertical replication factor and the power spectral 
-density are given in Table.~\ref{tbl:psd_results}, together with their 
-uncertainties resulting from the described procedure. The best fit of the PSD 
-model is shown in Fig.~\ref{fig:diffuse_meas}(c) as a solid blue curve.
+PSD model of Eq.~\eqref{ch_theo:eqn_psd} to the three resulting \gls{psd}s by applying the \gls{mcmc} procedure based on the parameter limits shown in table~\ref{ch_diff:tbl_PTB17_diffuse_optimization_limits_and_results}. The tilt angle beta was fixed to $\beta=\SI{0}{\degree}$ in this analysis, since no non-orthogonal roughness correlation was determined by comparison of vertical cuts at different $q_\parallel$ positions in the map. The computational cost for that is very low, since the relevant multiplications are done in the evaluation of the multilayer enhancement factor. After that, the integration over the full $q_\parallel$ range was performed for the best model. The deviation of the integration for the PSD model fit and the data in the available range were negligible. The best model results for the vertical replication factor and the power spectral 
+density are given in Table.~\ref{ch_diff:tbl_CrSc_psd_results}, together with their 
+uncertainties resulting from the \gls{mcmc} evaluation. It should be noted here, that similarly to the other systems treated within this chapter, only limited data is available to determine the Hurst factor.
 \begin{table}
 \centering
 \caption{Best model parameters of the PSD as a result of the diffuse scattering 
 analysis}
-\label{tbl:psd_results}
+\label{ch_diff:tbl_CrSc_psd_results}
 \begin{tabular}{@{}ll@{}}
 \toprule
 Parameter & Best model values\\ \midrule
@@ -389,7 +350,63 @@ $\beta$ & $0.0$ \\
  \bottomrule
 \end{tabular}
 \end{table}
-The r.m.s.~roughness value found with the analysis of the diffuse scattering is 
-identical within its uncertainty interval to the value obtained from the 
+The\gls{rms} roughness value found with the analysis of the diffuse scattering is 
+identical within its confidence interval to the value obtained from the 
 combined analysis and thus confirms the intermixing and roughness parameters 
-listed in Table.~\ref{tbl:results}.
+listed in Table.~\ref{ch_spec:tbl_CrSc_MCMC_results}.
+
+
+\subsection{Results and Conclusions}
+In conclusion, we have demonstrated a robust method to characterize ultra-thin 
+multilayer systems with subnanometer layer thicknesses unambiguously. Layer 
+thicknesses in the subnanometer region are necessary for near-normal incidence 
+reflective mirrors in the water window spectral range. However, they come with 
+the cost of increasing susceptibility to disturbances in the interfaces at the 
+layer boundaries. This limits the achievable reflectance to values well below 
+the theoretical threshold, posing a demand for ideally non-destructive 
+characterization methods. The main mechanisms for diminished reflectance are 
+interdiffusion and roughness. With these effects ranging on the order of the 
+layer thickness, models based on binary layer stacks become inadequate to 
+describe the physical situation. In order to find a proper representation of 
+the multilayer sample, more sophisticated models with an explicit description 
+of the gradual interdiffusion layers become necessary. This inevitably 
+increases the number of parameters to be determined in analytical experiments. 
+Finding an unambiguous solution is challenging and can only be achieved with a 
+combined analysis of several non-destructive techniques.
+
+We performed a rigorous analysis of several experimental methods to determine 
+the model parameters representing one Cr/Sc sample. The optimal set of 
+parameters was determined by applying a particle swarm optimizer in conjunction 
+with a Markov-chain Monte Carlo method to verify the uniqueness of the solution 
+and derive confidence intervals for all parameters in all experiments. The set 
+of analytical methods we employed were EUV and X-ray reflectance, resonant EUV 
+reflectance across the Sc L edge as well as X-ray standing wave fluorescence at 
+the Sc-K and Cr-K lines across the first Bragg peak. The analysis of each 
+method shows different sensitivities for specific parameters of the model. The 
+EUV reflectance shows sensitivity for the optical contrast, i.e. the 
+intermixing $\eta$ and the roughness $\sigma_r$. With the resonant EUV 
+reflectance this is further improved and additional sensitivity is added with 
+respect to the ratio of Sc and Cr as well as the total period thickness $D$. 
+The XRR measurement, on the other hand, yields better confidence intervals for 
+the roughness $\sigma_r$ due to the appearance of the second Bragg peak.
+Finally, GIXRF delivers a method to resolve the 
+multilayer structure spatially and thus the interdiffusion layer thickness 
+$\sigma_d$ and the Sc to Cr ratio.
+
+Within the verified confidence intervals the MCMC methods reveal a remaining 
+correlation between the intermixing parameter and the roughness factor, which 
+could not be resolved with the experiments in specular geometry. We therefore 
+performed a measurement of the off-specular diffuse scattering to distinguish 
+between the roughness and the interdiffusion. The results of these analyses 
+reveal a high degree of roughness correlation throughout the multilayer with 
+interface roughness values comparable with the best fit obtained in the 
+combined analysis. With the combination of all these methods, a robust result 
+could be derived with improved confidence intervals. Most notably, only the 
+combined analysis can detect the asymmetry of the interdiffusion layers 
+$\Gamma_\sigma$. It should also be noted here that the interdiffusion width 
+$s_d$ is much larger than the roughness values $\sigma_r$. Also none of the 
+layers was found to have the index of refraction of pure Cr or Sc, 
+respectively. This is reflected through the non-vanishing intermixing parameter 
+$\eta>0$. Thus, it can be concluded that while roughness still exists, 
+intermixing and interdiffusion are the main cause of diminished reflectance for 
+the Cr/Sc multilayer system studied here.
