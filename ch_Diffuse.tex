@@ -265,10 +265,7 @@ In Sec.~\ref{ch_spec:sec_CrSc}, we have demonstrated the analysis of Cr/Sc multi
   \includegraphics[width=0.5\textwidth]{images/eta_sigma_correlation}
   \caption{Correlation of the projected $\chi^2$ surface onto the parameter 
 pair $(\eta, \sigma_r$) by visualization of the position of the MCMC samples in 
-the reduced parameter space. The strong correlation of both parameters in the 
-optimal solution, which is indicated by blue solid lines, is clearly visible. 
-The percentiles corresponding to one and two standard deviations $\sigma$ are 
-indicated by the black contour lines.}
+the reduced parameter space.}
   \label{ch_diff:fig_eta_sigma_correlation}
 \end{figure}
 
@@ -278,10 +275,8 @@ The reciprocal space map was taken at an opening angle of $\Delta \Theta = \SI{3
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{img/CrSc_diffuse_measured}
-  \caption{a) Diffuse scattering measurement in $q$-space representation and 
-log scale. b) DWBA calculation of the optimal PSD model based on the electron 
-density profile with the multilayer parameters for the combined analysis listed 
-in Table~\ref{tbl:results}.}
+  \caption{Diffuse scattering measurement in $q$-space representation and 
+log scale.}
   \label{ch_diff:fig_CrSc_diffuse_meas}
 \end{figure}
 A clear difference to the maps in case of Mo/Si samples is the lack of Kiessig-like peaks and a similar triangular shaped intensity distribution due to the Bragg-like peak. Here, rather the expectation issued at the beginning of the chapter of the observation of a well formed Bragg sheet is met. The reasons behind this different behavior are the fundamental differences with respect to the quality as a mirror of the Cr/Sc system compared to the Mo/Si system and the different measurement geometry. With a \gls{euv} peak reflectance of only about $\SI{15}{\percent}$, only approximately $\SI{27}{\percent}$ of the maximum theoretical reflectivity is attained. In the previous chapter, it was found that the gradually shaped interfaces regions and intermixing of the sub-nanometer thick layers play a fundamental role in diminishing the reflectivity. This, however, does also crucially reduce the impact of multiple dynamic reflections, which were found to have a strong impact on the measured diffuse scatter intensity for the Mo/Si multilayer systems investigated above. In addition, this causes significantly higher penetration depth causing more layers to contribute to the diffuse scatter, even if the Bragg condition is fulfilled for both the incidence and exit angles. Apart from the general lack of dynamic effects due to bad reflectivity at the interfaces, the non-appearance of Kiessig-like peaks is also related to the rocking scan geometry with a significantly smaller opening angle. In the comparison of geometries done at the beginning of this chapter in Fig.~\ref{ch_diff:fig_kiessig_like_peaks_diffuse_map}, we have shown that the resonance conditions move to higher absolute values of $q_\parallel$, if the opening angle is reduced. Thus, no peaks are to be expected in the accessible range for the scan geometry chosen here.
@@ -292,19 +287,15 @@ The sample investigated here is represented by the gradual interface model intro
   \centering
   \includegraphics[width=0.7\textwidth]{img/CrSc_diffuse_measured_vs_dwba}
   \caption{a) Diffuse scattering measurement in $q$-space representation and 
-log scale. b) DWBA calculation of the optimal PSD model based on the electron 
-density profile with the multilayer parameters for the combined analysis listed 
-in Table~\ref{tbl:results}.}
+log scale. b) DWBA calculation of the optimal PSD model based on the gradual interface model with the multilayer parameters for the combined analysis listed 
+in Table~\ref{ch_spec:tbl_CrSc_MCMC_results}.}
   \label{ch_diff:fig_CrSc_diffuse_measured_vs_dwba}
 \end{figure}
 The comparison shows a good agreement of the model with the measured data. The data and the simulation results at the vertical cut position are shown in detail in Fig.~\ref{ch_diff:fig_CrSc_diffuse_vertical_correlation}.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{img/CrSc_diffuse_vertical_correlation}
-  \caption{ Vertical cut at the indicated white dashed cut 
-positions in (a) and (b). The blue dashed lines show two limiting cases for the 
-value of the vertical correlation length. The result is a model uncertainty in 
-the PSD.}
+  \caption{Measured data and calculations at the vertical cut indicated by the vertical white dashed line in Fig.~\ref{ch_diff:fig_CrSc_diffuse_measured_vs_dwba}. The blue dashed lines show two limiting cases for the value of the vertical correlation length. The result is a model uncertainty in the PSD.}
   \label{ch_diff:fig_CrSc_diffuse_vertical_correlation}
 \end{figure}
 The solid red line represents the measured data extracted at the aforementioned vertical cut position. The best model result was obtained using the \gls{pso} algorithm and is shown as solid blue line providing a good match with the data. The measurement uncertainty is indicated through the red shaded area. Due to the very high computational cost of the MCMC procedure mentioned above, we have instead
