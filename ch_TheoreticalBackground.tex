@@ -373,22 +373,21 @@ $S_{ij}(\vec{q}_\parallel)$ is, thus, the Fourier transform of the correlation f
 \begin{align}
 \tilde{C}_i(\vec{X}) = P_i \xi_\parallel^{H_i} |\vec{X}|^{H_i} K_{H_i}\Big(|\vec{X}|/\xi_\parallel\Big) \text{.} \label{eqn:lateral_correlation_function}
 \end{align}
-$H_i$ is the Hurst factor providing a measure for the jaggedness of the interface \cite{sinha_x-ray_1988}, $K_{H_i}$ are the modified Bessel functions of the order $H_i$, $\xi_\parallel$ is a lateral correlation length and
+$H_i$ is the Hurst factor providing a measure for the jaggedness of the interface \cite{sinha_x-ray_1988} as illustrated in Fig.~\ref{ch_theo:fig_hurst_illustration}, $K_{H_i}$ are the modified Bessel functions of the order $H_i$, $\xi_\parallel$ is a lateral correlation length and
 \begin{align}
 P_i = \frac{\sigma_i^2}{\xi_\parallel^{H_i-1} 2^{H_i-1} \Gamma(1+H_i)/H_i}\text{.}
 \end{align}
+\begin{figure}[htb]
+    \def\svgwidth{0.5\textwidth}
+    \import{svg/}{hurst_illustration.pdf_tex}
+    \caption{Qualitative illustration of the Hurst factor $H$ describing the jaggedness of the interface. The Hurst factor $H$ is defined between $0 \leq H \leq 1$, with small values describing strongly jagged roughness profiles as shown for the bottom interface and large values approaching unity for smooth (Gaussian type) interfaces.}
+    \label{ch_theo:fig_hurst_illustration}
+\end{figure}
 
 The multilayer mirror samples investigated within this thesis are highly-reflective samples fabricated with state of the art deposition processes. We therefore expect a highly periodic and highly-stable vertical replication of roughness. While a distinction of the roughness at the individual interfaces is theoretically possible, the experimental method always irradiates all interfaces simultaneously. Thus, reconstructing the parameters describing roughness of all interfaces individually is not possible due to the indistinguishability of the contribution of separate interfaces. Such a model would be ill-defined based on the scattering data recorded. Instead, our goal is to determine a single average power spectral density. We thus assume identical roughness properties for all interfaces in our model. Hence $\sigma_j = \sigma$, $H_j = H$ and $C_{\text{max}(i,j)}(\vec{q}_\parallel) = C(\vec{q}_\parallel)$. The PSD is given by the Fourier transform of Eq.~\eqref{eqn:lateral_correlation_function} with respect to $q_x$, which yields the closed analytic form
 \begin{equation}
         C(\vec{q}_\parallel) = \frac{4 \pi H \sigma^2 \xi_\parallel^2}{(1+|\vec{q}_\parallel|^2\xi_\parallel^2)^{1+H}} \text{.} \label{ch_theo:eqn_psd} 
 \end{equation}
-
-\begin{figure}[htb]
-    \def\svgwidth{0.4\textwidth}
-    \import{svg/}{hurst_illustration.pdf_tex}
-    \caption{Illustration of the Hurst factor.}
-    \label{ch_theo:fig_hurst_illustration}
-\end{figure}
 
 \paragraph{Vertical correlation of roughness}
 The high degree of thickness stability for well-defined multilayers as is necessary for high-performance mirrors implies a high degree of vertical correlation of individual interfaces roughness throughout the stack. To better illustrate the correlation of roughness, Fig.~\ref{ch_theo:fig_vertical_roughness_correlation} shows two situations where a weak and a strong correlation exist.
@@ -402,7 +401,7 @@ In order to derive the replication factor in Eq.~\eqref{eqn:factorized_structure
 \begin{align}
 \frac{\partial w(f)}{\partial t} = - 4 \pi^2 v f^2 w(f) + \frac{\partial \eta(f)}{\partial t} \text{,} \label{ch_theo:eqn_langevin}
 \end{align}
-where $v$ is a diffusion-like parameter, $\eta(f)$ is random noise normalized to the layer thickness and $w(f)$ describes the roughness evolution in dependence of the spatial frequency $f$. The roughness evolution during the growth of a single layer of a specific material can then be evaluated by discretizing Eq.~\eqref{ch_theo:eqn_langevin} for the successive deposition of material of thickness $\delta d$
+where $v$ is a diffusion-like parameter, $\eta(f)$ is random noise normalized to the layer thickness $t$ and $w(f)$ describes the roughness evolution in dependence of the spatial frequency $f$. The roughness evolution during the growth of a single layer of a specific material can then be evaluated by discretizing Eq.~\eqref{ch_theo:eqn_langevin} for the successive deposition of material of thickness $\delta d$
 \begin{align}
 w_i(f) = c_\perp(f;\delta d) w_{i-1}(f) + \eta(f) \text{,}
 \end{align}
