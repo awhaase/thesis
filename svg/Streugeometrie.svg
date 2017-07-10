@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="375.4736"
-     inkscape:cy="636.87569"
+     inkscape:zoom="5.6"
+     inkscape:cx="232.92581"
+     inkscape:cy="578.62547"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -396,9 +396,9 @@
      inkscape:label="Ebene 1">
     <path
        transform="matrix(-0.10849106,-0.52093399,0.49933331,-0.11318428,-19.805966,806.45426)"
-       sodipodi:end="0.47052593"
+       sodipodi:end="0.74643308"
        sodipodi:start="0.24813583"
-       d="m 505.77827,504.40933 a 102.85714,102.85714 0 0 1 -8.02718,21.36937"
+       d="m 505.77827,504.40933 a 102.85714,102.85714 0 0 1 -24.1978,44.58108"
        sodipodi:ry="102.85714"
        sodipodi:rx="102.85714"
        sodipodi:cy="479.14789"
@@ -548,17 +548,18 @@
     <path
        inkscape:connector-curvature="0"
        id="path4418"
-       d="m 201.32992,456.50721 -25.89937,84.20915"
-       style="fill:none;stroke:#a60628;stroke-width:2.08911133;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1SstartZ);marker-end:none" />
+       d="m 219.24532,473.68369 -43.81477,67.03267"
+       style="fill:none;stroke:#a60628;stroke-width:2.08911133;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1SstartZ);marker-end:none"
+       sodipodi:nodetypes="cc" />
     <text
        sodipodi:linespacing="125%"
        id="text5662"
-       y="479.14789"
-       x="177.47534"
+       y="479.50504"
+       x="190.86819"
        style="font-size:12.02020264px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:TeX Gyre Schola;-inkscape-font-specification:TeX Gyre Schola Italic"
        xml:space="preserve"><tspan
-         y="479.14789"
-         x="177.47534"
+         y="479.50504"
+         x="190.86819"
          id="tspan5664"
          sodipodi:role="line">$\alpha_f$</tspan></text>
     <text
@@ -575,13 +576,13 @@
     <text
        xml:space="preserve"
        style="font-size:9.6161623px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#a60628;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       x="206.09561"
-       y="472.29794"
+       x="223.59561"
+       y="479.26224"
        id="text5703"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="206.09561"
-         y="472.29794"
+         x="223.59561"
+         y="479.26224"
          id="tspan5707">$\vec{k}_f$</tspan></text>
     <path
        inkscape:connector-curvature="0"
