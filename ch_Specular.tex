@@ -35,7 +35,7 @@ For the purpose of reconstructing the layer layout of the Mo/B$_4$C/Si/C sample,
 \end{figure}
 As introduced above, the multilayer coating consists of a periodic arrangement of four layers replicated 64 times. With the top period being different from the others through the missing carbon interdiffusion layer on the top surface. Since the sample was exposed to ambient conditions, a passivization of the top silicon surface through oxidation has to be taken into account through a silicondioxide layer. The parametrization of that model is given by the thicknesses of each layer within one period as well as for the capping silicondioxide layer. Each of the deposited layers may vary in density with respect to the bulk density of that material \cite{braun_mo/si_2002}, which also needs to be reflected in the model. Finally, the N{\'e}vot-Croce factor $\sigma$ accounting for roughness and interdiffusion at the interfaces as introduced in Eq.~\eqref{ch_theo:eqn_mod_fresnel} of chapter \ref{ch_theo} is also included. The required optical constants, i.e.~the indices of refraction, of the respective materials in the relevant spectral range are taken from tabulated values by \textcite{henke_x-ray_1993} and are used for the theoretical calculations based on the matrix algorithm. At this point, it should be noted that the tabulated optical constants itself come with an uncertainty, which is generally unknown here. In order to account for this, all models within this thesis contain a variable density parameter for each material taken from the Henke database. This acts as a factor on the optical constants and thus takes the uncertainties into account. This parameter is used across all wavelengths in this thesis. As shall be demonstrated later, this does not pose a limitation on the structural reconstruction, as the sensitivity with respect to the optical constants of the different experiments conducted here is important in the \gls{euv} spectral range, but neglicable for high photon energies.
 
-A full list of the model parameters for the multilayer sample can be found in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters} together with physically plausible limits for each of the parameters. Due to the fact that the \gls{euv} reflectivity curve shown in Fig.~\ref{ch_spec:fig_ptb17_reflectance_AOI_15} shows the first order Bragg peak of the layer system, none of the layers can be thicker than \nm{7}, i.e.~in the order of half of the wavelength. The barrier layers were designed to attain thicknesses below \nm{1}. The density of the various materials within this model was constrained to values between $\SI{50}{\percent}$ and $\SI{100}{\percent}$ with respect to their bulk density. Through possible defects in an amorphous layer compared to a crystalline structure, the bulk density may not be attained. Due to the high peak reflectance close to the theoretical limit, i.e.~the reflectance calculated for a given model without any roughness or intermixing present, of the multilayer sample in the \gls{euv} measurement, the maximum value of the N{\'e}vot-Croce factor was limited to be below $\sigma \leq \nm{2}$. With its upper limit, the measured peak reflectance can not be attained within this model thus not limiting the generality.
+A full list of the model parameters for the multilayer sample can be found in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_parameters} together with physically plausible limits for each of the parameters. Due to the fact that the \gls{euv} reflectivity curve shown in Fig.~\ref{ch_spec:fig_ptb17_reflectance_AOI_15} shows the first order Bragg peak of the layer system, none of the layers can be thicker than \nm{7}, i.e.~in the order of half of the wavelength. The barrier layers were designed to attain thicknesses below \nm{1}. The density of the various materials within this model was constrained to values between $\SI{50}{\percent}$ and $\SI{200}{\percent}$ with respect to their bulk density. Due to the high peak reflectance close to the theoretical limit, i.e.~the reflectance calculated for a given model without any roughness or intermixing present, of the multilayer sample in the \gls{euv} measurement, the maximum value of the N{\'e}vot-Croce factor was limited to be below $\sigma \leq \nm{2}$. With its upper limit, the measured peak reflectance can not be attained within this model thus not limiting the generality.
 \begin{table*}
 \centering
 \caption{Multilayer parametrization and parameter limits}
@@ -49,10 +49,10 @@ $d_\text{C}$ / nm &C buffer layer thickness& $0.0$ & $5.0$\\
 $d_\text{B$_4$C}$ / nm &B$_4$C buffer layer thickness&$0.0$ & $5.0$\\ 
 $\sigma$ / nm & N\'{e}vot-Croce parameter& $0.0$& $2.0$\\ 
 &(identical for all interfaces)&&\\
-$\rho_\text{Mo}$ &Mo density w.r.t.~bulk density & $0.5$& $1.0$\\ 
-$\rho_\text{Si}$ &Si density w.r.t.~bulk density& $0.5$& $1.0$\\ 
-$\rho_\text{C}$ &C density w.r.t.~bulk density& $0.5$& $1.0$\\ 
-$\rho_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.5$& $1.0$\\
+$\rho_\text{Mo}$ &Mo density w.r.t.~bulk density & $0.5$& $2.0$\\ 
+$\rho_\text{Si}$ &Si density w.r.t.~bulk density& $0.5$& $2.0$\\ 
+$\rho_\text{C}$ &C density w.r.t.~bulk density& $0.5$& $2.0$\\ 
+$\rho_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.5$& $2.0$\\
 \midrule
 \multicolumn{4}{c}{Capping layer}\\
 \midrule
@@ -153,19 +153,20 @@ In all cases, the one-sigma standard deviations for Gaussian distributions are s
 \begin{tabular}{@{}lllll@{}}
 \toprule
 Parameter & PSO result & center value & $1 \sigma$ c.i.& $2 \sigma$ c.i.\\ \midrule
-$d_\text{SiO$_2$(cap)}$ / nm & $3.194$& $3.677 $&$({-2.252}/{+1.944})$ & $({-3.407}/{+3.108})$ \\
-$d_\text{Mo}$ / nm &  $2.460$& $3.137$&$({-0.587}/{+0.560})$ & $({-1.054}/{+1.016})$ \\
-$d_\text{Si}$ / nm & $2.421$& $2.338$&$({-0.497}/{+0.616})$ & $({-0.916}/{+1.294})$ \\
-$d_\text{C}$ / nm& $0.811$ & $0.744$&$({-0.477}/{+0.510})$ & $({-0.696}/{+0.971})$ \\
-$d_\text{B$_4$C}$ / nm & $1.308$& $0.782$&$({-0.471}/{+0.511})$ & $({-0.722}/{+0.973})$ \\
-$\sigma$ / nm & $0.322$& $0.214$&$({-0.143}/{+0.201})$ & $({-0.204}/{+0.347})$\\
-$\rho_\text{Mo}$ & $0.989$& $0.953$&$({-0.048}/{+0.034})$ & $({-0.094}/{+0.045})$ \\
-$\rho_\text{Si}$ & $0.883$& $0.782$&$({-0.167}/{+0.147})$ & $({-0.264}/{+0.208})$ \\
-$\rho_\text{C}$ & $0.833$& $0.739$&$({-0.164}/{+0.175})$ & $({-0.228}/{+0.249})$ \\
-$\rho_\text{B$_4$C}$ & $0.909$& $0.741$&$({-0.162}/{+0.172})$ & $({-0.230}/{+0.247})$ \\
+$d_\text{SiO$_2$(cap)}$ / nm & $3.194$& $3.139$&$({-1.077}/{+1.108})$ & $({-2.704}/{+3.378})$ \\
+$d_\text{Mo}$ / nm &  $2.460$& $1.998$&$({-0.422}/{+0.429})$ & $({-0.789}/{+0.945})$ \\
+$d_\text{Si}$ / nm & $2.421$& $2.910$&$({-0.529}/{+0.473})$ & $({-1.162}/{+0.862})$ \\
+$d_\text{C}$ / nm& $0.811$ & $1.190$&$({-0.516}/{+0.459})$ & $({-0.947}/{+0.968})$ \\
+$d_\text{B$_4$C}$ / nm & $1.308$& $0.894$&$({-0.531}/{+0.560})$ & $({-0.825}/{+1.060})$ \\
+$\sigma$ / nm & $0.322$& $0.456$&$({-0.211}/{+0.206})$ & $({-0.376}/{+0.399})$\\
+$\rho_\text{Mo}$ & $0.989$& $1.086$&$({-0.098}/{+0.147})$ & $({-0.183}/{+0.340})$ \\
+$\rho_\text{Si}$ & $0.883$& $0.851$&$({-0.219}/{+0.253})$ & $({-0.330}/{+0.491})$ \\
+$\rho_\text{C}$ & $0.833$& $0.941$&$({-0.297}/{+0.418})$ & $({-0.421}/{+0.846})$ \\
+$\rho_\text{B$_4$C}$ & $0.909$& $1.115$&$({-0.435}/{+0.572})$ & $({-0.588}/{+0.845})$ \\
  \bottomrule
 \end{tabular}
 \end{table*}
+
 
 It should be noted, that the given center values here are not a good solution to the optimization problem. The reason for that is, that the parameters are highly correlated. The center values of the one-dimensional projections may therefore not be suitable parameters for the model based on the low amount of data available. A valid optimization result can therefore only be obtained by either applying the \gls{pso} routine or by iterative application of the \gls{mcmc} procedure. The latter may be achieved by fixing single parameters according to their maximum likelihood value  found in the previous iteration and obtaining the resulting likelihood distributions for the remaining parameters according to that restricted prior distribution.
 
@@ -212,7 +213,7 @@ The thicknesses of the Mo layers inside the stack were varied nominally from $1.
     \caption[Model of the Mo/Si/C multilayer stack including the substrate and the capping layers.]{Model of the multilayer stack including the substrate and the capping layers. The periodic part is enclosed between the dashed lines with four layers in each period repeated 49 times. The capping period does not include an interdiffusion layer but has a natural SiO$_2$ layer and a carbon-like layer accounting for contamination on the top surface.}
     \label{ch_spec:fig_model_unpolished_and_polished_samples}
 \end{figure}
-To account for any contamination on the top sample surface, an additional carbon-like layer as the upper most layer was considered. In addition to the thicknesses of each layer we also allowed for a variation of the layer density between $80\%$ and $100\%$ of the bulk density. The model parameters and their boundaries entering in the optimization procedure are listed in table~\ref{ch_spec:tbl_mo_si_c_multilayer_parameters}. Similar to the Mo/B$_4$C/Si/C in Sec.~\ref{ch_spec:sec_reconstruction_PTB17}, a N\'{e}vot-Croce damping factor was assumed to account for specular reflectivity loss due to interface imperfections. 
+To account for any contamination on the top sample surface, an additional carbon-like layer as the upper most layer was considered. In addition to the thicknesses of each layer we also allowed for a variation of the layer density between $80\%$ and $100\%$ of the bulk density in agreement with findings in literature \cite{braun_mo/si_2002}. The model parameters and their boundaries entering in the optimization procedure are listed in table~\ref{ch_spec:tbl_mo_si_c_multilayer_parameters}. Similar to the Mo/B$_4$C/Si/C in Sec.~\ref{ch_spec:sec_reconstruction_PTB17}, a N\'{e}vot-Croce damping factor was assumed to account for specular reflectivity loss due to interface imperfections. 
 \begin{table*}
 \centering
 \caption{Parametrization of the Mo/Si/C multilayer samples with varying molybdenum layer thicknesses.}
@@ -226,10 +227,10 @@ $d_\text{C}$ / nm &C buffer layer thickness& $0.0$ & $0.6$\\
 $d_\text{MoSi$_2$}$ / nm &MoSi$_2$ interdiffusion layer thickness&$0.0$ & $0.6$\\ 
 $\sigma$ / nm & N\'{e}vot-Croce parameter& $0.0$& $0.5$\\ 
 &(identical for all interfaces)&&\\
-$\rho_\text{Mo}$ &Mo density w.r.t.~bulk density & $0.5$& $1.0$\\ 
-$\rho_\text{Si}$ &Si density w.r.t.~bulk density& $0.5$& $1.0$\\ 
-$\rho_\text{C}$ &C density w.r.t.~bulk density& $0.5$& $1.0$\\ 
-$\rho_\text{MoSi$_2$}$ &MoSi$_2$ density w.r.t.~bulk density& $0.5$& $1.0$\\
+$\rho_\text{Mo}$ &Mo density w.r.t.~bulk density & $0.8$& $1.0$\\ 
+$\rho_\text{Si}$ &Si density w.r.t.~bulk density& $0.8$& $1.0$\\ 
+$\rho_\text{C}$ &C density w.r.t.~bulk density& $0.8$& $1.0$\\ 
+$\rho_\text{MoSi$_2$}$ &MoSi$_2$ density w.r.t.~bulk density& $0.8$& $1.0$\\
 \midrule
 \multicolumn{4}{c}{Capping layer}\\
 \midrule
