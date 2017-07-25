@@ -428,7 +428,7 @@ Gullikson et al.~\cite{gullikson_asymmetric_1999} observed that the direction of
 \end{figure*}
 Including this effect in the differential cross section, requires a coordinate transformation in reciprocal space to account for the tilt angle $\beta$ according to
 \begin{align}
-\overline{q}_z = q_z - \hat{e} \cdot \vec{q}_\parallel   \tan \beta\text{,}
+\overline{q}_z = q_z - \hat{e} \cdot \vec{q}_\parallel   \tan \beta\text{,} \label{ch_theo:eqn_off_axis_vertical_roughness_correlation_angle}
 \end{align}
 where $\hat{e}$ is a unit vector in direction of the roughness replication. Since the vertical scattering vector components enter the calculations through the Fresnel coefficients in Eq.~\eqref{ch_theo:eqn_fresnel_reflection_coefficient} and Eq.~\eqref{ch_theo:eqn_fresnel_transmission_coefficient}, an additional factor appears in the calculation of Eq.~\eqref{ch_theo:eqn_factorized_structure_factor} through substitution by
 \begin{align}
@@ -443,7 +443,7 @@ Taking together all the above findings and inserting them into Eq.~\eqref{ch_the
     \end{align}
 Since all experiments in this thesis have been conducted in in co-planar geometry, i.e.~for in-plane scattering measurements with a vanishing azimuthal angle $\theta_f$ in Fig.~\ref{ch_theo:fig_scattering_process}, the parallel component of the scattering vector $\gls{q}$ is given by its $q_x$ component only, i.e.~$\vec{q}_\parallel \equiv q_x$, by choice of the coordinate system for the reciprocal space. We define the $x$, $y$ and $z$ components of the reciprocal space vector in Eq.~\eqref{ch_theo:eqn_q_components} to be parallel to the respectively labeled real space vectors in Fig.~\ref{ch_theo:fig_scattering_process}. The angle $\beta$ is thus determined based on that scattering direction only and dependent on the direction from which the sample is irradiated. The replication factor $c_\perp^{i j}$ and the \gls{psd} then read
 \begin{align}
-c_\perp^{i j}(q_x) =  \exp\Bigg(-\sum \limits_{n = \text{min}(i,j)}^{\text{max}(i,j)-1}\frac{d_n q_x^2}{\xi_\perp} \Bigg)\text{,}
+c_\perp^{i j}(q_x) =  \exp\Bigg(-\sum \limits_{n = \text{min}(i,j)}^{\text{max}(i,j)-1}\frac{d_n q_x^2}{\xi_\perp} \Bigg)\text{,} \label{ch_theo:eqn_vertical_roughness_correlation_length_explicit}
 \end{align}
 where the definition $\xi_\perp = 1/v$ holds and
 \begin{align}
