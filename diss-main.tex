@@ -31,12 +31,14 @@
     \printglossary[type=symbols,title=Symbols,style=long,nonumberlist=true]
 
 \mainmatter
-    \pagestyle{thesis}
+    \pagestyle{thesisINTRO}
     \include{ch_Introduction}
+    \pagestyle{thesis}
     \include{ch_TheoreticalBackground}
     \include{ch_Experimental}
     \include{ch_Specular}
     \include{ch_Diffuse}
+    \pagestyle{thesisINTRO}
     \include{ch_Summary}
 
     \printbibliography[heading=bibintoc,title={References}]
