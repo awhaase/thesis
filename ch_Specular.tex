@@ -43,21 +43,21 @@ A full list of the model parameters for the multilayer sample can be found in ta
 \begin{tabular}{@{}llll@{}}
 \toprule
 Parameter & Definition & Lower bound & Upper bound\\ \midrule
-$d_\text{Mo}$ / nm & Mo layer thickness & $0.0$& $7.0$\\ 
-$d_\text{Si}$ / nm & Si layer thickness& $0.0$& $7.0$\\ 
-$d_\text{C}$ / nm &C buffer layer thickness& $0.0$ & $5.0$\\ 
-$d_\text{B$_4$C}$ / nm &B$_4$C buffer layer thickness&$0.0$ & $5.0$\\ 
-$\sigma$ / nm & N\'{e}vot-Croce parameter& $0.0$& $2.0$\\ 
+$\gls{d}_\text{Mo}$ / nm & Mo layer thickness & $0.0$& $7.0$\\ 
+$\gls{d}_\text{Si}$ / nm & Si layer thickness& $0.0$& $7.0$\\ 
+$\gls{d}_\text{C}$ / nm &C buffer layer thickness& $0.0$ & $5.0$\\ 
+$\gls{d}_\text{B$_4$C}$ / nm &B$_4$C buffer layer thickness&$0.0$ & $5.0$\\ 
+$\gls{sigma}$ / nm & N\'{e}vot-Croce parameter& $0.0$& $2.0$\\ 
 &(identical for all interfaces)&&\\
-$\rho_\text{Mo}$ &Mo density w.r.t.~bulk density & $0.5$& $2.0$\\ 
-$\rho_\text{Si}$ &Si density w.r.t.~bulk density& $0.5$& $2.0$\\ 
-$\rho_\text{C}$ &C density w.r.t.~bulk density& $0.5$& $2.0$\\ 
-$\rho_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.5$& $2.0$\\
+$\gls{rho}_\text{Mo}$ &Mo density w.r.t.~bulk density & $0.5$& $2.0$\\ 
+$\gls{rho}_\text{Si}$ &Si density w.r.t.~bulk density& $0.5$& $2.0$\\ 
+$\gls{rho}_\text{C}$ &C density w.r.t.~bulk density& $0.5$& $2.0$\\ 
+$\gls{rho}_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.5$& $2.0$\\
 \midrule
 \multicolumn{4}{c}{Capping layer}\\
 \midrule
-$d_\text{SiO$_2$(cap)}$ / nm & SiO$_2$ capping layer thickness & $0.0$&$5.0$ \\ 
-$\rho_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
+$\gls{d}_\text{SiO$_2$(cap)}$ / nm & SiO$_2$ capping layer thickness & $0.0$&$5.0$ \\ 
+$\gls{rho}_\text{SiO$_2$(cap)}$& $=\rho_\text{Si}$ (identical to Si density)& & \\
  \bottomrule
 \end{tabular}
 \end{table*}
@@ -100,7 +100,7 @@ $\rho_\text{Si}$ &Si density w.r.t.~bulk density& $0.883$ & $0.974$& $0.749$\\
 $\rho_\text{C}$ &C density w.r.t.~bulk density& $0.833$ & $ 0.971$& $0.608$\\ 
 $\rho_\text{B$_4$C}$ &B$_4$C density w.r.t.~bulk density& $0.909$ & $0.973$& $0.936$\\
  \midrule
- $\tilde{\chi}^2$ & reduced $\chi^2$ value & $17.87$ & $17.89$ & $18.27$ \\
+ $\tilde{\chi}^2$ & reduced \gls{chi^2} value & $17.87$ & $17.89$ & $18.27$ \\
  \bottomrule
 \end{tabular}
 \end{table*}
@@ -173,7 +173,7 @@ It should be noted, that the given center values here are not a good solution to
 The results listed in table~\ref{ch_spec:tbl_mo_b4c_si_c_multilayer_mcmc_results} serve as the model parameters for the analysis of diffuse scattering from the Mo/B$_4$C/Si/C sample in chapter~\ref{ch_diff}.
 
 \section{Molybdenum Thickness Variation in Mo/Si/C Multilayers} \label{ch_spec:sec_mo_si_c}
-For the engineering of a near-normal incidence mirror, the ratio of molybdenum layer thickness to total period thickness has a clear impact on the reflectivity curve as seen from the theoretical simulations in Fig.~\ref{ch_spec:fig_mo_si_parameter_influence}c. Studies have shown, that an optimal value for high reflectivity is achieved by depositing $40\%$ molybdenum layer thickness $d_\text{Mo}$ with respect to the total period thickness $D$ \cite{bajt_investigation_2001,braun_mo/si_2002}. During the deposition process, the layer of molybdenum grows in thickness and at a certain threshold, crystallites may begin to form \cite{verhoeven_ion_1992,bajt_investigation_2001} inside the layer. Those may affect the interface morphology of the layer system at the boundaries to the molybdenum layer and possibly at further interfaces through correlation effects. This potentially increases the roughness and thus the loss of specularly reflected radiation to diffuse scatter.
+For the engineering of a near-normal incidence mirror, the ratio of molybdenum layer thickness to total period thickness has a clear impact on the reflectivity curve as seen from the theoretical simulations in Fig.~\ref{ch_spec:fig_mo_si_parameter_influence}c. Studies have shown, that an optimal value for high reflectivity is achieved by depositing $40\%$ molybdenum layer thickness $d_\text{Mo}$ with respect to the total period thickness $\gls{D}$ \cite{bajt_investigation_2001,braun_mo/si_2002}. During the deposition process, the layer of molybdenum grows in thickness and at a certain threshold, crystallites may begin to form \cite{verhoeven_ion_1992,bajt_investigation_2001} inside the layer. Those may affect the interface morphology of the layer system at the boundaries to the molybdenum layer and possibly at further interfaces through correlation effects. This potentially increases the roughness and thus the loss of specularly reflected radiation to diffuse scatter.
 
 In the following we shall apply and extend the reconstruction procedure discussed in the above section to the problem of multilayer sample systems deposited with varying molybdenum layer thicknesses from sample to sample. The samples discussed in this section were designed to investigate the impact of the crystallization on the performance on Mo/Si multilayer mirrors systems. Two sets of samples were fabricated. One with the standard magnetron deposition technique, which we shall refer to as \emph{unpolished samples} and another set with an additional ion polishing step applied within the deposition of each period to counteract the roughening expected from the crystallization process. Consequently, the latter samples are referred to as \emph{polished samples}. Both sets were deposited with linearly increasing molybdenum thickness across all periods from sample to sample. The details of the sample layout and the reflectivity measured from each sample are described in detail in Sec.~\ref{ch_spec:sec_mo_si_c_sample_systems_and_experimental}. 
 
@@ -458,7 +458,7 @@ and $s_\text{Cr}$. The effective index of refraction for both layers is given
 by $\tilde{n}_\text{Sc}$ and $\tilde{n}_\text{Cr}$, respectively.}
     \label{ch_spec:fig_CrScModel}
 \end{figure*}
-The interdiffusion zones are modeled following a sinusoidal profile, which represents a smooth transition from the refractive index of the Cr layer to the Sc layer and vice versa. The thickness of those zones is given by the parameters $s_\text{Sc}$ and $s_\text{Cr}$. For the calculation of the electromagnetic fields inside the stack, the interface region is sampled with a fixed number of equally spaced points in $z$-direction, effectively creating a region of thin sublayers with a gradually changing index of refraction (illustrated by the red stepped function in Fig.~\ref{ch_spec:fig_CrScModel}). To take into account intermixing extending across the full period, we introduced an intermixing parameter $\eta$. The effective indices of refraction of the individual Cr and Sc layers are then given through
+The interdiffusion zones are modeled following a sinusoidal profile, which represents a smooth transition from the refractive index of the Cr layer to the Sc layer and vice versa. The thickness of those zones is given by the parameters $s_\text{Sc}$ and $s_\text{Cr}$. For the calculation of the electromagnetic fields inside the stack, the interface region is sampled with a fixed number of equally spaced points in $z$-direction, effectively creating a region of thin sublayers with a gradually changing index of refraction (illustrated by the red stepped function in Fig.~\ref{ch_spec:fig_CrScModel}). To take into account intermixing extending across the full period, we introduced an intermixing parameter $\gls{eta}$. The effective indices of refraction of the individual Cr and Sc layers are then given through
 \begin{align}
 \tilde{n}_\text{Cr} &=(\eta/2) n_\text{Sc} + (1-\eta/2) n_\text{Cr} \text{,} 
 \nonumber\\
@@ -477,14 +477,14 @@ With the definition of the model as outlined above, natural restrictions arise f
 \begin{tabular}{@{}llll@{}}
 \toprule
 Parameter & Definition & Lower bound & Upper bound\\ \midrule
-$D$ / nm & $= d_\text{Sc} + d_\text{Cr}$ & $1.5$&$1.6$ \\ 
-$\Gamma_{Sc}$ & $= d_\text{Sc} / D$&$0.0$ &$1.0$ \\ 
-$s_d$ / nm&$=s_\text{Sc} + s_\text{Cr}$&$0.0$ & $1.6$\\ 
-$\Gamma_s$ &$= s_\text{Sc} / s_d$& $0.0$& $1.0$\\ 
-$\eta$ &layer intermixing&$0.0$& $1.0$\\ 
-$\sigma_r$ / nm & r.m.s.~roughness& $0.0$& $0.5$\\ 
-$\rho_{Sc}$ &Sc density w.r.t.~bulk density & $0.5$& $2.0$\\ 
-$\rho_{Cr}$ &Cr density w.r.t.~bulk density& $0.5$& $2.0$\\ 
+$\gls{D}$ / nm & $= d_\text{Sc} + d_\text{Cr}$ & $1.5$&$1.6$ \\ 
+$\gls{gamma_Sc}$ & $= d_\text{Sc} / D$&$0.0$ &$1.0$ \\ 
+$\gls{s_d}$ / nm&$=s_\text{Sc} + s_\text{Cr}$&$0.0$ & $1.6$\\ 
+$\gls{gamma_sigma}$ &$= s_\text{Sc} / s_d$& $0.0$& $1.0$\\ 
+$\gls{eta}$ &layer intermixing&$0.0$& $1.0$\\ 
+$\gls{sigma_r}$ / nm & r.m.s.~roughness& $0.0$& $0.5$\\ 
+$\gls{rho}_{Sc}$ &Sc density w.r.t.~bulk density & $0.5$& $2.0$\\ 
+$\gls{rho}_{Cr}$ &Cr density w.r.t.~bulk density& $0.5$& $2.0$\\ 
  \bottomrule
 \end{tabular}
 \end{table*}
