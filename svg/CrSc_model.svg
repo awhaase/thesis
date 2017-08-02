@@ -493,6 +493,61 @@
          x="58.928581"
          y="-181.60255" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5650">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect5652"
+         width="197.30537"
+         height="93.214287"
+         x="0.5517506"
+         y="-294.81686" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5654">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect5656"
+         width="565.05664"
+         height="266.95346"
+         x="-67.798386"
+         y="111.22159" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5658">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect5660"
+         width="197.30537"
+         height="93.214287"
+         x="0.5517506"
+         y="-294.81686" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5662">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect5664"
+         width="197.30537"
+         height="93.214287"
+         x="0.5517506"
+         y="-294.81686" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5666">
+      <rect
+         style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         id="rect5668"
+         width="197.30537"
+         height="93.214287"
+         x="0.5517506"
+         y="-294.81686" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -503,7 +558,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
      inkscape:cx="483.05983"
-     inkscape:cy="664.9473"
+     inkscape:cy="822.09016"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -606,7 +661,8 @@
        inkscape:connector-curvature="0"
        id="path4902"
        d="m 66.12682,-347.09459 0,6.48473 c 0,6.22667 4.844038,16.92377 25.689526,21.4495 C 112.26597,-314.72056 120,-299.54625 120,-292.09906 l 0,11.473 c 0,5.90196 -14.83135,6.79748 -26.687178,8.35533 -9.838451,1.29277 -27.186002,3.99061 -27.186002,11.473"
-       style="fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient3428);stroke-width:1.04753411;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+       style="fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient3428);stroke-width:1.04753411;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       clip-path="url(#clipPath5666)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.34917799;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:0.34917803, 0.34917803;stroke-dashoffset:0"
        d="m 66.12682,-176.34653 53.87318,0"
@@ -677,7 +733,8 @@
        style="fill:none;stroke:#000000;stroke-width:0.34917799;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:0.34917803, 0.34917803;stroke-dashoffset:0"
        d="m 66.12682,-252.41746 53.87318,0"
        id="path5588"
-       inkscape:connector-curvature="0" />
+       inkscape:connector-curvature="0"
+       clip-path="url(#clipPath5662)" />
     <text
        xml:space="preserve"
        style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
@@ -722,7 +779,8 @@
        width="53.87318"
        height="46.640209"
        x="66.126823"
-       y="-318.61166" />
+       y="-318.61166"
+       clip-path="url(#clipPath5658)" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.34917799;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#StopL);marker-end:url(#StopL)"
        d="m 142.24405,-186.67223 0,-85.29921"
@@ -1009,7 +1067,8 @@
        sodipodi:rx="1.5"
        sodipodi:ry="1.5"
        d="m 121.75614,232.36218 c 0,0.82843 -0.67157,1.5 -1.5,1.5 -0.82843,0 -1.5,-0.67157 -1.5,-1.5 0,-0.82842 0.67157,-1.5 1.5,-1.5 0.82843,0 1.5,0.67158 1.5,1.5 z"
-       transform="matrix(0.34917803,0,0,0.34917803,24.225457,-333.653)" />
+       transform="matrix(0.34917803,0,0,0.34917803,24.225457,-333.653)"
+       clip-path="url(#clipPath5654)" />
     <path
        style="fill:none;stroke:#ff0000;stroke-width:1.04753411;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 66.12682,-252.40515 0,3.49178 1.486154,0 0,3.49178 1.745887,0 0,3.49178 3.49178,0 0,3.49178 6.983561,0 0,3.49178 10.475341,0 0,3.49179 12.221227,0 0,3.49178 8.72945,0 0,3.49177 5.23768,0 0,3.49178 1.74589,0 0,3.49178 1.75621,0 0,4.12794"
@@ -1022,7 +1081,8 @@
        y="-286.82413"
        x="42.082272"
        style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
-       xml:space="preserve"><tspan
+       xml:space="preserve"
+       clip-path="url(#clipPath5650)"><tspan
          style="font-size:7.64756727px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
          y="-286.82413"
          x="42.082272"
