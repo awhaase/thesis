@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=ch_Diffuse.tex
+lastDocument=ch_Summary.tex
 masterDocument=
 name=Dissertation
 pkg_extIsRegExp=false
@@ -151,90 +151,90 @@ Mode=BibTeX
 
 [item:abstract.tex]
 archive=true
-column=0
+column=825
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=58
 mode=LaTeX
 open=true
-order=7
+order=5
 
 [item:ch_Diffuse.tex]
 archive=true
-column=307
+column=66
 encoding=UTF-8
 highlight=LaTeX
-line=9
+line=332
 mode=LaTeX
 open=true
 order=2
 
 [item:ch_Experimental.tex]
 archive=true
-column=65
+column=68
 encoding=UTF-8
 highlight=LaTeX
-line=185
+line=98
 mode=LaTeX
 open=true
-order=12
+order=10
 
 [item:ch_Introduction.tex]
 archive=true
-column=2148
+column=78
 encoding=UTF-8
 highlight=LaTeX
-line=16
+line=45
 mode=LaTeX
 open=true
-order=4
+order=18
 
 [item:ch_Specular.tex]
 archive=true
-column=46
+column=83
 encoding=UTF-8
 highlight=LaTeX
-line=733
+line=612
 mode=LaTeX
 open=true
 order=1
 
 [item:ch_Summary.tex]
 archive=true
-column=0
+column=47
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=2
 mode=LaTeX
 open=true
-order=3
+order=17
 
 [item:ch_TheoreticalBackground.tex]
 archive=true
-column=33
+column=13
 encoding=UTF-8
 highlight=LaTeX
-line=372
+line=130
 mode=LaTeX
 open=true
-order=11
+order=9
 
 [item:danksagung.tex]
 archive=true
-column=0
+column=370
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=16
 mode=LaTeX
 open=true
-order=10
+order=8
 
 [item:diss-main.tex]
 archive=true
-column=4
+column=24
 encoding=UTF-8
 highlight=LaTeX
-line=38
+line=41
 mode=LaTeX
 open=true
 order=0
@@ -257,47 +257,47 @@ highlight=LaTeX
 line=0
 mode=LaTeX
 open=true
-order=5
+order=3
 
 [item:final-head-end.tex]
 archive=true
-column=0
+column=8
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=15
 mode=LaTeX
 open=true
-order=6
+order=4
 
 [item:final-head-start.tex]
 archive=true
-column=0
+column=10
 encoding=UTF-8
 highlight=LaTeX
-line=0
+line=1
 mode=LaTeX
 open=true
-order=16
+order=14
 
 [item:gloss-entries.tex]
 archive=true
-column=46
+column=170
 encoding=UTF-8
 highlight=LaTeX
-line=30
+line=67
 mode=LaTeX
 open=true
-order=9
+order=7
 
 [item:header.tex]
 archive=true
-column=39
+column=45
 encoding=UTF-8
 highlight=LaTeX
-line=270
+line=211
 mode=LaTeX
 open=true
-order=15
+order=13
 
 [item:tub-eidesstattliche.tex]
 archive=true
@@ -307,17 +307,17 @@ highlight=LaTeX
 line=0
 mode=LaTeX
 open=true
-order=18
+order=16
 
 [item:tub-publist.tex]
 archive=true
-column=4
+column=32
 encoding=UTF-8
 highlight=LaTeX
-line=15
+line=7
 mode=LaTeX
 open=true
-order=8
+order=6
 
 [item:tub-titlepage.tex]
 archive=true
@@ -327,7 +327,7 @@ highlight=LaTeX
 line=9
 mode=LaTeX
 open=true
-order=14
+order=12
 
 [item:tub.tex]
 archive=true
@@ -337,71 +337,71 @@ highlight=LaTeX
 line=0
 mode=LaTeX
 open=true
-order=17
+order=15
 
 [item:zotero-full.bib]
 archive=true
-column=9
+column=35
 encoding=UTF-8
 highlight=BibTeX
-line=1347
+line=1719
 mode=BibTeX
 open=true
-order=13
+order=11
 
 [view-settings,view=0,item:abstract.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=825
+CursorLine=58
 JumpList=
-ViMarks=
+ViMarks=.,58,586,[,58,586,],58,586
 
 [view-settings,view=0,item:ch_Diffuse.tex]
-CursorColumn=307
-CursorLine=9
+CursorColumn=66
+CursorLine=332
 JumpList=
-ViMarks=.,5,311,[,5,310,],5,311,a,137,0
+ViMarks=.,332,65,[,332,63,],332,65,a,137,0
 
 [view-settings,view=0,item:ch_Experimental.tex]
-CursorColumn=65
-CursorLine=185
+CursorColumn=68
+CursorLine=98
 JumpList=
-ViMarks=.,185,65,[,185,65,],185,65
+ViMarks=.,98,67,[,98,9,],98,67
 
 [view-settings,view=0,item:ch_Introduction.tex]
-CursorColumn=2148
-CursorLine=16
+CursorColumn=78
+CursorLine=45
 JumpList=
-ViMarks=.,9,833,[,9,833,],9,847
+ViMarks=.,285,57,[,285,57,],285,61
 
 [view-settings,view=0,item:ch_Specular.tex]
-CursorColumn=46
-CursorLine=733
+CursorColumn=83
+CursorLine=612
 JumpList=
-ViMarks=.,733,9,[,733,9,],733,45,a,92,0,b,176,175
+ViMarks=.,612,82,[,612,77,],612,82,a,92,0,b,176,175
 
 [view-settings,view=0,item:ch_Summary.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=47
+CursorLine=2
 JumpList=
-ViMarks=
+ViMarks=.,2,46,[,2,44,],2,46
 
 [view-settings,view=0,item:ch_TheoreticalBackground.tex]
-CursorColumn=33
-CursorLine=372
+CursorColumn=13
+CursorLine=130
 JumpList=
-ViMarks=.,372,32,[,372,32,],372,32
+ViMarks=.,493,70,[,493,62,],493,70
 
 [view-settings,view=0,item:danksagung.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=370
+CursorLine=16
 JumpList=
-ViMarks=
+ViMarks=.,16,369,[,16,367,],16,369
 
 [view-settings,view=0,item:diss-main.tex]
-CursorColumn=4
-CursorLine=38
+CursorColumn=24
+CursorLine=41
 JumpList=
-ViMarks=.,38,4,[,38,4,],38,4
+ViMarks=.,40,4,[,40,0,],40,26
 
 [view-settings,view=0,item:draft-header.tex]
 CursorColumn=0
@@ -410,28 +410,28 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:final-head-end.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=8
+CursorLine=15
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:final-head-start.tex]
-CursorColumn=0
-CursorLine=0
+CursorColumn=10
+CursorLine=1
 JumpList=
 ViMarks=
 
 [view-settings,view=0,item:gloss-entries.tex]
-CursorColumn=46
-CursorLine=30
+CursorColumn=170
+CursorLine=67
 JumpList=
-ViMarks=.,30,45,[,30,20,],30,45
+ViMarks=.,67,170,[,67,170,],67,170
 
 [view-settings,view=0,item:header.tex]
-CursorColumn=39
-CursorLine=270
+CursorColumn=45
+CursorLine=211
 JumpList=
-ViMarks=.,271,30,[,271,30,],271,35
+ViMarks=.,211,0,[,211,0,],211,0
 
 [view-settings,view=0,item:tub-eidesstattliche.tex]
 CursorColumn=0
@@ -440,10 +440,10 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:tub-publist.tex]
-CursorColumn=4
-CursorLine=15
+CursorColumn=32
+CursorLine=7
 JumpList=
-ViMarks=.,15,4,[,15,4,],15,4
+ViMarks=.,5,20,[,5,10,],5,20
 
 [view-settings,view=0,item:tub-titlepage.tex]
 CursorColumn=0
@@ -458,7 +458,7 @@ JumpList=
 ViMarks=
 
 [view-settings,view=0,item:zotero-full.bib]
-CursorColumn=9
-CursorLine=1347
+CursorColumn=35
+CursorLine=1719
 JumpList=
-ViMarks=.,0,0,[,1,0,],2099,0
+ViMarks=.,2526,90,[,2526,90,],2526,94
